@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementTableViewCell" rowHeight="93" id="bA9-TR-cDq" customClass="AnnouncementTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="93"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bA9-TR-cDq" id="Tg2-6w-sXO">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="announcementicon_48x48.png" translatesAutoresizingMaskIntoConstraints="NO" id="yhn-YN-UKd">
+                        <rect key="frame" x="8" y="8" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="eiq-Sr-MXu"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="np9-4l-PGs"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="uVa-WF-oHV"/>
+                            <constraint firstAttribute="width" constant="46" id="wp6-Zg-WBg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="np9-4l-PGs"/>
+                                <exclude reference="uVa-WF-oHV"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-PV-buj">
+                        <rect key="frame" x="62" y="8" width="272" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="272" id="g0D-Nn-dkq"/>
+                            <constraint firstAttribute="height" constant="21" id="idf-qd-xDB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t2z-eV-cnb">
+                        <rect key="frame" x="62" y="37" width="369" height="55"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="fe6-LF-Mez"/>
+                        </constraints>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yhn-YN-UKd" firstAttribute="top" secondItem="Tg2-6w-sXO" secondAttribute="topMargin" id="33w-1L-Ji4"/>
+                    <constraint firstItem="yhn-YN-UKd" firstAttribute="leading" secondItem="Tg2-6w-sXO" secondAttribute="leadingMargin" id="I0N-Ki-kTa"/>
+                    <constraint firstItem="t2z-eV-cnb" firstAttribute="top" secondItem="EIM-PV-buj" secondAttribute="bottom" constant="8" id="LXh-nM-QVe"/>
+                    <constraint firstItem="t2z-eV-cnb" firstAttribute="leading" secondItem="yhn-YN-UKd" secondAttribute="trailing" constant="8" id="RdR-Ri-ewh"/>
+                    <constraint firstAttribute="bottom" secondItem="t2z-eV-cnb" secondAttribute="bottom" id="hxx-f0-UwM"/>
+                    <constraint firstItem="EIM-PV-buj" firstAttribute="top" secondItem="Tg2-6w-sXO" secondAttribute="topMargin" id="s9z-H6-o0Q"/>
+                    <constraint firstItem="EIM-PV-buj" firstAttribute="leading" secondItem="yhn-YN-UKd" secondAttribute="trailing" constant="8" id="vfX-cL-YZY"/>
+                    <constraint firstAttribute="trailing" secondItem="t2z-eV-cnb" secondAttribute="trailing" id="wns-E8-mss"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="announcementMsgHeight" destination="fe6-LF-Mez" id="Fmg-BZ-ZeE"/>
+                <outlet property="announcement_text" destination="t2z-eV-cnb" id="TjY-b2-UHn"/>
+                <outlet property="datelabel" destination="EIM-PV-buj" id="1qS-vd-m9Y"/>
+            </connections>
+            <point key="canvasLocation" x="664.5" y="413.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="announcementicon_48x48.png" width="48" height="48"/>
+    </resources>
+</document>

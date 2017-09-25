@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentInfoTableViewCell" rowHeight="104" id="9BY-jy-1l8" customClass="PaymentInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="141"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9BY-jy-1l8" id="qhS-tD-cJb">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1O-gL-fYk">
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="140"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnr-cs-HHD">
+                                <rect key="frame" x="8" y="8" width="436" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Payment Mode    : Online Transaction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coA-gE-a8s">
+                                        <rect key="frame" x="8" y="27" width="416" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Dc7-zX-7QI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receipt Date       : 26-01-2014" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtz-TF-Vsy">
+                                        <rect key="frame" x="8" y="51" width="416" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount (Rs.)      : 22,45,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WO-My-AmT">
+                                        <rect key="frame" x="8" y="76" width="416" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="DzQ-gs-gaX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receipt No         : REC-SRJ7r475943" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inz-sm-jbF">
+                                        <rect key="frame" x="8" y="100" width="420" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="72y-uJ-CFE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description        : Term 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXn-3t-zod">
+                                        <rect key="frame" x="8" y="3" width="416" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="jOK-Wz-gRj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8980392157" green="0.85098039219999999" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rXn-3t-zod" firstAttribute="leading" secondItem="coA-gE-a8s" secondAttribute="leading" id="3h9-Qg-KkZ"/>
+                                    <constraint firstItem="6WO-My-AmT" firstAttribute="leading" secondItem="inz-sm-jbF" secondAttribute="leading" id="8Sk-Xm-fDP"/>
+                                    <constraint firstItem="coA-gE-a8s" firstAttribute="leading" secondItem="qtz-TF-Vsy" secondAttribute="leading" id="BMh-7a-yQf"/>
+                                    <constraint firstItem="6WO-My-AmT" firstAttribute="top" secondItem="qtz-TF-Vsy" secondAttribute="bottom" constant="3" id="FFd-4v-FX4"/>
+                                    <constraint firstItem="coA-gE-a8s" firstAttribute="trailing" secondItem="qtz-TF-Vsy" secondAttribute="trailing" id="Qdt-A6-Qbf"/>
+                                    <constraint firstItem="qtz-TF-Vsy" firstAttribute="leading" secondItem="6WO-My-AmT" secondAttribute="leading" id="WbH-vU-B3G"/>
+                                    <constraint firstAttribute="bottom" secondItem="inz-sm-jbF" secondAttribute="bottom" constant="3" id="Wpb-Yf-WSd"/>
+                                    <constraint firstItem="coA-gE-a8s" firstAttribute="top" secondItem="rXn-3t-zod" secondAttribute="bottom" constant="3" id="akx-uJ-gng"/>
+                                    <constraint firstItem="rXn-3t-zod" firstAttribute="leading" secondItem="fnr-cs-HHD" secondAttribute="leading" constant="8" id="alM-ri-O8i"/>
+                                    <constraint firstItem="6WO-My-AmT" firstAttribute="trailing" secondItem="inz-sm-jbF" secondAttribute="trailing" constant="-4" id="e98-5x-mnY"/>
+                                    <constraint firstItem="qtz-TF-Vsy" firstAttribute="top" secondItem="coA-gE-a8s" secondAttribute="bottom" constant="3" id="iBE-Ne-aVH"/>
+                                    <constraint firstItem="rXn-3t-zod" firstAttribute="trailing" secondItem="coA-gE-a8s" secondAttribute="trailing" id="svi-lg-jPd"/>
+                                    <constraint firstItem="rXn-3t-zod" firstAttribute="top" secondItem="fnr-cs-HHD" secondAttribute="top" constant="3" id="uyy-v8-a4e"/>
+                                    <constraint firstItem="inz-sm-jbF" firstAttribute="top" secondItem="6WO-My-AmT" secondAttribute="bottom" constant="3" id="ybm-Oy-7sa"/>
+                                    <constraint firstAttribute="trailing" secondItem="rXn-3t-zod" secondAttribute="trailing" constant="12" id="zcy-0y-a5P"/>
+                                    <constraint firstItem="qtz-TF-Vsy" firstAttribute="trailing" secondItem="6WO-My-AmT" secondAttribute="trailing" id="zf3-1S-QQf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fnr-cs-HHD" secondAttribute="bottom" constant="8" id="0sF-OQ-ORz"/>
+                            <constraint firstItem="fnr-cs-HHD" firstAttribute="leading" secondItem="o1O-gL-fYk" secondAttribute="leading" constant="8" id="QBi-13-XAm"/>
+                            <constraint firstAttribute="trailing" secondItem="fnr-cs-HHD" secondAttribute="trailing" constant="8" id="VmS-Yz-FZ7"/>
+                            <constraint firstItem="fnr-cs-HHD" firstAttribute="top" secondItem="o1O-gL-fYk" secondAttribute="top" constant="8" id="Wud-yq-UXK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="o1O-gL-fYk" secondAttribute="trailing" id="Anl-UJ-W6S"/>
+                    <constraint firstItem="o1O-gL-fYk" firstAttribute="top" secondItem="qhS-tD-cJb" secondAttribute="top" id="Knr-93-xZB"/>
+                    <constraint firstItem="o1O-gL-fYk" firstAttribute="leading" secondItem="qhS-tD-cJb" secondAttribute="leading" id="Z9s-zt-mV9"/>
+                    <constraint firstAttribute="bottom" secondItem="o1O-gL-fYk" secondAttribute="bottom" id="fYs-Ee-NxV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label_amount" destination="6WO-My-AmT" id="aqS-ah-cp8"/>
+                <outlet property="label_description" destination="rXn-3t-zod" id="PJ2-Ek-171"/>
+                <outlet property="label_paymentMode" destination="coA-gE-a8s" id="Esf-gu-tbL"/>
+                <outlet property="label_receiptDate" destination="qtz-TF-Vsy" id="cca-Ng-kTo"/>
+                <outlet property="label_receiptNumber" destination="inz-sm-jbF" id="bi7-tF-vZK"/>
+                <outlet property="mainView" destination="fnr-cs-HHD" id="7il-uF-tJZ"/>
+            </connections>
+            <point key="canvasLocation" x="216" y="-98.5"/>
+        </tableViewCell>
+    </objects>
+</document>
