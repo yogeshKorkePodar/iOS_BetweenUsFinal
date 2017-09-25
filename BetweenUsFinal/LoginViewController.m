@@ -50,7 +50,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    // Comment added inside LoginViewController.m
+   
     username = @"";
     password = @"";
     NSLog(@"<<<<<< Inside LoginViewController >>>>>>>>>>>");
