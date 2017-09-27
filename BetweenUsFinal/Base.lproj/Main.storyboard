@@ -3652,6 +3652,16 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="T6g-DO-VeE">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <tabBarItem tag="1" title="Message" image="message_150rs.png" id="3ae-rQ-m2r"/>
+                                    <tabBarItem tag="2" title="Announcement" image="announcement_300rs.png" id="XKd-bt-5Tl"/>
+                                    <tabBarItem tag="3" title="Attendance" image="attendance_30x30.png" id="a7n-Q3-O1V"/>
+                                    <tabBarItem tag="4" title="Behaviour" image="behaviour_500rs.png" id="z1I-LN-zWF"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3923,11 +3933,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="tlM-rZ-ipK"/>
         <segue reference="HWc-rz-lyK"/>
-        <segue reference="IkV-Pe-i9B"/>
-        <segue reference="8lg-S3-Oe0"/>
+        <segue reference="jM9-g9-dwL"/>
         <segue reference="icx-44-Q3F"/>
-        <segue reference="jgP-2R-uPB"/>
-        <segue reference="A2m-0d-M1j"/>
+        <segue reference="1fE-qR-r1T"/>
+        <segue reference="qAK-1H-dXw"/>
         <segue reference="hjP-jO-qyY"/>
+        <segue reference="g5h-Gn-Itc"/>
     </inferredMetricsTieBreakers>
 </document>
