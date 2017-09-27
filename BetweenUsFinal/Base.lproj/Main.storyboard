@@ -1020,7 +1020,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XlF-QD-EfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3219.375" y="582.04225352112678"/>
+            <point key="canvasLocation" x="3218" y="603"/>
         </scene>
         <!--About Us-->
         <scene sceneID="bOc-sn-enD">
@@ -3477,8 +3477,8 @@
                                             <mask key="constraints">
                                                 <exclude reference="E3c-Fg-GmN"/>
                                                 <exclude reference="Ug2-Tf-zDB"/>
-                                                <exclude reference="hYt-l6-C6V"/>
                                                 <exclude reference="Vgz-HZ-OdG"/>
+                                                <exclude reference="hYt-l6-C6V"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -3504,10 +3504,10 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="LzB-rQ-gN7"/>
-                                        <exclude reference="F06-7g-0qc"/>
-                                        <exclude reference="pdZ-cw-cXF"/>
                                         <exclude reference="52F-IX-XZa"/>
+                                        <exclude reference="F06-7g-0qc"/>
                                         <exclude reference="om7-Iq-Af2"/>
+                                        <exclude reference="pdZ-cw-cXF"/>
                                         <exclude reference="tKZ-rU-Bpv"/>
                                     </mask>
                                 </variation>
@@ -3546,14 +3546,14 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="YYF-ei-dqB"/>
-                                <exclude reference="HCX-Js-Jyx"/>
                                 <exclude reference="3ti-UT-DSK"/>
-                                <exclude reference="iOQ-Rt-T9g"/>
-                                <exclude reference="d7T-sW-BmT"/>
-                                <exclude reference="Uxx-Du-A3y"/>
-                                <exclude reference="lw3-Wp-ttn"/>
+                                <exclude reference="HCX-Js-Jyx"/>
                                 <exclude reference="Po6-i7-aea"/>
+                                <exclude reference="Uxx-Du-A3y"/>
+                                <exclude reference="d7T-sW-BmT"/>
                                 <exclude reference="e2L-Tl-D8W"/>
+                                <exclude reference="iOQ-Rt-T9g"/>
+                                <exclude reference="lw3-Wp-ttn"/>
                                 <exclude reference="2V1-uS-ExA"/>
                             </mask>
                         </variation>
@@ -3569,6 +3569,302 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkD-0G-gYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="506.25" y="3084.5070422535214"/>
+        </scene>
+        <!--View Messages-->
+        <scene sceneID="ckB-fS-dNe">
+            <objects>
+                <viewController storyboardIdentifier="TeacherWriteMessage" title="View Messages" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2oR-8Z-lJE" customClass="ViewMessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T5w-Pr-WH4"/>
+                        <viewControllerLayoutGuide type="bottom" id="8jx-kB-hgf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sbG-KA-aRO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcB-oe-9Cj">
+                                <rect key="frame" x="-4" y="44" width="328" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhX-c2-VcZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="40"/>
+                                        <color key="backgroundColor" red="0.023529411760000001" green="0.2784313725" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HLE-dg-qHh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <state key="normal" title="View Messages">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewMessageBtn_Action:" destination="2oR-8Z-lJE" eventType="touchUpInside" id="ysR-TB-lHW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaX-31-5d3">
+                                        <rect key="frame" x="109.5" y="0.0" width="109" height="40"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="PU2-q9-UP9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="Write Message">
+                                            <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="30E-yd-rY8" kind="push" animates="NO" id="jM9-g9-dwL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzY-Mi-beR">
+                                        <rect key="frame" x="219.5" y="0.0" width="108.5" height="40"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Kcb-I0-n2X"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="Sent Messages">
+                                            <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="hEc-JY-ed2" kind="push" animates="NO" id="1fE-qR-r1T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mzY-Mi-beR" secondAttribute="trailing" id="1I4-Tg-uIf"/>
+                                    <constraint firstItem="VaX-31-5d3" firstAttribute="top" secondItem="dcB-oe-9Cj" secondAttribute="top" id="2qn-Oe-azC"/>
+                                    <constraint firstItem="DhX-c2-VcZ" firstAttribute="top" secondItem="dcB-oe-9Cj" secondAttribute="top" id="44A-du-xNV"/>
+                                    <constraint firstItem="VaX-31-5d3" firstAttribute="width" secondItem="DhX-c2-VcZ" secondAttribute="width" id="7uH-44-YYV"/>
+                                    <constraint firstItem="VaX-31-5d3" firstAttribute="height" secondItem="DhX-c2-VcZ" secondAttribute="height" id="9w5-Vn-nS8"/>
+                                    <constraint firstItem="mzY-Mi-beR" firstAttribute="leading" secondItem="VaX-31-5d3" secondAttribute="trailing" constant="1" id="ACQ-TW-zG5"/>
+                                    <constraint firstAttribute="height" constant="40" id="BSo-23-da2"/>
+                                    <constraint firstItem="DhX-c2-VcZ" firstAttribute="width" secondItem="VaX-31-5d3" secondAttribute="width" id="OHX-uN-YYb"/>
+                                    <constraint firstItem="VaX-31-5d3" firstAttribute="height" secondItem="mzY-Mi-beR" secondAttribute="height" id="QQN-CX-75v"/>
+                                    <constraint firstItem="VaX-31-5d3" firstAttribute="leading" secondItem="DhX-c2-VcZ" secondAttribute="trailing" constant="1" id="cdB-eX-bfu"/>
+                                    <constraint firstItem="DhX-c2-VcZ" firstAttribute="height" secondItem="VaX-31-5d3" secondAttribute="height" constant="-4" id="gZX-yg-lcs"/>
+                                    <constraint firstItem="mzY-Mi-beR" firstAttribute="top" secondItem="dcB-oe-9Cj" secondAttribute="top" id="kbI-EP-cqe"/>
+                                    <constraint firstItem="DhX-c2-VcZ" firstAttribute="leading" secondItem="dcB-oe-9Cj" secondAttribute="leading" id="onU-t2-2ro"/>
+                                    <constraint firstItem="VaX-31-5d3" firstAttribute="width" secondItem="mzY-Mi-beR" secondAttribute="width" id="tnO-DF-4f6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OHX-uN-YYb"/>
+                                        <exclude reference="gZX-yg-lcs"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dcB-oe-9Cj" secondAttribute="trailing" constant="-20" id="AdT-to-Gkc"/>
+                            <constraint firstItem="dcB-oe-9Cj" firstAttribute="leading" secondItem="sbG-KA-aRO" secondAttribute="leadingMargin" constant="-20" id="TWk-4R-cZd"/>
+                            <constraint firstItem="dcB-oe-9Cj" firstAttribute="top" secondItem="T5w-Pr-WH4" secondAttribute="bottom" id="hwz-By-otX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Messages" id="DuM-IA-DxT"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LU-5o-sna" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202" y="3085"/>
+        </scene>
+        <!--Write Messages-->
+        <scene sceneID="reQ-7T-q1v">
+            <objects>
+                <viewController title="Write Messages" modalTransitionStyle="crossDissolve" id="30E-yd-rY8" customClass="WriteMessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UIH-jo-zie"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Ip-7w-fK1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8In-k6-K4d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO2-jV-b5c">
+                                <rect key="frame" x="-4" y="44" width="328" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HL2-Bi-NbI">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="40"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IPZ-8G-cKA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <state key="normal" title="View Messages">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="2oR-8Z-lJE" kind="push" animates="NO" id="mAp-jw-aEY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apa-UQ-t9X">
+                                        <rect key="frame" x="109.5" y="0.0" width="109" height="40"/>
+                                        <color key="backgroundColor" red="0.023529411760000001" green="0.2784313725" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="150-dd-Trb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="Write Message">
+                                            <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5k-Bz-VIE">
+                                        <rect key="frame" x="219.5" y="0.0" width="108.5" height="40"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7y6-dS-pqu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="Sent Messages">
+                                            <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="hEc-JY-ed2" kind="push" animates="NO" id="8lg-S3-Oe0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="U5k-Bz-VIE" firstAttribute="leading" secondItem="Apa-UQ-t9X" secondAttribute="trailing" constant="1" id="1bh-Mp-8FH"/>
+                                    <constraint firstItem="Apa-UQ-t9X" firstAttribute="height" secondItem="U5k-Bz-VIE" secondAttribute="height" id="3Df-aJ-xZX"/>
+                                    <constraint firstAttribute="height" constant="40" id="Cmi-Dd-JWy"/>
+                                    <constraint firstItem="Apa-UQ-t9X" firstAttribute="height" secondItem="HL2-Bi-NbI" secondAttribute="height" id="DDu-db-oEn"/>
+                                    <constraint firstAttribute="trailing" secondItem="U5k-Bz-VIE" secondAttribute="trailing" id="EIx-b6-zH2"/>
+                                    <constraint firstItem="Apa-UQ-t9X" firstAttribute="leading" secondItem="HL2-Bi-NbI" secondAttribute="trailing" constant="1" id="JZY-TF-iYv"/>
+                                    <constraint firstItem="U5k-Bz-VIE" firstAttribute="top" secondItem="qO2-jV-b5c" secondAttribute="top" id="N9D-Vz-WIj"/>
+                                    <constraint firstItem="Apa-UQ-t9X" firstAttribute="width" secondItem="HL2-Bi-NbI" secondAttribute="width" id="X5t-Pj-GZo"/>
+                                    <constraint firstItem="HL2-Bi-NbI" firstAttribute="width" secondItem="Apa-UQ-t9X" secondAttribute="width" id="cjs-K2-NBX"/>
+                                    <constraint firstItem="HL2-Bi-NbI" firstAttribute="leading" secondItem="qO2-jV-b5c" secondAttribute="leading" id="fUE-QB-xVA"/>
+                                    <constraint firstItem="HL2-Bi-NbI" firstAttribute="top" secondItem="qO2-jV-b5c" secondAttribute="top" id="oK3-px-3Xf"/>
+                                    <constraint firstItem="Apa-UQ-t9X" firstAttribute="top" secondItem="qO2-jV-b5c" secondAttribute="top" id="oeF-w8-T9i"/>
+                                    <constraint firstItem="Apa-UQ-t9X" firstAttribute="width" secondItem="U5k-Bz-VIE" secondAttribute="width" id="pau-dT-70m"/>
+                                    <constraint firstItem="HL2-Bi-NbI" firstAttribute="height" secondItem="Apa-UQ-t9X" secondAttribute="height" constant="-4" id="yno-1A-05c"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yno-1A-05c"/>
+                                        <exclude reference="cjs-K2-NBX"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qO2-jV-b5c" firstAttribute="centerX" secondItem="8In-k6-K4d" secondAttribute="centerX" id="3kK-0A-q0n"/>
+                            <constraint firstItem="qO2-jV-b5c" firstAttribute="top" secondItem="UIH-jo-zie" secondAttribute="bottom" id="52M-Gn-dzp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qO2-jV-b5c" secondAttribute="trailing" constant="-20" id="9wU-A5-8g3"/>
+                            <constraint firstItem="qO2-jV-b5c" firstAttribute="leading" secondItem="8In-k6-K4d" secondAttribute="leadingMargin" constant="-20" id="ieL-Yf-BgC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3kK-0A-q0n"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Messages" id="f95-Q5-cbZ"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avP-hw-mAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="3636"/>
+        </scene>
+        <!--View Messages-->
+        <scene sceneID="21C-Wf-pWx">
+            <objects>
+                <viewController storyboardIdentifier="TeacherSentMessage" title="View Messages" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hEc-JY-ed2" customClass="SentMessagesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XoE-wm-W8Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="JOF-xN-Lwd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ggu-HN-aCF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5g2-Vd-dre">
+                                <rect key="frame" x="-4" y="44" width="328" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeD-Np-z6c">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="40"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="23C-Rs-lo5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <state key="normal" title="View Messages">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="2oR-8Z-lJE" kind="push" animates="NO" id="icx-44-Q3F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHZ-oo-yfI">
+                                        <rect key="frame" x="109.5" y="0.0" width="109" height="40"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CD7-YI-D5u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="Write Message">
+                                            <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="30E-yd-rY8" kind="push" animates="NO" id="IkV-Pe-i9B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kam-Qw-VH8">
+                                        <rect key="frame" x="219.5" y="0.0" width="108.5" height="40"/>
+                                        <color key="backgroundColor" red="0.023529411760000001" green="0.2784313725" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wVd-cw-oPx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="Sent Messages">
+                                            <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GeD-Np-z6c" firstAttribute="width" secondItem="uHZ-oo-yfI" secondAttribute="width" id="39E-bb-y1J"/>
+                                    <constraint firstItem="GeD-Np-z6c" firstAttribute="height" secondItem="uHZ-oo-yfI" secondAttribute="height" constant="-4" id="3gh-xt-pha"/>
+                                    <constraint firstItem="GeD-Np-z6c" firstAttribute="leading" secondItem="5g2-Vd-dre" secondAttribute="leading" id="5l9-UM-zlK"/>
+                                    <constraint firstItem="uHZ-oo-yfI" firstAttribute="leading" secondItem="GeD-Np-z6c" secondAttribute="trailing" constant="1" id="9A2-mQ-9so"/>
+                                    <constraint firstItem="uHZ-oo-yfI" firstAttribute="height" secondItem="GeD-Np-z6c" secondAttribute="height" id="9cK-jT-06V"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kam-Qw-VH8" secondAttribute="trailing" id="OEg-6W-jke"/>
+                                    <constraint firstAttribute="height" constant="40" id="PcY-Cq-AOl"/>
+                                    <constraint firstItem="uHZ-oo-yfI" firstAttribute="top" secondItem="5g2-Vd-dre" secondAttribute="top" id="U27-Js-LhY"/>
+                                    <constraint firstItem="uHZ-oo-yfI" firstAttribute="height" secondItem="Kam-Qw-VH8" secondAttribute="height" id="gIn-Ui-lZv"/>
+                                    <constraint firstItem="uHZ-oo-yfI" firstAttribute="width" secondItem="Kam-Qw-VH8" secondAttribute="width" id="iYx-Oa-REh"/>
+                                    <constraint firstItem="Kam-Qw-VH8" firstAttribute="top" secondItem="5g2-Vd-dre" secondAttribute="top" id="ngZ-Ca-WYW"/>
+                                    <constraint firstItem="GeD-Np-z6c" firstAttribute="top" secondItem="5g2-Vd-dre" secondAttribute="top" id="qrb-Xc-aST"/>
+                                    <constraint firstItem="uHZ-oo-yfI" firstAttribute="width" secondItem="GeD-Np-z6c" secondAttribute="width" id="tiV-ob-Mnc"/>
+                                    <constraint firstItem="Kam-Qw-VH8" firstAttribute="leading" secondItem="uHZ-oo-yfI" secondAttribute="trailing" constant="1" id="uu6-7X-7lW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="39E-bb-y1J"/>
+                                        <exclude reference="3gh-xt-pha"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5g2-Vd-dre" firstAttribute="leading" secondItem="Ggu-HN-aCF" secondAttribute="leadingMargin" constant="-20" id="FQS-Pt-9Eh"/>
+                            <constraint firstItem="5g2-Vd-dre" firstAttribute="top" secondItem="XoE-wm-W8Y" secondAttribute="bottom" id="STK-Io-OlZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5g2-Vd-dre" secondAttribute="trailing" constant="-20" id="qZ5-WS-m6i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Messages" id="Zje-oY-50K"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpp-jm-BWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="2960"/>
         </scene>
     </scenes>
     <resources>
@@ -3605,10 +3901,13 @@
         <image name="topics.png" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JlC-pr-Ap2"/>
-        <segue reference="HWc-rz-lyK"/>
         <segue reference="tlM-rZ-ipK"/>
-        <segue reference="qAK-1H-dXw"/>
-        <segue reference="g5h-Gn-Itc"/>
+        <segue reference="HWc-rz-lyK"/>
+        <segue reference="IkV-Pe-i9B"/>
+        <segue reference="8lg-S3-Oe0"/>
+        <segue reference="icx-44-Q3F"/>
+        <segue reference="jgP-2R-uPB"/>
+        <segue reference="A2m-0d-M1j"/>
+        <segue reference="hjP-jO-qyY"/>
     </inferredMetricsTieBreakers>
 </document>
