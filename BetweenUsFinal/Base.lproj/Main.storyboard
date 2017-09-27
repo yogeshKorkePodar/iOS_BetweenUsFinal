@@ -3866,6 +3866,26 @@
             </objects>
             <point key="canvasLocation" x="2016" y="2960"/>
         </scene>
+        <!--SMS-->
+        <scene sceneID="Ma6-pF-n16">
+            <objects>
+                <viewController title="SMS" id="h4m-ys-OKq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J1r-Tb-40T"/>
+                        <viewControllerLayoutGuide type="bottom" id="vrR-ha-HXh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r1H-iU-gaE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sus-Q6-eTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2793" y="2964"/>
+        </scene>
     </scenes>
     <resources>
         <image name="IconPassword.png" width="50" height="50"/>
