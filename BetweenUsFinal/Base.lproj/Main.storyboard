@@ -3652,16 +3652,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="T6g-DO-VeE">
-                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <tabBarItem tag="1" title="Message" image="message_150rs.png" id="3ae-rQ-m2r"/>
-                                    <tabBarItem tag="2" title="Announcement" image="announcement_300rs.png" id="XKd-bt-5Tl"/>
-                                    <tabBarItem tag="3" title="Attendance" image="attendance_30x30.png" id="a7n-Q3-O1V"/>
-                                    <tabBarItem tag="4" title="Behaviour" image="behaviour_500rs.png" id="z1I-LN-zWF"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3753,8 +3743,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="yno-1A-05c"/>
                                         <exclude reference="cjs-K2-NBX"/>
+                                        <exclude reference="yno-1A-05c"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -3894,7 +3884,148 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sus-Q6-eTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2793" y="2964"/>
+            <point key="canvasLocation" x="506" y="3742"/>
+        </scene>
+        <!--Announcement-->
+        <scene sceneID="5k2-el-cIl">
+            <objects>
+                <viewController storyboardIdentifier="TeacherAnnouncement" title="Announcement" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CkI-gb-O1f" customClass="AnnouncementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ttn-l6-tPa"/>
+                        <viewControllerLayoutGuide type="bottom" id="kAx-Hy-wXb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QUZ-Do-Q5E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="Mu1-CG-gse">
+                                <rect key="frame" x="0.0" y="514" width="320" height="49"/>
+                                <items>
+                                    <tabBarItem tag="2" title="Announcement" image="announcement_300rs.png" id="6Uc-oR-Bvy"/>
+                                    <tabBarItem tag="3" title="Attendance" image="attendance_30x30.png" id="8Tv-MB-Wjd"/>
+                                    <tabBarItem tag="4" title="Behaviour" image="behaviour_500rs.png" id="VVl-JR-pZe"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E0j-EX-1w2">
+                                <rect key="frame" x="0.0" y="44" width="320" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E0j-EX-1w2" firstAttribute="leading" secondItem="QUZ-Do-Q5E" secondAttribute="leading" id="0w0-Tn-dPI"/>
+                            <constraint firstItem="kAx-Hy-wXb" firstAttribute="top" secondItem="Mu1-CG-gse" secondAttribute="bottom" constant="5" id="Fmk-ai-q6F"/>
+                            <constraint firstItem="E0j-EX-1w2" firstAttribute="top" secondItem="ttn-l6-tPa" secondAttribute="bottom" id="P54-U4-7cS"/>
+                            <constraint firstItem="Mu1-CG-gse" firstAttribute="leading" secondItem="QUZ-Do-Q5E" secondAttribute="leading" id="PDb-jc-zfk"/>
+                            <constraint firstItem="Mu1-CG-gse" firstAttribute="top" secondItem="E0j-EX-1w2" secondAttribute="bottom" id="TLI-p4-yzn"/>
+                            <constraint firstAttribute="trailing" secondItem="Mu1-CG-gse" secondAttribute="trailing" id="ebc-i9-diJ"/>
+                            <constraint firstAttribute="trailing" secondItem="E0j-EX-1w2" secondAttribute="trailing" id="lmg-dG-pq4"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="announcemntTableView" destination="E0j-EX-1w2" id="Ps1-lv-gG7"/>
+                        <outlet property="my_tabBar" destination="Mu1-CG-gse" id="Gal-y7-EsV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmg-fr-ClO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="2960"/>
+        </scene>
+        <!--Attendance-->
+        <scene sceneID="G0d-9k-2rM">
+            <objects>
+                <viewController storyboardIdentifier="TeacherAttendance" title="Attendance" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FSy-Iu-HQL" customClass="AnnouncementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eAe-Fu-3vI"/>
+                        <viewControllerLayoutGuide type="bottom" id="KSa-0E-T0z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T4V-3f-NXl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="4df-Eg-bip">
+                                <rect key="frame" x="0.0" y="514" width="320" height="49"/>
+                                <items>
+                                    <tabBarItem tag="2" title="Announcement" image="announcement_300rs.png" id="lTA-sz-oqI"/>
+                                    <tabBarItem tag="3" title="Attendance" image="attendance_30x30.png" id="ljo-nJ-UgR"/>
+                                    <tabBarItem tag="4" title="Behaviour" image="behaviour_500rs.png" id="YFM-iB-zMD"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Yf-OA-YE1">
+                                <rect key="frame" x="0.0" y="44" width="320" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4df-Eg-bip" secondAttribute="trailing" id="0Wu-ZE-eMl"/>
+                            <constraint firstAttribute="trailing" secondItem="1Yf-OA-YE1" secondAttribute="trailing" id="2rJ-JI-Md5"/>
+                            <constraint firstItem="1Yf-OA-YE1" firstAttribute="leading" secondItem="T4V-3f-NXl" secondAttribute="leading" id="Kvv-FT-0sC"/>
+                            <constraint firstItem="1Yf-OA-YE1" firstAttribute="top" secondItem="eAe-Fu-3vI" secondAttribute="bottom" id="TcF-pY-Y1b"/>
+                            <constraint firstItem="KSa-0E-T0z" firstAttribute="top" secondItem="4df-Eg-bip" secondAttribute="bottom" constant="5" id="VhQ-mU-4Hx"/>
+                            <constraint firstItem="4df-Eg-bip" firstAttribute="top" secondItem="1Yf-OA-YE1" secondAttribute="bottom" id="fJL-Cf-Fdq"/>
+                            <constraint firstItem="4df-Eg-bip" firstAttribute="leading" secondItem="T4V-3f-NXl" secondAttribute="leading" id="ufD-Mo-AkW"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="announcemntTableView" destination="1Yf-OA-YE1" id="NmP-eV-iGl"/>
+                        <outlet property="my_tabBar" destination="4df-Eg-bip" id="rzV-ga-M8v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNg-wq-njL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3339" y="2960"/>
+        </scene>
+        <!--Behaviour-->
+        <scene sceneID="qnc-Rl-EZN">
+            <objects>
+                <viewController storyboardIdentifier="TeacherBehaviour" title="Behaviour" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ts3-gf-pdQ" customClass="AnnouncementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xO8-Wp-wUJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="IYO-OU-IXf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="inU-9g-feP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="rse-K5-aNU">
+                                <rect key="frame" x="0.0" y="514" width="320" height="49"/>
+                                <items>
+                                    <tabBarItem tag="2" title="Announcement" image="announcement_300rs.png" id="J96-co-fZp"/>
+                                    <tabBarItem tag="3" title="Attendance" image="attendance_30x30.png" id="9jx-pc-Tu4"/>
+                                    <tabBarItem tag="4" title="Behaviour" image="behaviour_500rs.png" id="blp-bI-taY"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D4U-mE-oUY">
+                                <rect key="frame" x="0.0" y="44" width="320" height="470"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IYO-OU-IXf" firstAttribute="top" secondItem="rse-K5-aNU" secondAttribute="bottom" constant="5" id="3U8-bK-4Mb"/>
+                            <constraint firstItem="D4U-mE-oUY" firstAttribute="top" secondItem="xO8-Wp-wUJ" secondAttribute="bottom" id="9Jj-AB-wRB"/>
+                            <constraint firstItem="D4U-mE-oUY" firstAttribute="leading" secondItem="inU-9g-feP" secondAttribute="leading" id="hwI-70-QST"/>
+                            <constraint firstItem="rse-K5-aNU" firstAttribute="leading" secondItem="inU-9g-feP" secondAttribute="leading" id="jrN-nv-Wm1"/>
+                            <constraint firstAttribute="trailing" secondItem="D4U-mE-oUY" secondAttribute="trailing" id="tmQ-eq-f1N"/>
+                            <constraint firstAttribute="trailing" secondItem="rse-K5-aNU" secondAttribute="trailing" id="wU4-pf-RLL"/>
+                            <constraint firstItem="rse-K5-aNU" firstAttribute="top" secondItem="D4U-mE-oUY" secondAttribute="bottom" id="xHC-LJ-maz"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="announcemntTableView" destination="D4U-mE-oUY" id="s98-mG-3XC"/>
+                        <outlet property="my_tabBar" destination="rse-K5-aNU" id="skk-ng-BsM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Z5-UU-w5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3988" y="2960"/>
         </scene>
     </scenes>
     <resources>
@@ -3933,9 +4064,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="tlM-rZ-ipK"/>
         <segue reference="HWc-rz-lyK"/>
-        <segue reference="jM9-g9-dwL"/>
-        <segue reference="icx-44-Q3F"/>
+        <segue reference="IkV-Pe-i9B"/>
         <segue reference="1fE-qR-r1T"/>
+        <segue reference="icx-44-Q3F"/>
         <segue reference="qAK-1H-dXw"/>
         <segue reference="hjP-jO-qyY"/>
         <segue reference="g5h-Gn-Itc"/>
