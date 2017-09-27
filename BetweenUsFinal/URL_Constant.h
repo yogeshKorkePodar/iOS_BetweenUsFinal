@@ -19,6 +19,3 @@
 //#define app_url @"http://115.124.127.238:8021/"
 
 #endif /* URL_Constant_h */
-
-// logout confirmation
-// send message response
