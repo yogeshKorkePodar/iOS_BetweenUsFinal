@@ -14,6 +14,8 @@
 #import "StudentDashboardWithoutSibling.h"
 #import "StudentDashboardWithSibling.h"
 #import "StudentProfileWithSiblingViewController.h"
+#import "TeacherProfileViewController.h"
+#import "TeacherProfileNoClassTeacherViewController.h"
 
 @interface LoginViewController () <RestAPIDelegate>
 @property (nonatomic, strong) RestAPI *restApi;
@@ -297,13 +299,7 @@
                                                    }
                         else if([roll_id isEqualToString:@"5"]){
                            // [self screenTappedOnceTeacher];
-                            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Sorry for inconvenience the App is under maintenance" preferredStyle:UIAlertControllerStyleAlert];
-                            
-                            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-                            [alertController addAction:ok];
-                            
-                            [self presentViewController:alertController animated:YES completion:nil];
-
+                            [self teacherDidLogin];
                         }
                         
                         else{
@@ -466,8 +462,6 @@
 
 -(void)parentDidLogin{
     
-    
-    
     NSLog(@"<< parentDidLogin");
     
     if (arraycount==1) {
@@ -485,11 +479,6 @@
         NSLog(@"Starting StudentDashboardWithSibling scene");
         //Starting StudentDashboardWithSibling scene
          StudentProfileWithSiblingViewController *SiblingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Sibling"];
-//        SiblingViewController.msd_id = msd_id;
-//        SiblingViewController.usl_id = usl_id;
-//        SiblingViewController.clt_id = clt_id;
-//        SiblingViewController.brdName = brd_name;
-//        SiblingViewController.schoolName = school_name;
         
         [ self.navigationController pushViewController:SiblingViewController animated:YES];
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
@@ -499,4 +488,20 @@
     
 }
 
+-(void) teacherDidLogin{
+    NSLog(@"<< teacherDidLogin");
+    
+    if([classTeacher isEqualToString:@"1"]){
+        TeacherProfileViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherProfile"];
+        [self.navigationController pushViewController:teacherProfileViewController animated:YES];
+    }
+    else if([classTeacher isEqualToString:@"0"]){
+        
+        TeacherProfileNoClassTeacherViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherNoClassProfile"];
+        [self.navigationController pushViewController:teacherProfileViewController animated:YES];
+        
+    }
+
+
+}
 @end

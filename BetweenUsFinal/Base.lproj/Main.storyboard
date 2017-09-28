@@ -3053,7 +3053,7 @@
         <!--class teacher-->
         <scene sceneID="Zuk-Bl-FhY">
             <objects>
-                <viewController storyboardIdentifier="ClassTeacherDashboard" title="class teacher" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LSK-oR-Yc8" customClass="StudentDashboardWithoutSibling" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherProfile" title="class teacher" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LSK-oR-Yc8" customClass="TeacherProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c00-gi-7Ha"/>
                         <viewControllerLayoutGuide type="bottom" id="Mwc-io-oiN"/>
@@ -3324,6 +3324,17 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="MessageClick" destination="Zpk-UR-slz" id="bxj-z4-ITJ"/>
+                        <outlet property="announcementClick" destination="XS1-1w-dcc" id="RA9-em-WeG"/>
+                        <outlet property="attendanceClick" destination="YCD-kF-uhk" id="gF7-7m-wyc"/>
+                        <outlet property="behaviourClick" destination="07F-5o-GtW" id="Vh7-UA-cKt"/>
+                        <outlet property="image_logo" destination="28W-sm-qPV" id="Cvb-Xs-iMa"/>
+                        <outlet property="schoolNameLabel" destination="MBX-Hi-zx1" id="0N3-uq-RtM"/>
+                        <outlet property="smsClick" destination="cUZ-hT-XZc" id="8es-UY-M3g"/>
+                        <outlet property="subjectListClick" destination="GHk-Py-xm1" id="lm7-CH-Ap6"/>
+                        <outlet property="teacherNameLabel" destination="7Mc-C8-Rmy" id="b1t-uG-YLd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oks-6u-FN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3332,7 +3343,7 @@
         <!--subject teacher-->
         <scene sceneID="u70-ex-fNX">
             <objects>
-                <viewController storyboardIdentifier="SubjectTeacherDashboard" title="subject teacher" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L8P-FW-hbF" customClass="StudentDashboardWithoutSibling" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherNoClassProfile" title="subject teacher" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L8P-FW-hbF" customClass="TeacherProfileNoClassTeacherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pqQ-BN-I2i"/>
                         <viewControllerLayoutGuide type="bottom" id="0Bd-0i-Q6Q"/>
@@ -3565,6 +3576,15 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="MessageClick" destination="um6-xS-HRl" id="dSK-Q9-COm"/>
+                        <outlet property="announcementClick" destination="Ug4-G5-juP" id="6sg-fy-5am"/>
+                        <outlet property="image_logo" destination="9qb-68-zMK" id="acQ-pD-Hwf"/>
+                        <outlet property="schoolNameLabel" destination="An9-uf-hUY" id="uzE-iB-N1F"/>
+                        <outlet property="smsClick" destination="JvN-hn-vc8" id="PHe-15-cAp"/>
+                        <outlet property="subjectListClick" destination="L5T-x3-uo0" id="iIU-oq-i7X"/>
+                        <outlet property="teacherNameLabel" destination="ylQ-Rj-fr2" id="10O-VG-W9a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkD-0G-gYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3770,6 +3790,26 @@
             </objects>
             <point key="canvasLocation" x="2016" y="3636"/>
         </scene>
+        <!--Subject List-->
+        <scene sceneID="4tf-VF-o87">
+            <objects>
+                <viewController title="Subject List" id="cTu-lI-w4U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lmv-Tb-1CN"/>
+                        <viewControllerLayoutGuide type="bottom" id="FhT-q7-PVw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hr4-jp-nae">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAq-jC-Jyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2679" y="3636"/>
+        </scene>
         <!--View Messages-->
         <scene sceneID="21C-Wf-pWx">
             <objects>
@@ -3884,7 +3924,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sus-Q6-eTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="3742"/>
+            <point key="canvasLocation" x="1202" y="3746"/>
         </scene>
         <!--Announcement-->
         <scene sceneID="5k2-el-cIl">
@@ -4062,13 +4102,13 @@
         <image name="topics.png" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tlM-rZ-ipK"/>
         <segue reference="HWc-rz-lyK"/>
-        <segue reference="IkV-Pe-i9B"/>
-        <segue reference="1fE-qR-r1T"/>
-        <segue reference="icx-44-Q3F"/>
-        <segue reference="qAK-1H-dXw"/>
+        <segue reference="tlM-rZ-ipK"/>
         <segue reference="hjP-jO-qyY"/>
+        <segue reference="qAK-1H-dXw"/>
         <segue reference="g5h-Gn-Itc"/>
+        <segue reference="8lg-S3-Oe0"/>
+        <segue reference="IkV-Pe-i9B"/>
+        <segue reference="mAp-jw-aEY"/>
     </inferredMetricsTieBreakers>
 </document>

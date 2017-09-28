@@ -321,15 +321,11 @@
         isStudentResourcePresent = [[NSUserDefaults standardUserDefaults]stringForKey:@"isStudenResourcePresent"];
         
         if([roll_id isEqualToString:@"6"]){
-            /*[_drawerView.std setText:drawerStd];
-            [_drawerView.academic_year setText:drawerAcademicYear];
-            [_drawerView.name setText:drawerName];
-            [_drawerView.rollNo setText:drawerRollNo];*/
-            [_drawerView.std setText:drawerStd];
+                      [_drawerView.std setText:drawerStd];
             [_drawerView.academic_year setText:drawerAcademicYear];
             [_drawerView.name setText:drawerName];
             [_drawerView.rollNo setText:drawerRollNo];
-            //isStudentResourcePresent = @"0";
+          
             //Non-sibling
             if([arraycount isEqualToString:@"1"]){
                 
@@ -369,6 +365,50 @@
                     [_drawerView.drawerTableView reloadData];
                     
                 }
+            }
+            
+        }
+        // Teacher role
+        else if([roll_id isEqualToString:@"5"]){
+            if([classTeacher isEqualToString:@"1"]){
+                if([teachershiftstdDiv isEqualToString:@"|| "]){
+                    [_drawerView.academic_year setText:drawerAcademicYear];
+                    [_drawerView.name setText:drawerName];
+                    [_drawerView.std setHidden:YES];
+                    [_drawerView.rollNo setHidden:YES];
+                    _drawerView.drawerStdConstraint.constant = 55;
+                }
+                else{
+                    [_drawerView.std setText:teachershiftstdDiv];
+                    [_drawerView.academic_year setText:drawerAcademicYear];
+                    [_drawerView.name setText:drawerName];
+                    [_drawerView.rollNo setHidden:YES];
+                    _drawerView.drawerStdConstraint.constant = 55;
+                }
+                drawerlabelData = [NSArray arrayWithObjects:@"Dashboard", @"Messages", @"SMS", @"Announcement",@"Attendance",@"Behaviour",@"Subject List",@"Setting",@"Sign Out",@"About", nil];
+                
+                drawerImage = [[NSMutableArray alloc] initWithObjects:@"studentdashboardicon.png",@"messageboxicon.png", @"sms_92x92.png",@"announcementicon_48x48.png",@"attendanceicon.png",@"behaviouricon_92x92.png",@"subjectlist_92x92.png",@"settingsicon.png",@"signouticon.png",@"aboutus_icon.png",nil];
+                [_drawerView.drawerTableView reloadData];
+            }
+            else if([classTeacher isEqualToString:@"0"]) {
+                if([teachershiftstdDiv isEqualToString:@"|| "]){
+                    [_drawerView.academic_year setText:drawerAcademicYear];
+                    [_drawerView.name setText:drawerName];
+                    [_drawerView.std setHidden:YES];
+                    [_drawerView.rollNo setHidden:YES];
+                    _drawerView.drawerStdConstraint.constant = 55;
+                }
+                else{
+                    [_drawerView.std setText:teachershiftstdDiv];
+                    [_drawerView.academic_year setText:drawerAcademicYear];
+                    [_drawerView.name setText:drawerName];
+                    [_drawerView.rollNo setHidden:YES];
+                    _drawerView.drawerStdConstraint.constant = 55;
+                }
+                drawerlabelData = [NSArray arrayWithObjects:@"Dashboard", @"Messages", @"SMS", @"Announcement",@"Subject List",@"Setting",@"Sign Out",@"About", nil];
+                
+                drawerImage = [[NSMutableArray alloc] initWithObjects:@"studentdashboardicon.png",@"messageboxicon.png", @"sms_92x92.png",@"announcementicon_48x48.png",@"subjectlist_92x92.png",@"settingsicon.png",@"signouticon.png",@"aboutus_icon.png",nil];
+                [_drawerView.drawerTableView reloadData];
             }
             
         }

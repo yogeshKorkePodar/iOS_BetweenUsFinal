@@ -99,6 +99,8 @@
 		D3201C601F4C4C55002E71FD /* BehaviourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3201C5F1F4C4C55002E71FD /* BehaviourViewController.m */; };
 		D3201C631F4C4C73002E71FD /* WriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3201C621F4C4C73002E71FD /* WriteMessageViewController.m */; };
 		D3201C661F4C4C8E002E71FD /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3201C651F4C4C8E002E71FD /* AnnouncementViewController.m */; };
+		D3203A5C1F7CB9BF00B55C4C /* TeacherProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A5B1F7CB9BF00B55C4C /* TeacherProfileViewController.m */; };
+		D3203A5F1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A5E1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m */; };
 		D3326E6E1F5D3AC3004AE998 /* StudentResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3326E6D1F5D3AC3004AE998 /* StudentResourcesViewController.m */; };
 		D3326E711F5D466C004AE998 /* CycleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3326E701F5D466C004AE998 /* CycleTest.m */; };
 		D3326E741F5D46E5004AE998 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = D3326E731F5D46E5004AE998 /* Subject.m */; };
@@ -328,6 +330,10 @@
 		D3201C621F4C4C73002E71FD /* WriteMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteMessageViewController.m; sourceTree = "<group>"; };
 		D3201C641F4C4C8E002E71FD /* AnnouncementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementViewController.h; sourceTree = "<group>"; };
 		D3201C651F4C4C8E002E71FD /* AnnouncementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnouncementViewController.m; sourceTree = "<group>"; };
+		D3203A5A1F7CB9BF00B55C4C /* TeacherProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherProfileViewController.h; sourceTree = "<group>"; };
+		D3203A5B1F7CB9BF00B55C4C /* TeacherProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherProfileViewController.m; sourceTree = "<group>"; };
+		D3203A5D1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherProfileNoClassTeacherViewController.h; sourceTree = "<group>"; };
+		D3203A5E1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherProfileNoClassTeacherViewController.m; sourceTree = "<group>"; };
 		D3326E6C1F5D3AC3004AE998 /* StudentResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentResourcesViewController.h; sourceTree = "<group>"; };
 		D3326E6D1F5D3AC3004AE998 /* StudentResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentResourcesViewController.m; sourceTree = "<group>"; };
 		D3326E6F1F5D466C004AE998 /* CycleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleTest.h; sourceTree = "<group>"; };
@@ -549,6 +555,10 @@
 		A5E4C0C51F28956000EEAA3B /* TeacherModule */ = {
 			isa = PBXGroup;
 			children = (
+				D3203A5A1F7CB9BF00B55C4C /* TeacherProfileViewController.h */,
+				D3203A5B1F7CB9BF00B55C4C /* TeacherProfileViewController.m */,
+				D3203A5D1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.h */,
+				D3203A5E1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m */,
 			);
 			name = TeacherModule;
 			sourceTree = "<group>";
@@ -579,81 +589,81 @@
 		D3076B591F270D4900E78694 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D3E09D561F78DB8B001F7093 /* sms_92x92.png */,
-				D3E09D541F78DB55001F7093 /* subjectlist_92x92.png */,
-				D3E09D521F78DB0C001F7093 /* behaviouricon_92x92.png */,
-				D31B0C951F67EF8D00A06BA9 /* white-menu-icon.png */,
-				D3DAAFF61F62681400B582DE /* videos.png */,
-				D3DAAFF41F6267E600B582DE /* audio.png */,
-				D3DAAFF21F6267AB00B582DE /* ppt1_32.png */,
-				D3DAAFF01F62677C00B582DE /* pdf_file_format_symbol.png */,
-				D3B36FB91F61513A00CB8B76 /* payfeesicon.png */,
-				D3B36FB71F614BE700CB8B76 /* drop_arrow_white.png */,
-				D3B36FB51F61465900CB8B76 /* topics.png */,
-				D3B36FB31F61464000CB8B76 /* subject.png */,
-				D3B36FB11F6142E900CB8B76 /* payment_history_64.png */,
-				D30D98491F5FB92600625144 /* announcementicon_48x48.png */,
-				D31D99A61F5946D200685886 /* podartree_highresolution_new.png */,
-				D3388FBF1F57E95F009DE47D /* msgsent.png */,
-				D3CA1CE21F53EC65008D08B0 /* attachment.png */,
-				D3E43F631F4EDE0F00515B0A /* dropdown_square_blue.png */,
+				A5EF1CC01F39C019007D3388 /* aboutus_icon.png */,
 				D3109DC91F46BCA000103696 /* announcement_300rs.png */,
-				D3109DCA1F46BCA000103696 /* behaviour_500rs.png */,
-				D3109DCB1F46BCA000103696 /* message_150rs.png */,
+				D30D98491F5FB92600625144 /* announcementicon_48x48.png */,
+				D3076B5A1F270DAF00E78694 /* appiconnew.jpg */,
+				D3CA1CE21F53EC65008D08B0 /* attachment.png */,
 				D3109DC71F46B98100103696 /* attendance_30x30.png */,
-				D37FFA751F45B0480017FDE8 /* dropdown_arrow_square.png */,
-				D37FFA731F45AFDB0017FDE8 /* dropdown_arrow_round.png */,
-				D37FFA711F45AEA10017FDE8 /* dropdown_arrow.png */,
-				D390BFF71F41667400E02247 /* Podar ORT.png */,
-				D390BFF81F41667400E02247 /* ICSE Logo 200x100 pix.png */,
-				D390BFF91F41667400E02247 /* CBSE Logo 200x100 pix (2).png */,
-				D390BFFA1F41667400E02247 /* PJK.png */,
+				A5ED70C21F304E5F00D35637 /* attendanceicon.png */,
+				D3DAAFF41F6267E600B582DE /* audio.png */,
+				D3109DCA1F46BCA000103696 /* behaviour_500rs.png */,
+				D3E09D521F78DB0C001F7093 /* behaviouricon_92x92.png */,
 				D390BFFB1F41667400E02247 /* CBSE Logo 200x100 pix (1).png */,
+				D390BFF91F41667400E02247 /* CBSE Logo 200x100 pix (2).png */,
 				D390BFFC1F41667400E02247 /* CBSE Logo 200x100 pix.png */,
 				D390BFFD1F41667400E02247 /* cbse_225x225.png */,
+				D3076B5B1F270DAF00E78694 /* Checked_Checkbox.png */,
 				D390BFFE1F41667400E02247 /* cie_250x100_old.png */,
 				D390BFFF1F41667400E02247 /* cie_250x100.png */,
+				A5ED70AE1F30398900D35637 /* colored_line.png */,
+				A5EF1CC21F39C798007D3388 /* drawer_92x92.png */,
+				D3B36FB71F614BE700CB8B76 /* drop_arrow_white.png */,
+				D37FFA731F45AFDB0017FDE8 /* dropdown_arrow_round.png */,
+				D37FFA751F45B0480017FDE8 /* dropdown_arrow_square.png */,
+				D37FFA711F45AEA10017FDE8 /* dropdown_arrow.png */,
+				D3E43F631F4EDE0F00515B0A /* dropdown_square_blue.png */,
+				A5EBC53E1F29B4B6006F1232 /* email_icon_25px2.png */,
+				A5ED70B01F303BE300D35637 /* feesonlineicon.png */,
 				D390C0001F41667400E02247 /* ib_250x100.png */,
+				D37FFA651F456D2D0017FDE8 /* Icon-76.png */,
+				A5E4C0BD1F2875A000EEAA3B /* IconPassword.png */,
+				A5E4C0BE1F2875A000EEAA3B /* IconUsername.png */,
+				D390BFF81F41667400E02247 /* ICSE Logo 200x100 pix.png */,
 				D390C0011F41667400E02247 /* icse_225x225.png */,
 				D390C0021F41667400E02247 /* jumbokids_184x184.png */,
 				D390C0031F41667400E02247 /* lilavati_250x125.png */,
 				D390C0041F41667400E02247 /* logo1.jpg */,
 				D390C0051F41667400E02247 /* logo2.jpg */,
 				D390C0061F41667400E02247 /* logo3.jpg */,
+				A55D3EAC1F331FA000E5343C /* menu_image.png */,
+				D3109DCB1F46BCA000103696 /* message_150rs.png */,
+				A5ED70C01F3044F100D35637 /* messageboxicon.png */,
+				A5EBC53A1F29AE82006F1232 /* mobile_icon_25px.png */,
+				D3388FBF1F57E95F009DE47D /* msgsent.png */,
+				A5ED70B11F303BE300D35637 /* parentinfoicon.png */,
+				D3076B5C1F270DAF00E78694 /* password_icon.png */,
+				D3B36FB91F61513A00CB8B76 /* payfeesicon.png */,
+				D3B36FB11F6142E900CB8B76 /* payment_history_64.png */,
+				D3DAAFF01F62677C00B582DE /* pdf_file_format_symbol.png */,
 				D390C0071F41667400E02247 /* pic_225x225.png */,
+				D390BFFA1F41667400E02247 /* PJK.png */,
+				D390BFF71F41667400E02247 /* Podar ORT.png */,
+				A5ED70C61F3054E900D35637 /* podar_international_school.jpg */,
 				D390C0081F41667400E02247 /* podarort_225x225.png */,
+				D31D99A61F5946D200685886 /* podartree_highresolution_new.png */,
+				D3DAAFF21F6267AB00B582DE /* ppt1_32.png */,
+				A5EF1CC41F39C7AE007D3388 /* profilepicture.png */,
 				D390C0091F41667400E02247 /* pwc_225x225.png */,
 				D390C00A1F41667400E02247 /* pws_300x95.png */,
-				D390C00B1F41667400E02247 /* rnpodar_225x100.png */,
-				D390C00C1F41667400E02247 /* ssc_250x100.png */,
-				A5EF1CC41F39C7AE007D3388 /* profilepicture.png */,
-				A5EF1CC21F39C798007D3388 /* drawer_92x92.png */,
-				A5EF1CC01F39C019007D3388 /* aboutus_icon.png */,
-				A55D3EAC1F331FA000E5343C /* menu_image.png */,
-				A5ED70C61F3054E900D35637 /* podar_international_school.jpg */,
-				A5ED70C21F304E5F00D35637 /* attendanceicon.png */,
-				A5ED70C01F3044F100D35637 /* messageboxicon.png */,
-				A5ED70B01F303BE300D35637 /* feesonlineicon.png */,
-				A5ED70B11F303BE300D35637 /* parentinfoicon.png */,
 				A5ED70B21F303BE300D35637 /* resourcesicon.png */,
-				D37FFA651F456D2D0017FDE8 /* Icon-76.png */,
-				A5E7D9FD1F343DCF0086C54E /* siblingicon.png */,
+				D390C00B1F41667400E02247 /* rnpodar_225x100.png */,
+				A5ED066B1F2F4D1D00FEE34B /* seperator_colored_line.jpg */,
 				A5ED70B31F303BE300D35637 /* settingsicon.png */,
 				A5ED70B41F303BE300D35637 /* shikshankiticon.png */,
+				A5E7D9FD1F343DCF0086C54E /* siblingicon.png */,
 				A5ED70B61F303BE300D35637 /* signouticon.png */,
-				A5ED70B71F303BE300D35637 /* studentdashboardicon.png */,
-				A5ED70AE1F30398900D35637 /* colored_line.png */,
-				A5ED066B1F2F4D1D00FEE34B /* seperator_colored_line.jpg */,
-				A5EBC53E1F29B4B6006F1232 /* email_icon_25px2.png */,
-				A5EBC53A1F29AE82006F1232 /* mobile_icon_25px.png */,
-				A5E4C0BD1F2875A000EEAA3B /* IconPassword.png */,
-				A5E4C0BE1F2875A000EEAA3B /* IconUsername.png */,
-				D3076B5A1F270DAF00E78694 /* appiconnew.jpg */,
-				D3076B5B1F270DAF00E78694 /* Checked_Checkbox.png */,
-				D3076B5C1F270DAF00E78694 /* password_icon.png */,
+				D3E09D561F78DB8B001F7093 /* sms_92x92.png */,
 				D3076B5D1F270DAF00E78694 /* splashscreen_new.png */,
+				D390C00C1F41667400E02247 /* ssc_250x100.png */,
+				A5ED70B71F303BE300D35637 /* studentdashboardicon.png */,
+				D3B36FB31F61464000CB8B76 /* subject.png */,
+				D3E09D541F78DB55001F7093 /* subjectlist_92x92.png */,
+				D3B36FB51F61465900CB8B76 /* topics.png */,
 				D3076B5E1F270DAF00E78694 /* Unchecked_Checkbox.png */,
 				D3076B5F1F270DAF00E78694 /* user_icon_new.png */,
+				D3DAAFF61F62681400B582DE /* videos.png */,
+				D31B0C951F67EF8D00A06BA9 /* white-menu-icon.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -1052,6 +1062,7 @@
 				D3109DD71F46E6E800103696 /* ViewAttendanceViewController.m in Sources */,
 				D30028F01F66A835004886FC /* AttendHistory.m in Sources */,
 				D30D98571F5FD06100625144 /* ParentInfoStudent.m in Sources */,
+				D3203A5F1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m in Sources */,
 				D30028DF1F666D41004886FC /* AttendanceTableViewCell.m in Sources */,
 				D30028EA1F66A296004886FC /* AbsentHistoryViewController.m in Sources */,
 				A5EE4E721F2B0725009C9F05 /* MBProgressHUD.m in Sources */,
@@ -1089,6 +1100,7 @@
 				D3CA1CDA1F53CBFE008D08B0 /* MessageTableViewCell.m in Sources */,
 				A5EF1CAD1F3991CB007D3388 /* DrawerIphoneTableViewCell.m in Sources */,
 				D39D3F7D1F48192200232635 /* ParentTabController.m in Sources */,
+				D3203A5C1F7CB9BF00B55C4C /* TeacherProfileViewController.m in Sources */,
 				D3036DD01F4D5E3B0092B142 /* AboutUsViewController.m in Sources */,
 				D3326E711F5D466C004AE998 /* CycleTest.m in Sources */,
 				D3F7B4441F1A1806005FBFE8 /* main.m in Sources */,
