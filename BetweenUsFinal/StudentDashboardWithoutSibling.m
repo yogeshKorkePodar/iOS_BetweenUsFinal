@@ -118,8 +118,6 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
-//    self.ViewAboveScrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"podartree_highresolution_new.png"]];
-   // _scrollViewForContent.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"podartree_highresolution_new.png"]];
     firstWebcall = YES;
     self.restApi.delegate = self;
     

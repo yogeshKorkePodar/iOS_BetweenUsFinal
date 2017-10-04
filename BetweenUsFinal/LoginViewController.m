@@ -51,6 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.navigationController setNavigationBarHidden:YES animated:YES];
    
     username = @"";
@@ -277,9 +278,7 @@
                             [[NSUserDefaults standardUserDefaults] setObject:classTeacher forKey:@"classTeacher"];
                             [[NSUserDefaults standardUserDefaults] synchronize];
                             
-                            //NSLog(@"MSD Idself:%@",self.msd_id);
-                            //NSLog(@"MSD Id:%@",_item.msd_ID);
-                            
+                                                        
                         }
                     }
                     
@@ -471,8 +470,14 @@
         StudentDashboardWithoutSibling *studentDashboardWithoutSibling = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDashboardWithoutSibling"];
         
         [ self.navigationController pushViewController:studentDashboardWithoutSibling animated:YES];
-          self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
+          [self.navigationController setNavigationBarHidden:NO animated:YES];
+//          self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+//        
+//        navController.navigationBar.barTintColor = [UIColor blackColor];
+//        [navController.navigationBar setTitleTextAttributes:
+//         @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
        
     } else {
         
@@ -481,9 +486,10 @@
          StudentProfileWithSiblingViewController *SiblingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Sibling"];
         
         [ self.navigationController pushViewController:SiblingViewController animated:YES];
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-         [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
 
+//        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        
     }
     
 }
@@ -494,13 +500,22 @@
     if([classTeacher isEqualToString:@"1"]){
         TeacherProfileViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherProfile"];
         [self.navigationController pushViewController:teacherProfileViewController animated:YES];
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+
+//        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+
     }
     else if([classTeacher isEqualToString:@"0"]){
         
         TeacherProfileNoClassTeacherViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherNoClassProfile"];
         [self.navigationController pushViewController:teacherProfileViewController animated:YES];
-        
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+
+//        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+
     }
+    
+    
 
 
 }

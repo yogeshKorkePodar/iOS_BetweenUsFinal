@@ -101,6 +101,13 @@
 		D3201C661F4C4C8E002E71FD /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3201C651F4C4C8E002E71FD /* AnnouncementViewController.m */; };
 		D3203A5C1F7CB9BF00B55C4C /* TeacherProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A5B1F7CB9BF00B55C4C /* TeacherProfileViewController.m */; };
 		D3203A5F1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A5E1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m */; };
+		D3203A661F7CF7EB00B55C4C /* NavigationMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A651F7CF7EB00B55C4C /* NavigationMenuButton.m */; };
+		D3203A691F7E140500B55C4C /* TeacherSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A681F7E140500B55C4C /* TeacherSMSViewController.m */; };
+		D3203A6C1F7E142F00B55C4C /* TeacherAnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A6B1F7E142F00B55C4C /* TeacherAnnouncementViewController.m */; };
+		D3203A6F1F7E146300B55C4C /* TeacherAttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A6E1F7E146300B55C4C /* TeacherAttendanceViewController.m */; };
+		D3203A721F7E149300B55C4C /* TeacherBehaviourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A711F7E149300B55C4C /* TeacherBehaviourViewController.m */; };
+		D3203A751F7E15EB00B55C4C /* TeacherSubjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A741F7E15EB00B55C4C /* TeacherSubjectListViewController.m */; };
+		D3203A781F7E187600B55C4C /* TeacherMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3203A771F7E187600B55C4C /* TeacherMessageViewController.m */; };
 		D3326E6E1F5D3AC3004AE998 /* StudentResourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3326E6D1F5D3AC3004AE998 /* StudentResourcesViewController.m */; };
 		D3326E711F5D466C004AE998 /* CycleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D3326E701F5D466C004AE998 /* CycleTest.m */; };
 		D3326E741F5D46E5004AE998 /* Subject.m in Sources */ = {isa = PBXBuildFile; fileRef = D3326E731F5D46E5004AE998 /* Subject.m */; };
@@ -137,7 +144,6 @@
 		D390C0221F41667400E02247 /* ssc_250x100.png in Resources */ = {isa = PBXBuildFile; fileRef = D390C00C1F41667400E02247 /* ssc_250x100.png */; };
 		D390C0251F416C0E00E02247 /* ViewMessageResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D390C0241F416C0E00E02247 /* ViewMessageResult.m */; };
 		D39D3F7D1F48192200232635 /* ParentTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = D39D3F7C1F48192200232635 /* ParentTabController.m */; };
-		D39D3F801F48194200232635 /* MenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D39D3F7F1F48194200232635 /* MenuButton.m */; };
 		D3A5A4041F275597004DC01D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A5A4031F275597004DC01D /* LoginViewController.m */; };
 		D3B36FB21F6142EA00CB8B76 /* payment_history_64.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B36FB11F6142E900CB8B76 /* payment_history_64.png */; };
 		D3B36FB41F61464000CB8B76 /* subject.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B36FB31F61464000CB8B76 /* subject.png */; };
@@ -334,6 +340,20 @@
 		D3203A5B1F7CB9BF00B55C4C /* TeacherProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherProfileViewController.m; sourceTree = "<group>"; };
 		D3203A5D1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherProfileNoClassTeacherViewController.h; sourceTree = "<group>"; };
 		D3203A5E1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherProfileNoClassTeacherViewController.m; sourceTree = "<group>"; };
+		D3203A641F7CF7EB00B55C4C /* NavigationMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMenuButton.h; sourceTree = "<group>"; };
+		D3203A651F7CF7EB00B55C4C /* NavigationMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMenuButton.m; sourceTree = "<group>"; };
+		D3203A671F7E140500B55C4C /* TeacherSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherSMSViewController.h; sourceTree = "<group>"; };
+		D3203A681F7E140500B55C4C /* TeacherSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherSMSViewController.m; sourceTree = "<group>"; };
+		D3203A6A1F7E142F00B55C4C /* TeacherAnnouncementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherAnnouncementViewController.h; sourceTree = "<group>"; };
+		D3203A6B1F7E142F00B55C4C /* TeacherAnnouncementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherAnnouncementViewController.m; sourceTree = "<group>"; };
+		D3203A6D1F7E146300B55C4C /* TeacherAttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherAttendanceViewController.h; sourceTree = "<group>"; };
+		D3203A6E1F7E146300B55C4C /* TeacherAttendanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherAttendanceViewController.m; sourceTree = "<group>"; };
+		D3203A701F7E149300B55C4C /* TeacherBehaviourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherBehaviourViewController.h; sourceTree = "<group>"; };
+		D3203A711F7E149300B55C4C /* TeacherBehaviourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherBehaviourViewController.m; sourceTree = "<group>"; };
+		D3203A731F7E15EB00B55C4C /* TeacherSubjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherSubjectListViewController.h; sourceTree = "<group>"; };
+		D3203A741F7E15EB00B55C4C /* TeacherSubjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherSubjectListViewController.m; sourceTree = "<group>"; };
+		D3203A761F7E187600B55C4C /* TeacherMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherMessageViewController.h; sourceTree = "<group>"; };
+		D3203A771F7E187600B55C4C /* TeacherMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherMessageViewController.m; sourceTree = "<group>"; };
 		D3326E6C1F5D3AC3004AE998 /* StudentResourcesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentResourcesViewController.h; sourceTree = "<group>"; };
 		D3326E6D1F5D3AC3004AE998 /* StudentResourcesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentResourcesViewController.m; sourceTree = "<group>"; };
 		D3326E6F1F5D466C004AE998 /* CycleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleTest.h; sourceTree = "<group>"; };
@@ -379,8 +399,6 @@
 		D390C0241F416C0E00E02247 /* ViewMessageResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewMessageResult.m; sourceTree = "<group>"; };
 		D39D3F7B1F48192200232635 /* ParentTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentTabController.h; sourceTree = "<group>"; };
 		D39D3F7C1F48192200232635 /* ParentTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentTabController.m; sourceTree = "<group>"; };
-		D39D3F7E1F48194200232635 /* MenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuButton.h; sourceTree = "<group>"; };
-		D39D3F7F1F48194200232635 /* MenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuButton.m; sourceTree = "<group>"; };
 		D3A5A4021F275597004DC01D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D3A5A4031F275597004DC01D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D3B36FB11F6142E900CB8B76 /* payment_history_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = payment_history_64.png; sourceTree = "<group>"; };
@@ -559,6 +577,18 @@
 				D3203A5B1F7CB9BF00B55C4C /* TeacherProfileViewController.m */,
 				D3203A5D1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.h */,
 				D3203A5E1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m */,
+				D3203A671F7E140500B55C4C /* TeacherSMSViewController.h */,
+				D3203A681F7E140500B55C4C /* TeacherSMSViewController.m */,
+				D3203A6A1F7E142F00B55C4C /* TeacherAnnouncementViewController.h */,
+				D3203A6B1F7E142F00B55C4C /* TeacherAnnouncementViewController.m */,
+				D3203A6D1F7E146300B55C4C /* TeacherAttendanceViewController.h */,
+				D3203A6E1F7E146300B55C4C /* TeacherAttendanceViewController.m */,
+				D3203A701F7E149300B55C4C /* TeacherBehaviourViewController.h */,
+				D3203A711F7E149300B55C4C /* TeacherBehaviourViewController.m */,
+				D3203A731F7E15EB00B55C4C /* TeacherSubjectListViewController.h */,
+				D3203A741F7E15EB00B55C4C /* TeacherSubjectListViewController.m */,
+				D3203A761F7E187600B55C4C /* TeacherMessageViewController.h */,
+				D3203A771F7E187600B55C4C /* TeacherMessageViewController.m */,
 			);
 			name = TeacherModule;
 			sourceTree = "<group>";
@@ -577,8 +607,6 @@
 				D3A5A4031F275597004DC01D /* LoginViewController.m */,
 				A5E4C0C81F28960300EEAA3B /* ForgotPasswordViewController.h */,
 				A5E4C0C91F28960300EEAA3B /* ForgotPasswordViewController.m */,
-				D39D3F7E1F48194200232635 /* MenuButton.h */,
-				D39D3F7F1F48194200232635 /* MenuButton.m */,
 				D3036DCE1F4D5E3B0092B142 /* AboutUsViewController.h */,
 				D3036DCF1F4D5E3B0092B142 /* AboutUsViewController.m */,
 				D3DA3CED1F6A4CAE006C2A5A /* URL_Constant.h */,
@@ -691,6 +719,8 @@
 				A5E4C0BA1F28593100EEAA3B /* CustomIOSAlertView.m */,
 				A5E4C0B61F28579D00EEAA3B /* Reachability.h */,
 				A5E4C0B71F28579D00EEAA3B /* Reachability.m */,
+				D3203A641F7CF7EB00B55C4C /* NavigationMenuButton.h */,
+				D3203A651F7CF7EB00B55C4C /* NavigationMenuButton.m */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1044,10 +1074,12 @@
 				A5E7D9FC1F34370B0086C54E /* StudentDashboardWithSibling.m in Sources */,
 				D30D98561F5FD06100625144 /* ParentInfoState.m in Sources */,
 				D3201C631F4C4C73002E71FD /* WriteMessageViewController.m in Sources */,
+				D3203A691F7E140500B55C4C /* TeacherSMSViewController.m in Sources */,
 				D30028DC1F665161004886FC /* BehavioursResult.m in Sources */,
 				D30D98541F5FD06100625144 /* ParentInfocity.m in Sources */,
+				D3203A661F7CF7EB00B55C4C /* NavigationMenuButton.m in Sources */,
 				D315525E1F5AC0480016EED9 /* StudentProfileWithSiblingViewController.m in Sources */,
-				D39D3F801F48194200232635 /* MenuButton.m in Sources */,
+				D3203A751F7E15EB00B55C4C /* TeacherSubjectListViewController.m in Sources */,
 				D3F7B44A1F1A1806005FBFE8 /* ViewController.m in Sources */,
 				A5ED70CA1F305B1C00D35637 /* StudentDashboardWithoutSibling.m in Sources */,
 				D315525B1F5ABFCA0016EED9 /* SiblingStudentViewController.m in Sources */,
@@ -1075,6 +1107,7 @@
 				D3CE48C01F5E97BC00D68CF6 /* RecipentResult2.m in Sources */,
 				D30D98551F5FD06100625144 /* ParentInfoCountyList.m in Sources */,
 				A5EE4E6F1F2B04B1009C9F05 /* userListDetails.m in Sources */,
+				D3203A781F7E187600B55C4C /* TeacherMessageViewController.m in Sources */,
 				D3109DDA1F46E79800103696 /* StudentInformationViewController.m in Sources */,
 				D30D98481F5FB29600625144 /* AnnouncementResult2.m in Sources */,
 				D3388FBA1F57C721009DE47D /* DetailMessageViewController.m in Sources */,
@@ -1103,6 +1136,9 @@
 				D3203A5C1F7CB9BF00B55C4C /* TeacherProfileViewController.m in Sources */,
 				D3036DD01F4D5E3B0092B142 /* AboutUsViewController.m in Sources */,
 				D3326E711F5D466C004AE998 /* CycleTest.m in Sources */,
+				D3203A6C1F7E142F00B55C4C /* TeacherAnnouncementViewController.m in Sources */,
+				D3203A6F1F7E146300B55C4C /* TeacherAttendanceViewController.m in Sources */,
+				D3203A721F7E149300B55C4C /* TeacherBehaviourViewController.m in Sources */,
 				D3F7B4441F1A1806005FBFE8 /* main.m in Sources */,
 				A5E4C0B81F28579D00EEAA3B /* Reachability.m in Sources */,
 				A5EF1CBA1F399691007D3388 /* stundentListDetails.m in Sources */,

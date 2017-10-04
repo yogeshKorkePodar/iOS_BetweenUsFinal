@@ -1,35 +1,22 @@
 //
-//  TeacherProfileNoClassTeacherViewController.m
+//  TeacherMessageViewController.m
 //  BetweenUs
 //
-//  Created by podar on 28/09/17.
+//  Created by podar on 29/09/17.
 //  Copyright © 2017 podar. All rights reserved.
 //
 
-#import "TeacherProfileNoClassTeacherViewController.h"
-#import "NavigationMenuButton.h"
+#import "TeacherMessageViewController.h"
 
-@interface TeacherProfileNoClassTeacherViewController ()
+@interface TeacherMessageViewController ()
 
 @end
 
-@implementation TeacherProfileNoClassTeacherViewController
+@implementation TeacherMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.hidesBackButton = NO;
-    self.rootNav = (CCKFNavDrawer *)self.navigationController;
-    [self.rootNav setCCKFNavDrawerDelegate:self];
-    
-    self.navigationItem.leftBarButtonItem = [NavigationMenuButton addNavigationMenuButton:self];
-
-}
-
-
--(void) buttonAction{
-    NSLog(@"Navigation bar button clicked!");
-    [self.rootNav drawerToggle];
 }
 
 - (void)didReceiveMemoryWarning {

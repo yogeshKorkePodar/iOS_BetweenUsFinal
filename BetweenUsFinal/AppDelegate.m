@@ -250,12 +250,7 @@ NSString *alert,*classTeacher;
      }
     if (usl_id==nil) {
         NSLog(@"<Starting Login scene");
-        //Starting StudentDashboardWithSibling scene
-        
-      //  LoginViewController *loginViewController = [[LoginViewController alloc] init];
-       // UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-       // [self.window.rootViewController presentViewController:navCon animated:YES completion:nil];
-        
+     
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                                  bundle: nil];
         LoginViewController *controller = (LoginViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"Login"];
@@ -265,9 +260,8 @@ NSString *alert,*classTeacher;
         navController.navigationBar.barTintColor = [UIColor blackColor];
         [navController.navigationBar setTitleTextAttributes:
          @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+       // [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
         self.window.rootViewController = navController;
-
 
     }
     else if([roll_id isEqualToString:@"6"]) {

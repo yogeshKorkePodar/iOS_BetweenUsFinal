@@ -273,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="280.98591549295776"/>
+            <point key="canvasLocation" x="726" y="281"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="s1g-Fa-i23">
@@ -3593,7 +3593,7 @@
         <!--View Messages-->
         <scene sceneID="ckB-fS-dNe">
             <objects>
-                <viewController storyboardIdentifier="TeacherWriteMessage" title="View Messages" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2oR-8Z-lJE" customClass="ViewMessageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherViewMessage" title="View Messages" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2oR-8Z-lJE" customClass="TeacherMessageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T5w-Pr-WH4"/>
                         <viewControllerLayoutGuide type="bottom" id="8jx-kB-hgf"/>
@@ -3793,7 +3793,7 @@
         <!--Subject List-->
         <scene sceneID="4tf-VF-o87">
             <objects>
-                <viewController title="Subject List" id="cTu-lI-w4U" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherSubjectList" title="Subject List" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cTu-lI-w4U" customClass="TeacherSubjectListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lmv-Tb-1CN"/>
                         <viewControllerLayoutGuide type="bottom" id="FhT-q7-PVw"/>
@@ -3909,7 +3909,7 @@
         <!--SMS-->
         <scene sceneID="Ma6-pF-n16">
             <objects>
-                <viewController title="SMS" id="h4m-ys-OKq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherSMS" title="SMS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h4m-ys-OKq" customClass="TeacherSMSViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J1r-Tb-40T"/>
                         <viewControllerLayoutGuide type="bottom" id="vrR-ha-HXh"/>
@@ -3929,7 +3929,7 @@
         <!--Announcement-->
         <scene sceneID="5k2-el-cIl">
             <objects>
-                <viewController storyboardIdentifier="TeacherAnnouncement" title="Announcement" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CkI-gb-O1f" customClass="AnnouncementViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherAnnouncement" title="Announcement" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CkI-gb-O1f" customClass="TeacherAnnouncementViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ttn-l6-tPa"/>
                         <viewControllerLayoutGuide type="bottom" id="kAx-Hy-wXb"/>
@@ -3976,7 +3976,7 @@
         <!--Attendance-->
         <scene sceneID="G0d-9k-2rM">
             <objects>
-                <viewController storyboardIdentifier="TeacherAttendance" title="Attendance" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FSy-Iu-HQL" customClass="AnnouncementViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherAttendance" title="Attendance" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FSy-Iu-HQL" customClass="TeacherAttendanceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eAe-Fu-3vI"/>
                         <viewControllerLayoutGuide type="bottom" id="KSa-0E-T0z"/>
@@ -4023,7 +4023,7 @@
         <!--Behaviour-->
         <scene sceneID="qnc-Rl-EZN">
             <objects>
-                <viewController storyboardIdentifier="TeacherBehaviour" title="Behaviour" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ts3-gf-pdQ" customClass="AnnouncementViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeacherBehaviour" title="Behaviour" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ts3-gf-pdQ" customClass="TeacherBehaviourViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xO8-Wp-wUJ"/>
                         <viewControllerLayoutGuide type="bottom" id="IYO-OU-IXf"/>
@@ -4104,11 +4104,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="HWc-rz-lyK"/>
         <segue reference="tlM-rZ-ipK"/>
-        <segue reference="hjP-jO-qyY"/>
-        <segue reference="qAK-1H-dXw"/>
+        <segue reference="JlC-pr-Ap2"/>
         <segue reference="g5h-Gn-Itc"/>
-        <segue reference="8lg-S3-Oe0"/>
-        <segue reference="IkV-Pe-i9B"/>
+        <segue reference="qAK-1H-dXw"/>
         <segue reference="mAp-jw-aEY"/>
+        <segue reference="jM9-g9-dwL"/>
+        <segue reference="1fE-qR-r1T"/>
     </inferredMetricsTieBreakers>
 </document>

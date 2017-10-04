@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCKFNavDrawer.h"
 #import "Reachability.h"
 #import "MKNumberBadgeView.h"
-@interface TeacherProfileNoClassTeacherViewController : UIViewController
+@interface TeacherProfileNoClassTeacherViewController : UIViewController<CCKFNavDrawerDelegate>
 {
     NSString *device;
     Reachability* internetReachable;
@@ -21,6 +22,7 @@
     NSMutableArray *unreadMessage,*unreadAnnouncement,*announcementReadCount,*messageReadCount,*messageReadCountWithNoInternet,*announcementReadCountWithNoInternet;
 }
 
+@property(strong, nonatomic) CCKFNavDrawer *rootNav;
 @property (retain) MKNumberBadgeView* badgeCount;
 @property BOOL internetActive;
 @property BOOL hostActive;
