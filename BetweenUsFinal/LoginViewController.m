@@ -132,6 +132,10 @@
 //        username = @"varshalipratham@gmail.com";
 //        password = @"pratham";
         
+        username = @"it.testteacher1@podar.org";
+        password = @"india";
+
+        
         //Checking for null values
         if ([username isEqualToString:@""]) {
             NSLog(@"Null Username");

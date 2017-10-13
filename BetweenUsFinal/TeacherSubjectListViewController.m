@@ -7,7 +7,7 @@
 //
 
 #import "TeacherSubjectListViewController.h"
-
+#import "NavigationMenuButton.h"
 @interface TeacherSubjectListViewController ()
 
 @end
@@ -16,7 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationItem.hidesBackButton = NO;
+    self.rootNav = (CCKFNavDrawer *)self.navigationController;
+    [self.rootNav setCCKFNavDrawerDelegate:self];
+    
+    self.navigationItem.leftBarButtonItem = [NavigationMenuButton addNavigationMenuButton:self];
+    
+}
+
+
+-(void) buttonAction{
+    NSLog(@"Navigation bar button clicked!");
+    [self.rootNav drawerToggle];
 }
 
 - (void)didReceiveMemoryWarning {

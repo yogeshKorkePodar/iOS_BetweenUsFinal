@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCKFNavDrawer.h"
 
-@interface TeacherSMSViewController : UIViewController
+@interface TeacherSMSViewController : UIViewController<CCKFNavDrawerDelegate>{
+    
+}
 
+@property(strong, nonatomic) CCKFNavDrawer *rootNav;
 @end

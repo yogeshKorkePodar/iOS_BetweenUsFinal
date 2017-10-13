@@ -7,6 +7,9 @@
 //
 
 #import "TeacherAnnouncementViewController.h"
+#import "TeacherAttendanceViewController.h"
+#import "TeacherBehaviourViewController.h"
+#import "NavigationMenuButton.h"
 
 @interface TeacherAnnouncementViewController ()
 
@@ -16,7 +19,54 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationItem.hidesBackButton = NO;
+    self.rootNav = (CCKFNavDrawer *)self.navigationController;
+    [self.rootNav setCCKFNavDrawerDelegate:self];
+    
+    self.navigationItem.leftBarButtonItem = [NavigationMenuButton addNavigationMenuButton:self];
+    
+    _my_tabBar.delegate = self;
+    _my_tabBar.selectedItem = [_my_tabBar.items objectAtIndex:0];
+
+    
+}
+
+
+-(void) buttonAction{
+    NSLog(@"Navigation bar button clicked!");
+    [self.rootNav drawerToggle];
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    
+    if(item.tag==1)
+    {
+        NSLog(@"First tab selected");
+        TeacherAnnouncementViewController *TeacherAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAnnouncement"];
+            [self.navigationController pushViewController:TeacherAnnouncementViewController animated:NO];
+        
+    }
+    else if(item.tag==2)
+        
+    {
+        NSLog(@"Second tab selected");
+        
+        TeacherAttendanceViewController *TeacherAttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAttendance"];
+             [self.navigationController pushViewController:TeacherAttendanceViewController animated:NO];
+        
+    }
+    else if(item.tag==3)
+        
+    {
+        NSLog(@"Third tab selected");
+        TeacherBehaviourViewController *TeacherBehaviourViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherBehaviour"];
+               [self.navigationController pushViewController:TeacherBehaviourViewController animated:NO];
+               
+        
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

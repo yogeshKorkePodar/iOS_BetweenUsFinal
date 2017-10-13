@@ -3941,9 +3941,9 @@
                             <tabBar contentMode="scaleToFill" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="Mu1-CG-gse">
                                 <rect key="frame" x="0.0" y="514" width="320" height="49"/>
                                 <items>
-                                    <tabBarItem tag="2" title="Announcement" image="announcement_300rs.png" id="6Uc-oR-Bvy"/>
-                                    <tabBarItem tag="3" title="Attendance" image="attendance_30x30.png" id="8Tv-MB-Wjd"/>
-                                    <tabBarItem tag="4" title="Behaviour" image="behaviour_500rs.png" id="VVl-JR-pZe"/>
+                                    <tabBarItem tag="1" title="Announcement" image="announcement_300rs.png" id="6Uc-oR-Bvy"/>
+                                    <tabBarItem tag="2" title="Attendance" image="attendance_30x30.png" id="8Tv-MB-Wjd"/>
+                                    <tabBarItem tag="3" title="Behaviour" image="behaviour_500rs.png" id="VVl-JR-pZe"/>
                                 </items>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E0j-EX-1w2">
@@ -3965,8 +3965,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="announcemntTableView" destination="E0j-EX-1w2" id="Ps1-lv-gG7"/>
-                        <outlet property="my_tabBar" destination="Mu1-CG-gse" id="Gal-y7-EsV"/>
+                        <outlet property="my_tabBar" destination="Mu1-CG-gse" id="Efj-iW-wEt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmg-fr-ClO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3988,9 +3987,9 @@
                             <tabBar contentMode="scaleToFill" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="4df-Eg-bip">
                                 <rect key="frame" x="0.0" y="514" width="320" height="49"/>
                                 <items>
-                                    <tabBarItem tag="2" title="Announcement" image="announcement_300rs.png" id="lTA-sz-oqI"/>
-                                    <tabBarItem tag="3" title="Attendance" image="attendance_30x30.png" id="ljo-nJ-UgR"/>
-                                    <tabBarItem tag="4" title="Behaviour" image="behaviour_500rs.png" id="YFM-iB-zMD"/>
+                                    <tabBarItem tag="1" title="Announcement" image="announcement_300rs.png" id="lTA-sz-oqI"/>
+                                    <tabBarItem tag="2" title="Attendance" image="attendance_30x30.png" id="ljo-nJ-UgR"/>
+                                    <tabBarItem tag="3" title="Behaviour" image="behaviour_500rs.png" id="YFM-iB-zMD"/>
                                 </items>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Yf-OA-YE1">
@@ -4012,8 +4011,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="announcemntTableView" destination="1Yf-OA-YE1" id="NmP-eV-iGl"/>
-                        <outlet property="my_tabBar" destination="4df-Eg-bip" id="rzV-ga-M8v"/>
+                        <outlet property="my_tabBar" destination="4df-Eg-bip" id="HQt-e4-wQg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNg-wq-njL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4035,9 +4033,9 @@
                             <tabBar contentMode="scaleToFill" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="rse-K5-aNU">
                                 <rect key="frame" x="0.0" y="514" width="320" height="49"/>
                                 <items>
-                                    <tabBarItem tag="2" title="Announcement" image="announcement_300rs.png" id="J96-co-fZp"/>
-                                    <tabBarItem tag="3" title="Attendance" image="attendance_30x30.png" id="9jx-pc-Tu4"/>
-                                    <tabBarItem tag="4" title="Behaviour" image="behaviour_500rs.png" id="blp-bI-taY"/>
+                                    <tabBarItem tag="1" title="Announcement" image="announcement_300rs.png" id="J96-co-fZp"/>
+                                    <tabBarItem tag="2" title="Attendance" image="attendance_30x30.png" id="9jx-pc-Tu4"/>
+                                    <tabBarItem tag="3" title="Behaviour" image="behaviour_500rs.png" id="blp-bI-taY"/>
                                 </items>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D4U-mE-oUY">
@@ -4059,8 +4057,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="announcemntTableView" destination="D4U-mE-oUY" id="s98-mG-3XC"/>
-                        <outlet property="my_tabBar" destination="rse-K5-aNU" id="skk-ng-BsM"/>
+                        <outlet property="my_tabBar" destination="rse-K5-aNU" id="gFv-ok-1wy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Z5-UU-w5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4102,13 +4099,13 @@
         <image name="topics.png" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HWc-rz-lyK"/>
-        <segue reference="tlM-rZ-ipK"/>
-        <segue reference="JlC-pr-Ap2"/>
-        <segue reference="g5h-Gn-Itc"/>
         <segue reference="qAK-1H-dXw"/>
-        <segue reference="mAp-jw-aEY"/>
+        <segue reference="JlC-pr-Ap2"/>
+        <segue reference="tlM-rZ-ipK"/>
+        <segue reference="HWc-rz-lyK"/>
+        <segue reference="g5h-Gn-Itc"/>
+        <segue reference="8lg-S3-Oe0"/>
         <segue reference="jM9-g9-dwL"/>
-        <segue reference="1fE-qR-r1T"/>
+        <segue reference="mAp-jw-aEY"/>
     </inferredMetricsTieBreakers>
 </document>

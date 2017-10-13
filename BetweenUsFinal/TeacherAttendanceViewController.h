@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCKFNavDrawer.h"
 
-@interface TeacherAttendanceViewController : UIViewController
-
+@interface TeacherAttendanceViewController : UIViewController<CCKFNavDrawerDelegate, UITabBarDelegate>{
+    
+}
+@property(strong, nonatomic) CCKFNavDrawer *rootNav;
+@property (weak, nonatomic) IBOutlet UITabBar *my_tabBar;
 @end
