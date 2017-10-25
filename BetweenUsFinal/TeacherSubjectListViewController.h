@@ -12,5 +12,6 @@
     
 }
 @property(strong, nonatomic) CCKFNavDrawer *rootNav;
+@property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
 
 @end

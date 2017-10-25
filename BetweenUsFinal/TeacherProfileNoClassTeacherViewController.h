@@ -24,6 +24,8 @@
 
 @property(strong, nonatomic) CCKFNavDrawer *rootNav;
 @property (retain) MKNumberBadgeView* badgeCount;
+@property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
+
 @property BOOL internetActive;
 @property BOOL hostActive;
 

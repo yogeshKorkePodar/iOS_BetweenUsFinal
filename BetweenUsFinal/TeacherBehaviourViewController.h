@@ -12,5 +12,6 @@
     
 }
 @property(strong, nonatomic) CCKFNavDrawer *rootNav;
+@property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
 @property (weak, nonatomic) IBOutlet UITabBar *my_tabBar;
 @end
