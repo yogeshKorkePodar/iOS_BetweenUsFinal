@@ -334,9 +334,7 @@
             if([arraycount isEqualToString:@"1"]){
                 
                 if([isStudentResourcePresent isEqualToString:@"0"]){
-                    // 0 = student resources present
-                    // "" = student resources not present
-
+               
                     drawerlabelData = [NSArray arrayWithObjects:@"Dashboard", @"Messages", @"Fees Information", @"Student Resource",@"Attendance", @"Student Information",@"Setting",@"Sign Out",@"About", nil];
                     
                     drawerImage = [[NSMutableArray alloc] initWithObjects:@"studentdashboardicon.png",@"messageboxicon.png", @"feesonlineicon.png",@"resourcesicon.png",@"attendanceicon.png",@"parentinfoicon.png",@"settingsicon.png",@"signouticon.png",@"aboutus_icon.png",nil];

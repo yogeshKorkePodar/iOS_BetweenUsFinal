@@ -569,11 +569,11 @@
 - (IBAction)btn_PostIt:(id)sender {
     sendMessage = YES;
     [self getData];
-    if([click_recipient.titleLabel.text isEqualToString:@"Please select the recipient"]){
+    if([click_recipient.titleLabel.text isEqualToString:@"Select the Recipient"]){
       //  [self.errorMessage setHidden:YES];
        // _errorMessage.text = @"Please Select Recipient";
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please Select Recipient" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Please Select Recipient" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
@@ -768,62 +768,6 @@
                     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 }
                 
-                //            AboutUsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //            controller.view.frame=CGRectMake(50,250,300,230);
-                //            controller.msd_id = msd_id;
-                //            controller.usl_id = usl_id;
-                //            controller.brd_Name = brdName;
-                //            controller.clt_id = clt_id;
-                //            controller.schoolName = school_name;
-                //
-                //            [self.view addSubview:controller.view];
-                //            //[controller.view.center ]
-                //            controller.view.center = CGPointMake(self.view.frame.size.width  / 2,
-                //                                                 self.view.frame.size.height / 2);
-                //            AboutUsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //            //   controller.view.frame=CGRectMake(50,250,300,230);
-                //            controller.msd_id = msd_id;
-                //            controller.usl_id = usl_id;
-                //            controller.brd_Name = brdName;
-                //            controller.clt_id = clt_id;
-                //
-                //            //      [self.view addSubview:controller.view];
-                //            //[controller.view.center ]
-                //            //  controller.view.center = CGPointMake(self.view.frame.size.width  / 2,
-                //            //                                         self.view.frame.size.height / 2);
-                //
-                //            [self.navigationController pushViewController:controller animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-                
-                //yocomment
-                //                if (settingsPopoverController == nil)
-                //                {
-                //                    AboutUsViewController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //                    settingsViewController.preferredContentSize = CGSizeMake(320, 300);
-                //
-                //                    settingsViewController.title = @"AboutUs";
-                //
-                //                    // [settingsViewController.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"change" style:UIBarButtonItemStylePlain target:self action:@selector(change:)]];
-                //
-                //                    //     [settingsViewController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)]];
-                //
-                //                    settingsViewController.modalInPopover = NO;
-                //
-                //                    UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
-                //
-                //                    settingsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
-                //                    settingsPopoverController.delegate = self;
-                //                    //  settingsPopoverController.passthroughViews = @[btn];
-                //                    settingsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
-                //                    settingsPopoverController.wantsDefaultContentAppearance = NO;
-                //
-                //
-                //                    [settingsPopoverController presentPopoverAsDialogAnimated:YES
-                //                                                                      options:WYPopoverAnimationOptionFadeWithScale];
-                //
-                //
-                //
-                //                }
-                //yocomment
                 
             }
         }
@@ -934,61 +878,6 @@
                     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 }
                 
-                //            AboutUsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //            controller.view.frame=CGRectMake(50,250,300,230);
-                //            controller.msd_id = msd_id;
-                //            controller.usl_id = usl_id;
-                //            controller.brd_Name = brdName;
-                //            controller.clt_id = clt_id;
-                //            controller.schoolName = school_name;
-                //
-                //            [self.view addSubview:controller.view];
-                //            //[controller.view.center ]
-                //            controller.view.center = CGPointMake(self.view.frame.size.width  / 2,
-                //                                                 self.view.frame.size.height / 2);
-                //                AboutUsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //                //   controller.view.frame=CGRectMake(50,250,300,230);
-                //                controller.msd_id = msd_id;
-                //                controller.usl_id = usl_id;
-                //                controller.brd_Name = brdName;
-                //                controller.clt_id = clt_id;
-                //
-                //                //      [self.view addSubview:controller.view];
-                //                //[controller.view.center ]
-                //                //  controller.view.center = CGPointMake(self.view.frame.size.width  / 2,
-                //                //                                         self.view.frame.size.height / 2);
-                //
-                //                [self.navigationController pushViewController:controller animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-                //yocomment
-                //                if (settingsPopoverController == nil)
-                //                {
-                //                    AboutUsViewController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //                    settingsViewController.preferredContentSize = CGSizeMake(320, 300);
-                //
-                //                    settingsViewController.title = @"AboutUs";
-                //
-                //                    // [settingsViewController.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"change" style:UIBarButtonItemStylePlain target:self action:@selector(change:)]];
-                //
-                //                    //     [settingsViewController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)]];
-                //
-                //                    settingsViewController.modalInPopover = NO;
-                //
-                //                    UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
-                //
-                //                    settingsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
-                //                    settingsPopoverController.delegate = self;
-                //                    //  settingsPopoverController.passthroughViews = @[btn];
-                //                    settingsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
-                //                    settingsPopoverController.wantsDefaultContentAppearance = NO;
-                //
-                //
-                //                    [settingsPopoverController presentPopoverAsDialogAnimated:YES
-                //                                                                      options:WYPopoverAnimationOptionFadeWithScale];
-                //
-                //
-                //
-                //                }
-                //yocomment
                 
             }
             
@@ -1105,50 +994,7 @@
                     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 }
                 
-                //       controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //     //   controller = [[AboutUsViewController alloc] init];
-                //   //     controller.view.frame=CGRectMake(50,250,300,230);
-                //        controller.msd_id = msd_id;
-                //        controller.usl_id = usl_id;
-                //        controller.brd_Name = brd_name;
-                //        controller.clt_id = clt_id;
-                //        controller.schoolName = school_name;
-                //
-                //     //   [self.view addSubview:controller.view];
-                //        //[controller.view.center ]
-                //      //  controller.view.center = CGPointMake(self.view.frame.size.width  / 2,
-                //                                 //        self.view.frame.size.height / 2);
-                //
-                //   //     [_closeClick addTarget:self action:@selector(dismissPopup:) forControlEvents:UIControlEventTouchUpInside];
-                //      //  [controller.closeClick addTarget:self action:@selector(dismissPopup) forControlEvents:UIControlEventTouchUpInside];
-                //        [self.navigationController pushViewController:controller animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-                //
-                
-                //            if (settingsPopoverController == nil)
-                {
-                    //                AboutUsViewController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                    //                settingsViewController.preferredContentSize = CGSizeMake(320, 300);
-                    //
-                    //                settingsViewController.title = @"AboutUs";
-                    //
-                    //                // [settingsViewController.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"change" style:UIBarButtonItemStylePlain target:self action:@selector(change:)]];
-                    //
-                    //                //     [settingsViewController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)]];
-                    //
-                    //                settingsViewController.modalInPopover = NO;
-                    //
-                    //                UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
-                    //
-                    //                settingsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
-                    //                settingsPopoverController.delegate = self;
-                    //                //  settingsPopoverController.passthroughViews = @[btn];
-                    //                settingsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
-                    //                settingsPopoverController.wantsDefaultContentAppearance = NO;
-                    //
-                    //
-                    //                [settingsPopoverController presentPopoverAsDialogAnimated:YES
-                    //                                                                  options:WYPopoverAnimationOptionFadeWithScale];
-                }
+  
                 
             }
         }
