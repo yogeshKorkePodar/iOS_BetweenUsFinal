@@ -478,32 +478,49 @@
 		A5E4C0BC1F286F5F00EEAA3B /* ParentModule */ = {
 			isa = PBXGroup;
 			children = (
+				D30028EB1F66A3E0004886FC /* AbsentHistoryTableViewCell.h */,
+				D30028EC1F66A3E0004886FC /* AbsentHistoryTableViewCell.m */,
 				D30028F11F66AB18004886FC /* AbsentHistoryTableViewCell.xib */,
+				D31B0C8F1F679F1D00A06BA9 /* AbsentHistoryTableViewCell2.h */,
+				D31B0C901F679F1D00A06BA9 /* AbsentHistoryTableViewCell2.m */,
+				D31B0C921F67A95700A06BA9 /* AbsentHistoryTableViewCell2.xib */,
 				D30028E81F66A296004886FC /* AbsentHistoryViewController.h */,
 				D30028E91F66A296004886FC /* AbsentHistoryViewController.m */,
-				D30028DD1F666D41004886FC /* AttendanceTableViewCell.h */,
-				D30028DE1F666D41004886FC /* AttendanceTableViewCell.m */,
-				D30028D01F664D8F004886FC /* BehaviourTableViewCell.xib */,
-				D30028D11F664D8F004886FC /* ViewBehaviourTableViewCell.xib */,
-				D30028D21F664D8F004886FC /* BehaviourTableViewCell.h */,
-				D30028D31F664D8F004886FC /* BehaviourTableViewCell.m */,
-				D30028D41F664D8F004886FC /* ViewBehaviourTableViewCell.h */,
-				D30028D51F664D8F004886FC /* ViewBehaviourTableViewCell.m */,
-				D30D98591F5FFD8C00625144 /* PaymentInfoTableViewCell.h */,
-				D30D985A1F5FFD8C00625144 /* PaymentInfoTableViewCell.m */,
-				D30D985B1F5FFD8C00625144 /* PaymentInfoTableViewCell.xib */,
 				D30D98411F5FB0E200625144 /* AnnouncementTableViewCell.h */,
 				D30D98421F5FB0E200625144 /* AnnouncementTableViewCell.m */,
 				D30D98431F5FB0E200625144 /* AnnouncementTableViewCell.xib */,
-				D3326E6C1F5D3AC3004AE998 /* StudentResourcesViewController.h */,
-				D3326E6D1F5D3AC3004AE998 /* StudentResourcesViewController.m */,
-				D315525C1F5AC0480016EED9 /* StudentProfileWithSiblingViewController.h */,
-				D315525D1F5AC0480016EED9 /* StudentProfileWithSiblingViewController.m */,
-				D31552591F5ABFCA0016EED9 /* SiblingStudentViewController.h */,
-				D315525A1F5ABFCA0016EED9 /* SiblingStudentViewController.m */,
+				D3201C641F4C4C8E002E71FD /* AnnouncementViewController.h */,
+				D3201C651F4C4C8E002E71FD /* AnnouncementViewController.m */,
+				D30028DD1F666D41004886FC /* AttendanceTableViewCell.h */,
+				D30028DE1F666D41004886FC /* AttendanceTableViewCell.m */,
+				D30028E31F666F97004886FC /* AttendanceTableViewCell.xib */,
+				D30028D21F664D8F004886FC /* BehaviourTableViewCell.h */,
+				D30028D31F664D8F004886FC /* BehaviourTableViewCell.m */,
+				D30028D01F664D8F004886FC /* BehaviourTableViewCell.xib */,
+				D3201C5E1F4C4C55002E71FD /* BehaviourViewController.h */,
+				D3201C5F1F4C4C55002E71FD /* BehaviourViewController.m */,
+				D3109DDB1F46E86800103696 /* ChangePassswordViewController.h */,
+				D3109DDC1F46E86800103696 /* ChangePassswordViewController.m */,
 				D3388FBB1F57C798009DE47D /* DetailMessageViewController.h */,
+				D3388FB91F57C721009DE47D /* DetailMessageViewController.m */,
 				D3CA1CDC1F53CD12008D08B0 /* MonthTableViewController.h */,
 				D3CA1CDD1F53CD12008D08B0 /* MonthTableViewController.m */,
+				D39D3F7B1F48192200232635 /* ParentTabController.h */,
+				D39D3F7C1F48192200232635 /* ParentTabController.m */,
+				D30D98591F5FFD8C00625144 /* PaymentInfoTableViewCell.h */,
+				D30D985A1F5FFD8C00625144 /* PaymentInfoTableViewCell.m */,
+				D30D985B1F5FFD8C00625144 /* PaymentInfoTableViewCell.xib */,
+				D3109DD21F46E5FF00103696 /* PaymentInfoViewController.h */,
+				D3109DD31F46E5FF00103696 /* PaymentInfoViewController.m */,
+				D3B36FBB1F61588F00CB8B76 /* ResourceTableViewCell2.h */,
+				D3B36FBC1F61588F00CB8B76 /* ResourceTableViewCell2.m */,
+				D3DAAFEE1F62641700B582DE /* ResourceTableViewCell2.xib */,
+				D3B36FBE1F61591500CB8B76 /* ResourceViewController2.h */,
+				D3B36FBF1F61591500CB8B76 /* ResourceViewController2.m */,
+				D3201C5B1F4C4C3D002E71FD /* SentMessagesViewController.h */,
+				D3201C5C1F4C4C3D002E71FD /* SentMessagesViewController.m */,
+				D31552591F5ABFCA0016EED9 /* SiblingStudentViewController.h */,
+				D315525A1F5ABFCA0016EED9 /* SiblingStudentViewController.m */,
 				A5E9B2951F3AE9F8005535EF /* SiblingTableViewCell.h */,
 				A5E9B2961F3AE9F8005535EF /* SiblingTableViewCell.m */,
 				A5E9B2971F3AE9F8005535EF /* SiblingTableViewCell.xib */,
@@ -511,37 +528,21 @@
 				A5ED70C91F305B1C00D35637 /* StudentDashboardWithoutSibling.m */,
 				A5E7D9FA1F34370B0086C54E /* StudentDashboardWithSibling.h */,
 				A5E7D9FB1F34370B0086C54E /* StudentDashboardWithSibling.m */,
-				D3109DCF1F46E48A00103696 /* ViewMessageViewController.h */,
-				D3109DD01F46E48A00103696 /* ViewMessageViewController.m */,
-				D3109DD21F46E5FF00103696 /* PaymentInfoViewController.h */,
-				D3109DD31F46E5FF00103696 /* PaymentInfoViewController.m */,
-				D3109DD51F46E6E800103696 /* ViewAttendanceViewController.h */,
-				D3109DD61F46E6E800103696 /* ViewAttendanceViewController.m */,
 				D3109DD81F46E79800103696 /* StudentInformationViewController.h */,
 				D3109DD91F46E79800103696 /* StudentInformationViewController.m */,
-				D3109DDB1F46E86800103696 /* ChangePassswordViewController.h */,
-				D3109DDC1F46E86800103696 /* ChangePassswordViewController.m */,
-				D39D3F7B1F48192200232635 /* ParentTabController.h */,
-				D39D3F7C1F48192200232635 /* ParentTabController.m */,
-				D3201C5B1F4C4C3D002E71FD /* SentMessagesViewController.h */,
-				D3201C5C1F4C4C3D002E71FD /* SentMessagesViewController.m */,
-				D3201C5E1F4C4C55002E71FD /* BehaviourViewController.h */,
-				D3201C5F1F4C4C55002E71FD /* BehaviourViewController.m */,
+				D315525C1F5AC0480016EED9 /* StudentProfileWithSiblingViewController.h */,
+				D315525D1F5AC0480016EED9 /* StudentProfileWithSiblingViewController.m */,
+				D3326E6C1F5D3AC3004AE998 /* StudentResourcesViewController.h */,
+				D3326E6D1F5D3AC3004AE998 /* StudentResourcesViewController.m */,
+				D3109DD51F46E6E800103696 /* ViewAttendanceViewController.h */,
+				D3109DD61F46E6E800103696 /* ViewAttendanceViewController.m */,
+				D30028D41F664D8F004886FC /* ViewBehaviourTableViewCell.h */,
+				D30028D51F664D8F004886FC /* ViewBehaviourTableViewCell.m */,
+				D30028D11F664D8F004886FC /* ViewBehaviourTableViewCell.xib */,
+				D3109DCF1F46E48A00103696 /* ViewMessageViewController.h */,
+				D3109DD01F46E48A00103696 /* ViewMessageViewController.m */,
 				D3201C611F4C4C73002E71FD /* WriteMessageViewController.h */,
 				D3201C621F4C4C73002E71FD /* WriteMessageViewController.m */,
-				D3201C641F4C4C8E002E71FD /* AnnouncementViewController.h */,
-				D3201C651F4C4C8E002E71FD /* AnnouncementViewController.m */,
-				D3B36FBB1F61588F00CB8B76 /* ResourceTableViewCell2.h */,
-				D3B36FBC1F61588F00CB8B76 /* ResourceTableViewCell2.m */,
-				D3B36FBE1F61591500CB8B76 /* ResourceViewController2.h */,
-				D3B36FBF1F61591500CB8B76 /* ResourceViewController2.m */,
-				D3DAAFEE1F62641700B582DE /* ResourceTableViewCell2.xib */,
-				D30028E31F666F97004886FC /* AttendanceTableViewCell.xib */,
-				D30028EB1F66A3E0004886FC /* AbsentHistoryTableViewCell.h */,
-				D30028EC1F66A3E0004886FC /* AbsentHistoryTableViewCell.m */,
-				D31B0C8F1F679F1D00A06BA9 /* AbsentHistoryTableViewCell2.h */,
-				D31B0C901F679F1D00A06BA9 /* AbsentHistoryTableViewCell2.m */,
-				D31B0C921F67A95700A06BA9 /* AbsentHistoryTableViewCell2.xib */,
 			);
 			name = ParentModule;
 			sourceTree = "<group>";
@@ -712,7 +713,6 @@
 				D3326E731F5D46E5004AE998 /* Subject.m */,
 				D3326E6F1F5D466C004AE998 /* CycleTest.h */,
 				D3326E701F5D466C004AE998 /* CycleTest.m */,
-				D3388FB91F57C721009DE47D /* DetailMessageViewController.m */,
 				D3CA1CDF1F53CFBB008D08B0 /* DateDropdownValueDetails.h */,
 				D3CA1CE01F53CFBB008D08B0 /* DateDropdownValueDetails.m */,
 				A5EF1CB81F399691007D3388 /* stundentListDetails.h */,
@@ -868,7 +868,7 @@
 					D3F7B43E1F1A1805005FBFE8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = EHE3TQAG25;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1244,8 +1244,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.podarbetweenus.BetweenUs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "96085022-76bc-444e-907c-d655e7dee32d";
+				PROVISIONING_PROFILE_SPECIFIER = BetweenusProfile;
 			};
 			name = Debug;
 		};
@@ -1261,8 +1261,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.podarbetweenus.BetweenUs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "96085022-76bc-444e-907c-d655e7dee32d";
+				PROVISIONING_PROFILE_SPECIFIER = BetweenusProfile;
 			};
 			name = Release;
 		};

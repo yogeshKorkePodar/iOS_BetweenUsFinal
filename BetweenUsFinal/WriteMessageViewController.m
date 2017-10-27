@@ -579,6 +579,7 @@
         [alertController addAction:ok];
         
         [self presentViewController:alertController animated:YES completion:nil];
+        
     }
     else if([messageSubject.text isEqualToString:@""]) {
     //    [self.errorMessage setHidden:NO];
