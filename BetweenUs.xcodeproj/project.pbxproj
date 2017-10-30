@@ -193,6 +193,7 @@
 		D3E09D531F78DB0C001F7093 /* behaviouricon_92x92.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E09D521F78DB0C001F7093 /* behaviouricon_92x92.png */; };
 		D3E09D551F78DB55001F7093 /* subjectlist_92x92.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E09D541F78DB55001F7093 /* subjectlist_92x92.png */; };
 		D3E09D571F78DB8B001F7093 /* sms_92x92.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E09D561F78DB8B001F7093 /* sms_92x92.png */; };
+		D3E0D1161FA339F5004539A7 /* blue_messagechecked_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E0D1151FA339F5004539A7 /* blue_messagechecked_32x32.png */; };
 		D3E43F621F4E8F8900515B0A /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E43F611F4E8F8900515B0A /* WYStoryboardPopoverSegue.m */; };
 		D3E43F641F4EDE0F00515B0A /* dropdown_square_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D3E43F631F4EDE0F00515B0A /* dropdown_square_blue.png */; };
 		D3F7B4441F1A1806005FBFE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B4431F1A1806005FBFE8 /* main.m */; };
@@ -500,6 +501,7 @@
 		D3E09D521F78DB0C001F7093 /* behaviouricon_92x92.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = behaviouricon_92x92.png; sourceTree = "<group>"; };
 		D3E09D541F78DB55001F7093 /* subjectlist_92x92.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subjectlist_92x92.png; sourceTree = "<group>"; };
 		D3E09D561F78DB8B001F7093 /* sms_92x92.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sms_92x92.png; sourceTree = "<group>"; };
+		D3E0D1151FA339F5004539A7 /* blue_messagechecked_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_messagechecked_32x32.png; sourceTree = "<group>"; };
 		D3E43F601F4E8F8900515B0A /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
 		D3E43F611F4E8F8900515B0A /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 		D3E43F631F4EDE0F00515B0A /* dropdown_square_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_square_blue.png; sourceTree = "<group>"; };
@@ -708,6 +710,7 @@
 		D3076B591F270D4900E78694 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D3E0D1151FA339F5004539A7 /* blue_messagechecked_32x32.png */,
 				D313753A1FA06CDF00C97E85 /* unchecked_checkbox2.png */,
 				D31375361FA0610600C97E85 /* username_close.png */,
 				D31375341FA059D600C97E85 /* send_sms.png */,
@@ -1129,6 +1132,7 @@
 				D30D98451F5FB0E200625144 /* AnnouncementTableViewCell.xib in Resources */,
 				D3DAAFF31F6267AB00B582DE /* ppt1_32.png in Resources */,
 				D3B36FB41F61464000CB8B76 /* subject.png in Resources */,
+				D3E0D1161FA339F5004539A7 /* blue_messagechecked_32x32.png in Resources */,
 				D390C01C1F41667400E02247 /* logo3.jpg in Resources */,
 				A5ED70C31F304E5F00D35637 /* attendanceicon.png in Resources */,
 				A5E7D9FE1F343DCF0086C54E /* siblingicon.png in Resources */,

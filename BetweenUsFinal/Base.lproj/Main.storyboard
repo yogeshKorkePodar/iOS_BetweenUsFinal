@@ -4325,6 +4325,9 @@
                                             <constraint firstAttribute="height" constant="30" id="mmD-KT-HSD"/>
                                         </constraints>
                                         <state key="normal" image="search_new.png"/>
+                                        <connections>
+                                            <action selector="searchStudent:" destination="lnd-8N-2UR" eventType="touchUpInside" id="5dD-YA-ac1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weB-5C-uLW">
                                         <rect key="frame" x="282" y="8" width="30" height="30"/>
@@ -4333,6 +4336,9 @@
                                             <constraint firstAttribute="height" constant="30" id="w8M-pV-u0z"/>
                                         </constraints>
                                         <state key="normal" image="send_sms.png"/>
+                                        <connections>
+                                            <action selector="sentMessageToStudent:" destination="lnd-8N-2UR" eventType="touchUpInside" id="isc-JH-hCr"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAr-9t-usO">
                                         <rect key="frame" x="214" y="8" width="28" height="28"/>
@@ -4399,6 +4405,9 @@
                                             <constraint firstAttribute="height" constant="20" id="sfb-0e-tHx"/>
                                         </constraints>
                                         <state key="normal" image="unchecked_checkbox2.png"/>
+                                        <connections>
+                                            <action selector="checkAll:" destination="lnd-8N-2UR" eventType="touchUpInside" id="sQE-IO-YmP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.078431372549019607" green="0.25098039215686274" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
@@ -4413,13 +4422,21 @@
                                     <constraint firstAttribute="trailing" secondItem="etZ-1J-hZz" secondAttribute="trailing" constant="12" id="yts-Fs-n7i"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z45-6z-QjT">
+                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="vMp-Nw-RYt" firstAttribute="top" secondItem="Rwv-hc-CR3" secondAttribute="bottom" constant="1" id="4Sk-tC-ccg"/>
                             <constraint firstItem="Rwv-hc-CR3" firstAttribute="leading" secondItem="6UW-pv-CzO" secondAttribute="leading" id="MXf-pZ-Wsa"/>
                             <constraint firstItem="vMp-Nw-RYt" firstAttribute="leading" secondItem="6UW-pv-CzO" secondAttribute="leading" id="TWj-xh-vfs"/>
+                            <constraint firstItem="z45-6z-QjT" firstAttribute="top" secondItem="vMp-Nw-RYt" secondAttribute="bottom" constant="1" id="Vgx-xn-PUD"/>
+                            <constraint firstItem="M81-oP-TEG" firstAttribute="top" secondItem="z45-6z-QjT" secondAttribute="bottom" id="Xgh-pt-baJ"/>
+                            <constraint firstAttribute="trailing" secondItem="z45-6z-QjT" secondAttribute="trailing" id="aJJ-II-H1q"/>
                             <constraint firstAttribute="trailing" secondItem="vMp-Nw-RYt" secondAttribute="trailing" id="jF2-32-rln"/>
+                            <constraint firstItem="z45-6z-QjT" firstAttribute="leading" secondItem="6UW-pv-CzO" secondAttribute="leading" id="pwW-Fa-Phl"/>
                             <constraint firstAttribute="trailing" secondItem="Rwv-hc-CR3" secondAttribute="trailing" id="x1h-gP-BnD"/>
                             <constraint firstItem="Rwv-hc-CR3" firstAttribute="top" secondItem="s2T-7V-ffb" secondAttribute="bottom" id="xtf-DD-2jX"/>
                         </constraints>
@@ -4428,6 +4445,8 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
+                        <outlet property="TeacherwriteMessageStudentTableView" destination="z45-6z-QjT" id="phR-Pi-YBH"/>
+                        <outlet property="checkBoxAllClick" destination="etZ-1J-hZz" id="I18-9W-xVc"/>
                         <outlet property="closeView" destination="vAr-9t-usO" id="xBW-uj-YrU"/>
                         <outlet property="close_click" destination="M9H-xc-cJa" id="L9I-xo-bh8"/>
                         <outlet property="studentNameTextfield" destination="fgP-dT-sj6" id="Eai-MG-QIQ"/>

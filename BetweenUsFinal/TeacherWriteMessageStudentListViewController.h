@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
-@interface TeacherWriteMessageStudentListViewController : UIViewController<UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface TeacherWriteMessageStudentListViewController : UIViewController<UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource,UIGestureRecognizerDelegate>
 {
     NSString *clt_id,*usl_id,*cls_ID,*check,*pageSize,*TeacherStudentListStatus,*senderName,*date,*subject,*message,*filename,*filePath,*fulldate,*formatedDate,*device,*DeviceToken,*DeviceType,*toUslId,*pmuId,*pmg_id,*sentmessageClick,*attachementClick,*acy_year,*selectedAcademicYear,*selectedAcademicYearId,*searchKey,*searchValue,*std_name,*div_name,*currentacademicYear,*cls_id,*student_name,*pageIndex,*stu_id,*btntapp,*section,*std,*shift,*AdminWriteMessage;
     Reachability* internetReachable;

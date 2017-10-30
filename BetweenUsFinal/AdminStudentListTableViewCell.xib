@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="39"/>
+                <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gm6-02-gtR">
@@ -70,7 +70,7 @@
                                     <constraint firstAttribute="width" constant="53" id="x9g-Gt-Cak"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
-                                <state key="normal" image="unchecked_checkbox.png"/>
+                                <state key="normal" image="unchecked_checkbox2.png"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,6 +114,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="unchecked_checkbox.png" width="52" height="52"/>
+        <image name="unchecked_checkbox2.png" width="52" height="52"/>
     </resources>
 </document>
