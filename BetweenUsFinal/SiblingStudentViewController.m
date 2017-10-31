@@ -56,7 +56,7 @@
     self.tableData.dataSource = self;
     [self httpPostRequest];
     self.automaticallyAdjustsScrollViewInsets = NO;
-     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
 }
 
 -(void) httpPostRequest{

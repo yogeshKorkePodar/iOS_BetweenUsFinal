@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
+#import "MKNumberBadgeView.h"
+#import "CCKFNavDrawer.h"
+@interface AdminSentMessagesViewController : UIViewController<CCKFNavDrawerDelegate>
+{
+    NSString *clt_id,*usl_id,*check,*pageNo,*pageSize,*SentMessageStatus,*msgReadStatus,*senderName,*date,*subject,*message,*filename,*filePath,*fulldate,*formatedDate,*device,*DeviceToken,*DeviceType,*toUslId,*pmuId,*pmg_id,*AdminsentmessageClick,*attachementClick,*stud_id;
+    Reachability* internetReachable;
+    Reachability* hostReachable;
+    NSArray *SentTableData,*dateitems;
+    NSDictionary *sentmessagedetails;
+}
+@property(strong, nonatomic) CCKFNavDrawer *rootNav;
+@property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
+@property BOOL internetActiveViewMessage;
+@property BOOL hostActiveViewMessage;
+@property (retain) MKNumberBadgeView* badgeCount;
 
-@interface AdminSentMessagesViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *adminSentMessageTableView;
 
 @end

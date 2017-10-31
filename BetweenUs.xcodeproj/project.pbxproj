@@ -82,6 +82,8 @@
 		D30D985C1F5FFD8C00625144 /* PaymentInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D30D985A1F5FFD8C00625144 /* PaymentInfoTableViewCell.m */; };
 		D30D985D1F5FFD8C00625144 /* PaymentInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30D985B1F5FFD8C00625144 /* PaymentInfoTableViewCell.xib */; };
 		D30D98601F60031D00625144 /* PaymentList.m in Sources */ = {isa = PBXBuildFile; fileRef = D30D985F1F60031D00625144 /* PaymentList.m */; };
+		D30FE6F61FA6F073004C391C /* TeacherSendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30FE6F51FA6F073004C391C /* TeacherSendMessageViewController.m */; };
+		D30FE6FA1FA6FAE1004C391C /* attachment_new.png in Resources */ = {isa = PBXBuildFile; fileRef = D30FE6F91FA6FAE1004C391C /* attachment_new.png */; };
 		D3109DC81F46B98100103696 /* attendance_30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = D3109DC71F46B98100103696 /* attendance_30x30.png */; };
 		D3109DCC1F46BCA000103696 /* announcement_300rs.png in Resources */ = {isa = PBXBuildFile; fileRef = D3109DC91F46BCA000103696 /* announcement_300rs.png */; };
 		D3109DCD1F46BCA000103696 /* behaviour_500rs.png in Resources */ = {isa = PBXBuildFile; fileRef = D3109DCA1F46BCA000103696 /* behaviour_500rs.png */; };
@@ -91,6 +93,7 @@
 		D3109DD71F46E6E800103696 /* ViewAttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3109DD61F46E6E800103696 /* ViewAttendanceViewController.m */; };
 		D3109DDA1F46E79800103696 /* StudentInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3109DD91F46E79800103696 /* StudentInformationViewController.m */; };
 		D3109DDD1F46E86800103696 /* ChangePassswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3109DDC1F46E86800103696 /* ChangePassswordViewController.m */; };
+		D313294A1FA8482F0010DC66 /* AdminMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31329491FA8482F0010DC66 /* AdminMessageTableViewCell.xib */; };
 		D31375331FA056B000C97E85 /* search_new.png in Resources */ = {isa = PBXBuildFile; fileRef = D31375321FA056B000C97E85 /* search_new.png */; };
 		D31375351FA059D600C97E85 /* send_sms.png in Resources */ = {isa = PBXBuildFile; fileRef = D31375341FA059D600C97E85 /* send_sms.png */; };
 		D31375371FA0610600C97E85 /* username_close.png in Resources */ = {isa = PBXBuildFile; fileRef = D31375361FA0610600C97E85 /* username_close.png */; };
@@ -335,6 +338,9 @@
 		D30D985B1F5FFD8C00625144 /* PaymentInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentInfoTableViewCell.xib; sourceTree = "<group>"; };
 		D30D985E1F60031D00625144 /* PaymentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentList.h; sourceTree = "<group>"; };
 		D30D985F1F60031D00625144 /* PaymentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentList.m; sourceTree = "<group>"; };
+		D30FE6F41FA6F073004C391C /* TeacherSendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherSendMessageViewController.h; sourceTree = "<group>"; };
+		D30FE6F51FA6F073004C391C /* TeacherSendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherSendMessageViewController.m; sourceTree = "<group>"; };
+		D30FE6F91FA6FAE1004C391C /* attachment_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attachment_new.png; sourceTree = "<group>"; };
 		D3109DC71F46B98100103696 /* attendance_30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attendance_30x30.png; sourceTree = "<group>"; };
 		D3109DC91F46BCA000103696 /* announcement_300rs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = announcement_300rs.png; sourceTree = "<group>"; };
 		D3109DCA1F46BCA000103696 /* behaviour_500rs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = behaviour_500rs.png; sourceTree = "<group>"; };
@@ -349,6 +355,7 @@
 		D3109DD91F46E79800103696 /* StudentInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentInformationViewController.m; sourceTree = "<group>"; };
 		D3109DDB1F46E86800103696 /* ChangePassswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassswordViewController.h; sourceTree = "<group>"; };
 		D3109DDC1F46E86800103696 /* ChangePassswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassswordViewController.m; sourceTree = "<group>"; };
+		D31329491FA8482F0010DC66 /* AdminMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminMessageTableViewCell.xib; sourceTree = "<group>"; };
 		D31375321FA056B000C97E85 /* search_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_new.png; sourceTree = "<group>"; };
 		D31375341FA059D600C97E85 /* send_sms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send_sms.png; sourceTree = "<group>"; };
 		D31375361FA0610600C97E85 /* username_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username_close.png; sourceTree = "<group>"; };
@@ -673,6 +680,8 @@
 				D34E05C21F9F22630074B7BD /* TeacherWriteMessageStudentListViewController.m */,
 				D34E05BE1F9F223D0074B7BD /* TeacherWriteMessageViewController.h */,
 				D34E05BF1F9F223D0074B7BD /* TeacherWriteMessageViewController.m */,
+				D30FE6F41FA6F073004C391C /* TeacherSendMessageViewController.h */,
+				D30FE6F51FA6F073004C391C /* TeacherSendMessageViewController.m */,
 			);
 			name = TeacherModule;
 			sourceTree = "<group>";
@@ -710,6 +719,7 @@
 		D3076B591F270D4900E78694 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D30FE6F91FA6FAE1004C391C /* attachment_new.png */,
 				D3E0D1151FA339F5004539A7 /* blue_messagechecked_32x32.png */,
 				D313753A1FA06CDF00C97E85 /* unchecked_checkbox2.png */,
 				D31375361FA0610600C97E85 /* username_close.png */,
@@ -828,6 +838,7 @@
 		D3076B9A1F272CE300E78694 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D31329491FA8482F0010DC66 /* AdminMessageTableViewCell.xib */,
 				D32045241F95C3BD00958699 /* AdminMessageTableViewCell.h */,
 				D32045251F95C3BD00958699 /* AdminMessageTableViewCell.m */,
 				D30D98461F5FB29600625144 /* AnnouncementResult2.h */,
@@ -1075,6 +1086,8 @@
 				A5ED70BA1F303BE300D35637 /* resourcesicon.png in Resources */,
 				D390C0171F41667400E02247 /* icse_225x225.png in Resources */,
 				D3E09D531F78DB0C001F7093 /* behaviouricon_92x92.png in Resources */,
+				D313294A1FA8482F0010DC66 /* AdminMessageTableViewCell.xib in Resources */,
+				D30FE6FA1FA6FAE1004C391C /* attachment_new.png in Resources */,
 				D3DAAFF11F62677C00B582DE /* pdf_file_format_symbol.png in Resources */,
 				D37FFA721F45AEA10017FDE8 /* dropdown_arrow.png in Resources */,
 				D390C0221F41667400E02247 /* ssc_250x100.png in Resources */,
@@ -1205,6 +1218,7 @@
 				D34E05C31F9F22630074B7BD /* TeacherWriteMessageStudentListViewController.m in Sources */,
 				D3201C631F4C4C73002E71FD /* WriteMessageViewController.m in Sources */,
 				D3203A691F7E140500B55C4C /* TeacherSMSViewController.m in Sources */,
+				D30FE6F61FA6F073004C391C /* TeacherSendMessageViewController.m in Sources */,
 				D30028DC1F665161004886FC /* BehavioursResult.m in Sources */,
 				D30D98541F5FD06100625144 /* ParentInfocity.m in Sources */,
 				D3203A661F7CF7EB00B55C4C /* NavigationMenuButton.m in Sources */,

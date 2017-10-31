@@ -123,7 +123,7 @@ NSString *alert,*classTeacher;
                              navController.navigationBar.barTintColor = [UIColor blackColor];
                              [navController.navigationBar setTitleTextAttributes:
                               @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-                             [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+                             [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
                              
                              self.window.rootViewController = navController;
                          }
@@ -150,7 +150,7 @@ NSString *alert,*classTeacher;
                              navController.navigationBar.barTintColor = [UIColor blackColor];
                              [navController.navigationBar setTitleTextAttributes:
                               @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-                             [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+                             [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
                              
                              self.window.rootViewController = navController;
                              
@@ -260,7 +260,7 @@ NSString *alert,*classTeacher;
         navController.navigationBar.barTintColor = [UIColor blackColor];
         [navController.navigationBar setTitleTextAttributes:
          @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-       // [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
         self.window.rootViewController = navController;
 
     }
@@ -275,7 +275,7 @@ NSString *alert,*classTeacher;
             navController.navigationBar.barTintColor = [UIColor blackColor];
             [navController.navigationBar setTitleTextAttributes:
              @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-            [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+           [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
             self.window.rootViewController = navController;
             
             //  navController.navigationBar.settc
@@ -288,7 +288,7 @@ NSString *alert,*classTeacher;
             CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
             hud = [[MBProgressHUD alloc] initWithView:controller.view];
             navController.navigationBar.barTintColor = [UIColor blackColor];
-            [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+           [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
             [navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
             self.window.rootViewController = navController;
         }

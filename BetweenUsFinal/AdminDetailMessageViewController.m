@@ -461,7 +461,7 @@ BOOL attachFile;
     [self presentViewController:documentPicker animated:YES completion:nil];
 }
 -(void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentAtURL:(NSURL *)url {
-    [controller.presentingViewController dismissViewControllerAnimated:YES completion:^{
+//    [controller.presentingViewController dismissViewControllerAnimated:YES completion:^{
         // [self didPickLocalURL:url];
         NSLog(@"<<<<< Inside documentPicker >>>>>>");
         
@@ -556,7 +556,7 @@ BOOL attachFile;
         else{
             [self uploadFilewithData:byteArray];
         }
-    }];
+//    }];
     
 }
 -(void) uploadFilewithData:(NSMutableArray *)fileByteArray{
@@ -670,7 +670,6 @@ BOOL attachFile;
         //   NSString *decodeString = [NSString alloc]initWithCString:ch encoding:NSUTF8StringEncoding];
         
         
-        
         //  NSURL *url = [[NSURL alloc] initWithString:[urlToDownload stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
         NSLog(@"UrlTodownload:%@",urlToDownload);
         
@@ -701,8 +700,6 @@ BOOL attachFile;
     
     
 }
-
-
 
 /*
 #pragma mark - Navigation

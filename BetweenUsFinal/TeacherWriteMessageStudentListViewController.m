@@ -11,6 +11,8 @@
 #import "AdminStudentListTableViewCell.h"
 #import "RestAPI.h"
 #import "MBProgressHUD.h"
+#import "TeacherSendMessageViewController.h"
+#import "URL_Constant.h"
 
 @interface TeacherWriteMessageStudentListViewController ()
 {
@@ -223,7 +225,7 @@
 }
 -(void)webserviceCall{
     if(firstTime==YES){
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/GetMessageStudentList";
+        NSString *urlString = app_url @"PodarApp.svc/GetMessageStudentList";
         
         //Pass The String to server
         newDatasetinfoTeacherWriteMessages_studentList = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",cls_ID,@"cls_id",student_name,@"studentName",pageIndex,@"PageNo",pageSize,@"PageSize",nil];
@@ -235,7 +237,7 @@
         
     }
     if(closeBtnClick==YES){
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/GetMessageStudentList";
+        NSString *urlString = app_url @"PodarApp.svc/GetMessageStudentList";
         
         //Pass The String to server
         newDatasetinfoTeacherWriteMessages_studentList = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",cls_ID,@"cls_id",student_name,@"studentName",pageIndex,@"PageNo",pageSize,@"PageSize",nil];
@@ -250,7 +252,7 @@
     else if(loginClick==YES){
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"usl_id"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/LogOut";
+        NSString *urlString = app_url @"PodarApp.svc/LogOut";
         //    newDatasetinfoAdminLogout = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",nil];
         
         //Pass The String to server
@@ -263,7 +265,7 @@
         
     }
     else if (searchStudent == YES){
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/GetMessageStudentList";
+        NSString *urlString = app_url @"PodarApp.svc/GetMessageStudentList";
         
         //Pass The String to server
         newDatasetinfoTeacherWriteMessages_studentList = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",cls_ID,@"cls_id",student_name,@"studentName",pageIndex,@"PageNo",pageSize,@"PageSize",nil];
@@ -732,9 +734,9 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         
 // yocomment
-//        TeacherSendMessageViewController *teacherSendMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSendMessage"];
-//        
-//        [self.navigationController pushViewController:teacherSendMessageViewController animated:YES];
+        TeacherSendMessageViewController *teacherSendMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSendMessage"];
+        
+        [self.navigationController pushViewController:teacherSendMessageViewController animated:YES];
 // yocomment
     }
     
