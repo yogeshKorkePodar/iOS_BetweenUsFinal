@@ -2562,8 +2562,8 @@
                         <outlet property="label_schoolName" destination="OOM-jQ-x4t" id="BiS-RA-pd7"/>
                         <outlet property="label_std" destination="ELw-3F-406" id="05k-V1-jRN"/>
                         <outlet property="label_studentName" destination="Ua8-M3-G29" id="TeD-7m-gr2"/>
-                        <outlet property="logo" destination="MXB-La-of6" id="Jna-hR-XLE"/>
                         <outlet property="message_leading" destination="rmo-DL-MHa" id="ljy-X3-HBf"/>
+                        <outlet property="schoolLogo" destination="MXB-La-of6" id="34P-89-tjZ"/>
                         <outlet property="sibling_trailing" destination="f0C-g7-nrF" id="qzX-kK-iGO"/>
                         <outlet property="stud_info_leading" destination="IhO-Nm-qs2" id="5VT-B1-AwW"/>
                         <outlet property="stud_res_leading_constrain" destination="ADZ-ph-sos" id="VyH-r5-4eV"/>
@@ -3579,10 +3579,10 @@
         <image name="topics.png" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JlC-pr-Ap2"/>
-        <segue reference="HWc-rz-lyK"/>
-        <segue reference="tlM-rZ-ipK"/>
-        <segue reference="qAK-1H-dXw"/>
+        <segue reference="Zlm-Wx-SnC"/>
+        <segue reference="CoL-nW-NFs"/>
+        <segue reference="mnz-Ds-iez"/>
         <segue reference="g5h-Gn-Itc"/>
+        <segue reference="qAK-1H-dXw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -112,7 +112,7 @@
 		D37FFA761F45B0480017FDE8 /* dropdown_arrow_square.png in Resources */ = {isa = PBXBuildFile; fileRef = D37FFA751F45B0480017FDE8 /* dropdown_arrow_square.png */; };
 		D38F651C1F3D786300273177 /* MKNumberBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38F651B1F3D786300273177 /* MKNumberBadgeView.m */; };
 		D390C00D1F41667400E02247 /* Podar ORT.png in Resources */ = {isa = PBXBuildFile; fileRef = D390BFF71F41667400E02247 /* Podar ORT.png */; };
-		D390C00E1F41667400E02247 /* ICSE Logo 200x100 pix.png in Resources */ = {isa = PBXBuildFile; fileRef = D390BFF81F41667400E02247 /* ICSE Logo 200x100 pix.png */; };
+		D390C00E1F41667400E02247 /* ICSE_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D390BFF81F41667400E02247 /* ICSE_Logo.png */; };
 		D390C00F1F41667400E02247 /* CBSE Logo 200x100 pix (2).png in Resources */ = {isa = PBXBuildFile; fileRef = D390BFF91F41667400E02247 /* CBSE Logo 200x100 pix (2).png */; };
 		D390C0101F41667400E02247 /* PJK.png in Resources */ = {isa = PBXBuildFile; fileRef = D390BFFA1F41667400E02247 /* PJK.png */; };
 		D390C0111F41667400E02247 /* CBSE Logo 200x100 pix (1).png in Resources */ = {isa = PBXBuildFile; fileRef = D390BFFB1F41667400E02247 /* CBSE Logo 200x100 pix (1).png */; };
@@ -348,7 +348,7 @@
 		D38F651A1F3D786300273177 /* MKNumberBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNumberBadgeView.h; sourceTree = "<group>"; };
 		D38F651B1F3D786300273177 /* MKNumberBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNumberBadgeView.m; sourceTree = "<group>"; };
 		D390BFF71F41667400E02247 /* Podar ORT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Podar ORT.png"; sourceTree = "<group>"; };
-		D390BFF81F41667400E02247 /* ICSE Logo 200x100 pix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ICSE Logo 200x100 pix.png"; sourceTree = "<group>"; };
+		D390BFF81F41667400E02247 /* ICSE_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICSE_Logo.png; sourceTree = "<group>"; };
 		D390BFF91F41667400E02247 /* CBSE Logo 200x100 pix (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CBSE Logo 200x100 pix (2).png"; sourceTree = "<group>"; };
 		D390BFFA1F41667400E02247 /* PJK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PJK.png; sourceTree = "<group>"; };
 		D390BFFB1F41667400E02247 /* CBSE Logo 200x100 pix (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CBSE Logo 200x100 pix (1).png"; sourceTree = "<group>"; };
@@ -606,7 +606,7 @@
 				D37FFA731F45AFDB0017FDE8 /* dropdown_arrow_round.png */,
 				D37FFA711F45AEA10017FDE8 /* dropdown_arrow.png */,
 				D390BFF71F41667400E02247 /* Podar ORT.png */,
-				D390BFF81F41667400E02247 /* ICSE Logo 200x100 pix.png */,
+				D390BFF81F41667400E02247 /* ICSE_Logo.png */,
 				D390BFF91F41667400E02247 /* CBSE Logo 200x100 pix (2).png */,
 				D390BFFA1F41667400E02247 /* PJK.png */,
 				D390BFFB1F41667400E02247 /* CBSE Logo 200x100 pix (1).png */,
@@ -868,7 +868,7 @@
 					D3F7B43E1F1A1805005FBFE8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = EHE3TQAG25;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -877,10 +877,12 @@
 					};
 					D3F7B4571F1A1806005FBFE8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EHE3TQAG25;
 						TestTargetID = D3F7B43E1F1A1805005FBFE8;
 					};
 					D3F7B4621F1A1806005FBFE8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = EHE3TQAG25;
 						TestTargetID = D3F7B43E1F1A1805005FBFE8;
 					};
 				};
@@ -920,7 +922,7 @@
 				D390C0221F41667400E02247 /* ssc_250x100.png in Resources */,
 				A5ED066C1F2F4D1D00FEE34B /* seperator_colored_line.jpg in Resources */,
 				A5ED70C11F3044F100D35637 /* messageboxicon.png in Resources */,
-				D390C00E1F41667400E02247 /* ICSE Logo 200x100 pix.png in Resources */,
+				D390C00E1F41667400E02247 /* ICSE_Logo.png in Resources */,
 				D3076B611F270DAF00E78694 /* Checked_Checkbox.png in Resources */,
 				D3DAAFF71F62681400B582DE /* videos.png in Resources */,
 				D3CA1CDB1F53CBFE008D08B0 /* MessageTableViewCell.xib in Resources */,
@@ -1166,9 +1168,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = EHE3TQAG25;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1188,6 +1192,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "09e0c129-7966-4268-b8b2-bbdddd83d5ef";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1211,9 +1216,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EHE3TQAG25;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1226,6 +1233,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "09e0c129-7966-4268-b8b2-bbdddd83d5ef";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1237,15 +1245,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BetweenUsFinal/BetweenUsFinal.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beanstalk Learning (EHE3TQAG25)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Beanstalk Learning (EHE3TQAG25)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EHE3TQAG25;
 				INFOPLIST_FILE = BetweenUsFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.podarbetweenus.BetweenUs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "96085022-76bc-444e-907c-d655e7dee32d";
-				PROVISIONING_PROFILE_SPECIFIER = BetweenusProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1254,15 +1263,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BetweenUsFinal/BetweenUsFinal.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beanstalk Learning (EHE3TQAG25)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EHE3TQAG25;
 				INFOPLIST_FILE = BetweenUsFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.podarbetweenus.BetweenUs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "96085022-76bc-444e-907c-d655e7dee32d";
-				PROVISIONING_PROFILE_SPECIFIER = BetweenusProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
