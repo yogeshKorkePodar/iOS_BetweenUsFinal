@@ -1485,7 +1485,8 @@ viewWillAppear:(BOOL)animated{
         _schoolLogo.image = [UIImage imageNamed:@"CBSE Logo 200x100 pix (2).png"];
     }
     else if((([org_id isEqualToString: @"2"]) && ([Brd_Id isEqualToString: @"2"]) && ((![sec_Id isEqualToString: @"1"])))){
-        _schoolLogo.image = [UIImage imageNamed:@"ICSE Logo 200x100 pix.png"];
+       
+        _schoolLogo.image = [UIImage imageNamed:@"ICSE_Logo.png"];
     }
     else if((([org_id isEqualToString: @"2"]) && ([Brd_Id isEqualToString: @"3"]) && ((![sec_Id isEqualToString: @"1"])))){
         _schoolLogo.image = [UIImage imageNamed:@"cie_250x100_old.png"];

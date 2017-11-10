@@ -88,31 +88,30 @@ Boolean firsttime = YES;
 -(void) setData{
     [_label_senderName setText:subject];
     [_date_label setText:date];
-  //  _detailMessage.text = message;
-   _detailsTextview.text = message;
-//    CGRect frame =_detailsTextview.frame;
-//    frame.size.height = _detailsTextview.contentSize.height;
-//    _detailsTextview.frame = frame;
-   _detailsTextview.translatesAutoresizingMaskIntoConstraints = true;
-    [_detailsTextview sizeToFit];
-    
-    _detailsTextview.scrollEnabled = false;
+  //_detailMessage.text = message;
+    _detailsTextview.text = message;
+    //CGRect frame =_detailsTextview.frame;
+    //frame.size.height = _detailsTextview.contentSize.height;
+    //_detailsTextview.frame = frame;
+//    _detailsTextview.translatesAutoresizingMaskIntoConstraints = true;
+//    [_detailsTextview sizeToFit];
+//    _detailsTextview.scrollEnabled = true;
 
     
-    CGSize sizeThatFitsTextView = [_detailsTextview sizeThatFits:CGSizeMake(_detailsTextview.frame.size.width, MAXFLOAT)];
+//    CGSize sizeThatFitsTextView = [_detailsTextview sizeThatFits:CGSizeMake(_detailsTextview.frame.size.width, MAXFLOAT)];
     
-    _detailtextviewHeight.constant = sizeThatFitsTextView.height;
-       NSLog( @"Height",_detailtextviewHeight.constant );
-    if(_detailtextviewHeight.constant>150){
-    _mainviewHeightConstarint.constant =  _mainviewHeightConstarint.constant+ _scrollHeight.constant;
-    _scrollHeight.constant = _mainviewHeightConstarint.constant-60;
-    }
-    else{
-        _mainviewHeightConstarint.constant = _mainviewHeightConstarint.constant+_detailtextviewHeight.constant;
-        _scrollHeight.constant = _mainviewHeightConstarint.constant-30;
-    }
-    _mainView.layer.cornerRadius = 5;
-    _mainView.layer.masksToBounds = YES;
+//    _detailtextviewHeight.constant = sizeThatFitsTextView.height;
+//       NSLog( @"Height",_detailtextviewHeight.constant );
+//    if(_detailtextviewHeight.constant>150){
+//    _mainviewHeightConstarint.constant =  _mainviewHeightConstarint.constant+ _scrollHeight.constant;
+//    _scrollHeight.constant = _mainviewHeightConstarint.constant-60;
+//    }
+//    else{
+//        _mainviewHeightConstarint.constant = _mainviewHeightConstarint.constant+_detailtextviewHeight.constant;
+//        _scrollHeight.constant = _mainviewHeightConstarint.constant-30;
+//    }
+//    _mainView.layer.cornerRadius = 5;
+//    _mainView.layer.masksToBounds = YES;
     
     
     self.navigationItem.title = sender_name;

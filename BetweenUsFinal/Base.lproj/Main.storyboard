@@ -2004,52 +2004,26 @@
                                     <constraint firstAttribute="trailing" secondItem="zou-Hv-9V5" secondAttribute="trailing" constant="8" id="hw8-E6-RiE"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lot-pP-R78">
-                                <rect key="frame" x="0.0" y="97" width="320" height="433"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S76-d9-MTl">
-                                        <rect key="frame" x="0.0" y="-16" width="320" height="128"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YS-ye-eGY">
-                                                <rect key="frame" x="0.0" y="4" width="320" height="121"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="121" id="F96-2v-wRE"/>
-                                                </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="9YS-ye-eGY" firstAttribute="top" secondItem="S76-d9-MTl" secondAttribute="top" constant="4" id="B11-uT-2I5"/>
-                                            <constraint firstAttribute="height" secondItem="9YS-ye-eGY" secondAttribute="height" constant="7" id="DVm-ee-e1A"/>
-                                            <constraint firstAttribute="width" secondItem="9YS-ye-eGY" secondAttribute="width" id="YDJ-hh-UY4"/>
-                                            <constraint firstItem="9YS-ye-eGY" firstAttribute="leading" secondItem="S76-d9-MTl" secondAttribute="leading" id="zzt-tN-Nfq"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="S76-d9-MTl" secondAttribute="trailing" id="BU2-Oi-aEC"/>
-                                    <constraint firstItem="S76-d9-MTl" firstAttribute="leading" secondItem="Lot-pP-R78" secondAttribute="leading" id="FII-zH-Z9I"/>
-                                    <constraint firstItem="S76-d9-MTl" firstAttribute="top" secondItem="Lot-pP-R78" secondAttribute="top" constant="-16" id="Vl1-ya-vlp"/>
-                                </constraints>
-                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VP7-gd-X77">
+                                <rect key="frame" x="0.0" y="82" width="320" height="447"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="10R-0n-pht" firstAttribute="top" secondItem="VP7-gd-X77" secondAttribute="bottom" constant="1" id="3LY-Ob-FyY"/>
                             <constraint firstItem="10R-0n-pht" firstAttribute="leading" secondItem="XrU-8t-h2l" secondAttribute="leading" id="3es-c5-ZGB"/>
+                            <constraint firstItem="VP7-gd-X77" firstAttribute="leading" secondItem="XrU-8t-h2l" secondAttribute="leading" id="8Aq-W6-SnC"/>
                             <constraint firstItem="OyA-JK-wCn" firstAttribute="top" secondItem="10R-0n-pht" secondAttribute="bottom" constant="-6" id="CwI-Sh-nWs"/>
-                            <constraint firstItem="Lot-pP-R78" firstAttribute="leading" secondItem="XrU-8t-h2l" secondAttribute="leading" id="DaV-f1-qVn"/>
                             <constraint firstAttribute="trailing" secondItem="Koc-7u-utq" secondAttribute="trailing" id="HXE-f5-5AR"/>
-                            <constraint firstAttribute="trailing" secondItem="Lot-pP-R78" secondAttribute="trailing" id="OAF-wP-AGY"/>
                             <constraint firstAttribute="trailing" secondItem="10R-0n-pht" secondAttribute="trailing" id="SJr-Vj-pwS"/>
                             <constraint firstItem="Koc-7u-utq" firstAttribute="top" secondItem="h9V-Za-ct4" secondAttribute="bottom" id="Sgl-Rr-dZ8"/>
-                            <constraint firstItem="10R-0n-pht" firstAttribute="top" secondItem="Lot-pP-R78" secondAttribute="bottom" id="dou-Tx-Sor"/>
+                            <constraint firstItem="VP7-gd-X77" firstAttribute="top" secondItem="Koc-7u-utq" secondAttribute="bottom" constant="2" id="cPc-GR-gBn"/>
+                            <constraint firstAttribute="trailing" secondItem="VP7-gd-X77" secondAttribute="trailing" id="kjp-A9-Dnh"/>
                             <constraint firstItem="Koc-7u-utq" firstAttribute="leading" secondItem="XrU-8t-h2l" secondAttribute="leading" id="xdu-4J-DpY"/>
-                            <constraint firstItem="Lot-pP-R78" firstAttribute="top" secondItem="Koc-7u-utq" secondAttribute="bottom" constant="17" id="yUf-SO-o8i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YYW-PL-fsi"/>
@@ -2058,7 +2032,7 @@
                     <connections>
                         <outlet property="attachment_btn" destination="ggK-jA-Oqi" id="s4h-u6-65v"/>
                         <outlet property="date_label" destination="BZn-vv-etg" id="TO6-go-ook"/>
-                        <outlet property="detailsTextview" destination="9YS-ye-eGY" id="NFT-vf-O9O"/>
+                        <outlet property="detailsTextview" destination="VP7-gd-X77" id="Q4z-Q6-5UJ"/>
                         <outlet property="enterMessageView" destination="10R-0n-pht" id="mgL-RW-BIa"/>
                         <outlet property="enterMessage_textfield" destination="FyP-2k-QHI" id="Elr-Yh-blr"/>
                         <outlet property="label_senderName" destination="2xv-B0-s8N" id="fpP-gW-17F"/>
@@ -2066,7 +2040,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDM-bO-sP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3217.5" y="-78.16901408450704"/>
+            <point key="canvasLocation" x="3049" y="157"/>
         </scene>
         <!--Nav Drawer-->
         <scene sceneID="K5N-aV-xOT">
@@ -2589,8 +2563,8 @@
                         <outlet property="label_schoolName" destination="OOM-jQ-x4t" id="BiS-RA-pd7"/>
                         <outlet property="label_std" destination="ELw-3F-406" id="05k-V1-jRN"/>
                         <outlet property="label_studentName" destination="Ua8-M3-G29" id="TeD-7m-gr2"/>
-                        <outlet property="logo" destination="MXB-La-of6" id="Jna-hR-XLE"/>
                         <outlet property="message_leading" destination="rmo-DL-MHa" id="ljy-X3-HBf"/>
+                        <outlet property="schoolLogo" destination="MXB-La-of6" id="34P-89-tjZ"/>
                         <outlet property="sibling_trailing" destination="f0C-g7-nrF" id="qzX-kK-iGO"/>
                         <outlet property="stud_info_leading" destination="IhO-Nm-qs2" id="5VT-B1-AwW"/>
                         <outlet property="stud_res_leading_constrain" destination="ADZ-ph-sos" id="VyH-r5-4eV"/>

@@ -32,6 +32,8 @@
 
 }
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageView_width;
+
 @property(nonatomic,strong) NSString *msd_id;
 @property(nonatomic,strong) NSString *usl_id;
 @property(nonatomic,strong) NSString *clt_id;

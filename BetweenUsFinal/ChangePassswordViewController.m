@@ -41,8 +41,6 @@
 
 - (void)viewDidLoad {
     
-    
-    
     [super viewDidLoad];
     
     self.navigationItem.hidesBackButton = NO;
@@ -62,7 +60,6 @@
     usl_id = [[NSUserDefaults standardUserDefaults]
               stringForKey:@"usl_id"];
     
-    
        [self checkInternetConnectivity];
     
     msd_id = [[NSUserDefaults standardUserDefaults]
@@ -75,6 +72,11 @@
               stringForKey:@"usl_id"];
     brd_Name = [[NSUserDefaults standardUserDefaults]
                 stringForKey:@"brd_name"];
+    
+    DeviceToken = [[NSUserDefaults standardUserDefaults]
+                   stringForKey:@"Device Token"];
+    DeviceType= @"IOS";
+    NSLog(@"Device Token:%@",DeviceToken);
 
     msd_id = msd_id;
     usl_id = usl_id;
@@ -177,6 +179,43 @@
 }
 
 -(void) httpPostRequest{
+    
+     if(loginClick ==YES){
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"usl_id"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        loginClick = NO;
+        NSError *err;
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        NSString *str = app_url @"PodarApp.svc/LogOut";
+        str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSURL *url = [NSURL URLWithString:str];
+        
+        //Pass The String to server
+        NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:usl_id,@"usl_id",DeviceType,@"DeviceType",DeviceToken,@"DeviceId",nil];
+        NSLog(@"the data Details is =%@", newDatasetInfo);
+        
+        //convert object to data
+        NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:kNilOptions error:&err];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        [request setHTTPMethod:POST];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        
+        //Apply the data to the body
+        [request setHTTPBody:jsonData];
+        
+        self.restApi.delegate = self;
+        [self.restApi httpRequest:request];
+        NSURLResponse *response;
+        
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+        NSString *resSrt = [[NSString alloc]initWithData:responseData encoding:NSASCIIStringEncoding];
+        
+        //This is for Response
+        NSLog(@"got logout==%@", resSrt);
+        [hud hideAnimated:YES];
+    }
+     else {
     //Create the response and Error
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     NSError *err;
@@ -226,10 +265,14 @@
                                  NSString *str = app_url @"PodarApp.svc/LogOut";
                                  str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
                                  NSURL *url = [NSURL URLWithString:str];
-                                 
+                                
+                                 DeviceToken = [[NSUserDefaults standardUserDefaults]
+                                                stringForKey:@"Device Token"];
+                                 DeviceType= @"IOS";
+
                                  //Pass The String to server
                                  NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:usl_id,@"usl_id",DeviceType,@"DeviceType",DeviceToken,@"DeviceId",nil];
-                                 NSLog(@"the data Details is =%@", newDatasetInfo);
+                                 NSLog(@"Data sent to server =%@", newDatasetInfo);
                                  
                                  //convert object to data
                                  NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:kNilOptions error:&err];
@@ -271,6 +314,7 @@
     }
     
     [hud hideAnimated:YES];
+  }
 }
 -(void)getReceivedData:(NSMutableData *)data sender:(RestAPI *)sender
 {
@@ -495,62 +539,6 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 }
                 
-                //            AboutUsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //            controller.view.frame=CGRectMake(50,250,300,230);
-                //            controller.msd_id = msd_id;
-                //            controller.usl_id = usl_id;
-                //            controller.brd_Name = brdName;
-                //            controller.clt_id = clt_id;
-                //            controller.schoolName = school_name;
-                //
-                //            [self.view addSubview:controller.view];
-                //            //[controller.view.center ]
-                //            controller.view.center = CGPointMake(self.view.frame.size.width  / 2,
-                //                                                 self.view.frame.size.height / 2);
-                //            AboutUsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //            //   controller.view.frame=CGRectMake(50,250,300,230);
-                //            controller.msd_id = msd_id;
-                //            controller.usl_id = usl_id;
-                //            controller.brd_Name = brdName;
-                //            controller.clt_id = clt_id;
-                //
-                //            //      [self.view addSubview:controller.view];
-                //            //[controller.view.center ]
-                //            //  controller.view.center = CGPointMake(self.view.frame.size.width  / 2,
-                //            //                                         self.view.frame.size.height / 2);
-                //
-                //            [self.navigationController pushViewController:controller animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-                
-                //yocomment
-                //                if (settingsPopoverController == nil)
-                //                {
-                //                    AboutUsViewController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //                    settingsViewController.preferredContentSize = CGSizeMake(320, 300);
-                //
-                //                    settingsViewController.title = @"AboutUs";
-                //
-                //                    // [settingsViewController.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"change" style:UIBarButtonItemStylePlain target:self action:@selector(change:)]];
-                //
-                //                    //     [settingsViewController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)]];
-                //
-                //                    settingsViewController.modalInPopover = NO;
-                //
-                //                    UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
-                //
-                //                    settingsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
-                //                    settingsPopoverController.delegate = self;
-                //                    //  settingsPopoverController.passthroughViews = @[btn];
-                //                    settingsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
-                //                    settingsPopoverController.wantsDefaultContentAppearance = NO;
-                //
-                //
-                //                    [settingsPopoverController presentPopoverAsDialogAnimated:YES
-                //                                                                      options:WYPopoverAnimationOptionFadeWithScale];
-                //
-                //
-                //
-                //                }
-                //yocomment
                 
             }
         }

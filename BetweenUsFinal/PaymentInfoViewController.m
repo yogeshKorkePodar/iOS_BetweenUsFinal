@@ -568,7 +568,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"Downloading Started");
         
-        NSString     *urlToDownload = [@"http://betweenus.in/AppAutoLogin.aspx?" stringByAppendingString:postString];
+        NSString *urlToDownload = [@"http://www.betweenus.in/AppAutoLogin.aspx?" stringByAppendingString:postString];
         
         //    urlToDownload = [urlToDownload stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         //  NSURL *url = [[NSURL alloc] initWithString:[urlToDownload stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
