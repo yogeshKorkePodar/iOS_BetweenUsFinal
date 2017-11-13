@@ -39,7 +39,7 @@ NSString *alert,*classTeacher;
     //[[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
     
     NSLog(@"<Launching App !!!");
-    
+    [self.window setTintColor:[UIColor whiteColor]];
     //-- Set Notification
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
