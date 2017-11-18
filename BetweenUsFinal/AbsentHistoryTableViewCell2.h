@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *date_label;
 @property (weak, nonatomic) IBOutlet UITextView *absentReason_textview;
+@property (weak, nonatomic) IBOutlet UIView *seperator_line;
 
 @end

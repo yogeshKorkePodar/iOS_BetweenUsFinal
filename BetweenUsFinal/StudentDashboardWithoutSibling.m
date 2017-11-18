@@ -118,6 +118,9 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     
+    //to make arrow white
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
     firstWebcall = YES;
     self.restApi.delegate = self;
     

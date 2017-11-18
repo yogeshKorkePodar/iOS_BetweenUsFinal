@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="17B48" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeacherAnnouncementTableViewCell" rowHeight="93" id="6pQ-5r-j3y" customClass="TeacherAnnouncementTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="93"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6pQ-5r-j3y" id="Epe-Nb-fyv">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="announcementicon_48x48.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kq3-97-EgL">
+                        <rect key="frame" x="8" y="8" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="2vr-v5-qA6"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="JbD-nq-Q6Y"/>
+                            <constraint firstAttribute="width" constant="46" id="LVH-hg-pA8"/>
+                            <constraint firstAttribute="height" constant="46" id="kaV-4a-NWd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2vr-v5-qA6"/>
+                                <exclude reference="JbD-nq-Q6Y"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyk-gB-fkb">
+                        <rect key="frame" x="62" y="8" width="272" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="272" id="ZYN-Dx-Xrb"/>
+                            <constraint firstAttribute="height" constant="21" id="sCE-zv-4CD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wnd-Iw-jf8">
+                        <rect key="frame" x="62" y="37" width="369" height="55"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="KgZ-Sv-FK5"/>
+                        </constraints>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wnd-Iw-jf8" firstAttribute="top" secondItem="nyk-gB-fkb" secondAttribute="bottom" constant="8" id="5bd-dT-U28"/>
+                    <constraint firstItem="Kq3-97-EgL" firstAttribute="top" secondItem="Epe-Nb-fyv" secondAttribute="topMargin" id="6bG-Eu-x3e"/>
+                    <constraint firstAttribute="trailing" secondItem="Wnd-Iw-jf8" secondAttribute="trailing" id="Gf5-J7-VTN"/>
+                    <constraint firstItem="Wnd-Iw-jf8" firstAttribute="leading" secondItem="Kq3-97-EgL" secondAttribute="trailing" constant="8" id="XUd-sh-OTE"/>
+                    <constraint firstItem="Kq3-97-EgL" firstAttribute="leading" secondItem="Epe-Nb-fyv" secondAttribute="leadingMargin" id="ggW-e2-25H"/>
+                    <constraint firstItem="nyk-gB-fkb" firstAttribute="leading" secondItem="Kq3-97-EgL" secondAttribute="trailing" constant="8" id="kos-Ns-N0J"/>
+                    <constraint firstAttribute="bottom" secondItem="Wnd-Iw-jf8" secondAttribute="bottom" id="oCF-Tw-VD2"/>
+                    <constraint firstItem="nyk-gB-fkb" firstAttribute="top" secondItem="Epe-Nb-fyv" secondAttribute="topMargin" id="so7-Dc-pcZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="announcementHeight" destination="KgZ-Sv-FK5" id="cNx-2S-h9u"/>
+                <outlet property="announcementText" destination="Wnd-Iw-jf8" id="0ed-v7-RbX"/>
+                <outlet property="datelabel" destination="nyk-gB-fkb" id="2WD-dh-rQg"/>
+            </connections>
+            <point key="canvasLocation" x="840.5" y="106.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="announcementicon_48x48.png" width="48" height="48"/>
+    </resources>
+</document>

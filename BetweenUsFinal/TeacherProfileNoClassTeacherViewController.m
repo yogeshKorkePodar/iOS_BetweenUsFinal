@@ -39,6 +39,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //to make arrow white
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
     self.navigationItem.hidesBackButton = NO;
     self.rootNav = (CCKFNavDrawer *)self.navigationController;
     [self.rootNav setCCKFNavDrawerDelegate:self];

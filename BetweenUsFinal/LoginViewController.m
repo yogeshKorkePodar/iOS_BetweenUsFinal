@@ -51,7 +51,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
    
     username = @"";
@@ -132,8 +132,8 @@
 //        username = @"varshalipratham@gmail.com";
 //        password = @"pratham";
         
-       // username = @"it.testteacher1@podar.org";
-       // password = @"india";
+        username = @"it.testteacher1@podar.org";
+        password = @"india";
 
         
         //Checking for null values

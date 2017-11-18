@@ -280,7 +280,6 @@
         [_cell.attachmentClick addTarget:self action:@selector(attachment:) forControlEvents:UIControlEventTouchUpInside];
         [_cell.attachmentClick setTag:indexPath.row];
         
-        
         senderName = [[ViewTableData objectAtIndex:indexPath.row] objectForKey:@"Fullname"];
         date = [[ViewTableData objectAtIndex:indexPath.row] objectForKey:@"pmg_date"];
         subject = [[ViewTableData objectAtIndex:indexPath.row] objectForKey:@"pmg_subject"];
@@ -524,7 +523,7 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"Downloading Started");
-        NSString     *urlToDownload = [@"http://betweenus.in/Uploads/Messages/" stringByAppendingString:firstBit];
+        NSString     *urlToDownload = [@"http://www.betweenus.in/Uploads/Messages/" stringByAppendingString:firstBit];
         
         NSLog(@"UrlTodownload:%@",urlToDownload);
         

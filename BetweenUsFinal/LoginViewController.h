@@ -4,7 +4,6 @@
 //
 //  Created by podar on 25/07/17.
 //  Copyright © 2017 podar. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 #import "ForgotPasswordViewController.h"
@@ -20,6 +19,7 @@
     NSString *username;
     NSString *password;
 }
+
 @property (weak, nonatomic) IBOutlet UITextField *textfield_username;
 @property (weak, nonatomic) IBOutlet UITextField *textfield_password;
 @property (weak, nonatomic) IBOutlet UIButton *outlet_showPassword;

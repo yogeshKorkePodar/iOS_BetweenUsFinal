@@ -1,75 +1,40 @@
 //
-//  TeacherBehaviourViewController.m
+//  TeacherBehaviourStudentListViewController.m
 //  BetweenUs
 //
-//  Created by podar on 29/09/17.
+//  Created by podar on 18/11/17.
 //  Copyright © 2017 podar. All rights reserved.
 //
 
-#import "NavigationMenuButton.h"
-#import "MBProgressHUD.h"
-#import "URL_Constant.h"
-#import "TeacherAttendanceTableViewCell.h"
-#import "TeacherBehaviourViewController.h"
-#import "TeacherAnnouncementViewController.h"
-#import "TeacherProfileViewController.h"
-#import "TeacherAttendanceViewController.h"
-#import "CCKFNavDrawer.h"
-#import "DrawerView.h"
-#import "ChangePassswordViewController.h"
-#import "AboutUsViewController.h"
-#import "WYPopoverController.h"
-#import "LoginViewController.h"
-#import "RestAPI.h"
-#import "TeacherBehaviourViewController.h"
-#import "AcedmicYearResult.h"
-#import "DivisionResult.h"
-#import "MonthResult.h"
-#import "SectionList.h"
-#import "ShiftResult.h"
-#import "StandardResult.h"
-#import "TeacherAttendanceTableViewCell.h"
-#import "TeacherSubjectListViewController.h"
-#import "TeacherSentMessageViewController.h"
-#import"TeacherMessageViewController.h"
-#import "TeacherSMSViewController.h"
 #import "TeacherBehaviourStudentListViewController.h"
+#import "TeacherBehvaiourDetailsViewController.h"
+#import "TeacherBehaviourStudentListTableViewCell.h"
+#import "MBProgressHUD.h"
+#import "RestAPI.h"
+#import "teacherBehaviourStudResult.h"
+#import "URL_Constant.h"
 
-@interface TeacherBehaviourViewController ()
+@interface TeacherBehaviourStudentListViewController ()
 {
-    NSDictionary *newDatasetinfoTeacherBehaviourDropdown,*newDatasetinfoTeacherLogout,*academicyeardetailsdictionry,*monthdetailsdictionry,*divisiondetailsdictionry,*standarddetailsdictionry,*shiftdetailsdictionry,*sectiondetailsdictionry;
-    BOOL loginClick,firstTime;
+    NSDictionary *newDatasetinfoTeacherLogout,*newDatasetinfoTeacherBehaviourStudentList,*behaviourstudResultdetailsdictionry;
+    BOOL loginClick;
 }
 
-@property (nonatomic, strong) AcedmicYearResult *AcedmicYearResultItems;
-@property (nonatomic, strong) MonthResult *MonthResultItems;
-@property (nonatomic, strong) DivisionResult *DivisionResultItems;
-@property (nonatomic, strong) SectionList *SectionListItems;
-@property (nonatomic, strong) ShiftResult *ShiftResultItems;
-@property (nonatomic, strong) StandardResult *StandardResultItems;
-
+@property (nonatomic, strong) teacherBehaviourStudResult *teacherBehaviourStudResultItems;
 @end
 
-@implementation TeacherBehaviourViewController
+@implementation TeacherBehaviourStudentListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    firstTime = YES;
-    self.navigationItem.hidesBackButton = NO;
-    self.rootNav = (CCKFNavDrawer *)self.navigationController;
-    [self.rootNav setCCKFNavDrawerDelegate:self];
-    
-    self.navigationItem.leftBarButtonItem = [NavigationMenuButton addNavigationMenuButton:self];
-    
-    _my_tabBar.delegate = self;
-    _my_tabBar.selectedItem = [_my_tabBar.items objectAtIndex:2];
-
-    
+    // Do any additional setup after loading the view.
+    self.navigationItem.title = @"Student List";
     device =[[NSUserDefaults standardUserDefaults]
              stringForKey:@"device"];
     DeviceType= @"IOS";
     DeviceToken = [[NSUserDefaults standardUserDefaults]
                    stringForKey:@"Device Token"];
+    class_id = [[NSUserDefaults standardUserDefaults] stringForKey:@"class_Id_Behaviour"];
     
     clt_id = [[NSUserDefaults standardUserDefaults]
               stringForKey:@"clt_id"];
@@ -80,50 +45,20 @@
     
     Brd_Id = [[NSUserDefaults standardUserDefaults]stringForKey:@"Brd_ID"];
     
-    self.teacherBehaviourTableView.delegate = self;
-    self.teacherBehaviourTableView.dataSource = self;
+    self.teacherBehaviourStudentTableView.delegate = self;
+    self.teacherBehaviourStudentTableView.dataSource = self;
+    pageNo = @"1";
+    pageSize  = @"200";
+    if([device isEqualToString:@"ipad"]){
+        [_rollNoLabel setFont: [_rollNoLabel.font fontWithSize: 16.0]];
+        [_nameLabel setFont: [_nameLabel.font fontWithSize: 16.0]];
+        [_actionLabel setFont: [_actionLabel.font fontWithSize: 16.0]];
+    }
     [self checkInternetConnectivity];
-
     
+
 }
 
-
--(void) buttonAction{
-    NSLog(@"Navigation bar button clicked!");
-    [self.rootNav drawerToggle];
-}
-
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    
-    if(item.tag==1)
-    {
-        NSLog(@"First tab selected");
-        TeacherAnnouncementViewController *TeacherAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAnnouncement"];
-        [self.navigationController pushViewController:TeacherAnnouncementViewController animated:NO];
-        
-    }
-    else if(item.tag==2)
-        
-    {
-        NSLog(@"Second tab selected");
-        
-        TeacherAttendanceViewController *TeacherAttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAttendance"];
-        [self.navigationController pushViewController:TeacherAttendanceViewController animated:NO];
-        
-    }
-    else if(item.tag==3)
-        
-    {
-        NSLog(@"Third tab selected");
-        TeacherBehaviourViewController *TeacherBehaviourViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherBehaviour"];
-        [self.navigationController pushViewController:TeacherBehaviourViewController animated:NO];
-        
-        
-    }
-    
-    
-}
 
 -(void)checkInternetConnectivity{
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -210,7 +145,7 @@
     if(loginClick==YES){
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"usl_id"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        NSString *urlString =app_url @"PodarApp.svc/LogOut";
+        NSString *urlString = app_url @"PodarApp.svc/LogOut";
         //  newDatasetinfoAdminLogout = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",nil];
         
         //Pass The String to server
@@ -222,14 +157,14 @@
         [self checkWithServer:urlString jsonString:jsonInputString];
         
     }
-    else if(firstTime == YES){
-        NSString *urlString = app_url @"PodarApp.svc/GetTeacherAttendanceDropDtls";
-        
+    else{
+        NSString *urlString = app_url @"PodarApp.svc/TeacherBehaviourStudList";
+    
         //Pass The String to server
-        newDatasetinfoTeacherBehaviourDropdown = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",brd_name,@"brd_name",nil];
+        newDatasetinfoTeacherBehaviourStudentList = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",class_id,@"cls_id",pageSize,@"PageSize",pageNo,@"PageNo",nil];
         
         NSError *error = nil;
-        NSData *jsonInputData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoTeacherBehaviourDropdown options:NSJSONWritingPrettyPrinted error:&error];
+        NSData *jsonInputData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoTeacherBehaviourStudentList options:NSJSONWritingPrettyPrinted error:&error];
         NSString *jsonInputString = [[NSString alloc] initWithData:jsonInputData encoding:NSUTF8StringEncoding];
         [self checkWithServer:urlString jsonString:jsonInputString];
     }
@@ -238,6 +173,7 @@
 -(void)checkWithServer:(NSString *)urlname jsonString:(NSString *)jsonString{
     
     if(loginClick == YES){
+        loginClick = NO;
         loginClick = NO;
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -266,8 +202,7 @@
             });
         });
     }
-    else if(firstTime == YES){
-        firstTime = NO;
+    else{
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -276,7 +211,7 @@
                 NSURL *url=[NSURL URLWithString:[urlname stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
                 responseData = [NSMutableData data] ;
                 NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url];
-                NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoTeacherBehaviourDropdown options:kNilOptions error:&err];
+                NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoTeacherBehaviourStudentList options:kNilOptions error:&err];
                 
                 [request setHTTPMethod:POST];
                 [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -290,7 +225,7 @@
                 NSString *resSrt = [[NSString alloc]initWithData:responseData encoding:NSASCIIStringEncoding];
                 
                 //This is for Response
-                NSLog(@"<<<<<<<< got response==%@", resSrt);
+                NSLog(@"got response==%@", resSrt);
                 
                 
                 NSError *error = nil;
@@ -298,38 +233,14 @@
                     NSDictionary *receivedData =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
                     NSArray *parsedJsonArray = [NSJSONSerialization JSONObjectWithData:responseData options:(NSJSONReadingMutableContainers) error:&error];
                     BehaviourStatus = [parsedJsonArray valueForKey:@"Status"];
-                    teacherAcademicYearArray = [receivedData valueForKey:@"AcedmicYearResult"];
-                    teacherShiftListArray = [receivedData valueForKey:@"ShiftResult"];
-                    tecaherMonthListArray = [receivedData valueForKey:@"MonthResult"];
-                    teacherSectionListarray = [receivedData valueForKey:@"SectionList"];
-                    teacherStandardListArray = [receivedData valueForKey:@"StandardResult"];
-                    teacherDivisionListArray = [receivedData valueForKey:@"DivisionResult"];
+                    teacherBehaviourStudentListArray = [receivedData valueForKey:@"teacherBehavioutStudResult"];
+                    
                     NSLog(@"Status:%@",BehaviourStatus);
                     if([BehaviourStatus isEqualToString:@"1"]){
                         
-                        for(int n = 0; n < [teacherAcademicYearArray  count]; n++){
-                            _AcedmicYearResultItems = [[AcedmicYearResult alloc]init];
-                            academicyeardetailsdictionry = [teacherAcademicYearArray objectAtIndex:n];
-                        }
-                        for(int m = 0; m < [tecaherMonthListArray  count]; m++){
-                            _MonthResultItems = [[MonthResult alloc]init];
-                            monthdetailsdictionry = [tecaherMonthListArray objectAtIndex:m];
-                        }
-                        for(int d = 0; d < [teacherDivisionListArray  count]; d++){
-                            _DivisionResultItems = [[DivisionResult alloc]init];
-                            divisiondetailsdictionry = [teacherDivisionListArray objectAtIndex:d];
-                        }
-                        for(int s = 0; s < [teacherStandardListArray  count]; s++){
-                            _StandardResultItems = [[StandardResult alloc]init];
-                            standarddetailsdictionry = [teacherStandardListArray objectAtIndex:s];
-                        }
-                        for(int t = 0; t< [teacherShiftListArray  count]; t++){
-                            _ShiftResultItems = [[ShiftResult alloc]init];
-                            shiftdetailsdictionry = [teacherShiftListArray objectAtIndex:t];
-                        }
-                        for(int c = 0; c< [teacherSectionListarray  count]; c++){
-                            _SectionListItems = [[SectionList alloc]init];
-                            sectiondetailsdictionry = [teacherSectionListarray objectAtIndex:c];
+                        for(int n = 0; n < [teacherBehaviourStudentListArray  count]; n++){
+                            _teacherBehaviourStudResultItems = [[teacherBehaviourStudResult alloc]init];
+                            behaviourstudResultdetailsdictionry = [teacherAcademicYearArray objectAtIndex:n];
                         }
                         
                     }
@@ -342,7 +253,7 @@
                         [self presentViewController:alertController animated:YES completion:nil];
                     }
                     
-                    [self.teacherBehaviourTableView reloadData];
+                    [self.teacherBehaviourStudentTableView reloadData];
                     [hud hideAnimated:YES];
                 }
             });
@@ -353,80 +264,70 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [teacherSectionListarray count];
+    return [teacherBehaviourStudentListArray count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *simpleTableIdentifier = @"TeacherAttendanceTableViewCell";
+    static NSString *simpleTableIdentifier = @"TeacherBehaviourStudentListTableViewCell";
     
-    TeacherAttendanceTableViewCell *cell = (TeacherAttendanceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:nil];
+    TeacherBehaviourStudentListTableViewCell *cell = (TeacherBehaviourStudentListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:nil];
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TeacherAttendanceTableViewCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TeacherBehaviourStudentListTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
         
     }
-    cell.sectionLabel.backgroundColor =[UIColor colorWithRed:121.0/255.0f green:116/255.0f blue:210/255.0f alpha:1.0];
-    cell.shiftlabel.backgroundColor = [UIColor colorWithRed:121.0/255.0f green:116/255.0f blue:210/255.0f alpha:1.0];
-    cell.std_div_label.backgroundColor =[UIColor colorWithRed:121.0/255.0f green:116/255.0f blue:210/255.0f alpha:1.0];
-    cell.wholeview.backgroundColor = [UIColor colorWithRed:121.0/255.0f green:116/255.0f blue:210/255.0f alpha:1.0];
-    cell.teacherbtnBg.backgroundColor = [UIColor colorWithRed:91.0/255.0f green:84.0/255.0f blue:208/255.0f alpha:1.0];
-    cell.nextBtnBg.backgroundColor = [UIColor colorWithRed:91.0/255.0f green:84.0/255.0f blue:208/255.0f alpha:1.0];
-    sectionName = [[teacherSectionListarray objectAtIndex:indexPath.row]objectForKey:@"sec_Name"];
-    cell.sectionLabel.text = sectionName;
-    NSLog(@"Section name  %@",sectionName);
-    SfiName = [[teacherShiftListArray objectAtIndex:indexPath.row] objectForKey:@"sft_name"];
-    divName = [[teacherDivisionListArray objectAtIndex:indexPath.row]objectForKey:@"div_name"];
-    stdName = [[teacherStandardListArray objectAtIndex:indexPath.row]objectForKey:@"std_Name"];
-    teachershiftstdDiv=[NSString stringWithFormat: @"%@-%@", stdName,divName];
-    cell.shiftlabel.text = SfiName;
-    cell.std_div_label.text = teachershiftstdDiv;
+    [cell.viewClick addTarget:self action:@selector(viewBehaviour:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.viewClick.tag = indexPath.row;
+    // NSNumber *abc = [NSNumber numberWithInt:_cell.cellCheckBoxClick.tag];
+    [cell.viewClick setTag:indexPath.row];
+    
+    cell.rollNoView.layer.cornerRadius = 5;
+    cell.rollNoView.layer.masksToBounds = YES;
+    cell.viewClick.layer.cornerRadius = 5;
+    cell.viewClick.layer.masksToBounds = YES;
+    rollNo = [[teacherBehaviourStudentListArray objectAtIndex:indexPath.row]objectForKey:@"Roll_No"];
+    cell.rollNo.text = rollNo;
+    NSLog(@"RollNo  %@",rollNo);
+    studentName = [[teacherBehaviourStudentListArray objectAtIndex:indexPath.row] objectForKey:@"stu_display"];
+    
+    cell.studentname.text = studentName;
     if([device isEqualToString:@"ipad"]){
-        [cell.sectionLabel setFont: [cell.sectionLabel.font fontWithSize: 16.0]];
-        [cell.shiftlabel setFont: [cell.shiftlabel.font fontWithSize: 16.0]];
-        [cell.std_div_label setFont: [cell.std_div_label.font fontWithSize: 16.0]];
+        [cell.rollNo setFont: [cell.rollNo.font fontWithSize: 16.0]];
+        [cell.studentname setFont: [cell.studentname.font fontWithSize: 16.0]];
+        [cell.viewClick setFont: [cell.viewClick.font fontWithSize: 16.0]];
     }
     
     return cell;
     
 }
 
+-(void)viewBehaviour:(id)sender
+{
+    
+    BOOL checked;
+    
+    UIButton *viewbehaviour=(UIButton*)sender;
+    
+    selectedMsd_ID = [[teacherBehaviourStudentListArray objectAtIndex:viewbehaviour.tag] objectForKey:@"msd_id"];
+    [[NSUserDefaults standardUserDefaults] setObject:selectedMsd_ID forKey:@"msdID_Behaviour"];
+    NSLog(@"Selectd smdid  %@",selectedMsd_ID);
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    TeacherBehvaiourDetailsViewController *teacherBehvaiourDetailsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BehaviourDetails"];
+    
+    
+    [self.navigationController pushViewController:teacherBehvaiourDetailsViewController animated:YES];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    
+    
+}
 - (float)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     // This will create a "invisible" footer
     return 0.01f;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    @try
-    {
-        
-        if ([device isEqualToString:@"ipad"]) {
-            return 60;
-        }else if([device isEqualToString:@"iphone"]){
-            return 45;
-        }
-    } @catch (NSException *exception) {
-        NSLog(@"Exception: %@", exception);
-    }
-    
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    TeacherBehaviourStudentListViewController *teacherBehaviourStudentListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherBehaviourStudentList"];
-    class_id = [[teacherStandardListArray objectAtIndex:indexPath.row]objectForKey:@"class_id"];
-    [[NSUserDefaults standardUserDefaults] setObject:class_id forKey:@"class_Id_Behaviour"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self.navigationController pushViewController:teacherBehaviourStudentListViewController animated:YES];
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-    
-}
--(void)screenTappedOnceTeacherBehaviour{
-    TeacherBehaviourViewController *teacherBehaviourViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherBehaviour"];
-    [self.navigationController pushViewController:teacherBehaviourViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-    
 }
 
 
