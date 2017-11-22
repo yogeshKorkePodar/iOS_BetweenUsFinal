@@ -35,7 +35,7 @@
     BOOL forgotPassword;
     NSString *classTeacher,*acy_year;
 
-    
+
     UITapGestureRecognizer *tapGestRecog ;
     UITapGestureRecognizer *tapGesture;
     UITapGestureRecognizer *tapGestRecogAdmin;
@@ -105,6 +105,7 @@
 */
 
 - (IBAction)btn_login:(UIButton *)sender {
+   
     if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
     {
         //connection unavailable
@@ -132,9 +133,19 @@
 //        username = @"varshalipratham@gmail.com";
 //        password = @"pratham";
         
-        username = @"it.testteacher1@podar.org";
-        password = @"india";
-
+      // username = @"it.testteacher1@podar.org";
+      // password = @"india";
+        
+      //subject
+      //username = @"anaghashalde@gmail.com";
+      //password = @"anagha1973";
+      
+      //class
+      //username = @"anitagotu@gmail.com";
+      //password = @"saklani";
+        
+          username = @"it.testteacher3@podar.org";
+          password = @"india";
         
         //Checking for null values
         if ([username isEqualToString:@""]) {
@@ -162,8 +173,6 @@
         //storing details in app preferences
         [[NSUserDefaults standardUserDefaults] setObject:username forKey:@"username"];
         [[NSUserDefaults standardUserDefaults] setObject:password forKey:@"password"];
-        
-        
         
         if (username!=nil & password!=nil) {
             
@@ -519,8 +528,5 @@
 
     }
     
-    
-
-
 }
 @end

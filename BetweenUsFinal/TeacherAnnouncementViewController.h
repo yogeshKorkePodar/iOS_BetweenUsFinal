@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CCKFNavDrawer.h"
 #import "MKNumberBadgeView.h"
+
+
 @interface TeacherAnnouncementViewController : UIViewController<CCKFNavDrawerDelegate, UITabBarDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSString *device;
@@ -37,6 +39,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *announcementTableView;
 @property (weak, nonatomic) IBOutlet UILabel *attendanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *behaviourLabel;
+
+@property (weak, nonatomic) IBOutlet UITabBarItem *attendance_tab;
+@property (weak, nonatomic) IBOutlet UITabBarItem *behaviour_tab;
 
 - (IBAction)announcementBehavioutBtn:(id)sender;
 - (IBAction)announcementAnnBtn:(id)sender;

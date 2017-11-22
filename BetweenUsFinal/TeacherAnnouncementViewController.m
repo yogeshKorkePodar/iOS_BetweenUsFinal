@@ -31,6 +31,8 @@
 #import "TeacherAnnouncementTableViewCell.h"
 #import "MBProgressHUD.h"
 
+
+
 @interface TeacherAnnouncementViewController ()
 {
     NSDictionary *newDatasetinfoTeacherAnnouncement,*announcemntdetailsdictionry,*newDatasetinfoTeacherLogout;
@@ -43,6 +45,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationItem.hidesBackButton = NO;
     self.rootNav = (CCKFNavDrawer *)self.navigationController;
     [self.rootNav setCCKFNavDrawerDelegate:self];
@@ -68,20 +72,13 @@
     
     classTeacher = [[NSUserDefaults standardUserDefaults]stringForKey:@"classTeacher"];
     
-    //Hide back button
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
-                                                         forBarMetrics:UIBarMetricsDefault];
-    self.navigationItem.hidesBackButton=YES;
-    self.navigationItem.title = @"Announcements";
-    //Add drawer image button
-    UIImage *faceImage = [UIImage imageNamed:@"drawer_icon.png"];
-    UIButton *face = [UIButton buttonWithType:UIButtonTypeCustom];
-    face.bounds = CGRectMake( 15, 0, 15, 15 );
-    UITapGestureRecognizer *tapdrawer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDrawerTeacherProfile)];
-    [tapdrawer setNumberOfTapsRequired:1];
-    [face addGestureRecognizer:tapdrawer];
-    tapdrawer.delegate = self;
-    _announcementTableView.delegate = self;
+    if ([classTeacher isEqualToString:@"0"]){
+        _attendance_tab.enabled = NO;
+        _behaviour_tab.enabled = NO;
+        
+    }
+    
+        _announcementTableView.delegate = self;
     _announcementTableView.dataSource = self;
     self.announcementTableView.estimatedRowHeight = 500.0; // put max you expect here.
     self.announcementTableView.rowHeight = UITableViewAutomaticDimension;
@@ -92,15 +89,6 @@
     }
     
     
-    [face addTarget:self action:@selector(handleDrawerTeacherProfile) forControlEvents:UIControlEventTouchUpInside];
-    [face setImage:faceImage forState:UIControlStateNormal];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:face];
-    self.navigationItem.leftBarButtonItem = backButton;
-    [self.navigationItem setHidesBackButton:YES animated:YES];
-    [self.navigationItem setBackBarButtonItem:nil];
-    
-    self.rootNav = (CCKFNavDrawer *)self.navigationController;
-    [self.rootNav setCCKFNavDrawerDelegate:self];
     [self checkInternetConnectivity];
 
 
@@ -115,6 +103,7 @@
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     
+   
     if(item.tag==1)
     {
         NSLog(@"First tab selected");
@@ -511,6 +500,157 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
     
 }
+
+
+-(void)CCKFNavDrawerSelection:(NSInteger)selectionIndex
+{
+    if([classTeacher isEqualToString:@"1"]){
+        if(selectionIndex == 0){
+            
+            TeacherProfileViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherProfile"];
+            [self.navigationController pushViewController:teacherProfileViewController animated:YES];
+        }
+        else if(selectionIndex == 1){
+            // Messsage
+            TeacherMessageViewController *teacherMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherViewMessage"];
+            
+            [self.navigationController pushViewController:teacherMessageViewController animated:YES];
+        }
+        else if(selectionIndex == 2){
+            //sms
+            TeacherSMSViewController *teacherSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSMS"];
+            [self.navigationController pushViewController:teacherSMSViewController animated:YES];
+        }
+        else if(selectionIndex == 3){
+            TeacherAnnouncementViewController *teacherAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAnnouncement"];
+            
+            [self.navigationController pushViewController:teacherAnnouncementViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+        
+        else if(selectionIndex == 4){
+            TeacherAttendanceViewController *teacherAttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAttendance"];
+            [self.navigationController pushViewController:teacherAttendanceViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+        else if(selectionIndex == 5){
+            //Behaviour
+            TeacherBehaviourViewController *teacherBehaviourViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherBehaviour"];
+            [self.navigationController pushViewController:teacherBehaviourViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+        else if(selectionIndex == 6){
+            //SubjectList
+            TeacherSubjectListViewController *teacherSubjectListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSubjectList"];
+            [self.navigationController pushViewController:teacherSubjectListViewController animated:YES];
+            
+        }
+        else if(selectionIndex == 7){
+            //Setting
+            ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
+            [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+        else if(selectionIndex == 8){
+            loginClick = YES;
+            [self webserviceCall];
+            LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+            [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+        else if(selectionIndex == 9){
+            NSLog(@"<<<<< About Us clicked >>>>>>>>");
+            
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+            {
+                AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs1"];
+                UINavigationController *destNav = [[UINavigationController alloc] initWithRootViewController:aboutus];/*Here dateVC is controller you want to show in popover*/
+                aboutus.preferredContentSize = CGSizeMake(320,300);
+                destNav.modalPresentationStyle = UIModalPresentationPopover;
+                _aboutUsPopOver = destNav.popoverPresentationController;
+                _aboutUsPopOver.delegate = self;
+                _aboutUsPopOver.sourceView = self.view;
+                _aboutUsPopOver.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0);
+                destNav.navigationBarHidden = YES;
+                _aboutUsPopOver.permittedArrowDirections = 0;
+                [self presentViewController:destNav animated:YES completion:nil];
+            }
+            else{
+                
+                AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs2"];
+                [self.navigationController pushViewController:aboutus animated:YES];
+                
+                self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+            }
+        }
+    }
+    else if ([classTeacher isEqualToString:@"0"])
+    {
+        if(selectionIndex == 0){
+            
+            TeacherProfileNoClassTeacherViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherNoClassProfile"];
+            [self.navigationController pushViewController:teacherProfileViewController animated:YES];
+        }
+        else if(selectionIndex == 1){
+            // Messsage
+            
+            TeacherMessageViewController *teacherMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherViewMessage"];
+            
+            [self.navigationController pushViewController:teacherMessageViewController animated:YES];
+        }
+        else if(selectionIndex == 2){
+            //sms
+            TeacherSMSViewController *teacherSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSMS"];
+            [self.navigationController pushViewController:teacherSMSViewController animated:YES];
+        }
+        else if(selectionIndex == 3){
+            TeacherAnnouncementViewController *teacherAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAnnouncement"];
+            
+            [self.navigationController pushViewController:teacherAnnouncementViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+        
+        else if(selectionIndex == 4){
+            //SubjectList
+            TeacherSubjectListViewController *teacherSubjectListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSubjectList"];
+            [self.navigationController pushViewController:teacherSubjectListViewController animated:YES];
+        }
+        else if(selectionIndex == 5){
+            //Setting
+            ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
+            [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+        else if(selectionIndex == 6){
+            loginClick = YES;
+            [self webserviceCall];
+            LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+            [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+        else if(selectionIndex == 7){
+            NSLog(@"<<<<< About Us clicked >>>>>>>>");
+            
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+            {
+                
+                AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs1"];
+                UINavigationController *destNav = [[UINavigationController alloc] initWithRootViewController:aboutus];/*Here dateVC is controller you want to show in popover*/
+                aboutus.preferredContentSize = CGSizeMake(320,300);
+                destNav.modalPresentationStyle = UIModalPresentationPopover;
+                _aboutUsPopOver = destNav.popoverPresentationController;
+                _aboutUsPopOver.delegate = self;
+                _aboutUsPopOver.sourceView = self.view;
+                _aboutUsPopOver.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0);
+                destNav.navigationBarHidden = YES;
+                _aboutUsPopOver.permittedArrowDirections = 0;
+                [self presentViewController:destNav animated:YES completion:nil];
+            }
+            else{
+                
+                AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs2"];
+                [self.navigationController pushViewController:aboutus animated:YES];
+                
+                self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+            }
+        }
+        
+    }
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {

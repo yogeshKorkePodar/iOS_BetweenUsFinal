@@ -17,6 +17,7 @@
     NSString *school_name;
     NSString *brdName;
     NSString *oldPassword;
+    NSString *classTeacher;
     NSString *newPassword;
     NSString *confirmPassword;
     NSString *LoginArrayCount;

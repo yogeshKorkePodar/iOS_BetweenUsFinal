@@ -11,7 +11,6 @@
 #import "HVTableView.h"
 #import "ViewAttendanceViewController.h"
 
-
 @implementation HVTableView
 {
     ViewAttendanceViewController *vc;
@@ -28,7 +27,6 @@
     }
     return self;
 }
-
 
 //////// IMPORTANT!!!!!!!!!!!!!!!!!!!!!
 //////// UITableViewDataSource Protocol Forwarding

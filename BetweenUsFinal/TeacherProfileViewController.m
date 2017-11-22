@@ -84,8 +84,6 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     NSLog(@"Admin Profile board name==%@", brd_name);
     
-
-    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -298,6 +296,7 @@
     
     NSError *error = nil;
     NSData *jsonInputData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoTeacherLogout options:NSJSONWritingPrettyPrinted error:&error];
+    
     NSString *jsonInputString = [[NSString alloc] initWithData:jsonInputData encoding:NSUTF8StringEncoding];
     [self checkWithServerLogout:urlString jsonString:jsonInputString];
     
@@ -423,7 +422,6 @@
                             
                             [[NSUserDefaults standardUserDefaults] setObject:announcementReadCount forKey:@"AnnouncementCount"];
                             [[NSUserDefaults standardUserDefaults] synchronize];
-                            
                             
                         }
                     }
@@ -558,8 +556,8 @@
         [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
     }
     else if(selectionIndex == 8){
-        //loginClick = YES;
-       // [self webserviceCallForLogout];
+        loginClick = YES;
+        [self webserviceCallForLogout];
         LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
         [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
     }
@@ -570,7 +568,6 @@
         {
             
             AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs1"];
-            
             UINavigationController *destNav = [[UINavigationController alloc] initWithRootViewController:aboutus];/*Here dateVC is controller you want to show in popover*/
             aboutus.preferredContentSize = CGSizeMake(320,300);
             destNav.modalPresentationStyle = UIModalPresentationPopover;
@@ -589,8 +586,8 @@
             
             self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
-
-            }
+        
+    }
 }
 
 
