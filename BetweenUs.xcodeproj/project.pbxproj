@@ -1191,6 +1191,7 @@
 					D3F7B4571F1A1806005FBFE8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = EHE3TQAG25;
+						ProvisioningStyle = Automatic;
 						TestTargetID = D3F7B43E1F1A1805005FBFE8;
 					};
 					D3F7B4621F1A1806005FBFE8 = {
@@ -1575,7 +1576,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "09e0c129-7966-4268-b8b2-bbdddd83d5ef";
+				PROVISIONING_PROFILE = "b560782e-30c2-4843-8341-be5bf991c21c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1616,7 +1617,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "09e0c129-7966-4268-b8b2-bbdddd83d5ef";
+				PROVISIONING_PROFILE = "b560782e-30c2-4843-8341-be5bf991c21c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1662,10 +1663,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beanstalk Learning (EHE3TQAG25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EHE3TQAG25;
 				INFOPLIST_FILE = BetweenUsFinalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.podar.BetweenUsFinalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetweenUsFinal.app/BetweenUsFinal";
 			};
 			name = Debug;
@@ -1674,10 +1679,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beanstalk Learning (EHE3TQAG25)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EHE3TQAG25;
 				INFOPLIST_FILE = BetweenUsFinalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.podar.BetweenUsFinalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetweenUsFinal.app/BetweenUsFinal";
 			};
 			name = Release;

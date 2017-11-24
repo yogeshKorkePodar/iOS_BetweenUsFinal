@@ -144,8 +144,8 @@
       //username = @"anitagotu@gmail.com";
       //password = @"saklani";
         
-          username = @"it.testteacher3@podar.org";
-          password = @"india";
+        //  username = @"it.testteacher3@podar.org";
+        //  password = @"india";
         
         //Checking for null values
         if ([username isEqualToString:@""]) {

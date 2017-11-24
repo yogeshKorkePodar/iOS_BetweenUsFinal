@@ -516,7 +516,7 @@
     
     if(selectionIndex == 0){
         
-        TeacherProfileNoClassTeacherViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherViewMessage"];
+        TeacherProfileNoClassTeacherViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherNoClassProfile"];
         [self.navigationController pushViewController:teacherProfileViewController animated:YES];
     }
     else if(selectionIndex == 1){

@@ -3615,9 +3615,6 @@
                                         <state key="normal" title="View Messages">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="viewMessageBtn_Action:" destination="2oR-8Z-lJE" eventType="touchUpInside" id="ysR-TB-lHW"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaX-31-5d3">
                                         <rect key="frame" x="109.5" y="0.0" width="109" height="40"/>
@@ -4037,7 +4034,7 @@
         <!--Sent Messages-->
         <scene sceneID="21C-Wf-pWx">
             <objects>
-                <viewController storyboardIdentifier="TeacherSentMessage" title="Sent Messages" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hEc-JY-ed2" customClass="AdminSentMessagesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminSentMessage" title="Sent Messages" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hEc-JY-ed2" customClass="AdminSentMessagesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XoE-wm-W8Y"/>
                         <viewControllerLayoutGuide type="bottom" id="JOF-xN-Lwd"/>
@@ -5319,16 +5316,16 @@
         <image name="username_close.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YET-xD-lKH"/>
-        <segue reference="tsO-9I-A3V"/>
-        <segue reference="dDW-lD-Y0F"/>
-        <segue reference="QEa-Yd-2gt"/>
         <segue reference="Zlm-Wx-SnC"/>
         <segue reference="CoL-nW-NFs"/>
         <segue reference="mnz-Ds-iez"/>
         <segue reference="g5h-Gn-Itc"/>
         <segue reference="qAK-1H-dXw"/>
-        <segue reference="8lg-S3-Oe0"/>
+        <segue reference="dDW-lD-Y0F"/>
+        <segue reference="tsO-9I-A3V"/>
+        <segue reference="QEa-Yd-2gt"/>
+        <segue reference="icx-44-Q3F"/>
+        <segue reference="1fE-qR-r1T"/>
         <segue reference="IkV-Pe-i9B"/>
     </inferredMetricsTieBreakers>
 </document>

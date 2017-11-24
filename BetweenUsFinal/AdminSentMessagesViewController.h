@@ -17,6 +17,7 @@
     Reachability* hostReachable;
     NSArray *SentTableData,*dateitems;
     NSDictionary *sentmessagedetails;
+    NSString *classTeacher;
 }
 @property(strong, nonatomic) CCKFNavDrawer *rootNav;
 @property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
