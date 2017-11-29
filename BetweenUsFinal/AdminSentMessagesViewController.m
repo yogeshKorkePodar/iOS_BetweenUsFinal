@@ -100,6 +100,7 @@
     [hostReachable startNotifier];
     [hud hideAnimated:YES];
 }
+
 -(void) checkNetworkStatusViewMessage:(NSNotification *)notice
 {
     // called after network status changes
