@@ -132,6 +132,9 @@
 
 - (void)viewDidLoad {
     
+   // UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handelGesture:)];
+   // [self.view addGestureRecognizer:tap];
+    
     _my_tabBar.delegate = self;
     _my_tabBar.selectedItem = [_my_tabBar.items objectAtIndex:0];
           [super viewDidLoad];
@@ -213,6 +216,9 @@
     [_SelectMonth setTitle:monthYear forState:UIControlStateNormal];
 
     [_selectMonthTableData setHidden:YES];
+    _selectMonthTableData.layer.borderWidth = 2.0;
+    _selectMonthTableData.layer.borderColor = [UIColor blueColor].CGColor;
+    
     self.viewMessageTable.delegate = self;
     self.viewMessageTable.dataSource = self;
     self.selectMonthTableData.dataSource = self;
@@ -883,6 +889,7 @@
                 // NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SiblingTableViewCell" owner:self options:nil];
                 // cell = [nib objectAtIndex:0];
                 cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+               
             }
             [cell.textLabel setFont: [cell.textLabel.font fontWithSize: 14]];
             cell.textLabel.text = [[MonthTableData objectAtIndex:indexPath.row] objectForKey:@"MonthYear"];

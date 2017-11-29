@@ -66,6 +66,9 @@
 }
 - (void)viewDidLoad {
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handelGesture:)];
+    [self.view addGestureRecognizer:tap];
+    
     firstWebcall = YES;
     [self checkInternetConnectivity];
     
@@ -162,6 +165,13 @@
     
     [self.click_city.layer setBorderWidth:1.0];
     [self.click_city.layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+    
+    state_tableData.layer.borderWidth = 1.0;
+    state_tableData.layer.borderColor = [UIColor blackColor].CGColor;
+    country_tableData.layer.borderWidth = 1.0;
+    country_tableData.layer.borderColor = [UIColor blackColor].CGColor;
+    city_tableData.layer.borderWidth = 1.0;
+    city_tableData.layer.borderColor = [UIColor blackColor].CGColor;
 
 }
 
@@ -186,6 +196,12 @@
     return YES;
 }
 
+- (void) handelGesture:(UITapGestureRecognizer*)sender
+{
+    state_tableData.hidden = YES;
+    country_tableData.hidden = YES;
+    city_tableData.hidden = YES;
+}
 
 -(void)checkInternetConnectivity{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];

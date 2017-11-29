@@ -5,6 +5,7 @@
 //  Created by podar on 25/07/17.
 //  Copyright © 2017 podar. All rights reserved.
 //
+
 #import "URL_Constant.h"
 #import "LoginViewController.h"
 #import "Reachability.h"
@@ -35,7 +36,6 @@
     BOOL forgotPassword;
     NSString *classTeacher,*acy_year;
 
-
     UITapGestureRecognizer *tapGestRecog ;
     UITapGestureRecognizer *tapGesture;
     UITapGestureRecognizer *tapGestRecogAdmin;
@@ -53,7 +53,6 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-   
     username = @"";
     password = @"";
     NSLog(@"<<<<<< Inside LoginViewController >>>>>>>>>>>");
@@ -181,12 +180,9 @@
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
-                    
                     //Create the response and Error
                     NSError *err;
-                    
                     NSString *str = app_url @"PodarApp.svc/DoLogin";
-                   
                     str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
                     NSURL *url = [NSURL URLWithString:str];
                     

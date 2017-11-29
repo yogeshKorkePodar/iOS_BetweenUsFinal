@@ -108,6 +108,7 @@ BOOL firstTime,viewMessage,writeMessage,selectmonth,isMonthSelected,Message,Atte
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self checkInternetConnectivity];
 
     _my_tabBar.delegate = self;
@@ -177,12 +178,22 @@ BOOL firstTime,viewMessage,writeMessage,selectmonth,isMonthSelected,Message,Atte
     [_sentClick_selectMonth setTitle:monthYear forState:UIControlStateNormal];
     [_monthTableData setHidden:YES];
     [_noRecords_Label setHidden:YES];
+    
+    _monthTableData.layer.borderWidth = 1.0;
+    _monthTableData.layer.borderColor = [UIColor blackColor].CGColor;
     self.sentMessageData.dataSource = self;
     self.sentMessageData.delegate = self;
     self.monthTableData.delegate = self;
     self.monthTableData.dataSource = self;
     _topConstraint.constant = 0;
     [self httpPostRequest];
+
+}
+
+- (void) handelGesture:(UITapGestureRecognizer*)sender
+{
+   // _monthTableData.hidden = YES;
+   // _topConstraint.constant = 0;
 
 }
 
