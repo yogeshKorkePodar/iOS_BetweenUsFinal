@@ -410,6 +410,20 @@
             }
             
         }
+        
+        else if([roll_id isEqualToString:@"2"]){
+            
+            [_drawerView.academic_year setText:drawerAcademicYear];
+            [_drawerView.name setText:drawerName];
+            [_drawerView.std setHidden:YES];
+            [_drawerView.rollNo setHidden:YES];
+
+                     drawerlabelData = [NSArray arrayWithObjects:@"Dashboard", @"Messages", @"SMS", @"Announcement",@"Setting",@"Sign Out",@"About", nil];
+            
+            drawerImage = [[NSMutableArray alloc] initWithObjects:@"studentdashboardicon.png",@"messageboxicon.png", @"sms_92x92.png",@"announcementicon_48x48.png",@"settingsicon.png",@"signouticon.png",@"aboutus_icon.png",nil];
+            [_drawerView.drawerTableView reloadData];
+        }
+
          NSLog(@"<<<< opening navigation drawer >>>>");
         [self openNavigationDrawer];
 

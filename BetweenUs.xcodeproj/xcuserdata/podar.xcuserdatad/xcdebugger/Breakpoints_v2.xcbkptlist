@@ -282,7 +282,7 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/StudentInformationViewController.h"
-                  timestampString = "533191825.02977"
+                  timestampString = "533886517.637825"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -297,7 +297,7 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/StudentInformationViewController.h"
-                  timestampString = "533191825.031678"
+                  timestampString = "533886517.639802"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -1418,7 +1418,7 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/TeacherTopicListViewController.h"
-                  timestampString = "533191825.582389"
+                  timestampString = "533886517.877878"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -1433,7 +1433,7 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/TeacherTopicListViewController.h"
-                  timestampString = "533191825.58549"
+                  timestampString = "533886517.881421"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -1520,6 +1520,22 @@
             startingLineNumber = "342"
             endingLineNumber = "342"
             landmarkName = "-checkWithServerLogout:jsonString:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetweenUsFinal/AdminWriteMessageViewController.m"
+            timestampString = "533810996.769588"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "600"
+            endingLineNumber = "600"
+            landmarkName = "-checkWithServer:jsonString:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
