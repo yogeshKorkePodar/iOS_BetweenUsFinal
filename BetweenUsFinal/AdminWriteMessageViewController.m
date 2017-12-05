@@ -26,7 +26,7 @@
 //#import "AdminAnnouncementViewController.h"
 #import "AcedmicYearResult.h"
 #import "AdminDropResult.h"
-//#import "AdminStudentListViewController.h"
+#import "AdminStudentListViewController.h"
 #import "AdminWriteMessageTeacherViewController.h"
 //#import "AdminSchoolSMSViewController.h"
 
@@ -822,11 +822,11 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
 
        //yocomment
-        /*
+        
         AdminStudentListViewController *adminStudentListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminStudentList"];
         
         [self.navigationController pushViewController:adminStudentListViewController animated:YES];
-         */
+        
     }
 
 }
@@ -911,10 +911,10 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:clickedAll forKey:@"ClickedAll"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-   /* AdminStudentListViewController *adminStudentListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminStudentList"];
+    AdminStudentListViewController *adminStudentListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminStudentList"];
     
     [self.navigationController pushViewController:adminStudentListViewController animated:YES];
-    */
+    
 }
 - (IBAction)academicYear_btn:(id)sender {
     alertcycle = [[UIAlertView alloc] initWithTitle:@"Academic Year"

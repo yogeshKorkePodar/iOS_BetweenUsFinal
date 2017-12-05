@@ -150,12 +150,12 @@
     [tapGestAnnouncentLabel setNumberOfTapsRequired:1];
     [_label_announcement addGestureRecognizer:tapGestAnnouncentLabel];
     tapGestAnnouncentLabel.delegate = self;
-    
+  /*
     UITapGestureRecognizer *tapGestSMS =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceSMS)];
     [tapGestSMS setNumberOfTapsRequired:1];
     [_admin_sms_click addGestureRecognizer:tapGestSMS];
     tapGestSMS.delegate = self;
-    
+    */
     //Add drawer image button
     
     

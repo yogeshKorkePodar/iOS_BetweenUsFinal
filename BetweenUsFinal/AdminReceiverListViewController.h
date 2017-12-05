@@ -25,7 +25,4 @@
 @property BOOL internetActiveViewMessage;
 @property BOOL hostActiveViewMessage;
 @property (weak, nonatomic) IBOutlet UILabel *top_std_label;
-
-
-
 @end

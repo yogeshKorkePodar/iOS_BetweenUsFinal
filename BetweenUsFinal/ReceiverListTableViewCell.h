@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ReceiverListTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *SrNo_label;
-@property (weak, nonatomic) IBOutlet UILabel *receiverName_label;
-@property (weak, nonatomic) IBOutlet UILabel *receiverStd_label;
-@property (weak, nonatomic) IBOutlet UIView *cellView;
+@property (strong, nonatomic) IBOutlet UILabel *SrNo_label;
+@property (strong, nonatomic) IBOutlet UILabel *receiverName_label;
+@property (strong, nonatomic) IBOutlet UILabel *receiverStd_label;
+@property (strong, nonatomic) IBOutlet UIView *cellView;
 @end
