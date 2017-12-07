@@ -307,6 +307,16 @@
     NSString *urlString = app_url @"PodarApp.svc/GetSentMessageDataTeacher";
     
     //Pass The String to server
+ /*   newDatasetinfoTeacherMessage = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",pageNo,@"PageNo",pageSize,@"PageSize",check,@"check",month,@"month",nil];
+    */
+    
+    NSDate *currentDate = [NSDate date];
+    NSLog(@"Current Date = %@", currentDate);
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"MM"];
+    month = [formatter stringFromDate:currentDate];
+    NSLog(@"<<< Month detected >>>>> : %@", month);
+//@"got response==%@"
     newDatasetinfoTeacherMessage = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",pageNo,@"PageNo",pageSize,@"PageSize",check,@"check",month,@"month",nil];
     
     NSError *error = nil;
@@ -458,7 +468,7 @@
             responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
             NSString *resSrt = [[NSString alloc]initWithData:responseData encoding:NSASCIIStringEncoding];
             //This is for Response
-            NSLog(@"got response==%@", resSrt);
+            NSLog(@"<<<<<<<<< checkWithServerMessage response >>>>>>>>>%@", resSrt);
             NSError *error = nil;
             if(!responseData==nil){
                 NSDictionary *receivedData =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
@@ -476,11 +486,11 @@
                                               objectAtIndex:n];
                         _ViewMessageItems.pmu_readunredStatus = [viewmessagedetails objectForKey:@"pmu_readunreadstatus"];
                         messageReadStatus =_ViewMessageItems.pmu_readunredStatus;
-                        NSLog(@"MessageStatus:%@",  _ViewMessageItems.pmu_readunredStatus);
+                        NSLog(@"<<yoMessageStatus:%@",  _ViewMessageItems.pmu_readunredStatus);
                         if([messageReadStatus isEqualToString:@"1"]){
                             [messageReadCount addObject:messageReadStatus];
                             
-                            NSLog(@"Size ReadMesssage:%lu",(unsigned long)[messageReadCount count]);
+                            NSLog(@"<<yoSize ReadMesssage:%lu",(unsigned long)[messageReadCount count]);
                             
                             badgeCountNo = [messageReadCount count];
                             if([device isEqualToString:@"ipad"]){

@@ -227,7 +227,7 @@
             
             //Pass The String to server
             NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:emailid,@"SendTo",type,@"type", nil];
-            NSLog(@"the data Details is =%@", newDatasetInfo);
+            NSLog(@"Data Details for forgot password =%@", newDatasetInfo);
             
             //convert object to data
             NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:kNilOptions error:&err];

@@ -4345,7 +4345,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiV-ex-McX">
-                                        <rect key="frame" x="261" y="12.5" width="51" height="18"/>
+                                        <rect key="frame" x="261" y="13" width="51" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="51" id="MjJ-PQ-l7H"/>
                                         </constraints>
@@ -5318,16 +5318,16 @@
         <image name="username_close.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zlm-Wx-SnC"/>
-        <segue reference="mnz-Ds-iez"/>
-        <segue reference="9n4-wT-9t8"/>
-        <segue reference="vbA-3r-PYo"/>
-        <segue reference="SNA-zd-QUl"/>
-        <segue reference="8Gm-wp-z4q"/>
-        <segue reference="1fE-qR-r1T"/>
-        <segue reference="IkV-Pe-i9B"/>
         <segue reference="qAK-1H-dXw"/>
         <segue reference="hjP-jO-qyY"/>
         <segue reference="g5h-Gn-Itc"/>
+        <segue reference="dDW-lD-Y0F"/>
+        <segue reference="tsO-9I-A3V"/>
+        <segue reference="YET-xD-lKH"/>
+        <segue reference="QEa-Yd-2gt"/>
+        <segue reference="1fE-qR-r1T"/>
+        <segue reference="IkV-Pe-i9B"/>
+        <segue reference="mnz-Ds-iez"/>
+        <segue reference="Zlm-Wx-SnC"/>
     </inferredMetricsTieBreakers>
 </document>

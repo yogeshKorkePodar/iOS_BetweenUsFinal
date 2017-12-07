@@ -45,7 +45,6 @@
 #import "TeacherSMSViewController.h"
 #import "TeacherProfileNoClassTeacherViewController.h"
 
-
 @interface ChangePassswordViewController (){
       BOOL firstWebcall,loginClick;
 }
@@ -241,10 +240,14 @@
     NSString *str = app_url @"PodarApp.svc/ChangePassword";
     str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURL *url = [NSURL URLWithString:str];
-    
+         
+    NSLog(@"<<< usl_id %@",usl_id );
+    NSLog(@"<<< oldPassword %@",oldPassword );
+    NSLog(@"<<< newPassword %@",newPassword );
+
     //Pass The String to server
     NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:usl_id,@"usl_id",oldPassword,@"Password",newPassword,@"NewPassword",nil];
-    NSLog(@"the data Details is =%@", newDatasetInfo);
+    NSLog(@"<<< Change password data Details is =%@", newDatasetInfo);
     
     //convert object to data
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:kNilOptions error:&err];
@@ -264,7 +267,7 @@
     NSString *resSrt = [[NSString alloc]initWithData:responseData encoding:NSASCIIStringEncoding];
     
     //This is for Response
-    NSLog(@"got changepasswordresponse==%@", resSrt);
+    NSLog(@"<<< changepasswordresponse==%@", resSrt);
     NSError *error = nil;
     
     NSArray *parsedJsonArray = [NSJSONSerialization JSONObjectWithData:responseData options:(NSJSONReadingMutableContainers) error:&error];
@@ -312,7 +315,9 @@
                                  
                                  //This is for Response
                                  NSLog(@"got logout==%@", resSrt);
-                                 
+
+                                 [[NSURLCache sharedURLCache] removeAllCachedResponses];
+
                                  [hud hideAnimated:YES];
                                  
                                  LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
@@ -324,7 +329,7 @@
     }
     else if([ChangePasswordStatus isEqualToString:@"0"])
     {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:ChangePasswordStatusMessage preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error:" message:ChangePasswordStatusMessage preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
@@ -508,6 +513,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
         }
+        
+        
     }
     else if ([classTeacher isEqualToString:@"0"])
     {
@@ -627,12 +634,7 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
             }
             else if(selectionIndex == 4){
                 StudentResourcesViewController *StudentResourceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentResource"];
-                //                StudentResourceViewController.msd_id = msd_id;
-                //                StudentResourceViewController.usl_id = usl_id;
-                //                StudentResourceViewController.clt_id = clt_id;
-                //                StudentResourceViewController.brdName = brdName;
-                
-                [self.navigationController pushViewController:StudentResourceViewController animated:YES];
+                                [self.navigationController pushViewController:StudentResourceViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 5){
@@ -648,12 +650,7 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
             else if(selectionIndex == 6){
                 StudentInformationViewController *StudentInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentInformation"];
                 StudentInformationViewController.msd_id = msd_id;
-                //        secondViewController.usl_id = usl_id;
-                //        secondViewController.clt_id = clt_id;
-                //        secondViewController.name = name;
-                //        secondViewController.school_name = school_name;
-                //        secondViewController.teacherAnnouncementCount = teacher_announcementCount;
-                [self.navigationController pushViewController:StudentInformationViewController animated:YES];
+                             [self.navigationController pushViewController:StudentInformationViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 
             }
@@ -759,12 +756,7 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
             else if(selectionIndex == 5){
                 StudentInformationViewController *StudentInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentInformation"];
                 StudentInformationViewController.msd_id = msd_id;
-                //        secondViewController.usl_id = usl_id;
-                //        secondViewController.clt_id = clt_id;
-                //        secondViewController.name = name;
-                //        secondViewController.school_name = school_name;
-                //        secondViewController.teacherAnnouncementCount = teacher_announcementCount;
-                [self.navigationController pushViewController:StudentInformationViewController animated:YES];
+                             [self.navigationController pushViewController:StudentInformationViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 
             }
@@ -829,69 +821,38 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
             if(selectionIndex == 0){
                 
                 StudentDashboardWithoutSibling *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDashboardWithoutSibling"];
-                //            secondViewController.msd_id = msd_id;
-                //            secondViewController.usl_id = usl_id;
-                //            secondViewController.clt_id = clt_id;
-                //            secondViewController.name = name;
-                //            secondViewController.school_name = school_name;
-                //            secondViewController.teacherAnnouncementCount = teacherAnnouncementCount;
+               
                 [self.navigationController pushViewController:secondViewController animated:YES];
             }
             else if(selectionIndex == 1){
                 ViewMessageViewController *ViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Message"];
-                //            ViewMessageViewController.msd_id = msd_id;
-                //            ViewMessageViewController.usl_id = usl_id;
-                //            ViewMessageViewController.clt_id = clt_id;
-                //            ViewMessageViewController.brdName = brd_name;
-                //            ViewMessageViewController.stdName = _std;
-                //            NSLog(@"msdid", msd_id);
-                [self.navigationController pushViewController:ViewMessageViewController animated:YES];
-                //            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-            }
+                               [self.navigationController pushViewController:ViewMessageViewController animated:YES];
+                           }
             else if(selectionIndex == 2){
                 PaymentInfoViewController *PaymentInfoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentInformation"];
-                //            PaymentInfoViewController.msd_id = msd_id;
-                //            PaymentInfoViewController.clt_id = clt_id;
-                [self.navigationController pushViewController:PaymentInfoViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+                              [self.navigationController pushViewController:PaymentInfoViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 3){
                 StudentResourcesViewController *StudentResourceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentResource"];
-                //            StudentResourceViewController.msd_id = msd_id;
-                //            StudentResourceViewController.usl_id = usl_id;
-                //            StudentResourceViewController.clt_id = clt_id;
-                //            StudentResourceViewController.brdName = brd_name;
-                //            StudentResourceViewController.stdName = _std;
-                [self.navigationController pushViewController:StudentResourceViewController animated:YES];
+                              [self.navigationController pushViewController:StudentResourceViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             
             else if(selectionIndex == 4){
                 ViewAttendanceViewController *AttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Attendance"];
-                //            AttendanceViewController.msd_id = msd_id;
-                //            AttendanceViewController.usl_id = usl_id;
-                //            AttendanceViewController.clt_id = clt_id;
-                //            AttendanceViewController.brd_Name = brd_name;
-                [self.navigationController pushViewController:AttendanceViewController animated:YES];
+                                [self.navigationController pushViewController:AttendanceViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 5){
                 StudentInformationViewController *StudentInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentInformation"];
-                //StudentInformationViewController.msd_id = msd_id;
-                //        secondViewController.usl_id = usl_id;
-                //        secondViewController.clt_id = clt_id;
-                //        secondViewController.name = name;
-                //        secondViewController.school_name = school_name;
-                //        secondViewController.teacherAnnouncementCount = teacher_announcementCount;
+                
                 [self.navigationController pushViewController:StudentInformationViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 
             }
             else if(selectionIndex == 6){
                 ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
-                //            ChangePasswordViewController.msd_id = msd_id;
-                //            ChangePasswordViewController.clt_id = clt_id;
-                //            ChangePasswordViewController.usl_id = usl_id;
-                //            ChangePasswordViewController.brd_Name = brd_name;
+                
                 [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 
                 
@@ -938,62 +899,31 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
             if(selectionIndex == 0){
                 
                 StudentDashboardWithoutSibling *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDashboardWithoutSibling"];
-                //            secondViewController.msd_id = msd_id;
-                //            secondViewController.usl_id = usl_id;
-                //            secondViewController.clt_id = clt_id;
-                //            secondViewController.name = name;
-                //            secondViewController.school_name = school_name;
-                //            secondViewController.teacherAnnouncementCount = teacherAnnouncementCount;
-                [self.navigationController pushViewController:secondViewController animated:YES];
+                                [self.navigationController pushViewController:secondViewController animated:YES];
             }
             else if(selectionIndex == 1){
                 ViewMessageViewController *ViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Message"];
-                //            ViewMessageViewController.msd_id = msd_id;
-                //            ViewMessageViewController.usl_id = usl_id;
-                //            ViewMessageViewController.clt_id = clt_id;
-                //            ViewMessageViewController.brdName = brd_name;
-                //            ViewMessageViewController.stdName = _std;
-                //            NSLog(@"msdid", msd_id);
                 [self.navigationController pushViewController :ViewMessageViewController animated:YES];
-                //            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-                
-                //            ViewMessageViewController *navigationTabController = [self.storyboard instantiateViewControllerWithIdentifier:@"tab_controller"];
-                //
-                //            [ self presentModalViewController:navigationTabController animated:YES];
                 
             }
             else if(selectionIndex == 2){
                 PaymentInfoViewController *PaymentInfoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentInformation"];
-                //            PaymentInfoViewController.msd_id = msd_id;
-                //            PaymentInfoViewController.clt_id = clt_id;
-                [self.navigationController pushViewController:PaymentInfoViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+                              [self.navigationController pushViewController:PaymentInfoViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 3){
                 ViewAttendanceViewController *AttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Attendance"];
-                //            AttendanceViewController.msd_id = msd_id;
-                //            AttendanceViewController.usl_id = usl_id;
-                //            AttendanceViewController.clt_id = clt_id;
-                //            AttendanceViewController.brd_Name = brd_name;
-                [self.navigationController pushViewController:AttendanceViewController animated:YES];
+                              [self.navigationController pushViewController:AttendanceViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 4){
                 StudentInformationViewController *StudentInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentInformation"];
-                //            StudentInformationViewController.msd_id = msd_id;
-                //        secondViewController.usl_id = usl_id;
-                //        secondViewController.clt_id = clt_id;
-                //        secondViewController.name = name;
-                //        secondViewController.school_name = school_name;
-                //        secondViewController.teacherAnnouncementCount = teacher_announcementCount;
+               
                 [self.navigationController pushViewController:StudentInformationViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 5){
                 ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
-                //            ChangePasswordViewController.msd_id = msd_id;
-                //            ChangePasswordViewController.clt_id = clt_id;
-                //            ChangePasswordViewController.usl_id = usl_id;
-                //            ChangePasswordViewController.brd_Name = brd_name;
+               
                 [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 
                 
@@ -1032,53 +962,7 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
                 }
                 
-                
-                //            controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //            //   controller = [[AboutUsViewController alloc] init];
-                //            //     controller.view.frame=CGRectMake(50,250,300,230);
-                //            controller.msd_id = msd_id;
-                //            controller.usl_id = usl_id;
-                //            controller.brd_Name = brd_name;
-                //            controller.clt_id = clt_id;
-                //            controller.schoolName = school_name;
-                //
-                //            //   [self.view addSubview:controller.view];
-                //            //[controller.view.center ]
-                //            //  controller.view.center = CGPointMake(self.view.frame.size.width  / 2,
-                //            //        self.view.frame.size.height / 2);
-                //
-                //            //     [_closeClick addTarget:self action:@selector(dismissPopup:) forControlEvents:UIControlEventTouchUpInside];
-                //            //  [controller.closeClick addTarget:self action:@selector(dismissPopup) forControlEvents:UIControlEventTouchUpInside];
-                //            [self.navigationController pushViewController:controller animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-                //
-                //if (settingsPopoverController == nil)
-                //            {
-                //                AboutUsViewController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-                //                settingsViewController.preferredContentSize = CGSizeMake(320, 300);
-                //
-                //                settingsViewController.title = @"AboutUs";
-                //
-                //                // [settingsViewController.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"change" style:UIBarButtonItemStylePlain target:self action:@selector(change:)]];
-                //
-                //                //     [settingsViewController.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)]];
-                //
-                //                settingsViewController.modalInPopover = NO;
-                //
-                //                UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
-                //
-                //                settingsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
-                //                settingsPopoverController.delegate = self;
-                //                //  settingsPopoverController.passthroughViews = @[btn];
-                //                settingsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
-                //                settingsPopoverController.wantsDefaultContentAppearance = NO;
-                //
-                //
-                //                [settingsPopoverController presentPopoverAsDialogAnimated:YES
-                //                                                                  options:WYPopoverAnimationOptionFadeWithScale];
-                //
-                //
-                //            }
-            }
+                         }
             
             
         }

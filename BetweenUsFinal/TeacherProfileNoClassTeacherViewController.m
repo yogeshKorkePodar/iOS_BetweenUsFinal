@@ -301,6 +301,13 @@
     
     NSString *urlString = app_url @"PodarApp.svc/GetSentMessageDataTeacher";
     
+    NSDate *currentDate = [NSDate date];
+    NSLog(@"Current Date = %@", currentDate);
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM"];
+    month = [formatter stringFromDate:currentDate];
+    NSLog(@"<<< Month detected >>>>> : %@", month);
+    
     //Pass The String to server
     newDatasetinfoTeacherMessage = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",pageNo,@"PageNo",pageSize,@"PageSize",check,@"check",month,@"month",nil];
     
@@ -418,7 +425,6 @@
                             
                             [[NSUserDefaults standardUserDefaults] setObject:announcementReadCount forKey:@"AnnouncementCount"];
                             [[NSUserDefaults standardUserDefaults] synchronize];
-                            
                             
                         }
                     }
