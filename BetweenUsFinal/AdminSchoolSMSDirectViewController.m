@@ -692,7 +692,7 @@
 //}
 
 -(void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentAtURL:(NSURL *)url {
-    [controller.presentingViewController dismissViewControllerAnimated:YES completion:^{
+  //  [controller.presentingViewController dismissViewControllerAnimated:YES completion:^{
         // [self didPickLocalURL:url];
         NSLog(@"URL  :  %@",url);
         uploadFilePath = url.absoluteString;
@@ -800,7 +800,7 @@
         else{
             [self uploadFilewithData:byteArray];
         }
-    }];
+   // }];
     
 }
 -(void) uploadFilewithData:(NSMutableArray *)fileByteArray{

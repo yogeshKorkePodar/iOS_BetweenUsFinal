@@ -81,9 +81,9 @@
 
     [_closeView setHidden:YES];
     [_closeViewImg setHidden:YES];
-    _enterTeacherName.delegate = self;
-    _teacherSMSListData.delegate = self;
-    _teacherSMSListData.dataSource = self;
+    _enterTeacher.delegate = self;
+    _teacherSMSList.delegate = self;
+    _teacherSMSList.dataSource = self;
     self.navigationItem.title = @"SMS";
     //Add drawer image button
     UIImage *faceImage = [UIImage imageNamed:@"drawer_icon.png"];
@@ -112,7 +112,7 @@
     
     UITapGestureRecognizer *tapGestTextfield =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(TextfieldAdminUsername)];
     [tapGestTextfield setNumberOfTapsRequired:1];
-    [_enterTeacherName addGestureRecognizer:tapGestTextfield];
+    [_enterTeacher addGestureRecognizer:tapGestTextfield];
     tapGestTextfield.delegate = self;
     
     UITapGestureRecognizer *tapGestCloseView =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(TextfieldAdminUsername)];
@@ -142,7 +142,7 @@
     NSLog(@"went here ...");
     
     //  if([touch.view isKindOfClass:[UITextField class]]){
-    if(touch.view==_enterTeacherName){
+    if(touch.view==_enterTeacher){
         [_closeViewImg setHidden:NO];
         [_closeView setHidden:NO];
         //   tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(TextfieldAdminUsername)];
@@ -167,7 +167,7 @@
 }
 -(void)screenTappedOnceCloseView{
     closebtnclick = YES;
-    _enterTeacherName.text = @"";
+    _enterTeacher.text = @"";
     [_closeView setHidden:YES];
     [_closeViewImg setHidden:YES];
     Searchname= @"";
@@ -175,8 +175,8 @@
     [[NSUserDefaults standardUserDefaults] setObject:checkAll forKey:@"CheckAll"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [arrayForTag removeAllObjects];
-    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
-    [_checkAllClick setImage:btnUnCheckedImage forState:UIControlStateNormal];
+    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
+    [_checkAll setImage:btnUnCheckedImage forState:UIControlStateNormal];
     [contactNoArray removeAllObjects];
     checkboxAllClicked = NO;
     individualButtonClicked = NO;
@@ -193,7 +193,7 @@
 {
     
     @try {
-        if(tableView == _teacherSMSListData){
+        if(tableView == _teacherSMSList){
             return [AdminTeacherSMSArray count];
         }
     } @catch (NSException *exception) {
@@ -223,7 +223,7 @@
             _cell = [nib objectAtIndex:0];
         }
         UIImage *btnCheckedImage = [UIImage imageNamed:@"smschecked_red_32x32.png"];
-        UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
+        UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
         [_cell.cellCheckBoxClick addTarget:self action:@selector(checkButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         _cell.cellCheckBoxClick.tag = indexPath.row;
@@ -254,7 +254,7 @@
         
         
         if(checkboxAllClicked == YES && individualButtonClicked==NO){
-            if(_checkAllClick.selected == YES){
+            if(_checkAll.selected == YES){
                 NSInteger nSections = [tableView numberOfSections];
                 for (int j=0; j<nSections; j++) {
                     NSInteger nRows = [tableView numberOfRowsInSection:j];
@@ -281,7 +281,7 @@
                 
                 
             }
-            else if(_checkAllClick.selected == NO){
+            else if(_checkAll.selected == NO){
                 _cell.cellCheckBoxClick.selected = YES;
                 [_cell.cellCheckBoxClick setTag:indexPath.row];
                 [_cell.cellCheckBoxClick setImage:btnUnCheckedImage forState:UIControlStateNormal];
@@ -323,7 +323,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     UIButton *checkBox=(UIButton*)sender;
     UIImage *btnCheckedImage = [UIImage imageNamed:@"smschecked_red_32x32.png"];
-    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
+    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
     
     path = [NSIndexPath indexPathForRow:checkBox.tag inSection:0];
     contactNo = [[AdminTeacherSMSArray objectAtIndex:checkBox.tag] objectForKey:@"stf_Mno"];
@@ -634,7 +634,7 @@
                         
                         [self presentViewController:alertController animated:YES completion:nil];
                     }
-                    [_teacherSMSListData reloadData];
+                    [_teacherSMSList reloadData];
                     
                     [hud hideAnimated:YES];
                 }
@@ -689,7 +689,7 @@
                         
                         [self presentViewController:alertController animated:YES completion:nil];
                     }
-                    [_teacherSMSListData reloadData];
+                    [_teacherSMSList reloadData];
                     
                     [hud hideAnimated:YES];
                 }
@@ -744,7 +744,7 @@
                         
                         [self presentViewController:alertController animated:YES completion:nil];
                     }
-                    [_teacherSMSListData reloadData];
+                    [_teacherSMSList reloadData];
                     
                     [hud hideAnimated:YES];
                 }
@@ -757,19 +757,19 @@
 
 
 - (IBAction)searchBtn:(id)sender {
-    if([_enterTeacherName isFirstResponder]){
-    [_enterTeacherName resignFirstResponder];
+    if([_enterTeacher isFirstResponder]){
+    [_enterTeacher resignFirstResponder];
 }
     UIButton *checkBoxAll=(UIButton*)sender;
     [self.view endEditing:YES];
     searchList = YES;
-    Searchname = _enterTeacherName.text;
+    Searchname = _enterTeacher.text;
     [[NSUserDefaults standardUserDefaults] setObject:checkAll forKey:@"CheckAll"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [arrayForTag removeAllObjects];
     
-    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
-    [_checkAllClick setImage:btnUnCheckedImage forState:UIControlStateNormal];
+    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
+    [_checkAll setImage:btnUnCheckedImage forState:UIControlStateNormal];
     [contactNoArray removeAllObjects];
     checkboxAllClicked = NO;
     individualButtonClicked = NO;
@@ -815,29 +815,29 @@
     individualButtonClicked = NO;
     selectAll= YES;
     UIImage *btnCheckedImage = [UIImage imageNamed:@"smschecked_red_32x32.png"];
-    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
+    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
     
-    if(_checkAllClick.isSelected == YES){
-        _checkAllClick.selected = NO;
+    if(_checkAll.isSelected == YES){
+        _checkAll.selected = NO;
         checkboxAllClicked = NO;
         checkAll = @"0";
         [[NSUserDefaults standardUserDefaults] setObject:checkAll forKey:@"CheckAll"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [arrayForTag removeAllObjects];
-        [_checkAllClick setImage:btnUnCheckedImage forState:UIControlStateNormal];
+        [_checkAll setImage:btnUnCheckedImage forState:UIControlStateNormal];
         [contactNoArray removeAllObjects];
     
         contactNo = [contactNoArray componentsJoinedByString:@","];
         NSLog(@"conatct id after all det: %@", contactNo);
-        [_teacherSMSListData reloadData];
+        [_teacherSMSList reloadData];
     }
-    else if(_checkAllClick.isSelected == NO){
+    else if(_checkAll.isSelected == NO){
         checkAll = @"1";
         [[NSUserDefaults standardUserDefaults] setObject:checkAll forKey:@"CheckAll"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        _checkAllClick.selected = YES;
-        [_checkAllClick setImage:btnCheckedImage forState:UIControlStateNormal];
-        [_teacherSMSListData reloadData];
+        _checkAll.selected = YES;
+        [_checkAll setImage:btnCheckedImage forState:UIControlStateNormal];
+        [_teacherSMSList reloadData];
     }
     
 

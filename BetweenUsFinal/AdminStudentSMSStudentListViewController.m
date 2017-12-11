@@ -5,7 +5,7 @@
 //  Created by podar on 13/10/16.
 //  Copyright © 2016 podar. All rights reserved.
 //
-
+#import "URL_Constant.h"
 #import "AdminStudentSMSStudentListViewController.h"
 #import "AdminStudentListViewController.h"
 #import "AdminWriteMessageViewController.h"
@@ -153,7 +153,7 @@
     [_closeImage setHidden:YES];
     student_name = @"";
     [arrayForTag removeAllObjects];
-    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
+    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
     [_checkAllClick setImage:btnUnCheckedImage forState:UIControlStateNormal];
     [stuIdArray removeAllObjects];
     [clsIdArray removeAllObjects];
@@ -254,7 +254,7 @@
 
 -(void)webserviceCall{
     if(firstTime==YES){
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/GetTeacherSMSStudentList";
+        NSString *urlString = app_url @"PodarApp.svc/GetTeacherSMSStudentList";
         
         //Pass The String to server
         newDatasetinfoStudentSMSStudentList = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",cls_id,@"cls_id",student_name,@"studentName",pageIndex,@"PageNo",pageSize,@"PageSize",nil];
@@ -266,7 +266,7 @@
         
     }
     else if(studentListSearch==YES){
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/GetTeacherSMSStudentList";
+        NSString *urlString = app_url @"PodarApp.svc/GetTeacherSMSStudentList";
         
         //Pass The String to server
         newDatasetinfoStudentSMSStudentList = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",cls_id,@"cls_id",student_name,@"studentName",pageIndex,@"PageNo",pageSize,@"PageSize",nil];
@@ -277,7 +277,7 @@
         [self checkWithServer:urlString jsonString:jsonInputString];
     }
     else if(closeBtnClick == YES){
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/GetTeacherSMSStudentList";
+        NSString *urlString = app_url @"PodarApp.svc/GetTeacherSMSStudentList";
         
         //Pass The String to server
         newDatasetinfoStudentSMSStudentList = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",cls_id,@"cls_id",student_name,@"studentName",pageIndex,@"PageNo",pageSize,@"PageSize",nil];
@@ -291,7 +291,7 @@
     else if(loginClick==YES){
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"usl_id"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/LogOut";
+        NSString *urlString = app_url @"PodarApp.svc/LogOut";
         //Pass The String to server
         newDatasetinfoAdminLogout= [NSDictionary dictionaryWithObjectsAndKeys:usl_id,@"usl_id",DeviceType,@"DeviceType",DeviceToken,@"DeviceId",nil];
         
@@ -540,7 +540,7 @@
             _cell = [nib objectAtIndex:0];
         }
         UIImage *btnCheckedImage = [UIImage imageNamed:@"smschecked_red_32x32.png"];
-        UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
+        UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
         [_cell.cellCheckBoxClick addTarget:self action:@selector(checkButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         _cell.cellCheckBoxClick.tag = indexPath.row;
@@ -650,7 +650,7 @@
     selectAll = NO;
     UIButton *checkBox=(UIButton*)sender;
     UIImage *btnCheckedImage = [UIImage imageNamed:@"smschecked_red_32x32.png"];
-    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
+    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
     
     path = [NSIndexPath indexPathForRow:checkBox.tag inSection:0];
     stu_id = [[AdminStudentSMSListData objectAtIndex:checkBox.tag] objectForKey:@"stu_ID"];
@@ -761,7 +761,7 @@
     studentListSearch =  YES;
     student_name = _enterStudentName.text;
     [arrayForTag removeAllObjects];
-    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
+    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
     [_checkAllClick setImage:btnUnCheckedImage forState:UIControlStateNormal];
     [stuIdArray removeAllObjects];
     [clsIdArray removeAllObjects];
@@ -817,7 +817,7 @@
     individualButtonClicked = NO;
     
     UIImage *btnCheckedImage = [UIImage imageNamed:@"smschecked_red_32x32.png"];
-    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox.png"];
+    UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
     
     if(_checkAllClick.isSelected == YES){
         _checkAllClick.selected = NO;

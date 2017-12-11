@@ -5,7 +5,7 @@
 //  Created by podar on 19/09/16.
 //  Copyright © 2016 podar. All rights reserved.
 //
-
+#import "URL_Constant.h"
 #import "AdminUpdateAnnouncementViewController.h"
 #import "WYPopoverController.h"
 #import "AdminAnnouncementViewController.h"
@@ -105,7 +105,7 @@
     
  
         
-        NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/UpdateAdminAnnoucement";
+        NSString *urlString = app_url @"PodarApp.svc/UpdateAdminAnnoucement";
         
         //Pass The String to server
         newDatasetinfoAdminUpdateAnnouncement = [NSDictionary dictionaryWithObjectsAndKeys:msg_id,@"msg_Id",newAnnouncement,@"message",nil];

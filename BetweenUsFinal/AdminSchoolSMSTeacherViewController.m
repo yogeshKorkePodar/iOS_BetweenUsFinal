@@ -429,7 +429,7 @@
         if (range.location == NSNotFound) {
             // no ( or ) in the string
             
-            enteredSms= [NSString stringWithFormat:@"%@ %@",@"Dear Parent,Kindly Note",enteredSms];
+            enteredSms= [NSString stringWithFormat:@"%@ %@",@"Dear Teacher,Kindly Note",enteredSms];
             NSLog(@"NO%@",@"NO");
             NSLog(@"Afer text%@",enteredSms);
             

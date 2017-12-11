@@ -666,7 +666,6 @@
                 //This is for Response
                 NSLog(@"got response==%@", resSrt);
                 
-                
                 NSError *error = nil;
                 if(!responseData==nil){
                     NSDictionary *receivedData =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
@@ -908,6 +907,9 @@
                                 _SchoolSMScell.sectionLabel_cell.backgroundColor = [UIColor colorWithRed:255.0/255.0f green:229.0/255.0f blue:222/255.0f alpha:1.0];
                                 _SchoolSMScell.checBoxCell.backgroundColor =[UIColor colorWithRed:255.0/255.0f green:229.0/255.0f blue:222/255.0f alpha:1.0];
                                 _SchoolSMScell.stdLabel_cell.backgroundColor =[UIColor colorWithRed:255.0/255.0f green:229.0/255.0f blue:222/255.0f alpha:1.0];
+                                
+                                //255 229 222
+                                //244 202 190
                 
                 
                             }
@@ -993,9 +995,6 @@
             div_name = [[AdminSchoolSMSData objectAtIndex:indexPath.row] objectForKey:@"div_name"];
             _SchoolSMScell.stdLabel_cell.text = [NSString stringWithFormat:@"%@-%@",std_name,div_name];
             
-          
-            
-
             return _SchoolSMScell;
         
         
@@ -1203,7 +1202,7 @@
 - (IBAction)showSearchViewBtn:(id)sender {
     if(_SearchView.isHidden==YES){
         [_SearchView setHidden:NO];
-        _topConstraintToAcademicYearFromLabel.constant=61;
+        _topConstraintToAcademicYearFromLabel.constant=70;
     }
     else{
         [_SearchView setHidden:YES];

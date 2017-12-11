@@ -755,7 +755,7 @@
 - (IBAction)searchByBtn:(id)sender {
     if(_searchView.isHidden==YES){
         [_searchView setHidden:NO];
-        _topConstraintToAcademicYearView.constant=62;
+        _topConstraintToAcademicYearView.constant=70;
     }
     else{
         [_searchView setHidden:YES];
@@ -1031,8 +1031,6 @@
         
         [[NSUserDefaults standardUserDefaults] setObject:selectedShiftname forKey:@"SelectedShiftNameStudentSMS"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        
         
        AdminStudentSMSStudentListViewController *adminStudentSMSStudentListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminStudentSMSStudentList"];
         

@@ -5,7 +5,7 @@
 //  Created by podar on 20/10/16.
 //  Copyright © 2016 podar. All rights reserved.
 //
-
+#import "URL_Constant.h"
 #import "AdminSendSMSToTeacherSMSViewController.h"
 #import "WYPopoverController.h"
 #import "MBProgressHUD.h"
@@ -139,7 +139,7 @@
 
 -(void)webserviceCall{
     
-    NSString *urlString = @"http://115.124.127.238:8021/PodarApp.svc/SendSmsAdminToTeacher";
+    NSString *urlString = app_url @"PodarApp.svc/SendSmsAdminToTeacher";
     
     //Pass The String to server
     newDatasetinfoAdminSMSToTeacherSMS = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",messageContent,@"smsString",contactNo,@"mobilenumber",usl_id,@"usl_id",brd_name,@"brd_name",checkall,@"ChkAll",nil];

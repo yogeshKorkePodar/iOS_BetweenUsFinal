@@ -17,20 +17,29 @@
     NSArray *AdminTeacherSMSArray;
 
 }
--(void)checkButtonPressed:(id)sender;
-@property (weak, nonatomic) IBOutlet UITableView *teacherSMSListData;
-@property (weak, nonatomic) IBOutlet UITextField *enterTeacherName;
-@property (weak, nonatomic) IBOutlet UIView *closeView;
-@property (weak, nonatomic) IBOutlet UIImageView *closeViewImg;
-- (IBAction)searchBtn:(id)sender;
-- (IBAction)sendSMSBtn:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *checkAllClick;
-- (IBAction)checkAllBtn:(id)sender;
+
 @property BOOL internetActive;
 @property BOOL hostActive;
+
+@property (weak, nonatomic) IBOutlet UITableView *teacherSMSList;
+@property (weak, nonatomic) IBOutlet UITableView *teacherSMSListData;
+
+@property (weak, nonatomic) IBOutlet UITextField *enterTeacherName;
+@property (weak, nonatomic) IBOutlet UITextField *enterTeacher;
+
+@property (weak, nonatomic) IBOutlet UIView *closeView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *closeViewImg;
+
+@property (weak, nonatomic) IBOutlet UIButton *checkAllClick;
+@property (weak, nonatomic) IBOutlet UIButton *checkAll;
+
+-(void)checkButtonPressed:(id)sender;
+- (IBAction)searchBtn:(id)sender;
+- (IBAction)sendSMSBtn:(id)sender;
+- (IBAction)checkAllBtn:(id)sender;
 - (IBAction)schoolSMSBtn:(id)sender;
 - (IBAction)teacherSMSBtn:(id)sender;
-
 - (IBAction)studentSMSBtn:(id)sender;
 
 @end
