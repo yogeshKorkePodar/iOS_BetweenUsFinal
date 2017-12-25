@@ -256,7 +256,7 @@
     if(loginClick == YES){
         loginClick = NO;
         loginClick = NO;
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES ];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSError *err;
@@ -286,6 +286,7 @@
     else if(attendancefirstTime == YES){
         attendancefirstTime = NO;
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSError *err;
@@ -375,6 +376,7 @@
     else if(attendanceDetails == YES){
         attendanceDetails = NO;
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+      
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSError *err;
@@ -435,6 +437,7 @@
     else if(AcademicYearBtnClick == YES){
         AcademicYearBtnClick = NO;
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSError *err;
@@ -457,7 +460,6 @@
                 
                 //This is for Response
                 NSLog(@"got response==%@", resSrt);
-                
                 
                 NSError *error = nil;
                 if(!responseData == nil){

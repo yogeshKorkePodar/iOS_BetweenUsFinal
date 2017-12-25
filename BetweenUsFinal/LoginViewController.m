@@ -34,7 +34,7 @@
     UIDevice *currentDevice;
     BOOL loginbtn;
     BOOL forgotPassword;
-    NSString *classTeacher,*acy_year;
+    NSString *classTeacher,*acy_year,*sft_name, *std_Name, *div_name;
 
     UITapGestureRecognizer *tapGestRecog ;
     UITapGestureRecognizer *tapGesture;
@@ -263,8 +263,33 @@
                             roll_id = _item.rol_id;
                             school_name = _item.sch_name;
                             classTeacher = _item.clss_teacher;
+                            sft_name = _item.sft_name;
+                            std_Name = _item.std_Name;
+                            div_name = _item.div_name;
+                            
+                            teacherClassStdDiv =[NSString stringWithFormat: @"%@-%@-%@", sft_name,std_Name,div_name];
+                            
+                            NSLog(@"<<<<<<<< teacherClassStdDiv >>>>>>> %@",teacherClassStdDiv);
+                            NSLog(@"<<<<<<<< sft_name >>>>>>> %@",sft_name);
+                            NSLog(@"<<<<<<<< std_Name >>>>>>> %@",std_Name);
+                            NSLog(@"<<<<<<<< div_name >>>>>>> %@",div_name);
+                            NSLog(@"<<<<<<<< classTeacher >>>>>>> %@",classTeacher);
+
+                            [[NSUserDefaults standardUserDefaults] setObject:teacherClassStdDiv forKey:@"teacherClassStdDiv"];
+                            [[NSUserDefaults standardUserDefaults] synchronize];
+                            
+                            [[NSUserDefaults standardUserDefaults] setObject:sft_name forKey:@"sft_name"];
+                            [[NSUserDefaults standardUserDefaults] synchronize];
+
+                            [[NSUserDefaults standardUserDefaults] setObject:std_Name forKey:@"std_Name"];
+                            [[NSUserDefaults standardUserDefaults] synchronize];
+
+                            [[NSUserDefaults standardUserDefaults] setObject:div_name forKey:@"div_name"];
+                            [[NSUserDefaults standardUserDefaults] synchronize];
+                            
                             [[NSUserDefaults standardUserDefaults] setObject:brd_name forKey:@"brd_name"];
                             [[NSUserDefaults standardUserDefaults] synchronize];
+                            
                             [[NSUserDefaults standardUserDefaults] setObject:name forKey:@"name"];
                             [[NSUserDefaults standardUserDefaults] synchronize];
                             
@@ -423,6 +448,31 @@
             acy_year = _item.acy_year;
             school_name = _item.sch_name;
             classTeacher = _item.clss_teacher;
+            
+            sft_name = _item.sft_name;
+            std_Name = _item.std_Name;
+            div_name = _item.div_name;
+            
+            teacherClassStdDiv =[NSString stringWithFormat: @"%@-%@-%@", sft_name,std_Name,div_name];
+            
+            NSLog(@"<<<<<<<< teacherClassStdDiv >>>>>>> %@",teacherClassStdDiv);
+            NSLog(@"<<<<<<<< sft_name >>>>>>> %@",sft_name);
+            NSLog(@"<<<<<<<< std_Name >>>>>>> %@",std_Name);
+            NSLog(@"<<<<<<<< div_name >>>>>>> %@",div_name);
+            NSLog(@"<<<<<<<< classTeacher >>>>>>> %@",classTeacher);
+            
+            [[NSUserDefaults standardUserDefaults] setObject:teacherClassStdDiv forKey:@"teacherClassStdDiv"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:sft_name forKey:@"sft_name"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:std_Name forKey:@"std_Name"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:div_name forKey:@"div_name"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
             [[NSUserDefaults standardUserDefaults] setObject:brd_name forKey:@"brd_name"];
             [[NSUserDefaults standardUserDefaults] synchronize];
             

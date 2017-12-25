@@ -18,6 +18,7 @@
     NSString *DeviceToken;
     NSString *username;
     NSString *password;
+    NSString *teacherClassStdDiv;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *textfield_username;

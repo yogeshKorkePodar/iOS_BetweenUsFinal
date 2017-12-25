@@ -28,6 +28,10 @@
     NSString *clt_id;
     NSString *usl_id;
     NSString *msd_id;
+    NSString *div_name;
+    NSString *sft_name;
+    NSString *std_Name;
+    NSString *teacherClassStdDiv;
     NSString *drawerName;
     NSString *drawerStd;
     NSString *drawerRollNo;
@@ -313,6 +317,8 @@
         
         classTeacher = [[NSUserDefaults standardUserDefaults]stringForKey:@"classTeacher"];
         
+        teacherClassStdDiv = [[NSUserDefaults standardUserDefaults]stringForKey:@"teacherClassStdDiv"];
+        NSLog(@"<<<<<<<< From Drawer teacherClassStdDiv >>>>> %@", teacherClassStdDiv);
         teachershiftstdDiv = [[NSUserDefaults standardUserDefaults]stringForKey:@"shift"];
         
         [[NSUserDefaults standardUserDefaults] setInteger:arraycount forKey:@"arrayCount"];
@@ -369,17 +375,19 @@
         // Teacher role
         else if([roll_id isEqualToString:@"5"]){
             if([classTeacher isEqualToString:@"1"]){
+                NSLog(@"<<<<<  teachershiftstdDiv >>>>>>> %@", teachershiftstdDiv);
+
                 if([teachershiftstdDiv isEqualToString:@"|| "]){
-                    [_drawerView.academic_year setText:drawerAcademicYear];
-                    [_drawerView.name setText:drawerName];
-                    [_drawerView.std setHidden:YES];
+                    [_drawerView.academic_year setText:drawerName];
+                    [_drawerView.name setText:drawerAcademicYear];
+                    [_drawerView.std setText:teacherClassStdDiv];
                     [_drawerView.rollNo setHidden:YES];
                     _drawerView.drawerStdConstraint.constant = 55;
                 }
                 else{
-                    [_drawerView.std setText:teachershiftstdDiv];
-                    [_drawerView.academic_year setText:drawerAcademicYear];
-                    [_drawerView.name setText:drawerName];
+                    [_drawerView.std setText:teacherClassStdDiv];
+                    [_drawerView.academic_year setText:drawerName];
+                    [_drawerView.name setText:drawerAcademicYear];
                     [_drawerView.rollNo setHidden:YES];
                     _drawerView.drawerStdConstraint.constant = 55;
                 }
@@ -389,17 +397,20 @@
                 [_drawerView.drawerTableView reloadData];
             }
             else if([classTeacher isEqualToString:@"0"]) {
+                
+            NSLog(@"<<<<<  teachershiftstdDiv >>>>>>> %@", teachershiftstdDiv);
+            
                 if([teachershiftstdDiv isEqualToString:@"|| "]){
-                    [_drawerView.academic_year setText:drawerAcademicYear];
-                    [_drawerView.name setText:drawerName];
-                    [_drawerView.std setHidden:YES];
+                    [_drawerView.academic_year setText:drawerName];
+                    [_drawerView.name setText:drawerAcademicYear];
+                    [_drawerView.std setText:teacherClassStdDiv];
                     [_drawerView.rollNo setHidden:YES];
                     _drawerView.drawerStdConstraint.constant = 55;
                 }
                 else{
-                    [_drawerView.std setText:teachershiftstdDiv];
-                    [_drawerView.academic_year setText:drawerAcademicYear];
-                    [_drawerView.name setText:drawerName];
+                    [_drawerView.std setText:teacherClassStdDiv];
+                    [_drawerView.academic_year setText:drawerName];
+                    [_drawerView.name setText:drawerAcademicYear];
                     [_drawerView.rollNo setHidden:YES];
                     _drawerView.drawerStdConstraint.constant = 55;
                 }

@@ -317,7 +317,7 @@
     month = [formatter stringFromDate:currentDate];
     NSLog(@"<<< Month detected >>>>> : %@", month);
 //@"got response==%@"
-    newDatasetinfoTeacherMessage = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",pageNo,@"PageNo",pageSize,@"PageSize",check,@"check",month,@"month",nil];
+    newDatasetinfoTeacherMessage = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",pageNo,@"PageNo",pageSize,@"PageSize",check,@"check",@"0",@"month",nil];
     
     NSError *error = nil;
     NSData *jsonInputData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoTeacherMessage options:NSJSONWritingPrettyPrinted error:&error];

@@ -309,7 +309,7 @@
     NSLog(@"<<< Month detected >>>>> : %@", month);
     
     //Pass The String to server
-    newDatasetinfoTeacherMessage = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",pageNo,@"PageNo",pageSize,@"PageSize",check,@"check",month,@"month",nil];
+    newDatasetinfoTeacherMessage = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",pageNo,@"PageNo",pageSize,@"PageSize",check,@"check",@"0",@"month",nil];
     
     NSError *error = nil;
     NSData *jsonInputData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoTeacherMessage options:NSJSONWritingPrettyPrinted error:&error];
