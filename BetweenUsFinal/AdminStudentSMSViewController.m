@@ -6,7 +6,7 @@
 //  Copyright © 2016 podar. All rights reserved.
 //
 #import "URL_Constant.h"
-
+#import "NavigationMenuButton.h"
 #import "AdminStudentSMSViewController.h"
 #import "AdminStudentSMSViewController.h"
 #import "AdminSchoolSMSDirectViewController.h"
@@ -51,6 +51,7 @@
     UITapGestureRecognizer *tapGestureTextfield;
 }
 
+@property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
 
 @property (strong, nonatomic) CCKFNavDrawer *rootNav;
 @property (nonatomic, strong) AcedmicYearResult *AcedemicYearItems;
@@ -105,7 +106,8 @@
     self.rootNav = (CCKFNavDrawer *)self.navigationController;
     [self.rootNav setCCKFNavDrawerDelegate:self];
     
-       
+    self.navigationItem.leftBarButtonItem = [NavigationMenuButton addNavigationMenuButton:self];
+
     
 
     UITapGestureRecognizer *tapGestStudentSMS =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceStudentSMS)];
@@ -129,6 +131,12 @@
 -(void)handleDrawer{
     [self.rootNav drawerToggle];
 }
+
+-(void) buttonAction{
+    NSLog(@"Navigation bar button clicked!");
+    [self.rootNav drawerToggle];
+}
+
 -(void)screenTappedOnceStudentSMS{
     AdminStudentSMSViewController *adminStudentSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminStudentSMS"];
     [self.navigationController pushViewController:adminStudentSMSViewController animated:YES];
@@ -173,24 +181,31 @@
         [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
     }
     else if(selectionIndex == 6){
-        if (settingsPopoverController == nil)
+        NSLog(@"<<<<< About Us clicked >>>>>>>>");
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         {
-            AboutUsViewController *settingsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs"];
-            settingsViewController.preferredContentSize = CGSizeMake(320, 300);
             
-            settingsViewController.title = @"AboutUs";
-            settingsViewController.modalInPopover = NO;
-            
-            UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
-            
-            settingsPopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
-            settingsPopoverController.delegate = self;
-            settingsPopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
-            settingsPopoverController.wantsDefaultContentAppearance = NO;
-            [settingsPopoverController presentPopoverAsDialogAnimated:YES
-                                                              options:WYPopoverAnimationOptionFadeWithScale];
+            AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs1"];
+            UINavigationController *destNav = [[UINavigationController alloc] initWithRootViewController:aboutus];/*Here dateVC is controller you want to show in popover*/
+            aboutus.preferredContentSize = CGSizeMake(320,300);
+            destNav.modalPresentationStyle = UIModalPresentationPopover;
+            _aboutUsPopOver = destNav.popoverPresentationController;
+            _aboutUsPopOver.delegate = self;
+            _aboutUsPopOver.sourceView = self.view;
+            _aboutUsPopOver.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0);
+            destNav.navigationBarHidden = YES;
+            _aboutUsPopOver.permittedArrowDirections = 0;
+            [self presentViewController:destNav animated:YES completion:nil];
         }
-    }
+        else{
+            
+            AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs2"];
+            [self.navigationController pushViewController:aboutus animated:YES];
+            
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+  }
 }
 
 -(void)TextfieldAdminUsername{

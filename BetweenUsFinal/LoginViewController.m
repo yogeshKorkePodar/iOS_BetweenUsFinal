@@ -9,6 +9,7 @@
 #import "URL_Constant.h"
 #import "LoginViewController.h"
 #import "Reachability.h"
+#import "AdminProfileViewController.h"
 #import "RestAPI.h"
 #import "userListDetails.h"
 #import "MBProgressHUD.h"
@@ -62,7 +63,10 @@
     
     DeviceToken = [[NSUserDefaults standardUserDefaults]
                    stringForKey:@"Device Token"];
-    
+    _adminLoggedIn = @"false";
+    [[NSUserDefaults standardUserDefaults] setObject:_adminLoggedIn forKey:@"adminLoggedIn"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     checked = NO;
     sibling = NO;
     self.navigationItem.title = @"Login";
@@ -526,8 +530,12 @@
 
 -(void) adminDidLogin{
     NSLog(@"<< adminDidLogin");
-    TeacherProfileViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminProfile"];
-    [self.navigationController pushViewController:teacherProfileViewController animated:YES];
+    _adminLoggedIn  = @"true";
+    [[NSUserDefaults standardUserDefaults] setObject:_adminLoggedIn forKey:@"adminLoggedIn"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    AdminProfileViewController *adminProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminProfile"];
+    [self.navigationController pushViewController:adminProfileViewController animated:YES];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 
 }

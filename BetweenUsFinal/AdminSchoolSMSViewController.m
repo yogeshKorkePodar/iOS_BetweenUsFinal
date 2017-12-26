@@ -6,6 +6,7 @@
 //  Copyright © 2016 podar. All rights reserved.
 //
 #import "URL_Constant.h"
+#import "NavigationMenuButton.h"
 #import "AdminSchoolSMSViewController.h"
 #import "AdminWriteMessageTeacherViewController.h"
 #import "AdminWriteMessageViewController.h"
@@ -58,6 +59,7 @@
     BOOL academicYear,loginClick,firstTime,firstTimeList,academicYearSelected,closeBtnClick,*ListSearch,checkboxAllClicked,individualButtonClicked,selectAll;
 }
 @property (strong, nonatomic) CCKFNavDrawer *rootNav;
+@property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
 //@property (nonatomic, strong) MsgStudentResult *MsgStudentResultItems;
 //@property(nonatomic,strong)   AdminSchoolSMSTableViewCell *SchoolSMScell;
 @property (nonatomic, strong) AcedmicYearResult *AcedemicYearItems;
@@ -93,6 +95,9 @@
     
     self.rootNav = (CCKFNavDrawer *)self.navigationController;
     [self.rootNav setCCKFNavDrawerDelegate:self];
+    
+    self.navigationItem.leftBarButtonItem = [NavigationMenuButton addNavigationMenuButton:self];
+
     
     firstTime = YES;
     searchKey =@"";
@@ -155,6 +160,12 @@
     
     [self checkInternetConnectivity];
 }
+
+-(void) buttonAction{
+    NSLog(@"Navigation bar button clicked!");
+    [self.rootNav drawerToggle];
+}
+
 -(void)screenTappedOnceSchoolSMS{
     AdminSchoolSMSViewController *adminSchoolSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminSchoolSMS"];
     
@@ -1356,5 +1367,71 @@
         [_AdminSchoolSMSTableView reloadData];
     }
 
+}
+
+-(void)CCKFNavDrawerSelection:(NSInteger)selectionIndex
+{
+    
+    if(selectionIndex == 0){
+        
+        AdminProfileViewController *adminProfileController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminProfile"];
+        [self.navigationController pushViewController:adminProfileController animated:YES];
+    }
+    else if(selectionIndex == 1){
+        //Messsage
+        AdminViewMessageViewController *adminViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminViewMessage"];
+        
+        [self.navigationController pushViewController:adminViewMessageViewController animated:YES];
+    }
+    else if(selectionIndex == 2){
+        //sms
+        AdminSchoolSMSViewController *adminSchoolSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminSchoolSMS"];
+        
+        [self.navigationController pushViewController:adminSchoolSMSViewController animated:YES];
+        
+        
+    }
+    else if(selectionIndex == 3){
+        AdminAnnouncementViewController *adminAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminAnnouncement"];
+        
+        [self.navigationController pushViewController:adminAnnouncementViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    
+    else if(selectionIndex == 4){
+        ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
+        [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    else if(selectionIndex == 5){
+        loginClick = YES;
+        [self webserviceCall];
+        LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+        [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    else if(selectionIndex == 6){
+        NSLog(@"<<<<< About Us clicked >>>>>>>>");
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            
+            AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs1"];
+            UINavigationController *destNav = [[UINavigationController alloc] initWithRootViewController:aboutus];/*Here dateVC is controller you want to show in popover*/
+            aboutus.preferredContentSize = CGSizeMake(320,300);
+            destNav.modalPresentationStyle = UIModalPresentationPopover;
+            _aboutUsPopOver = destNav.popoverPresentationController;
+            _aboutUsPopOver.delegate = self;
+            _aboutUsPopOver.sourceView = self.view;
+            _aboutUsPopOver.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0);
+            destNav.navigationBarHidden = YES;
+            _aboutUsPopOver.permittedArrowDirections = 0;
+            [self presentViewController:destNav animated:YES completion:nil];
+        }
+        else{
+            
+            AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs2"];
+            [self.navigationController pushViewController:aboutus animated:YES];
+            
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+    }
 }
 @end

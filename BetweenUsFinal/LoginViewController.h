@@ -42,5 +42,8 @@
 @property(strong,nonatomic) NSString *teacher_announcementCount;
 @property(strong,nonatomic) NSString *clt_id;
 @property(strong,nonatomic) NSString *LoginUserCount;
+@property(strong,nonatomic) NSString *adminLoggedIn;
+
+
 
 @end

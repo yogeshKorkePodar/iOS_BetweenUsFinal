@@ -21,6 +21,8 @@
 }
 @property(strong, nonatomic) CCKFNavDrawer *rootNav;
 @property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
+@property(strong,nonatomic) NSString *adminLoggedIn;
+
 @property BOOL internetActiveViewMessage;
 @property BOOL hostActiveViewMessage;
 @property (retain) MKNumberBadgeView* badgeCount;

@@ -10,16 +10,16 @@
 #import "CCKFNavDrawer.h"
 #import "DrawerView.h"
 #import "NavigationMenuButton.h"
-//#import "AdminViewMessageViewController.h"
-//#import "AdminAnnouncementViewController.h"
+#import "AdminViewMessageViewController.h"
+#import "AdminAnnouncementViewController.h"
 #import "ChangePassswordViewController.h"
 #import "AboutUsViewController.h"
 #import "WYPopoverController.h"
 #import "LoginViewController.h"
 #import "RestAPI.h"
 #import "ViewMessageResult.h"
-//#import "AdminWriteMessageViewController.h"
-//#import "AdminSchoolSMSViewController.h"
+#import "AdminWriteMessageViewController.h"
+#import "AdminSchoolSMSViewController.h"
 @interface AdminProfileViewController (){
     
     BOOL loginClick;
@@ -27,7 +27,7 @@
     UITapGestureRecognizer *tapGestRecog ;
     NSDictionary *newDatasetinfoAdminViewMessages,*newDatasetinfoAdminLogout;
 }
-
+@property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
 @property (strong, nonatomic) CCKFNavDrawer *rootNav;
 @property (nonatomic, strong) ViewMessageResult *ViewMessageItems;
 @end
@@ -510,8 +510,129 @@
     return NO; // handle the touch
 }
 
--(void)CCKFNavDrawerSelection:(NSInteger)selectionIndex{
+-(void)CCKFNavDrawerSelection:(NSInteger)selectionIndex
+{
     
+    if(selectionIndex == 0){
+        
+        AdminProfileViewController *adminProfileController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminProfile"];
+        [self.navigationController pushViewController:adminProfileController animated:YES];
+    }
+    else if(selectionIndex == 1){
+        //Messsage
+        AdminViewMessageViewController *adminViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminViewMessage"];
+        
+        [self.navigationController pushViewController:adminViewMessageViewController animated:YES];
+    }
+    else if(selectionIndex == 2){
+        //sms
+        AdminSchoolSMSViewController *adminSchoolSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminSchoolSMS"];
+        
+        [self.navigationController pushViewController:adminSchoolSMSViewController animated:YES];
+        
+        
+    }
+    else if(selectionIndex == 3){
+        AdminAnnouncementViewController *adminAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminAnnouncement"];
+        
+        [self.navigationController pushViewController:adminAnnouncementViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    
+    else if(selectionIndex == 4){
+        ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
+        [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    else if(selectionIndex == 5){
+        loginClick = YES;
+        [self webserviceCallForLogout];
+        LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+        [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    else if(selectionIndex == 6){
+        NSLog(@"<<<<< About Us clicked >>>>>>>>");
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            
+            AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs1"];
+            UINavigationController *destNav = [[UINavigationController alloc] initWithRootViewController:aboutus];/*Here dateVC is controller you want to show in popover*/
+            aboutus.preferredContentSize = CGSizeMake(320,300);
+            destNav.modalPresentationStyle = UIModalPresentationPopover;
+            _aboutUsPopOver = destNav.popoverPresentationController;
+            _aboutUsPopOver.delegate = self;
+            _aboutUsPopOver.sourceView = self.view;
+            _aboutUsPopOver.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0);
+            destNav.navigationBarHidden = YES;
+            _aboutUsPopOver.permittedArrowDirections = 0;
+            [self presentViewController:destNav animated:YES completion:nil];
+        }
+        else{
+            
+            AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs2"];
+            [self.navigationController pushViewController:aboutus animated:YES];
+            
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+    }
+}
+
+-(void)webserviceCallForLogout{
+    
+    NSString *usl_id,*DeviceToken,*DeviceType;
+    
+    usl_id = [[NSUserDefaults standardUserDefaults]
+              stringForKey:@"usl_id"];
+    DeviceType= @"IOS";
+    DeviceToken = [[NSUserDefaults standardUserDefaults]
+                   stringForKey:@"Device Token"];
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"usl_id"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    NSString *urlString = app_url @"PodarApp.svc/LogOut";
+    
+    
+    //Pass The String to server
+    newDatasetinfoAdminLogout= [NSDictionary dictionaryWithObjectsAndKeys:usl_id,@"usl_id",DeviceType,@"DeviceType",DeviceToken,@"DeviceId",nil];
+    
+    NSError *error = nil;
+    NSData *jsonInputData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoAdminLogout options:NSJSONWritingPrettyPrinted error:&error];
+    
+    NSString *jsonInputString = [[NSString alloc] initWithData:jsonInputData encoding:NSUTF8StringEncoding];
+    [self checkWithServerLogout:urlString jsonString:jsonInputString];
+    
+    
+}
+////////////////////
+
+-(void)checkWithServerLogout:(NSString *)urlname jsonString:(NSString *)jsonString{
+    loginClick = NO;
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSError *err;
+            NSData* responseData = nil;
+            NSURL *url=[NSURL URLWithString:[urlname stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            responseData = [NSMutableData data] ;
+            NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url];
+            NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetinfoAdminLogout options:kNilOptions error:&err];
+            
+            [request setHTTPMethod:POST];
+            [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+            
+            //Apply the data to the body
+            [request setHTTPBody:jsonData];
+            NSURLResponse *response;
+            
+            responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+            NSString *resSrt = [[NSString alloc]initWithData:responseData encoding:NSASCIIStringEncoding];
+            
+            //This is for Response
+            NSLog(@"got response==%@", resSrt);
+            [hud hideAnimated:YES];
+        });
+    });
 }
 
 

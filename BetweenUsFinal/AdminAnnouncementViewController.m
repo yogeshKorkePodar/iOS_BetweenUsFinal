@@ -14,7 +14,7 @@
 #import "CCKFNavDrawer.h"
 #import "LoginViewController.h"
 #import "ChangePassswordViewController.h"
-#import "AdminAnnouncementTableViewCell.h"
+#import "AdminAnnouncementTableViewCell2.h"
 #import "WYPopoverController.h"
 #import "AboutUsViewController.h"
 #import "AdminViewMessageViewController.h"
@@ -23,6 +23,8 @@
 #import"NYAlertViewController.h"
 #import "NYAlertView.h"
 #import "CustomIOSAlertView.h"
+#import "NavigationMenuButton.h"
+
 
 @interface AdminAnnouncementViewController (){
 
@@ -94,6 +96,9 @@
     [self.rootNav setCCKFNavDrawerDelegate:self];
     [self checkInternetConnectivity];
     
+    self.navigationItem.leftBarButtonItem = [NavigationMenuButton addNavigationMenuButton:self];
+
+    
     UITapGestureRecognizer *tapGestSMS =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceAddAnnouncement)];
     [tapGestSMS setNumberOfTapsRequired:1];
     [_add_announcement_view addGestureRecognizer:tapGestSMS];
@@ -104,6 +109,12 @@
 -(void)handleDrawerAdminAnnouncement{
     [self.rootNav drawerToggle];
 }
+
+-(void) buttonAction{
+    NSLog(@"Navigation bar button clicked!");
+    [self.rootNav drawerToggle];
+}
+
 -(void)screenTappedOnceAddAnnouncement{
     addAnnouncement = YES;
     
@@ -384,12 +395,12 @@
 {
       static NSString *simpleTableIdentifier = @"AdminAnnouncementTableView";
     
-    AdminAnnouncementTableViewCell *cell = (AdminAnnouncementTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    AdminAnnouncementTableViewCell2 *cell = (AdminAnnouncementTableViewCell2 *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AdminAnnouncementTableViewCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AdminAnnouncementTableViewCell2" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
 

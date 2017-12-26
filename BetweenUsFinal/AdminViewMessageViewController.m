@@ -20,10 +20,10 @@
 #import "AdminProfileViewController.h"
 #import "AboutUsViewController.h"
 #import "LoginViewController.h"
-//#import "AdminAnnouncementViewController.h"
-//#import "AdminSentMessagesViewController.h"
-//#import "AdminWriteMessageViewController.h"
-//#import "AdminSchoolSMSViewController.h"
+#import "AdminAnnouncementViewController.h"
+#import "AdminSentMessagesViewController.h"
+#import "AdminWriteMessageViewController.h"
+#import "AdminSchoolSMSViewController.h"
 #import "AdminDetailMessageViewController.h"
 
 @interface AdminViewMessageViewController (){
@@ -34,7 +34,7 @@
     BOOL loginClick;
    // AdminMessageTableViewCell *cell;
 }
-
+@property(nonatomic,retain)UIPopoverPresentationController *aboutUsPopOver;
 @property (strong, nonatomic) CCKFNavDrawer *rootNav;
 @property (nonatomic, strong) ViewMessageResult *ViewMessageItems;
 @property (nonatomic, strong) ViewMessageResult *ViewMessageDetails;
@@ -105,6 +105,73 @@
     [self.rootNav drawerToggle];
 }
 
+
+-(void)CCKFNavDrawerSelection:(NSInteger)selectionIndex
+{
+    
+    if(selectionIndex == 0){
+        
+        AdminProfileViewController *adminProfileController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminProfile"];
+        [self.navigationController pushViewController:adminProfileController animated:YES];
+    }
+    else if(selectionIndex == 1){
+        //Messsage
+        AdminViewMessageViewController *adminViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminViewMessage"];
+        
+        [self.navigationController pushViewController:adminViewMessageViewController animated:YES];
+    }
+    else if(selectionIndex == 2){
+        //sms
+        AdminSchoolSMSViewController *adminSchoolSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminSchoolSMS"];
+        
+        [self.navigationController pushViewController:adminSchoolSMSViewController animated:YES];
+        
+        
+    }
+    else if(selectionIndex == 3){
+        AdminAnnouncementViewController *adminAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminAnnouncement"];
+        
+        [self.navigationController pushViewController:adminAnnouncementViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    
+    else if(selectionIndex == 4){
+        ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
+        [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    else if(selectionIndex == 5){
+        loginClick = YES;
+        [self webserviceCall];
+        LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+        [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+    }
+    else if(selectionIndex == 6){
+        NSLog(@"<<<<< About Us clicked >>>>>>>>");
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            
+            AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs1"];
+            UINavigationController *destNav = [[UINavigationController alloc] initWithRootViewController:aboutus];/*Here dateVC is controller you want to show in popover*/
+            aboutus.preferredContentSize = CGSizeMake(320,300);
+            destNav.modalPresentationStyle = UIModalPresentationPopover;
+            _aboutUsPopOver = destNav.popoverPresentationController;
+            _aboutUsPopOver.delegate = self;
+            _aboutUsPopOver.sourceView = self.view;
+            _aboutUsPopOver.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds),0,0);
+            destNav.navigationBarHidden = YES;
+            _aboutUsPopOver.permittedArrowDirections = 0;
+            [self presentViewController:destNav animated:YES completion:nil];
+        }
+        else{
+            
+            AboutUsViewController *aboutus = [self.storyboard instantiateViewControllerWithIdentifier:@"AboutUs2"];
+            [self.navigationController pushViewController:aboutus animated:YES];
+            
+            self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+        }
+
+    }
+}
 
 -(void)checkInternetConnectivityViewMessage{
    
