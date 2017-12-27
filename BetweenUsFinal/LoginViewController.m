@@ -150,8 +150,8 @@
         //  username = @"it.testteacher3@podar.org";
         //  password = @"india";
         
-        username = @"it.admintest@podar.org";
-        password = @"test123";
+       // username = @"it.admintest@podar.org";
+       // password = @"test123";
         //Checking for null values
         if ([username isEqualToString:@""]) {
             NSLog(@"Null Username");
