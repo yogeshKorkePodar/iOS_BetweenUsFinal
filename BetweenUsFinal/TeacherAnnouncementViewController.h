@@ -10,7 +10,6 @@
 #import "CCKFNavDrawer.h"
 #import "MKNumberBadgeView.h"
 
-
 @interface TeacherAnnouncementViewController : UIViewController<CCKFNavDrawerDelegate, UITabBarDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSString *device;
@@ -21,6 +20,7 @@
     __weak IBOutlet UIView *buttonView;
 
 }
+
 @property BOOL internetActive;
 @property BOOL hostActive;
 @property(strong, nonatomic) CCKFNavDrawer *rootNav;

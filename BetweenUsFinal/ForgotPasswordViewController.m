@@ -57,6 +57,7 @@
     [textField resignFirstResponder];
     return YES;
 }
+
 -(void)checkInternetConnectivity{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
     

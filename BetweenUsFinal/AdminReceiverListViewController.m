@@ -18,6 +18,8 @@
 UITapGestureRecognizer *tapGestRecog ;
 NSDictionary *newDatasetinfoAdminReceiverList;
 BOOL loginClick;
+NSArray *nib;
+
 }
 @property (nonatomic, strong) ViewMessageResult *ViewMessageItems;
 @property (nonatomic, strong) ViewMessageResult *ViewMessageDetails;
@@ -29,6 +31,8 @@ BOOL loginClick;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UITableView *tableView;
+    _cell = (ReceiverListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:nil];
     
     clt_id = [[NSUserDefaults standardUserDefaults]
               stringForKey:@"clt_id"];
@@ -239,6 +243,7 @@ BOOL loginClick;
             [_top_std_label setHidden:YES];
             [_top_std_label removeFromSuperview];
             [_topView addSubview:_top_name_label];
+            
             if([device isEqualToString:@"iphone"]){
                 [_cell.receiverName_label addConstraint:[NSLayoutConstraint constraintWithItem:_cell.receiverName_label attribute:NSLayoutAttributeWidth
                                                                                      relatedBy:NSLayoutRelationEqual
@@ -286,7 +291,6 @@ BOOL loginClick;
             _cell.receiverName_label.backgroundColor =[UIColor colorWithRed:73.0/255.0f green:157.0/255.0f blue:204/255.0f alpha:1.0];
             _cell.SrNo_label.backgroundColor =[UIColor colorWithRed:73.0/255.0f green:157.0/255.0f blue:204/255.0f alpha:1.0];
         }
-        
         
         return _cell;
     } @catch (NSException *exception) {

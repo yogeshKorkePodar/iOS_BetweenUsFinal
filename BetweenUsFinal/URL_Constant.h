@@ -10,6 +10,6 @@
 #define URL_Constant_h
 
 //Amazon web services
-#define app_url @"http://www.betweenus.in/PODARAPP/"
+#define app_url @"http://betweenus.in/PODARAPP/"
 
 #endif /* URL_Constant_h */

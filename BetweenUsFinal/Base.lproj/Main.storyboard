@@ -1826,7 +1826,7 @@
                                 <rect key="frame" x="0.0" y="96" width="320" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fees payment history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GV-K0-TqI">
-                                        <rect key="frame" x="72" y="5" width="176.5" height="21"/>
+                                        <rect key="frame" x="72" y="5" width="177" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3593,7 +3593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkD-0G-gYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="523" y="3085"/>
+            <point key="canvasLocation" x="553" y="3085"/>
         </scene>
         <!--View Messages-->
         <scene sceneID="ckB-fS-dNe">
@@ -4193,7 +4193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpp-jm-BWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015.625" y="2959.8591549295775"/>
+            <point key="canvasLocation" x="2016" y="2960"/>
         </scene>
         <!--SMS-->
         <scene sceneID="Ma6-pF-n16">
@@ -4895,6 +4895,12 @@
                                     <action selector="attachment:" destination="Lp0-Vg-IrX" eventType="touchUpInside" id="Dug-uz-Ha1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="(Upload only word or pdf document with max size 500kb)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-9C-2Q1">
+                                <rect key="frame" x="16" y="299" width="288" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -4908,11 +4914,14 @@
                             <constraint firstItem="Due-b2-idB" firstAttribute="top" secondItem="4QU-Vf-tgZ" secondAttribute="bottom" constant="8" id="KSH-NL-Tu3"/>
                             <constraint firstItem="tp1-DL-LOd" firstAttribute="leading" secondItem="SyX-Yp-8j0" secondAttribute="trailing" constant="8" id="Lhw-kG-mbR"/>
                             <constraint firstItem="tp1-DL-LOd" firstAttribute="height" secondItem="SyX-Yp-8j0" secondAttribute="height" id="NLn-Pb-6lH"/>
+                            <constraint firstItem="rbX-9C-2Q1" firstAttribute="trailing" secondItem="j9r-Lj-oJU" secondAttribute="trailingMargin" id="NaC-dd-EN8"/>
                             <constraint firstItem="PDh-5r-0ed" firstAttribute="leading" secondItem="j9r-Lj-oJU" secondAttribute="leadingMargin" id="Pn2-BH-aSR"/>
                             <constraint firstItem="PDh-5r-0ed" firstAttribute="top" secondItem="Due-b2-idB" secondAttribute="bottom" constant="8" id="Rn8-PG-2Jc"/>
                             <constraint firstItem="SyX-Yp-8j0" firstAttribute="leading" secondItem="j9r-Lj-oJU" secondAttribute="leadingMargin" id="Udk-XL-Kcv"/>
+                            <constraint firstItem="rbX-9C-2Q1" firstAttribute="top" secondItem="tp1-DL-LOd" secondAttribute="bottom" constant="8" id="dNe-Dy-BMt"/>
                             <constraint firstItem="4QU-Vf-tgZ" firstAttribute="leading" secondItem="j9r-Lj-oJU" secondAttribute="leadingMargin" id="e3P-qP-69Y"/>
                             <constraint firstItem="tp1-DL-LOd" firstAttribute="top" secondItem="PDh-5r-0ed" secondAttribute="bottom" constant="8" id="gP0-zv-7oT"/>
+                            <constraint firstItem="rbX-9C-2Q1" firstAttribute="leading" secondItem="j9r-Lj-oJU" secondAttribute="leadingMargin" id="l8d-wt-p18"/>
                             <constraint firstItem="4QU-Vf-tgZ" firstAttribute="top" secondItem="wPx-d0-Zze" secondAttribute="bottom" constant="8" id="xjv-i1-Vhk"/>
                         </constraints>
                     </view>

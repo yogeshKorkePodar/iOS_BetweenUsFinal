@@ -9,6 +9,7 @@
 #import "URL_Constant.h"
 #import "LoginViewController.h"
 #import "Reachability.h"
+#import "AdminProfileViewController.h"
 #import "RestAPI.h"
 #import "userListDetails.h"
 #import "MBProgressHUD.h"
@@ -62,7 +63,10 @@
     
     DeviceToken = [[NSUserDefaults standardUserDefaults]
                    stringForKey:@"Device Token"];
-    
+    _adminLoggedIn = @"false";
+    [[NSUserDefaults standardUserDefaults] setObject:_adminLoggedIn forKey:@"adminLoggedIn"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     checked = NO;
     sibling = NO;
     self.navigationItem.title = @"Login";
@@ -135,17 +139,19 @@
       // username = @"it.testteacher1@podar.org";
       // password = @"india";
         
-      //subject
+      //subject teacher
       //username = @"anaghashalde@gmail.com";
       //password = @"anagha1973";
       
-      //class
+      //class teacher
       //username = @"anitagotu@gmail.com";
       //password = @"saklani";
         
         //  username = @"it.testteacher3@podar.org";
         //  password = @"india";
         
+       // username = @"it.admintest@podar.org";
+       // password = @"test123";
         //Checking for null values
         if ([username isEqualToString:@""]) {
             NSLog(@"Null Username");
@@ -312,19 +318,14 @@
                             [[NSUserDefaults standardUserDefaults] setObject:classTeacher forKey:@"classTeacher"];
                             [[NSUserDefaults standardUserDefaults] synchronize];
                             
-                                                        
+                            
                         }
                     }
                     
                     if([_loginStatus isEqualToString:@"1"]){
                         if([roll_id isEqualToString:@"2"]){
                            // [self screenTappedOnceAdmin];
-                            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"Sorry for inconvenience the App is under maintenance" preferredStyle:UIAlertControllerStyleAlert];
-                            
-                            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-                            [alertController addAction:ok];
-                            
-                            [self presentViewController:alertController animated:YES completion:nil];
+                            [self adminDidLogin];
 
                         }
                         else  if([roll_id isEqualToString:@"6"]){
@@ -530,7 +531,8 @@
         
         [ self.navigationController pushViewController:studentDashboardWithoutSibling animated:YES];
           [self.navigationController setNavigationBarHidden:NO animated:YES];
-//          self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
+
+        //          self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
 //        
 //        navController.navigationBar.barTintColor = [UIColor blackColor];
 //        [navController.navigationBar setTitleTextAttributes:
@@ -574,5 +576,17 @@
 
     }
     
+}
+
+-(void) adminDidLogin{
+    NSLog(@"<< adminDidLogin");
+    _adminLoggedIn  = @"true";
+    [[NSUserDefaults standardUserDefaults] setObject:_adminLoggedIn forKey:@"adminLoggedIn"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    AdminProfileViewController *adminProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminProfile"];
+    [self.navigationController pushViewController:adminProfileViewController animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+
 }
 @end

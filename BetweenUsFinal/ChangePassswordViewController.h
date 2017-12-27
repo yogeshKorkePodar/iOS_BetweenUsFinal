@@ -48,6 +48,8 @@
 @property(nonatomic,strong) NSString *drawerRollNo;
 @property(nonatomic,strong) NSString *draweracademicYear;
 @property(strong, nonatomic) NSString *teacherAnnouncementCount;
+@property(strong,nonatomic) NSString *adminLoggedIn;
+
 
 @property BOOL internetActive;
 @property BOOL hostActive;

@@ -71,6 +71,26 @@
 		D3076B651F270DAF00E78694 /* user_icon_new.png in Resources */ = {isa = PBXBuildFile; fileRef = D3076B5F1F270DAF00E78694 /* user_icon_new.png */; };
 		D30799A01F9DA89B00F512CB /* AdminDetailMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D307999F1F9DA89B00F512CB /* AdminDetailMessageViewController.m */; };
 		D30799A31F9DB4CE00F512CB /* AdminSentMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30799A21F9DB4CE00F512CB /* AdminSentMessagesViewController.m */; };
+		D30A2CDF1FD5059C0043BE67 /* AdminStudentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CDE1FD5059C0043BE67 /* AdminStudentListViewController.m */; };
+		D30A2CE21FD5067E0043BE67 /* AdminSendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CE11FD5067E0043BE67 /* AdminSendMessageViewController.m */; };
+		D30A2CE51FD556130043BE67 /* AdminSchoolSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CE41FD556130043BE67 /* AdminSchoolSMSViewController.m */; };
+		D30A2CE91FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CE71FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.m */; };
+		D30A2CEA1FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30A2CE81FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.xib */; };
+		D30A2CED1FD55D180043BE67 /* AdminSendSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CEC1FD55D180043BE67 /* AdminSendSMSViewController.m */; };
+		D30A2CF01FD55DBE0043BE67 /* AdminSchoolSMSTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CEF1FD55DBE0043BE67 /* AdminSchoolSMSTeacherViewController.m */; };
+		D30A2CF31FD55E730043BE67 /* AdminSchoolSMSDirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CF21FD55E730043BE67 /* AdminSchoolSMSDirectViewController.m */; };
+		D30A2CF61FD55EB50043BE67 /* AdminStudentSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CF41FD55EB50043BE67 /* AdminStudentSMSViewController.m */; };
+		D30A2CF71FD55EB50043BE67 /* AdminTeacherSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CF51FD55EB50043BE67 /* AdminTeacherSMSViewController.m */; };
+		D30A2CFB1FD5607C0043BE67 /* AdminStudentSendSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CFA1FD5607C0043BE67 /* AdminStudentSendSMSViewController.m */; };
+		D30A2CFE1FD560D60043BE67 /* AdminAnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2CFD1FD560D60043BE67 /* AdminAnnouncementViewController.m */; };
+		D30A2D011FD565680043BE67 /* AdmTechList.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2D001FD565680043BE67 /* AdmTechList.m */; };
+		D30A2D041FD565840043BE67 /* AdminStudentSMSStudentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2D031FD565840043BE67 /* AdminStudentSMSStudentListViewController.m */; };
+		D30A2D071FD565BD0043BE67 /* AdminUpdateAnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2D061FD565BD0043BE67 /* AdminUpdateAnnouncementViewController.m */; };
+		D30A2D0A1FD567D20043BE67 /* AdminAnnouncementTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2D091FD567D20043BE67 /* AdminAnnouncementTableViewCell2.m */; };
+		D30A2D0E1FD569340043BE67 /* AdminAnnouncementTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30A2D0D1FD569340043BE67 /* AdminAnnouncementTableViewCell2.xib */; };
+		D30A2D111FD6581B0043BE67 /* NYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2D0F1FD6581B0043BE67 /* NYAlertViewController.m */; };
+		D30A2D141FD6584E0043BE67 /* NYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2D121FD6584E0043BE67 /* NYAlertView.m */; };
+		D30A2D171FD659760043BE67 /* AdminSendSMSToTeacherSMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A2D161FD659760043BE67 /* AdminSendSMSToTeacherSMSViewController.m */; };
 		D30A45411FBC082500609B1E /* TeacherSmsStudentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A45401FBC082500609B1E /* TeacherSmsStudentListViewController.m */; };
 		D30A45441FBC0AAF00609B1E /* SmsStudentResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A45431FBC0AAF00609B1E /* SmsStudentResult.m */; };
 		D30A45461FBC12E900609B1E /* smschecked_red_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = D30A45451FBC12E900609B1E /* smschecked_red_32x32.png */; };
@@ -189,12 +209,27 @@
 		D3B36FBD1F61588F00CB8B76 /* ResourceTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B36FBC1F61588F00CB8B76 /* ResourceTableViewCell2.m */; };
 		D3B36FC01F61591500CB8B76 /* ResourceViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B36FBF1F61591500CB8B76 /* ResourceViewController2.m */; };
 		D3B36FC31F615A2A00CB8B76 /* ResourceList.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B36FC21F615A2A00CB8B76 /* ResourceList.m */; };
+		D3B8E8881FCFC4E6004263E4 /* AdminViewMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B8E8871FCFC4E6004263E4 /* AdminViewMessageViewController.m */; };
+		D3B8E88B1FD01E3D004263E4 /* radio-off.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B8E8891FD01E3C004263E4 /* radio-off.png */; };
+		D3B8E88C1FD01E3D004263E4 /* radio-on.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B8E88A1FD01E3C004263E4 /* radio-on.png */; };
+		D3C2906D1FF0CA3600BAF92D /* AdminTeacherSMSViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C2906C1FF0CA3600BAF92D /* AdminTeacherSMSViewController2.m */; };
+		D3C2906F1FF0F59E00BAF92D /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C2906E1FF0F59E00BAF92D /* edit.png */; };
+		D3C290711FF0F7A600BAF92D /* addFilled.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C290701FF0F7A600BAF92D /* addFilled.png */; };
+		D3C6EAAA1FD11E6600E9BCB1 /* AdminWriteMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C6EAA91FD11E6600E9BCB1 /* AdminWriteMessageViewController.m */; };
+		D3C6EAAD1FD11EBC00E9BCB1 /* WriteMessageStudentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C6EAAC1FD11EBC00E9BCB1 /* WriteMessageStudentTableViewCell.m */; };
+		D3C6EAB01FD11F6300E9BCB1 /* AdminDropResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C6EAAF1FD11F6300E9BCB1 /* AdminDropResult.m */; };
+		D3C6EAB21FD127F600E9BCB1 /* WriteMessageStudentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C6EAB11FD127F600E9BCB1 /* WriteMessageStudentTableViewCell.xib */; };
+		D3C6EAB51FD26B2400E9BCB1 /* AdminWriteMessageTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C6EAB41FD26B2400E9BCB1 /* AdminWriteMessageTeacherViewController.m */; };
+		D3C6EAB91FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C6EAB71FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.m */; };
+		D3C6EABA1FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C6EAB81FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.xib */; };
+		D3C6EABD1FD26F4200E9BCB1 /* MsgTeacherResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C6EABC1FD26F4200E9BCB1 /* MsgTeacherResult.m */; };
 		D3CA1CDA1F53CBFE008D08B0 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1CD81F53CBFE008D08B0 /* MessageTableViewCell.m */; };
 		D3CA1CDB1F53CBFE008D08B0 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CA1CD91F53CBFE008D08B0 /* MessageTableViewCell.xib */; };
 		D3CA1CDE1F53CD12008D08B0 /* MonthTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1CDD1F53CD12008D08B0 /* MonthTableViewController.m */; };
 		D3CA1CE11F53CFBB008D08B0 /* DateDropdownValueDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA1CE01F53CFBB008D08B0 /* DateDropdownValueDetails.m */; };
 		D3CA1CE31F53EC65008D08B0 /* attachment.png in Resources */ = {isa = PBXBuildFile; fileRef = D3CA1CE21F53EC65008D08B0 /* attachment.png */; };
 		D3CE48C01F5E97BC00D68CF6 /* RecipentResult2.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CE48BF1F5E97BB00D68CF6 /* RecipentResult2.m */; };
+		D3D34A231FCEB6B500F84BB1 /* AdminProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D34A221FCEB6B500F84BB1 /* AdminProfileViewController.m */; };
 		D3DAAFEF1F62641700B582DE /* ResourceTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DAAFEE1F62641700B582DE /* ResourceTableViewCell2.xib */; };
 		D3DAAFF11F62677C00B582DE /* pdf_file_format_symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DAAFF01F62677C00B582DE /* pdf_file_format_symbol.png */; };
 		D3DAAFF31F6267AB00B582DE /* ppt1_32.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DAAFF21F6267AB00B582DE /* ppt1_32.png */; };
@@ -351,6 +386,43 @@
 		D307999F1F9DA89B00F512CB /* AdminDetailMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminDetailMessageViewController.m; sourceTree = "<group>"; };
 		D30799A11F9DB4CE00F512CB /* AdminSentMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminSentMessagesViewController.h; sourceTree = "<group>"; };
 		D30799A21F9DB4CE00F512CB /* AdminSentMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminSentMessagesViewController.m; sourceTree = "<group>"; };
+		D30A2CDD1FD5059C0043BE67 /* AdminStudentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminStudentListViewController.h; sourceTree = "<group>"; };
+		D30A2CDE1FD5059C0043BE67 /* AdminStudentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminStudentListViewController.m; sourceTree = "<group>"; };
+		D30A2CE01FD5067E0043BE67 /* AdminSendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminSendMessageViewController.h; sourceTree = "<group>"; };
+		D30A2CE11FD5067E0043BE67 /* AdminSendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminSendMessageViewController.m; sourceTree = "<group>"; };
+		D30A2CE31FD556130043BE67 /* AdminSchoolSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminSchoolSMSViewController.h; sourceTree = "<group>"; };
+		D30A2CE41FD556130043BE67 /* AdminSchoolSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminSchoolSMSViewController.m; sourceTree = "<group>"; };
+		D30A2CE61FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminSchoolSMSTableViewCell.h; sourceTree = "<group>"; };
+		D30A2CE71FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminSchoolSMSTableViewCell.m; sourceTree = "<group>"; };
+		D30A2CE81FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminSchoolSMSTableViewCell.xib; sourceTree = "<group>"; };
+		D30A2CEB1FD55D180043BE67 /* AdminSendSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminSendSMSViewController.h; sourceTree = "<group>"; };
+		D30A2CEC1FD55D180043BE67 /* AdminSendSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminSendSMSViewController.m; sourceTree = "<group>"; };
+		D30A2CEE1FD55DBE0043BE67 /* AdminSchoolSMSTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminSchoolSMSTeacherViewController.h; sourceTree = "<group>"; };
+		D30A2CEF1FD55DBE0043BE67 /* AdminSchoolSMSTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminSchoolSMSTeacherViewController.m; sourceTree = "<group>"; };
+		D30A2CF11FD55E730043BE67 /* AdminSchoolSMSDirectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminSchoolSMSDirectViewController.h; sourceTree = "<group>"; };
+		D30A2CF21FD55E730043BE67 /* AdminSchoolSMSDirectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminSchoolSMSDirectViewController.m; sourceTree = "<group>"; };
+		D30A2CF41FD55EB50043BE67 /* AdminStudentSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminStudentSMSViewController.m; sourceTree = "<group>"; };
+		D30A2CF51FD55EB50043BE67 /* AdminTeacherSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminTeacherSMSViewController.m; sourceTree = "<group>"; };
+		D30A2CF81FD55EFF0043BE67 /* AdminStudentSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminStudentSMSViewController.h; sourceTree = "<group>"; };
+		D30A2CF91FD560600043BE67 /* AdminStudentSendSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminStudentSendSMSViewController.h; sourceTree = "<group>"; };
+		D30A2CFA1FD5607C0043BE67 /* AdminStudentSendSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminStudentSendSMSViewController.m; sourceTree = "<group>"; };
+		D30A2CFC1FD560D60043BE67 /* AdminAnnouncementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminAnnouncementViewController.h; sourceTree = "<group>"; };
+		D30A2CFD1FD560D60043BE67 /* AdminAnnouncementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminAnnouncementViewController.m; sourceTree = "<group>"; };
+		D30A2CFF1FD565680043BE67 /* AdmTechList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmTechList.h; sourceTree = "<group>"; };
+		D30A2D001FD565680043BE67 /* AdmTechList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmTechList.m; sourceTree = "<group>"; };
+		D30A2D021FD565840043BE67 /* AdminStudentSMSStudentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminStudentSMSStudentListViewController.h; sourceTree = "<group>"; };
+		D30A2D031FD565840043BE67 /* AdminStudentSMSStudentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminStudentSMSStudentListViewController.m; sourceTree = "<group>"; };
+		D30A2D051FD565BD0043BE67 /* AdminUpdateAnnouncementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminUpdateAnnouncementViewController.h; sourceTree = "<group>"; };
+		D30A2D061FD565BD0043BE67 /* AdminUpdateAnnouncementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminUpdateAnnouncementViewController.m; sourceTree = "<group>"; };
+		D30A2D081FD567D20043BE67 /* AdminAnnouncementTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminAnnouncementTableViewCell2.h; sourceTree = "<group>"; };
+		D30A2D091FD567D20043BE67 /* AdminAnnouncementTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminAnnouncementTableViewCell2.m; sourceTree = "<group>"; };
+		D30A2D0D1FD569340043BE67 /* AdminAnnouncementTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminAnnouncementTableViewCell2.xib; sourceTree = "<group>"; };
+		D30A2D0F1FD6581B0043BE67 /* NYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAlertViewController.m; sourceTree = "<group>"; };
+		D30A2D101FD6581B0043BE67 /* NYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAlertViewController.h; sourceTree = "<group>"; };
+		D30A2D121FD6584E0043BE67 /* NYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAlertView.m; sourceTree = "<group>"; };
+		D30A2D131FD6584E0043BE67 /* NYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAlertView.h; sourceTree = "<group>"; };
+		D30A2D151FD659760043BE67 /* AdminSendSMSToTeacherSMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminSendSMSToTeacherSMSViewController.h; sourceTree = "<group>"; };
+		D30A2D161FD659760043BE67 /* AdminSendSMSToTeacherSMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminSendSMSToTeacherSMSViewController.m; sourceTree = "<group>"; };
 		D30A453F1FBC082400609B1E /* TeacherSmsStudentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherSmsStudentListViewController.h; sourceTree = "<group>"; };
 		D30A45401FBC082500609B1E /* TeacherSmsStudentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherSmsStudentListViewController.m; sourceTree = "<group>"; };
 		D30A45421FBC0AAF00609B1E /* SmsStudentResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmsStudentResult.h; sourceTree = "<group>"; };
@@ -532,6 +604,28 @@
 		D3B36FBF1F61591500CB8B76 /* ResourceViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceViewController2.m; sourceTree = "<group>"; };
 		D3B36FC11F615A2A00CB8B76 /* ResourceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceList.h; sourceTree = "<group>"; };
 		D3B36FC21F615A2A00CB8B76 /* ResourceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceList.m; sourceTree = "<group>"; };
+		D3B8E8861FCFC4E6004263E4 /* AdminViewMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewMessageViewController.h; sourceTree = "<group>"; };
+		D3B8E8871FCFC4E6004263E4 /* AdminViewMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewMessageViewController.m; sourceTree = "<group>"; };
+		D3B8E8891FD01E3C004263E4 /* radio-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-off.png"; sourceTree = "<group>"; };
+		D3B8E88A1FD01E3C004263E4 /* radio-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-on.png"; sourceTree = "<group>"; };
+		D3C2906B1FF0CA3600BAF92D /* AdminTeacherSMSViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminTeacherSMSViewController2.h; sourceTree = "<group>"; };
+		D3C2906C1FF0CA3600BAF92D /* AdminTeacherSMSViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminTeacherSMSViewController2.m; sourceTree = "<group>"; };
+		D3C2906E1FF0F59E00BAF92D /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
+		D3C290701FF0F7A600BAF92D /* addFilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addFilled.png; sourceTree = "<group>"; };
+		D3C6EAA81FD11E6600E9BCB1 /* AdminWriteMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminWriteMessageViewController.h; sourceTree = "<group>"; };
+		D3C6EAA91FD11E6600E9BCB1 /* AdminWriteMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminWriteMessageViewController.m; sourceTree = "<group>"; };
+		D3C6EAAB1FD11EBC00E9BCB1 /* WriteMessageStudentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteMessageStudentTableViewCell.h; sourceTree = "<group>"; };
+		D3C6EAAC1FD11EBC00E9BCB1 /* WriteMessageStudentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteMessageStudentTableViewCell.m; sourceTree = "<group>"; };
+		D3C6EAAE1FD11F6300E9BCB1 /* AdminDropResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminDropResult.h; sourceTree = "<group>"; };
+		D3C6EAAF1FD11F6300E9BCB1 /* AdminDropResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminDropResult.m; sourceTree = "<group>"; };
+		D3C6EAB11FD127F600E9BCB1 /* WriteMessageStudentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteMessageStudentTableViewCell.xib; sourceTree = "<group>"; };
+		D3C6EAB31FD26B2400E9BCB1 /* AdminWriteMessageTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminWriteMessageTeacherViewController.h; sourceTree = "<group>"; };
+		D3C6EAB41FD26B2400E9BCB1 /* AdminWriteMessageTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminWriteMessageTeacherViewController.m; sourceTree = "<group>"; };
+		D3C6EAB61FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminTeacherTableViewCell.h; sourceTree = "<group>"; };
+		D3C6EAB71FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminTeacherTableViewCell.m; sourceTree = "<group>"; };
+		D3C6EAB81FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminTeacherTableViewCell.xib; sourceTree = "<group>"; };
+		D3C6EABB1FD26F4200E9BCB1 /* MsgTeacherResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgTeacherResult.h; sourceTree = "<group>"; };
+		D3C6EABC1FD26F4200E9BCB1 /* MsgTeacherResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgTeacherResult.m; sourceTree = "<group>"; };
 		D3CA1CD71F53CBFE008D08B0 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		D3CA1CD81F53CBFE008D08B0 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		D3CA1CD91F53CBFE008D08B0 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
@@ -542,6 +636,8 @@
 		D3CA1CE21F53EC65008D08B0 /* attachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attachment.png; sourceTree = "<group>"; };
 		D3CE48BE1F5E97BB00D68CF6 /* RecipentResult2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipentResult2.h; sourceTree = "<group>"; };
 		D3CE48BF1F5E97BB00D68CF6 /* RecipentResult2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipentResult2.m; sourceTree = "<group>"; };
+		D3D34A211FCEB6B500F84BB1 /* AdminProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminProfileViewController.h; sourceTree = "<group>"; };
+		D3D34A221FCEB6B500F84BB1 /* AdminProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminProfileViewController.m; sourceTree = "<group>"; };
 		D3DA3CED1F6A4CAE006C2A5A /* URL_Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URL_Constant.h; sourceTree = "<group>"; };
 		D3DAAFEE1F62641700B582DE /* ResourceTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResourceTableViewCell2.xib; sourceTree = "<group>"; };
 		D3DAAFF01F62677C00B582DE /* pdf_file_format_symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pdf_file_format_symbol.png; sourceTree = "<group>"; };
@@ -806,15 +902,68 @@
 		A5E4C0C61F28956D00EEAA3B /* AdminModule */ = {
 			isa = PBXGroup;
 			children = (
-				D31375381FA0671600C97E85 /* AdminStudentListTableViewCell.xib */,
-				D34E05E21F9F4DE60074B7BD /* AdminStudentListTableViewCell.h */,
-				D34E05E31F9F4DE60074B7BD /* AdminStudentListTableViewCell.m */,
-				D32045271F95C73200958699 /* AdminReceiverListViewController.h */,
-				D32045281F95C73200958699 /* AdminReceiverListViewController.m */,
+				D30A2D081FD567D20043BE67 /* AdminAnnouncementTableViewCell2.h */,
+				D30A2D091FD567D20043BE67 /* AdminAnnouncementTableViewCell2.m */,
+				D30A2D0D1FD569340043BE67 /* AdminAnnouncementTableViewCell2.xib */,
+				D30A2CFC1FD560D60043BE67 /* AdminAnnouncementViewController.h */,
+				D30A2CFD1FD560D60043BE67 /* AdminAnnouncementViewController.m */,
 				D307999E1F9DA89B00F512CB /* AdminDetailMessageViewController.h */,
 				D307999F1F9DA89B00F512CB /* AdminDetailMessageViewController.m */,
+				D3D34A211FCEB6B500F84BB1 /* AdminProfileViewController.h */,
+				D3D34A221FCEB6B500F84BB1 /* AdminProfileViewController.m */,
+				D32045271F95C73200958699 /* AdminReceiverListViewController.h */,
+				D32045281F95C73200958699 /* AdminReceiverListViewController.m */,
+				D30A2CF11FD55E730043BE67 /* AdminSchoolSMSDirectViewController.h */,
+				D30A2CF21FD55E730043BE67 /* AdminSchoolSMSDirectViewController.m */,
+				D30A2CE61FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.h */,
+				D30A2CE71FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.m */,
+				D30A2CE81FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.xib */,
+				D30A2CEE1FD55DBE0043BE67 /* AdminSchoolSMSTeacherViewController.h */,
+				D30A2CEF1FD55DBE0043BE67 /* AdminSchoolSMSTeacherViewController.m */,
+				D30A2CE31FD556130043BE67 /* AdminSchoolSMSViewController.h */,
+				D30A2CE41FD556130043BE67 /* AdminSchoolSMSViewController.m */,
+				D30A2CE01FD5067E0043BE67 /* AdminSendMessageViewController.h */,
+				D30A2CE11FD5067E0043BE67 /* AdminSendMessageViewController.m */,
+				D30A2D151FD659760043BE67 /* AdminSendSMSToTeacherSMSViewController.h */,
+				D30A2D161FD659760043BE67 /* AdminSendSMSToTeacherSMSViewController.m */,
+				D30A2CEB1FD55D180043BE67 /* AdminSendSMSViewController.h */,
+				D30A2CEC1FD55D180043BE67 /* AdminSendSMSViewController.m */,
 				D30799A11F9DB4CE00F512CB /* AdminSentMessagesViewController.h */,
 				D30799A21F9DB4CE00F512CB /* AdminSentMessagesViewController.m */,
+				D34E05E21F9F4DE60074B7BD /* AdminStudentListTableViewCell.h */,
+				D34E05E31F9F4DE60074B7BD /* AdminStudentListTableViewCell.m */,
+				D31375381FA0671600C97E85 /* AdminStudentListTableViewCell.xib */,
+				D30A2CDD1FD5059C0043BE67 /* AdminStudentListViewController.h */,
+				D30A2CDE1FD5059C0043BE67 /* AdminStudentListViewController.m */,
+				D30A2CF91FD560600043BE67 /* AdminStudentSendSMSViewController.h */,
+				D30A2CFA1FD5607C0043BE67 /* AdminStudentSendSMSViewController.m */,
+				D30A2D021FD565840043BE67 /* AdminStudentSMSStudentListViewController.h */,
+				D30A2D031FD565840043BE67 /* AdminStudentSMSStudentListViewController.m */,
+				D30A2CF81FD55EFF0043BE67 /* AdminStudentSMSViewController.h */,
+				D30A2CF41FD55EB50043BE67 /* AdminStudentSMSViewController.m */,
+				D30A2CF51FD55EB50043BE67 /* AdminTeacherSMSViewController.m */,
+				D3C2906B1FF0CA3600BAF92D /* AdminTeacherSMSViewController2.h */,
+				D3C2906C1FF0CA3600BAF92D /* AdminTeacherSMSViewController2.m */,
+				D3C6EAB61FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.h */,
+				D3C6EAB71FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.m */,
+				D3C6EAB81FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.xib */,
+				D30A2D051FD565BD0043BE67 /* AdminUpdateAnnouncementViewController.h */,
+				D30A2D061FD565BD0043BE67 /* AdminUpdateAnnouncementViewController.m */,
+				D3B8E8861FCFC4E6004263E4 /* AdminViewMessageViewController.h */,
+				D3B8E8871FCFC4E6004263E4 /* AdminViewMessageViewController.m */,
+				D3C6EAB31FD26B2400E9BCB1 /* AdminWriteMessageTeacherViewController.h */,
+				D3C6EAB41FD26B2400E9BCB1 /* AdminWriteMessageTeacherViewController.m */,
+				D3C6EAA81FD11E6600E9BCB1 /* AdminWriteMessageViewController.h */,
+				D3C6EAA91FD11E6600E9BCB1 /* AdminWriteMessageViewController.m */,
+				D30A2CFF1FD565680043BE67 /* AdmTechList.h */,
+				D30A2D001FD565680043BE67 /* AdmTechList.m */,
+				D30A2D131FD6584E0043BE67 /* NYAlertView.h */,
+				D30A2D121FD6584E0043BE67 /* NYAlertView.m */,
+				D30A2D101FD6581B0043BE67 /* NYAlertViewController.h */,
+				D30A2D0F1FD6581B0043BE67 /* NYAlertViewController.m */,
+				D3C6EAAB1FD11EBC00E9BCB1 /* WriteMessageStudentTableViewCell.h */,
+				D3C6EAAC1FD11EBC00E9BCB1 /* WriteMessageStudentTableViewCell.m */,
+				D3C6EAB11FD127F600E9BCB1 /* WriteMessageStudentTableViewCell.xib */,
 			);
 			name = AdminModule;
 			sourceTree = "<group>";
@@ -836,6 +985,10 @@
 		D3076B591F270D4900E78694 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D3C290701FF0F7A600BAF92D /* addFilled.png */,
+				D3C2906E1FF0F59E00BAF92D /* edit.png */,
+				D3B8E8891FD01E3C004263E4 /* radio-off.png */,
+				D3B8E88A1FD01E3C004263E4 /* radio-on.png */,
 				D3F5023E1FC02BAB000F393F /* thumbsdown.png */,
 				D3F5023C1FC02B7A000F393F /* thumbsup.png */,
 				D30A454A1FBC395600609B1E /* dropdown_black.png */,
@@ -959,6 +1112,10 @@
 		D3076B9A1F272CE300E78694 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D3C6EABB1FD26F4200E9BCB1 /* MsgTeacherResult.h */,
+				D3C6EABC1FD26F4200E9BCB1 /* MsgTeacherResult.m */,
+				D3C6EAAE1FD11F6300E9BCB1 /* AdminDropResult.h */,
+				D3C6EAAF1FD11F6300E9BCB1 /* AdminDropResult.m */,
 				D3ED41671FC295A30077C6E1 /* ExpandTableViewCell.h */,
 				D3ED41681FC295A30077C6E1 /* ExpandTableViewCell.m */,
 				D3ED41641FC292490077C6E1 /* FZAccordionTableView.h */,
@@ -1232,6 +1389,8 @@
 				D31375351FA059D600C97E85 /* send_sms.png in Resources */,
 				A5ED70BA1F303BE300D35637 /* resourcesicon.png in Resources */,
 				D390C0171F41667400E02247 /* icse_225x225.png in Resources */,
+				D3C6EABA1FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.xib in Resources */,
+				D30A2D0E1FD569340043BE67 /* AdminAnnouncementTableViewCell2.xib in Resources */,
 				D3E09D531F78DB0C001F7093 /* behaviouricon_92x92.png in Resources */,
 				D313294A1FA8482F0010DC66 /* AdminMessageTableViewCell.xib in Resources */,
 				D30FE6FA1FA6FAE1004C391C /* attachment_new.png in Resources */,
@@ -1240,6 +1399,8 @@
 				D390C0221F41667400E02247 /* ssc_250x100.png in Resources */,
 				A5ED066C1F2F4D1D00FEE34B /* seperator_colored_line.jpg in Resources */,
 				A5ED70C11F3044F100D35637 /* messageboxicon.png in Resources */,
+				D30A2CEA1FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.xib in Resources */,
+				D3C290711FF0F7A600BAF92D /* addFilled.png in Resources */,
 				D390C00E1F41667400E02247 /* ICSE_Logo.png in Resources */,
 				D3076B611F270DAF00E78694 /* Checked_Checkbox.png in Resources */,
 				D3DAAFF71F62681400B582DE /* videos.png in Resources */,
@@ -1260,7 +1421,9 @@
 				D390C0211F41667400E02247 /* rnpodar_225x100.png in Resources */,
 				D3388FC01F57E95F009DE47D /* msgsent.png in Resources */,
 				A5ED70AF1F30398900D35637 /* colored_line.png in Resources */,
+				D3B8E88B1FD01E3D004263E4 /* radio-off.png in Resources */,
 				D3F5023D1FC02B7A000F393F /* thumbsup.png in Resources */,
+				D3C6EAB21FD127F600E9BCB1 /* WriteMessageStudentTableViewCell.xib in Resources */,
 				D390C01A1F41667400E02247 /* logo1.jpg in Resources */,
 				D31375331FA056B000C97E85 /* search_new.png in Resources */,
 				D390C0111F41667400E02247 /* CBSE Logo 200x100 pix (1).png in Resources */,
@@ -1275,6 +1438,7 @@
 				D390C0181F41667400E02247 /* jumbokids_184x184.png in Resources */,
 				A5EF1CAA1F3991BB007D3388 /* DrawerIphoneTableViewCell.xib in Resources */,
 				D3B36FB81F614BE700CB8B76 /* drop_arrow_white.png in Resources */,
+				D3B8E88C1FD01E3D004263E4 /* radio-on.png in Resources */,
 				D30028F21F66AB18004886FC /* AbsentHistoryTableViewCell.xib in Resources */,
 				D31D99A71F5946D200685886 /* podartree_highresolution_new.png in Resources */,
 				D320452E1F95CEDB00958699 /* ReceiverListTableViewCell.xib in Resources */,
@@ -1283,6 +1447,7 @@
 				D3F7B4521F1A1806005FBFE8 /* LaunchScreen.storyboard in Resources */,
 				D390C0191F41667400E02247 /* lilavati_250x125.png in Resources */,
 				D390C01B1F41667400E02247 /* logo2.jpg in Resources */,
+				D3C2906F1FF0F59E00BAF92D /* edit.png in Resources */,
 				D3109DCE1F46BCA000103696 /* message_150rs.png in Resources */,
 				D390C0161F41667400E02247 /* ib_250x100.png in Resources */,
 				A5EF1CB41F39921B007D3388 /* TableCellView.xib in Resources */,
@@ -1362,16 +1527,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30A2D111FD6581B0043BE67 /* NYAlertViewController.m in Sources */,
 				D3F502451FC04147000F393F /* TeacherTopicListViewController.m in Sources */,
 				D3109DD41F46E5FF00103696 /* PaymentInfoViewController.m in Sources */,
 				D30A454F1FBC508000609B1E /* TeacherAnnouncementTableViewCell.m in Sources */,
 				D3201C661F4C4C8E002E71FD /* AnnouncementViewController.m in Sources */,
 				D3326E771F5D47A7004AE998 /* TopicList.m in Sources */,
+				D3C6EAAD1FD11EBC00E9BCB1 /* WriteMessageStudentTableViewCell.m in Sources */,
 				A5E9B2981F3AE9F8005535EF /* SiblingTableViewCell.m in Sources */,
 				D3A5A4041F275597004DC01D /* LoginViewController.m in Sources */,
 				D3EA8B821FBD5E9100942E3B /* teacherAttendanceResult.m in Sources */,
 				A5E7D9FC1F34370B0086C54E /* StudentDashboardWithSibling.m in Sources */,
 				D34E05E11F9F4DC80074B7BD /* MsgStudentResult.m in Sources */,
+				D30A2CE91FD55CD00043BE67 /* AdminSchoolSMSTableViewCell.m in Sources */,
 				D30D98561F5FD06100625144 /* ParentInfoState.m in Sources */,
 				D3F502341FBFF771000F393F /* TeacherBehaviourStudentListTableViewCell.m in Sources */,
 				D34E05C31F9F22630074B7BD /* TeacherWriteMessageStudentListViewController.m in Sources */,
@@ -1380,7 +1548,10 @@
 				D30FE6F61FA6F073004C391C /* TeacherSendMessageViewController.m in Sources */,
 				D30028DC1F665161004886FC /* BehavioursResult.m in Sources */,
 				D30D98541F5FD06100625144 /* ParentInfocity.m in Sources */,
+				D30A2D071FD565BD0043BE67 /* AdminUpdateAnnouncementViewController.m in Sources */,
 				D3203A661F7CF7EB00B55C4C /* NavigationMenuButton.m in Sources */,
+				D30A2CFE1FD560D60043BE67 /* AdminAnnouncementViewController.m in Sources */,
+				D30A2CED1FD55D180043BE67 /* AdminSendSMSViewController.m in Sources */,
 				D315525E1F5AC0480016EED9 /* StudentProfileWithSiblingViewController.m in Sources */,
 				D3203A751F7E15EB00B55C4C /* TeacherSubjectListViewController.m in Sources */,
 				D3F502381FBFF82D000F393F /* TeacherBehvaiourDetailsViewController.m in Sources */,
@@ -1389,13 +1560,16 @@
 				D315525B1F5ABFCA0016EED9 /* SiblingStudentViewController.m in Sources */,
 				D3036DD31F4D7A530092B142 /* WYPopoverController.m in Sources */,
 				D3ED41661FC292490077C6E1 /* FZAccordionTableView.m in Sources */,
+				D30A2D141FD6584E0043BE67 /* NYAlertView.m in Sources */,
 				D34E05E41F9F4DE60074B7BD /* AdminStudentListTableViewCell.m in Sources */,
+				D30A2CF01FD55DBE0043BE67 /* AdminSchoolSMSTeacherViewController.m in Sources */,
 				A5E4C0BB1F28593100EEAA3B /* CustomIOSAlertView.m in Sources */,
 				D3ED41621FC290360077C6E1 /* TopicListTableViewCell.m in Sources */,
 				D34E05CC1F9F41C40074B7BD /* DivisionResult.m in Sources */,
 				D34E05D51F9F426F0074B7BD /* StandardResult.m in Sources */,
 				D390C0251F416C0E00E02247 /* ViewMessageResult.m in Sources */,
 				D30028E71F668E1F004886FC /* HVTableView.m in Sources */,
+				D30A2D171FD659760043BE67 /* AdminSendSMSToTeacherSMSViewController.m in Sources */,
 				D3F5023B1FC003DF000F393F /* teacherStudBehaviourResult.m in Sources */,
 				A5EF1CB21F3991F4007D3388 /* NavTableViewCell.m in Sources */,
 				D3CA1CDE1F53CD12008D08B0 /* MonthTableViewController.m in Sources */,
@@ -1408,12 +1582,15 @@
 				D30028F01F66A835004886FC /* AttendHistory.m in Sources */,
 				D3F502301FBFF72B000F393F /* teacherBehaviourStudResult.m in Sources */,
 				D30D98571F5FD06100625144 /* ParentInfoStudent.m in Sources */,
+				D3C6EAB01FD11F6300E9BCB1 /* AdminDropResult.m in Sources */,
+				D30A2CF71FD55EB50043BE67 /* AdminTeacherSMSViewController.m in Sources */,
 				D3203A5F1F7CBE5300B55C4C /* TeacherProfileNoClassTeacherViewController.m in Sources */,
 				D34E05C61F9F40920074B7BD /* AcedmicYearResult.m in Sources */,
 				D30028DF1F666D41004886FC /* AttendanceTableViewCell.m in Sources */,
 				D30028EA1F66A296004886FC /* AbsentHistoryViewController.m in Sources */,
 				D3F502421FC040C7000F393F /* SubjectResult.m in Sources */,
 				D32045231F95C1CC00958699 /* TeacherSentMessageViewController.m in Sources */,
+				D30A2D0A1FD567D20043BE67 /* AdminAnnouncementTableViewCell2.m in Sources */,
 				A5EE4E721F2B0725009C9F05 /* MBProgressHUD.m in Sources */,
 				A5E4C0CA1F28960300EEAA3B /* ForgotPasswordViewController.m in Sources */,
 				D3326E6E1F5D3AC3004AE998 /* StudentResourcesViewController.m in Sources */,
@@ -1425,6 +1602,7 @@
 				D3F5022D1FBFF344000F393F /* TeacherBehaviourStudentListViewController.m in Sources */,
 				D30028D81F664D8F004886FC /* BehaviourTableViewCell.m in Sources */,
 				D30799A01F9DA89B00F512CB /* AdminDetailMessageViewController.m in Sources */,
+				D30A2CF61FD55EB50043BE67 /* AdminStudentSMSViewController.m in Sources */,
 				D30D98601F60031D00625144 /* PaymentList.m in Sources */,
 				D3CE48C01F5E97BC00D68CF6 /* RecipentResult2.m in Sources */,
 				D30D98551F5FD06100625144 /* ParentInfoCountyList.m in Sources */,
@@ -1435,6 +1613,7 @@
 				D3109DDA1F46E79800103696 /* StudentInformationViewController.m in Sources */,
 				D30799A31F9DB4CE00F512CB /* AdminSentMessagesViewController.m in Sources */,
 				D30D98481F5FB29600625144 /* AnnouncementResult2.m in Sources */,
+				D3C6EAB51FD26B2400E9BCB1 /* AdminWriteMessageTeacherViewController.m in Sources */,
 				D3388FBA1F57C721009DE47D /* DetailMessageViewController.m in Sources */,
 				D3388FBE1F57C854009DE47D /* OpenInChromeController.m in Sources */,
 				D3109DD11F46E48A00103696 /* ViewMessageViewController.m in Sources */,
@@ -1442,28 +1621,37 @@
 				D34E05CF1F9F41FD0074B7BD /* SectionList.m in Sources */,
 				D38F651C1F3D786300273177 /* MKNumberBadgeView.m in Sources */,
 				D3B36FC01F61591500CB8B76 /* ResourceViewController2.m in Sources */,
+				D30A2D041FD565840043BE67 /* AdminStudentSMSStudentListViewController.m in Sources */,
 				A564C0771F31A50900AAA6CA /* CCKFNavDrawer.m in Sources */,
 				D3F5024B1FC045BC000F393F /* TopicInfoAcyGrtSixteenResult.m in Sources */,
+				D30A2CDF1FD5059C0043BE67 /* AdminStudentListViewController.m in Sources */,
 				D30028ED1F66A3E0004886FC /* AbsentHistoryTableViewCell.m in Sources */,
 				D3CA1CE11F53CFBB008D08B0 /* DateDropdownValueDetails.m in Sources */,
 				D34E05D81F9F46260074B7BD /* TeacherAttendanceTableViewCell.m in Sources */,
 				D30D98441F5FB0E200625144 /* AnnouncementTableViewCell.m in Sources */,
+				D3C6EAB91FD26D0F00E9BCB1 /* AdminTeacherTableViewCell.m in Sources */,
 				D30A45441FBC0AAF00609B1E /* SmsStudentResult.m in Sources */,
+				D3C6EAAA1FD11E6600E9BCB1 /* AdminWriteMessageViewController.m in Sources */,
+				D30A2CFB1FD5607C0043BE67 /* AdminStudentSendSMSViewController.m in Sources */,
 				D31B0C911F679F1D00A06BA9 /* AbsentHistoryTableViewCell2.m in Sources */,
 				D30028D91F664D8F004886FC /* ViewBehaviourTableViewCell.m in Sources */,
 				D3E43F621F4E8F8900515B0A /* WYStoryboardPopoverSegue.m in Sources */,
 				A5EF1CBD1F399D07007D3388 /* DrawerView.m in Sources */,
 				D30D985C1F5FFD8C00625144 /* PaymentInfoTableViewCell.m in Sources */,
+				D30A2CF31FD55E730043BE67 /* AdminSchoolSMSDirectViewController.m in Sources */,
 				D3326E741F5D46E5004AE998 /* Subject.m in Sources */,
 				D3201C601F4C4C55002E71FD /* BehaviourViewController.m in Sources */,
+				D30A2CE21FD5067E0043BE67 /* AdminSendMessageViewController.m in Sources */,
 				D32045291F95C73200958699 /* AdminReceiverListViewController.m in Sources */,
 				D3EA8B7F1FBD5ABF00942E3B /* TeacherAttendanceDetailsViewController.m in Sources */,
 				D3B36FC31F615A2A00CB8B76 /* ResourceList.m in Sources */,
 				D3F5024E1FC0485E000F393F /* TopicinfoResult.m in Sources */,
 				D3EA8B8A1FBD602F00942E3B /* TeacherPresentHistoryViewController.m in Sources */,
 				D3201C5D1F4C4C3D002E71FD /* SentMessagesViewController.m in Sources */,
+				D30A2CE51FD556130043BE67 /* AdminSchoolSMSViewController.m in Sources */,
 				D3EA8B8D1FBD676E00942E3B /* TeacherAttendanceHistoryViewController.m in Sources */,
 				D3109DDD1F46E86800103696 /* ChangePassswordViewController.m in Sources */,
+				D3D34A231FCEB6B500F84BB1 /* AdminProfileViewController.m in Sources */,
 				D3EA8B871FBD5FE600942E3B /* AttendanceDetailsTableViewCell.m in Sources */,
 				D3CA1CDA1F53CBFE008D08B0 /* MessageTableViewCell.m in Sources */,
 				A5EF1CAD1F3991CB007D3388 /* DrawerIphoneTableViewCell.m in Sources */,
@@ -1471,14 +1659,18 @@
 				D39D3F7D1F48192200232635 /* ParentTabController.m in Sources */,
 				D3ED416C1FC296020077C6E1 /* TeacherResourceListViewController.m in Sources */,
 				D3203A5C1F7CB9BF00B55C4C /* TeacherProfileViewController.m in Sources */,
+				D3C6EABD1FD26F4200E9BCB1 /* MsgTeacherResult.m in Sources */,
 				D3036DD01F4D5E3B0092B142 /* AboutUsViewController.m in Sources */,
 				D3326E711F5D466C004AE998 /* CycleTest.m in Sources */,
 				D3203A6C1F7E142F00B55C4C /* TeacherAnnouncementViewController.m in Sources */,
+				D3C2906D1FF0CA3600BAF92D /* AdminTeacherSMSViewController2.m in Sources */,
 				D320452C1F95CE4400958699 /* ReceiverListTableViewCell.m in Sources */,
 				D3203A6F1F7E146300B55C4C /* TeacherAttendanceViewController.m in Sources */,
 				D3203A721F7E149300B55C4C /* TeacherBehaviourViewController.m in Sources */,
 				D3F7B4441F1A1806005FBFE8 /* main.m in Sources */,
 				A5E4C0B81F28579D00EEAA3B /* Reachability.m in Sources */,
+				D3B8E8881FCFC4E6004263E4 /* AdminViewMessageViewController.m in Sources */,
+				D30A2D011FD565680043BE67 /* AdmTechList.m in Sources */,
 				A5EF1CBA1F399691007D3388 /* stundentListDetails.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
