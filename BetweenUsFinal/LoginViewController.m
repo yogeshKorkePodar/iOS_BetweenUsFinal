@@ -139,11 +139,11 @@
       // username = @"it.testteacher1@podar.org";
       // password = @"india";
         
-      //subject
+      //subject teacher
       //username = @"anaghashalde@gmail.com";
       //password = @"anagha1973";
       
-      //class
+      //class teacher
       //username = @"anitagotu@gmail.com";
       //password = @"saklani";
         
