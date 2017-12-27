@@ -282,7 +282,7 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/StudentInformationViewController.h"
-                  timestampString = "535869360.103897"
+                  timestampString = "536052566.185364"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -297,7 +297,7 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/StudentInformationViewController.h"
-                  timestampString = "535869360.105854"
+                  timestampString = "536052566.187661"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "83"
@@ -1418,7 +1418,7 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/TeacherTopicListViewController.h"
-                  timestampString = "535869360.358926"
+                  timestampString = "536052566.581572"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -1433,7 +1433,7 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/TeacherTopicListViewController.h"
-                  timestampString = "535869360.360866"
+                  timestampString = "536052566.583759"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -1473,38 +1473,6 @@
             endingLineNumber = "442"
             landmarkName = "-CCKFNavDrawerSelection:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ChangePassswordViewController CCKFNavDrawerSelection:]"
-                  moduleName = "BetweenUsFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/ChangePassswordViewController.m"
-                  timestampString = "535869360.366046"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "442"
-                  endingLineNumber = "442"
-                  offsetFromSymbolStart = "420">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ChangePassswordViewController CCKFNavDrawerSelection:]"
-                  moduleName = "BetweenUsFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/ChangePassswordViewController.m"
-                  timestampString = "535869360.368007"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "442"
-                  endingLineNumber = "442"
-                  offsetFromSymbolStart = "424">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1754,12 +1722,12 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/ChangePassswordViewController.m"
-                  timestampString = "535869360.429521"
+                  timestampString = "536052566.743213"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "599"
-                  endingLineNumber = "599"
-                  offsetFromSymbolStart = "14768">
+                  startingLineNumber = "598"
+                  endingLineNumber = "598"
+                  offsetFromSymbolStart = "14848">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1769,12 +1737,12 @@
                   moduleName = "BetweenUsFinal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/ChangePassswordViewController.m"
-                  timestampString = "535869360.431478"
+                  timestampString = "536052566.745771"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "599"
-                  endingLineNumber = "599"
-                  offsetFromSymbolStart = "14772">
+                  startingLineNumber = "598"
+                  endingLineNumber = "598"
+                  offsetFromSymbolStart = "14852">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1793,38 +1761,6 @@
             endingLineNumber = "599"
             landmarkName = "-CCKFNavDrawerSelection:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ChangePassswordViewController CCKFNavDrawerSelection:]"
-                  moduleName = "BetweenUsFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/ChangePassswordViewController.m"
-                  timestampString = "535869360.436465"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "599"
-                  endingLineNumber = "599"
-                  offsetFromSymbolStart = "14768">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ChangePassswordViewController CCKFNavDrawerSelection:]"
-                  moduleName = "BetweenUsFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/ChangePassswordViewController.m"
-                  timestampString = "535869360.438421"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "599"
-                  endingLineNumber = "599"
-                  offsetFromSymbolStart = "14772">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1921,6 +1857,38 @@
             endingLineNumber = "828"
             landmarkName = "-CCKFNavDrawerSelection:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ChangePassswordViewController CCKFNavDrawerSelection:]"
+                  moduleName = "BetweenUsFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/ChangePassswordViewController.m"
+                  timestampString = "536052566.779353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "828"
+                  endingLineNumber = "828"
+                  offsetFromSymbolStart = "32902">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ChangePassswordViewController CCKFNavDrawerSelection:]"
+                  moduleName = "BetweenUsFinal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/podar/Desktop/BetweenUs%20iOS%20App%20development/BetweenUsFinal/BetweenUsFinal/ChangePassswordViewController.m"
+                  timestampString = "536052566.781623"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "828"
+                  endingLineNumber = "828"
+                  offsetFromSymbolStart = "32906">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
