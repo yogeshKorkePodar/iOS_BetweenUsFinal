@@ -268,7 +268,6 @@
 		D3F502511FC04BEC000F393F /* PeriodNoList.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F502501FC04BEC000F393F /* PeriodNoList.m */; };
 		D3F7B4441F1A1806005FBFE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B4431F1A1806005FBFE8 /* main.m */; };
 		D3F7B4471F1A1806005FBFE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B4461F1A1806005FBFE8 /* AppDelegate.m */; };
-		D3F7B44A1F1A1806005FBFE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F7B4491F1A1806005FBFE8 /* ViewController.m */; };
 		D3F7B44D1F1A1806005FBFE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7B44B1F1A1806005FBFE8 /* Main.storyboard */; };
 		D3F7B44F1F1A1806005FBFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F7B44E1F1A1806005FBFE8 /* Assets.xcassets */; };
 		D3F7B4521F1A1806005FBFE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3F7B4501F1A1806005FBFE8 /* LaunchScreen.storyboard */; };
@@ -700,8 +699,6 @@
 		D3F7B4431F1A1806005FBFE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3F7B4451F1A1806005FBFE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3F7B4461F1A1806005FBFE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D3F7B4481F1A1806005FBFE8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D3F7B4491F1A1806005FBFE8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D3F7B44C1F1A1806005FBFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3F7B44E1F1A1806005FBFE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3F7B4511F1A1806005FBFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1230,8 +1227,6 @@
 				D3076B591F270D4900E78694 /* Images */,
 				D3F7B4451F1A1806005FBFE8 /* AppDelegate.h */,
 				D3F7B4461F1A1806005FBFE8 /* AppDelegate.m */,
-				D3F7B4481F1A1806005FBFE8 /* ViewController.h */,
-				D3F7B4491F1A1806005FBFE8 /* ViewController.m */,
 				D3F7B44B1F1A1806005FBFE8 /* Main.storyboard */,
 				D3F7B44E1F1A1806005FBFE8 /* Assets.xcassets */,
 				D3F7B4501F1A1806005FBFE8 /* LaunchScreen.storyboard */,
@@ -1555,7 +1550,6 @@
 				D315525E1F5AC0480016EED9 /* StudentProfileWithSiblingViewController.m in Sources */,
 				D3203A751F7E15EB00B55C4C /* TeacherSubjectListViewController.m in Sources */,
 				D3F502381FBFF82D000F393F /* TeacherBehvaiourDetailsViewController.m in Sources */,
-				D3F7B44A1F1A1806005FBFE8 /* ViewController.m in Sources */,
 				A5ED70CA1F305B1C00D35637 /* StudentDashboardWithoutSibling.m in Sources */,
 				D315525B1F5ABFCA0016EED9 /* SiblingStudentViewController.m in Sources */,
 				D3036DD31F4D7A530092B142 /* WYPopoverController.m in Sources */,

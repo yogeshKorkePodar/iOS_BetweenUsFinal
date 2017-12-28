@@ -237,14 +237,16 @@ NSArray *nib;
         
         if([Receiver_shift isEqualToString:@""] ||([receiver_Std isEqualToString:@""]) || ([receiver_divName isEqualToString:@""])){
             
-            [_cell.receiverStd_label setHidden:YES];
+            _cell.std_constraint.constant = 0;
+          /*   [_cell.receiverStd_label setHidden:NO];
             [_cell.receiverStd_label removeFromSuperview];
             [_cell.cellView addSubview:_cell.receiverName_label];
             [_top_std_label setHidden:YES];
             [_top_std_label removeFromSuperview];
             [_topView addSubview:_top_name_label];
-            
-            if([device isEqualToString:@"iphone"]){
+            _cell.receiverStd_label.backgroundColor =  [UIColor colorWithRed:195.0/255.0f green:229.0/255.0f blue:247/255.0f alpha:1.0];
+
+           if([device isEqualToString:@"iphone"]){
                 [_cell.receiverName_label addConstraint:[NSLayoutConstraint constraintWithItem:_cell.receiverName_label attribute:NSLayoutAttributeWidth
                                                                                      relatedBy:NSLayoutRelationEqual
                                                                                         toItem:nil
@@ -272,7 +274,7 @@ NSArray *nib;
                                                                              multiplier:1
                                                                                constant:800]];
                 
-            }
+            } */
         }
         else{
             

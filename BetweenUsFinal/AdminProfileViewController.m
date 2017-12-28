@@ -141,10 +141,10 @@
     [_admin_announcement_click addGestureRecognizer:tapGestAnnouncentButton];
     tapGestAnnouncentButton.delegate = self;
     
-    UITapGestureRecognizer *tapGestMessageButton=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceMessage)];
+    /*UITapGestureRecognizer *tapGestMessageButton=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceMessage)];
     [tapGestMessageButton setNumberOfTapsRequired:1];
     [_admin_message_click addGestureRecognizer:tapGestMessageButton];
-    tapGestMessageButton.delegate = self;
+    tapGestMessageButton.delegate = self;*/
     
     UITapGestureRecognizer *tapGestAnnouncentLabel =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceAnnouncement)];
     [tapGestAnnouncentLabel setNumberOfTapsRequired:1];
@@ -254,12 +254,10 @@
             //This is for Response
             NSLog(@"got response==%@", resSrt);
             
-            
             NSError *error = nil;
             if(!responseData==nil){
                 NSDictionary *receivedData =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
                 NSArray *parsedJsonArray = [NSJSONSerialization JSONObjectWithData:responseData options:(NSJSONReadingMutableContainers) error:&error];
-                
                 
                 ViewMessageStatus = [parsedJsonArray valueForKey:@"Status"];
                 ViewTableData = [receivedData objectForKey:@"ViewMessageResult"];
@@ -272,13 +270,13 @@
                                               objectAtIndex:n];
                         _ViewMessageItems.pmu_readunredStatus = [viewmessagedetails objectForKey:@"pmu_readunreadstatus"];
                         messageReadStatus =_ViewMessageItems.pmu_readunredStatus;
-                        NSLog(@"MessageStatus:%@",  _ViewMessageItems.pmu_readunredStatus);
+                        NSLog(@"<<<<<<<< MessageStatus:%@",  _ViewMessageItems.pmu_readunredStatus);
                         if([messageReadStatus isEqualToString:@"1"]){
                             
                             
                             [messageReadCount addObject:messageReadStatus];
                             
-                            NSLog(@"Size ReadMesssage:%lu",(unsigned long)[messageReadCount count]);
+                            NSLog(@"<<<<<<<<< Size ReadMesssage:%lu",(unsigned long)[messageReadCount count]);
                             badgeCountNo = [messageReadCount count];
                             if([device isEqualToString:@"ipad"]){
                                  self.badgeCount = [[MKNumberBadgeView alloc] initWithFrame:CGRectMake(self.admin_message_click.frame.size.width - 40, -20,44,40)];
@@ -459,8 +457,6 @@
                 [self.admin_message_click addSubview:self.badgeCount];
                 self.badgeCount.value =  [messageReadCountWithNoInternet count];
                 
-                
-                
                 UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Internet Error" message:@"Please Check Internet Connectivity" preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
@@ -487,7 +483,7 @@
             
             if(touch.view == _admin_message_click){
               
-                tapGestRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceMessage)];
+               // tapGestRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceMessage)];
             }
             else if(touch == _admin_announcement_click){
                               tapGestRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTappedOnceAnnouncement)];

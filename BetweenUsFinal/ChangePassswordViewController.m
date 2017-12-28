@@ -45,6 +45,22 @@
 #import "TeacherSMSViewController.h"
 #import "TeacherProfileNoClassTeacherViewController.h"
 
+//// teacher imports starts here
+#import "AdminProfileViewController.h"
+#import "CCKFNavDrawer.h"
+#import "DrawerView.h"
+#import "NavigationMenuButton.h"
+#import "AdminViewMessageViewController.h"
+#import "AdminAnnouncementViewController.h"
+#import "ChangePassswordViewController.h"
+#import "AboutUsViewController.h"
+#import "WYPopoverController.h"
+#import "LoginViewController.h"
+#import "RestAPI.h"
+#import "ViewMessageResult.h"
+#import "AdminWriteMessageViewController.h"
+#import "AdminSchoolSMSViewController.h"
+
 @interface ChangePassswordViewController (){
       BOOL firstWebcall,loginClick;
 }

@@ -18,6 +18,16 @@
 #import "TeacherAnnouncementViewController.h"
 #import "TeacherProfileViewController.h"
 #import "TeacherProfileNoClassTeacherViewController.h"
+#import "AdminProfileViewController.h"
+#import "AdminViewMessageViewController.h"
+#import "AdminAnnouncementViewController.h"
+#import "ChangePassswordViewController.h"
+#import "AboutUsViewController.h"
+#import "LoginViewController.h"
+#import "RestAPI.h"
+#import "ViewMessageResult.h"
+#import "AdminWriteMessageViewController.h"
+#import "AdminSchoolSMSViewController.h"
 
 @interface AppDelegate ()
 {
@@ -244,7 +254,144 @@ NSString *alert,*classTeacher;
                 
                  else if([roll_id isEqualToString:@"2"]){
                       // Admin role
-                 }
+                     
+                         if (state == UIApplicationStateActive) {
+                             
+                             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+                             
+                             // Below Code Shows Message While Your Application is in Active State
+                             
+                             NSLog(@"Notification Received---  %@",@"Notification Received");
+                             NSString *cancelTitle = @"Ok";
+                             
+                             message = [[userInfo valueForKey:@"aps"] valueForKey:@"Type"];
+                             alert = [[userInfo valueForKey:@"aps"]valueForKey:@"alert"];
+                             NSLog(@"Message %@",message);
+                             
+                             if([message isEqualToString:@"Message"]){
+                                 
+                                 AudioServicesPlaySystemSound(1004);
+                                 
+                                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message"
+                                                                                     message:alert
+                                                                                    delegate:nil
+                                                                           cancelButtonTitle:cancelTitle
+                                                                           otherButtonTitles: nil];
+                                 [alertView show];
+                                 UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                          bundle: nil];
+                                 AdminViewMessageViewController *controller = (AdminViewMessageViewController*)[mainStoryboard
+                                                                                                                instantiateViewControllerWithIdentifier: @"AdminViewMessage"];
+                                 CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                                 hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                                 navController.navigationBar.barTintColor = [UIColor blackColor];
+                                 [navController.navigationBar setTitleTextAttributes:
+                                  @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                                 [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+                                 
+                                 self.window.rootViewController = navController;
+                             }
+                             else if([message isEqualToString:@"Annoucement"]){
+                                 AudioServicesPlaySystemSound(1004);
+                                 
+                                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Announcement"
+                                                                                     message:alert
+                                                                                    delegate:nil
+                                                                           cancelButtonTitle:cancelTitle
+                                                                           otherButtonTitles: nil];
+                                 [alertView show];
+                                 
+                                 UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                          bundle: nil];
+                                 AdminAnnouncementViewController *controller = (AdminAnnouncementViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminAnnouncement"];
+                                 CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                                 hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                                 navController.navigationBar.barTintColor = [UIColor blackColor];
+                                 [navController.navigationBar setTitleTextAttributes:
+                                  @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                                 [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+                                 
+                                 self.window.rootViewController = navController;
+                                 
+                                 
+                             }
+                         } else if(state == UIApplicationStateInactive) {
+                             NSLog(@"Notification Received---  %@",@"Notification Received");
+                             NSString *cancelTitle = @"Ok";
+                             
+                             message = [[userInfo valueForKey:@"aps"] valueForKey:@"Type"];
+                             NSLog(@"Message %@",message);
+                             
+                             if([message isEqualToString:@"Message"]){
+                                 
+                                 UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                          bundle: nil];
+                                 AdminViewMessageViewController *controller = (AdminViewMessageViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminViewMessage"];
+                                 CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                                 hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                                 navController.navigationBar.barTintColor = [UIColor blackColor];
+                                 [navController.navigationBar setTitleTextAttributes:
+                                  @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                                 
+                                 self.window.rootViewController = navController;
+                             }
+                             else if([message isEqualToString:@"Annoucement"]){
+                                 
+                                 UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                          bundle: nil];
+                                 AdminAnnouncementViewController *controller = (AdminAnnouncementViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminAnnouncement"];
+                                 CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                                 hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                                 navController.navigationBar.barTintColor = [UIColor blackColor];
+                                 [navController.navigationBar setTitleTextAttributes:
+                                  @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                                 
+                                 self.window.rootViewController = navController;
+                                 
+                             }
+                             
+                         }
+                         else if(state == UIApplicationStateBackground) {
+                             NSLog(@"Notification Received---  %@",@"Notification Received");
+                             NSString *cancelTitle = @"Ok";
+                             
+                             message = [[userInfo valueForKey:@"aps"] valueForKey:@"Type"];
+                             NSLog(@"Message %@",message);
+                             
+                             if([message isEqualToString:@"Message"]){
+                                 
+                                 UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                          bundle: nil];
+                                 AdminViewMessageViewController *controller = (AdminViewMessageViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminViewMessage"];
+                                 CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                                 hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                                 navController.navigationBar.barTintColor = [UIColor blackColor];
+                                 [navController.navigationBar setTitleTextAttributes:
+                                  @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                                 
+                                 self.window.rootViewController = navController;
+                                 
+                                 
+                             }
+                             else if([message isEqualToString:@"Annoucement"]){
+                                 
+                                 UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                          bundle: nil];
+                                 AdminAnnouncementViewController *controller = (AdminAnnouncementViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminAnnouncement"];
+                                 CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                                 hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                                 navController.navigationBar.barTintColor = [UIColor blackColor];
+                                 [navController.navigationBar setTitleTextAttributes:
+                                  @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                                 
+                                 self.window.rootViewController = navController;
+                                 
+                             }
+                             
+                         }
+                         
+                     }
+                 
                  else if([roll_id isEqualToString:@"5"]) {
                      // Teacher role
                      
@@ -465,6 +612,19 @@ NSString *alert,*classTeacher;
             self.window.rootViewController = navController;
         }
     }
+    else if([roll_id isEqualToString:@"2"]){
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                 bundle: nil];
+        AdminProfileViewController *controller = (AdminProfileViewController*)[mainStoryboard  instantiateViewControllerWithIdentifier: @"AdminProfile"];
+        CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+        hud = [[MBProgressHUD alloc] initWithView:controller.view];
+        navController.navigationBar.barTintColor = [UIColor blackColor];
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        [navController.navigationBar setTitleTextAttributes:
+         @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+        self.window.rootViewController = navController;
+
+    }
     
     return YES;
 }
@@ -616,6 +776,141 @@ NSString *alert,*classTeacher;
         }
         
         else if([roll_id isEqualToString:@"2"]){
+            
+                if (state == UIApplicationStateActive) {
+                    
+                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+                    
+                    // Below Code Shows Message While Your Application is in Active State
+                    
+                    NSLog(@"Notification Received---  %@",@"Notification Received");
+                    NSString *cancelTitle = @"Ok";
+                    
+                    message = [[userInfo valueForKey:@"aps"] valueForKey:@"Type"];
+                    alert = [[userInfo valueForKey:@"aps"]valueForKey:@"alert"];
+                    NSLog(@"Message %@",message);
+                    
+                    if([message isEqualToString:@"Message"]){
+                        
+                        AudioServicesPlaySystemSound(1004);
+                        
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Message"
+                                                                            message:alert
+                                                                           delegate:nil
+                                                                  cancelButtonTitle:cancelTitle
+                                                                  otherButtonTitles: nil];
+                        [alertView show];
+                        //                    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                        //                                                                             bundle: nil];
+                        //                    AdminViewMessageViewController *controller = (AdminViewMessageViewController*)[mainStoryboard
+                        //                                                                                         instantiateViewControllerWithIdentifier: @"AdminViewMessage"];
+                        //                    CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                        //                    hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                        //                    navController.navigationBar.barTintColor = [UIColor blackColor];
+                        //                    [navController.navigationBar setTitleTextAttributes:
+                        //                     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                        //                    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+                        //
+                        //                    self.window.rootViewController = navController;
+                    }
+                    else if([message isEqualToString:@"Annoucement"]){
+                        AudioServicesPlaySystemSound(1004);
+                        
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Announcement"
+                                                                            message:alert
+                                                                           delegate:nil
+                                                                  cancelButtonTitle:cancelTitle
+                                                                  otherButtonTitles: nil];
+                        [alertView show];
+                        //
+                        //                    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                        //                                                                             bundle: nil];
+                        //                    AdminAnnouncementViewController *controller = (AdminAnnouncementViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminAnnouncement"];
+                        //                    CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                        //                    hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                        //                    navController.navigationBar.barTintColor = [UIColor blackColor];
+                        //                    [navController.navigationBar setTitleTextAttributes:
+                        //                     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                        //                    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+                        //
+                        //                    self.window.rootViewController = navController;
+                    }
+                }
+                else if(state == UIApplicationStateInactive) {
+                    NSLog(@"Notification Received---  %@",@"Notification Received");
+                    NSString *cancelTitle = @"Ok";
+                    
+                    message = [[userInfo valueForKey:@"aps"] valueForKey:@"Type"];
+                    NSLog(@"Message %@",message);
+                    
+                    if([message isEqualToString:@"Message"]){
+                        
+                        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                 bundle: nil];
+                        AdminViewMessageViewController *controller = (AdminViewMessageViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminViewMessage"];
+                        CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                        hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                        navController.navigationBar.barTintColor = [UIColor blackColor];
+                        [navController.navigationBar setTitleTextAttributes:
+                         @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                        
+                        self.window.rootViewController = navController;
+                    }
+                    else if([message isEqualToString:@"Annoucement"]){
+                        
+                        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                 bundle: nil];
+                        AdminAnnouncementViewController *controller = (AdminAnnouncementViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminAnnouncement"];
+                        CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                        hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                        navController.navigationBar.barTintColor = [UIColor blackColor];
+                        [navController.navigationBar setTitleTextAttributes:
+                         @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                        
+                        self.window.rootViewController = navController;
+                        
+                    }
+                    
+                }
+                else if(state == UIApplicationStateBackground) {
+                    NSLog(@"Notification Received---  %@",@"Notification Received");
+                    NSString *cancelTitle = @"Ok";
+                    
+                    message = [[userInfo valueForKey:@"aps"] valueForKey:@"Type"];
+                    NSLog(@"Message %@",message);
+                    
+                    if([message isEqualToString:@"Message"]){
+                        
+                        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                 bundle: nil];
+                        AdminViewMessageViewController *controller = (AdminViewMessageViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminViewMessage"];
+                        CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                        hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                        navController.navigationBar.barTintColor = [UIColor blackColor];
+                        [navController.navigationBar setTitleTextAttributes:
+                         @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                        
+                        self.window.rootViewController = navController;
+                        
+                        
+                    }
+                    else if([message isEqualToString:@"Annoucement"]){
+                        
+                        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                                 bundle: nil];
+                        AdminAnnouncementViewController *controller = (AdminAnnouncementViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"AdminAnnouncement"];
+                        CCKFNavDrawer *navController = (CCKFNavDrawer *)[[CCKFNavDrawer alloc]initWithRootViewController:controller];
+                        hud = [[MBProgressHUD alloc] initWithView:controller.view];
+                        navController.navigationBar.barTintColor = [UIColor blackColor];
+                        [navController.navigationBar setTitleTextAttributes:
+                         @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+                        
+                        self.window.rootViewController = navController;
+                        
+                    }
+                    
+                }
+                
             
         }
         else if([roll_id isEqualToString:@"5"]){

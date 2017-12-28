@@ -12,5 +12,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *SrNo_label;
 @property (strong, nonatomic) IBOutlet UILabel *receiverName_label;
 @property (strong, nonatomic) IBOutlet UILabel *receiverStd_label;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *std_constraint;
 @property (strong, nonatomic) IBOutlet UIView *cellView;
 @end

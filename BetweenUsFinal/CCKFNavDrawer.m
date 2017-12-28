@@ -375,7 +375,7 @@
         // Teacher role
         else if([roll_id isEqualToString:@"5"]){
             if([classTeacher isEqualToString:@"1"]){
-                NSLog(@"<<<<<  teachershiftstdDiv >>>>>>> %@", teachershiftstdDiv);
+                NSLog(@"<<<<<  teachershiftstdDiv >>>>>>> %@", teacherClassStdDiv);
 
                 if([teachershiftstdDiv isEqualToString:@"|| "]){
                     [_drawerView.academic_year setText:drawerName];
@@ -398,7 +398,7 @@
             }
             else if([classTeacher isEqualToString:@"0"]) {
                 
-            NSLog(@"<<<<<  teachershiftstdDiv >>>>>>> %@", teachershiftstdDiv);
+            NSLog(@"<<<<<  teachershiftstdDiv >>>>>>> %@", teacherClassStdDiv);
             
                 if([teachershiftstdDiv isEqualToString:@"|| "]){
                     [_drawerView.academic_year setText:drawerName];

@@ -580,6 +580,11 @@
 
 -(void) adminDidLogin{
     NSLog(@"<< adminDidLogin");
+   // below step to prevent navigation menu misleading problem in change password menu selection after multiple module login on same ios device (prevent cache issue)
+    classTeacher = @"";
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"classTeacher"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     _adminLoggedIn  = @"true";
     [[NSUserDefaults standardUserDefaults] setObject:_adminLoggedIn forKey:@"adminLoggedIn"];
     [[NSUserDefaults standardUserDefaults] synchronize];
