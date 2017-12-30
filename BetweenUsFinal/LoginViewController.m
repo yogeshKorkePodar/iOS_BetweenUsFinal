@@ -50,8 +50,22 @@
     return NO;
 }
 
+- (void)resetDefaults {
+    NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
+    NSDictionary * dict = [defs dictionaryRepresentation];
+    for (id key in dict) {
+        [defs removeObjectForKey:key];
+    }
+    [defs synchronize];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+   // [self resetDefaults];
+   // NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+   // [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+   // [[NSUserDefaults standardUserDefaults] synchronize];
+    
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     username = @"";
@@ -125,6 +139,8 @@
     {
         //connection available
         NSLog(@"connection Available");
+        
+         //[self resetDefaults];
         
         //Getting textfield values
         username = _textfield_username.text;
@@ -310,7 +326,6 @@
                             
                             [[NSUserDefaults standardUserDefaults] setObject:roll_id forKey:@"Roll_id"];
                             [[NSUserDefaults standardUserDefaults] synchronize];
-                            
                             
                             [[NSUserDefaults standardUserDefaults] setObject:school_name forKey:@"school_name"];
                             [[NSUserDefaults standardUserDefaults] synchronize];
