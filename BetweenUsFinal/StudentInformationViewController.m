@@ -36,7 +36,7 @@
     Boolean save,cancel,edit,stateboolean,cityboolean,countryboolean,firstTime;
     NSString *regEmailId,*mobilNo,*bldgAddress,*streetAddress,*locationArea,*state,*city,*country,*pincode,*telephoneNo;
     BOOL countrytableStatus,citytableStatus,statetableStatus,loginClick,firstWebcall;
-
+    
 }
 @property (nonatomic, strong) RestAPI *restApi;
 @property (nonatomic, strong) ParentInfoStudent *ParentInfoStudent;
@@ -66,9 +66,6 @@
 }
 - (void)viewDidLoad {
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handelGesture:)];
-    [self.view addGestureRecognizer:tap];
-    
     firstWebcall = YES;
     [self checkInternetConnectivity];
     
@@ -95,7 +92,7 @@
     
     usl_id = [[NSUserDefaults standardUserDefaults]
               stringForKey:@"usl_id"];
-
+    
     
     msd_id = msd_id;
     usl_id = usl_id;
@@ -166,13 +163,6 @@
     [self.click_city.layer setBorderWidth:1.0];
     [self.click_city.layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
     
-    state_tableData.layer.borderWidth = 1.0;
-    state_tableData.layer.borderColor = [UIColor blackColor].CGColor;
-    country_tableData.layer.borderWidth = 1.0;
-    country_tableData.layer.borderColor = [UIColor blackColor].CGColor;
-    city_tableData.layer.borderWidth = 1.0;
-    city_tableData.layer.borderColor = [UIColor blackColor].CGColor;
-
 }
 
 
@@ -196,12 +186,6 @@
     return YES;
 }
 
-- (void) handelGesture:(UITapGestureRecognizer*)sender
-{
-    state_tableData.hidden = YES;
-    country_tableData.hidden = YES;
-    city_tableData.hidden = YES;
-}
 
 -(void)checkInternetConnectivity{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
@@ -1487,7 +1471,7 @@
                 
             }
             else if(selectionIndex == 7){
-                            loginClick = YES;
+                loginClick = YES;
                 Status = @"0";
                 [self httpPostRequest];
                 LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
@@ -1633,7 +1617,7 @@
                 
             }
             else if(selectionIndex == 6){
-                            loginClick = YES;
+                loginClick = YES;
                 Status = @"0";
                 [self httpPostRequest];
                 LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
@@ -1725,13 +1709,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

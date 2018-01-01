@@ -532,7 +532,6 @@ NSString *alert,*classTeacher;
                          
                      }
 
-                     
                  }
              }
              
