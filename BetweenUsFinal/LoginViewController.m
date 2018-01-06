@@ -62,9 +62,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    // [self resetDefaults];
-   // NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-   // [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-   // [[NSUserDefaults standardUserDefaults] synchronize];
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+   /* isStudentResourcePresent = @"1";
+    [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"isStudentResourcePresent"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    */
+    
+    /*
+    LoginArrayCount = @"0";
+    [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"LoginArrayCount"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    */
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController setNavigationBarHidden:YES animated:YES];

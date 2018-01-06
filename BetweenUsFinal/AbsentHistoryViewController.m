@@ -50,6 +50,8 @@
     
     _absentHistory.dataSource = self;
     _absentHistory.delegate = self;
+    //_absentHistory.layer.borderWidth = 2.0;
+    //_absentHistory.layer.borderColor = [UIColor blackColor].CGColor;
     [self httpPostRequest];
 }
 -(RestAPI *)restApi
@@ -127,8 +129,9 @@
                 _AttendHistory_Item.atn_date = [attendHostprydictonary objectForKey:@"atn_date"];
                 NSLog(@"date:%@",   _AttendHistory_Item.atn_date);
             }
-
+          
             [_absentHistory reloadData];
+                        
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 [hud hideAnimated:YES];

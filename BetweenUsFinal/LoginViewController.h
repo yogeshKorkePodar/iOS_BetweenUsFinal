@@ -19,6 +19,8 @@
     NSString *username;
     NSString *password;
     NSString *teacherClassStdDiv;
+    NSString *isStudentResourcePresent;
+    NSString *LoginArrayCount;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *textfield_username;

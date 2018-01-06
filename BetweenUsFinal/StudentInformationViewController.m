@@ -508,7 +508,7 @@
                 
                 //Pass The String to server
                 NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:msd_id,@"msd_Id", nil];
-                NSLog(@"the data Details is =%@", newDatasetInfo);
+                NSLog(@"<<<<<<<<<<< the data Details is =%@", newDatasetInfo);
                 
                 //convert object to data
                 NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:kNilOptions error:&err];
@@ -528,7 +528,7 @@
                 NSString *resSrt = [[NSString alloc]initWithData:responseData encoding:NSASCIIStringEncoding];
                 
                 //This is for Response
-                NSLog(@"got response==%@", resSrt);
+                NSLog(@"<<<<<<<< got response==%@", resSrt);
                 
                 NSError *error = nil;
                 NSDictionary *receivedData =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
@@ -538,7 +538,7 @@
                                             (NSJSONReadingMutableContainers) error:&error];
                 Status = [parsedJsonArray valueForKey:@"Status"];
                 
-                NSLog(@"Statusfirst:%@",Status);
+                NSLog(@"<<<<<<< Statusfirst:%@",Status);
                 
                 NSArray* parentInfoStudent = [receivedData objectForKey:@"ParentInfoStudent"];
                 
@@ -565,12 +565,12 @@
                 [hud hideAnimated:YES];
             }
             @catch (NSException *exception) {
-                NSLog(@"Exception: %@", exception);
+                NSLog(@"<<<<<<<< Exception: %@", exception);
             }
         }
     }
     @catch (NSException *exception) {
-        NSLog(@"Exception: %@", exception);
+        NSLog(@"<<<<<<<<<<< Exception: %@", exception);
     }
 }
 
