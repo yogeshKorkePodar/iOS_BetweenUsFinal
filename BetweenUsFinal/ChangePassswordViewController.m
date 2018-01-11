@@ -463,17 +463,20 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
         
             
             if(selectionIndex == 0){
-                
+                selectionIndex = -1;
                 AdminProfileViewController *adminProfileController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminProfile"];
                 [self.navigationController pushViewController:adminProfileController animated:YES];
             }
             else if(selectionIndex == 1){
+                selectionIndex = -1;
                 //Messsage
                 AdminViewMessageViewController *adminViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminViewMessage"];
                 
                 [self.navigationController pushViewController:adminViewMessageViewController animated:YES];
             }
             else if(selectionIndex == 2){
+                selectionIndex = -1;
+
                 //sms
                 AdminSchoolSMSViewController *adminSchoolSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminSchoolSMS"];
                 
@@ -482,22 +485,30 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 3){
+                selectionIndex = -1;
+
                 AdminAnnouncementViewController *adminAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AdminAnnouncement"];
                 
                 [self.navigationController pushViewController:adminAnnouncementViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             
             else if(selectionIndex == 4){
+                selectionIndex = -1;
+
                 ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
                 [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 5){
+                selectionIndex = -1;
+
                 loginClick = YES;
                 [self httpPostRequest];
                 LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
                 [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 6){
+                selectionIndex = -1;
+
                 NSLog(@"<<<<< About Us clicked >>>>>>>>");
                 
                 if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -528,54 +539,73 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
     
     else if([classTeacher isEqualToString:@"1"]){
         if(selectionIndex == 0){
-            
+            selectionIndex = -1;
+
             TeacherProfileViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherProfile"];
             [self.navigationController pushViewController:teacherProfileViewController animated:YES];
         }
         else if(selectionIndex == 1){
+            selectionIndex = -1;
+
             // Messsage
             TeacherMessageViewController *teacherMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherViewMessage"];
             
             [self.navigationController pushViewController:teacherMessageViewController animated:YES];
         }
         else if(selectionIndex == 2){
+            selectionIndex = -1;
+
             //sms
             TeacherSMSViewController *teacherSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSMS"];
             [self.navigationController pushViewController:teacherSMSViewController animated:YES];
         }
         else if(selectionIndex == 3){
+            selectionIndex = -1;
+
             TeacherAnnouncementViewController *teacherAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAnnouncement"];
             
             [self.navigationController pushViewController:teacherAnnouncementViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
         
         else if(selectionIndex == 4){
+            selectionIndex = -1;
+
             TeacherAttendanceViewController *teacherAttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAttendance"];
             [self.navigationController pushViewController:teacherAttendanceViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
         else if(selectionIndex == 5){
+            selectionIndex = -1;
+
             //Behaviour
             TeacherBehaviourViewController *teacherBehaviourViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherBehaviour"];
             [self.navigationController pushViewController:teacherBehaviourViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
         else if(selectionIndex == 6){
+            selectionIndex = -1;
+
             //SubjectList
             TeacherSubjectListViewController *teacherSubjectListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSubjectList"];
             [self.navigationController pushViewController:teacherSubjectListViewController animated:YES];
             
         }
         else if(selectionIndex == 7){
+            selectionIndex = -1;
+
             //Setting
             ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
             [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
         else if(selectionIndex == 8){
+            selectionIndex = -1;
+
             loginClick = YES;
             [self httpPostRequest];
             LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
             [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
         else if(selectionIndex == 9){
+            selectionIndex = -1;
+
             NSLog(@"<<<<< About Us clicked >>>>>>>>");
             
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -606,11 +636,15 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
     else if ([classTeacher isEqualToString:@"0"])
     {
         if(selectionIndex == 0){
+            selectionIndex = -1;
+
             
             TeacherProfileNoClassTeacherViewController *teacherProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherNoClassProfile"];
             [self.navigationController pushViewController:teacherProfileViewController animated:YES];
         }
         else if(selectionIndex == 1){
+            selectionIndex = -1;
+
             // Messsage
             
             TeacherMessageViewController *teacherMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherViewMessage"];
@@ -618,33 +652,45 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
             [self.navigationController pushViewController:teacherMessageViewController animated:YES];
         }
         else if(selectionIndex == 2){
+            selectionIndex = -1;
+
             //sms
             TeacherSMSViewController *teacherSMSViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSMS"];
             [self.navigationController pushViewController:teacherSMSViewController animated:YES];
         }
         else if(selectionIndex == 3){
+            selectionIndex = -1;
+
             TeacherAnnouncementViewController *teacherAnnouncementViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherAnnouncement"];
             
             [self.navigationController pushViewController:teacherAnnouncementViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
         
         else if(selectionIndex == 4){
+            selectionIndex = -1;
+
             //SubjectList
             TeacherSubjectListViewController *teacherSubjectListViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TeacherSubjectList"];
             [self.navigationController pushViewController:teacherSubjectListViewController animated:YES];
         }
         else if(selectionIndex == 5){
+            selectionIndex = -1;
+
             //Setting
             ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
             [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
         else if(selectionIndex == 6){
+            selectionIndex = -1;
+
             loginClick = YES;
             [self httpPostRequest];
             LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
             [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
         }
         else if(selectionIndex == 7){
+            selectionIndex = -1;
+
             NSLog(@"<<<<< About Us clicked >>>>>>>>");
             
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -679,11 +725,12 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
     
     LoginArrayCount = [[NSUserDefaults standardUserDefaults]
                        stringForKey:@"LoginUserCount"];
-    if (![LoginArrayCount isEqualToString:@"1"]) {
+    if (![LoginArrayCount isEqualToString:@"1"] && [_adminLoggedIn isEqualToString:@"false"]) {
         // SiblingProfile
         if([isStudentResourcePresent isEqualToString:@"0"]){
             if(selectionIndex == 0){
-                
+                selectionIndex = -1;
+
                 StudentProfileWithSiblingViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SiblingProfile"];
                 secondViewController.msd_id = msd_id;
                 secondViewController.usl_id = usl_id;
@@ -692,6 +739,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex ==1){
+                selectionIndex = -1;
+
                 SiblingStudentViewController *SiblingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Sibling"];
                 SiblingViewController.msd_id = msd_id;
                 SiblingViewController.usl_id = usl_id;
@@ -703,6 +752,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 2){
+                selectionIndex = -1;
+
                 ViewMessageViewController *ViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Message"];
                 ViewMessageViewController.msd_id = msd_id;
                 ViewMessageViewController.usl_id = usl_id;
@@ -714,17 +765,23 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 3){
+                selectionIndex = -1;
+
                 PaymentInfoViewController *PaymentInfoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentInformation"];
                 PaymentInfoViewController.msd_id = msd_id;
                 PaymentInfoViewController.clt_id = clt_id;
                 [self.navigationController pushViewController:PaymentInfoViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 4){
+                selectionIndex = -1;
+
                 StudentResourcesViewController *StudentResourceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentResource"];
                                 [self.navigationController pushViewController:StudentResourceViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 5){
+                selectionIndex = -1;
+
                 ViewAttendanceViewController *AttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Attendance"];
                 AttendanceViewController.msd_id = msd_id;
                 AttendanceViewController.usl_id = usl_id;
@@ -735,6 +792,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 6){
+                selectionIndex = -1;
+
                 StudentInformationViewController *StudentInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentInformation"];
                 StudentInformationViewController.msd_id = msd_id;
                              [self.navigationController pushViewController:StudentInformationViewController animated:YES];
@@ -743,6 +802,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
             }
             
             else if(selectionIndex == 7){
+                selectionIndex = -1;
+
                 ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
                 ChangePasswordViewController.msd_id = msd_id;
                 ChangePasswordViewController.clt_id = clt_id;
@@ -754,6 +815,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 8){
+                selectionIndex = -1;
+
                 loginClick = YES;
                 //yocomment
                 //ViewMessageStatus =@"1";
@@ -763,7 +826,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 9){
-                
+                selectionIndex = -1;
+
                 NSLog(@"<<<<< About Us clicked >>>>>>>>");
                 
                 if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -794,7 +858,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
         }
         else if([isStudentResourcePresent isEqualToString:@""]){
             if(selectionIndex == 0){
-                
+                selectionIndex = -1;
+
                 StudentProfileWithSiblingViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SiblingProfile"];
                 secondViewController.msd_id = msd_id;
                 secondViewController.usl_id = usl_id;
@@ -803,6 +868,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex ==1){
+                selectionIndex = -1;
+
                 SiblingStudentViewController *SiblingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Sibling"];
                 SiblingViewController.msd_id = msd_id;
                 SiblingViewController.usl_id = usl_id;
@@ -814,6 +881,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 2){
+                selectionIndex = -1;
+
                 ViewMessageViewController *ViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Message"];
                 ViewMessageViewController.msd_id = msd_id;
                 ViewMessageViewController.usl_id = usl_id;
@@ -825,12 +894,16 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 3){
+                selectionIndex = -1;
+
                 PaymentInfoViewController *PaymentInfoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentInformation"];
                 PaymentInfoViewController.msd_id = msd_id;
                 PaymentInfoViewController.clt_id = clt_id;
                 [self.navigationController pushViewController:PaymentInfoViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 4){
+                selectionIndex = -1;
+
                 ViewAttendanceViewController *AttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Attendance"];
                 AttendanceViewController.msd_id = msd_id;
                 AttendanceViewController.usl_id = usl_id;
@@ -841,6 +914,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 5){
+                selectionIndex = -1;
+
                 StudentInformationViewController *StudentInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentInformation"];
                 StudentInformationViewController.msd_id = msd_id;
                              [self.navigationController pushViewController:StudentInformationViewController animated:YES];
@@ -848,6 +923,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 6){
+                selectionIndex = -1;
+
                 ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
                 ChangePasswordViewController.msd_id = msd_id;
                 ChangePasswordViewController.clt_id = clt_id;
@@ -859,6 +936,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 7){
+                selectionIndex = -1;
+
                 loginClick = YES;
                 //yocomment
                 // ViewMessageStatus =@"1";
@@ -869,6 +948,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 8){
+                selectionIndex = -1;
+
                 NSLog(@"<<<<< About Us clicked >>>>>>>>");
                 
                 if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -899,19 +980,22 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
             
         }
     }
-    else if([LoginArrayCount isEqualToString:@"1"]){
+    else if([LoginArrayCount isEqualToString:@"1"] && [_adminLoggedIn isEqualToString:@"false"]){
         NSLog(@"LoginArrayCount %@", LoginArrayCount);
         NSLog(@"Without sibling");
         if([isStudentResourcePresent isEqualToString:@"0"]) {
             NSLog(@"isStudentResourcePresent %@", isStudentResourcePresent );
             NSLog(@"With student resources");
             if(selectionIndex == 0){
-                
+                selectionIndex = -1;
+
                 StudentDashboardWithoutSibling *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDashboardWithoutSibling"];
                
                 [self.navigationController pushViewController:secondViewController animated:YES];
             }
             else if(selectionIndex == 1){
+                selectionIndex = -1;
+
                 ViewMessageViewController *ViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Message"];
                                [self.navigationController pushViewController:ViewMessageViewController animated:YES];
                            }
@@ -920,17 +1004,23 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                               [self.navigationController pushViewController:PaymentInfoViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 3){
+                selectionIndex = -1;
+
                 StudentResourcesViewController *StudentResourceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentResource"];
                               [self.navigationController pushViewController:StudentResourceViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             
             else if(selectionIndex == 4){
+                selectionIndex = -1;
+
                 ViewAttendanceViewController *AttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Attendance"];
                                 [self.navigationController pushViewController:AttendanceViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 5){
+                selectionIndex = -1;
+
                 StudentInformationViewController *StudentInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentInformation"];
                 
                 [self.navigationController pushViewController:StudentInformationViewController animated:YES];
@@ -938,6 +1028,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 6){
+                selectionIndex = -1;
+
                 ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
                 
                 [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
@@ -945,6 +1037,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 7){
+                selectionIndex = -1;
+
                            loginClick = YES;
                 _Status = @"0";
                 [self httpPostRequest];
@@ -952,7 +1046,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 8){
-                
+                selectionIndex = -1;
+
                 NSLog(@"<<<<< About Us clicked >>>>>>>>");
                 
                 if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -984,31 +1079,42 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
         else if([isStudentResourcePresent isEqualToString:@""]){
             NSLog(@"Without student resources");
             if(selectionIndex == 0){
-                
+                selectionIndex = -1;
+
                 StudentDashboardWithoutSibling *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDashboardWithoutSibling"];
                                 [self.navigationController pushViewController:secondViewController animated:YES];
             }
             else if(selectionIndex == 1){
+                selectionIndex = -1;
+
                 ViewMessageViewController *ViewMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Message"];
                 [self.navigationController pushViewController :ViewMessageViewController animated:YES];
                 
             }
             else if(selectionIndex == 2){
+                selectionIndex = -1;
+
                 PaymentInfoViewController *PaymentInfoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PaymentInformation"];
                               [self.navigationController pushViewController:PaymentInfoViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 3){
+                selectionIndex = -1;
+
                 ViewAttendanceViewController *AttendanceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Attendance"];
                               [self.navigationController pushViewController:AttendanceViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 4){
+                selectionIndex = -1;
+
                 StudentInformationViewController *StudentInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentInformation"];
                
                 [self.navigationController pushViewController:StudentInformationViewController animated:YES];
                 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 5){
+                selectionIndex = -1;
+
                 ChangePassswordViewController *ChangePasswordViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePassword"];
                
                 [self.navigationController pushViewController:ChangePasswordViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
@@ -1016,6 +1122,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 
             }
             else if(selectionIndex == 6){
+                selectionIndex = -1;
+
                           loginClick = YES;
                 _Status = @"0";
                 [self httpPostRequest];
@@ -1023,6 +1131,8 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
                 [self.navigationController pushViewController:LoginViewController animated:YES];self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             }
             else if(selectionIndex == 7){
+                selectionIndex = -1;
+
                 
                 NSLog(@"<<<<< About Us clicked >>>>>>>>");
                 

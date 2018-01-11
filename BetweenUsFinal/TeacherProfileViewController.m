@@ -113,7 +113,7 @@
         _image_logo.image = [UIImage imageNamed:@"CBSE Logo 200x100 pix (2).png"];
     }
     else if((([org_id isEqualToString: @"2"]) && ([brd_name isEqualToString: @"ICSE"]))){
-        _image_logo.image = [UIImage imageNamed:@"ICSE Logo 200x100 pix.png"];
+        _image_logo.image = [UIImage imageNamed:@"ICSE_Logo.png"];
     }
     else if((([org_id isEqualToString: @"2"]) && ([brd_name isEqualToString: @"CIE"]))){
         _image_logo.image = [UIImage imageNamed:@"cie_250x100_old.png"];

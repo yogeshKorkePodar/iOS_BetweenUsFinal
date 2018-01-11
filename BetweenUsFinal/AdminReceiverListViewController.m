@@ -238,6 +238,8 @@ NSArray *nib;
         if([Receiver_shift isEqualToString:@""] ||([receiver_Std isEqualToString:@""]) || ([receiver_divName isEqualToString:@""])){
             
             _cell.std_constraint.constant = 0;
+            _class_label_constraint.constant = 0;
+            [_class_label setText:@""];
           /*   [_cell.receiverStd_label setHidden:NO];
             [_cell.receiverStd_label removeFromSuperview];
             [_cell.cellView addSubview:_cell.receiverName_label];

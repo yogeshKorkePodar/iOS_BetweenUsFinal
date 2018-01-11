@@ -302,12 +302,16 @@
 }
 
 -(void)setLogo{
+    NSLog(@"<<<<<<<< Admin >>>>>>>> brd_name==%@", brd_name);
+    NSLog(@"<<<<<<<< Admin >>>>>>>> org_id==%@", org_id);
+    NSLog(@"<<<<<<<< Admin >>>>>>>> school_name==%@", school_name);
+    NSLog(@"<<<<<<<< Admin >>>>>>>> clt_id==%@", clt_id);
+
     if((([org_id isEqualToString: @"2"]) && ([brd_name isEqualToString: @"CBSE"]) && ((![school_name containsString:@"Podar Jumbo"])))){
-        
         _img_logo.image = [UIImage imageNamed:@"CBSE Logo 200x100 pix (2).png"];
     }
     else if((([org_id isEqualToString: @"2"]) && ([brd_name isEqualToString: @"ICSE"]))){
-        _img_logo.image = [UIImage imageNamed:@"ICSE Logo 200x100 pix.png"];
+        _img_logo.image = [UIImage imageNamed:@"ICSE_Logo.png"];
     }
     else if((([org_id isEqualToString: @"2"]) && ([brd_name isEqualToString: @"CIE"]))){
         _img_logo.image = [UIImage imageNamed:@"cie_250x100_old.png"];

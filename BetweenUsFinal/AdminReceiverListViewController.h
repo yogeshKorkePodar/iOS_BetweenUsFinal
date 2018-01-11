@@ -18,7 +18,8 @@
     Reachability* hostReachable;
     
 }
-
+@property (weak, nonatomic) IBOutlet UILabel *class_label;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *class_label_constraint;
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UILabel *top_name_label;
 @property (weak, nonatomic) IBOutlet UITableView *ReceiverTableView;

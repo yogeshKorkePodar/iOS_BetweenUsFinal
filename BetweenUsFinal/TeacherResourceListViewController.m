@@ -31,6 +31,7 @@
     crf_id = crf_id;
     self.TeacherResourceTableView.dataSource = self;
     self.TeacherResourceTableView.delegate = self;
+     self.TeacherResourceTableView.tableFooterView = [UIView new];
       self.navigationItem.title = @"Resource";
     firstTime = YES;
     [self checkInternetConnectivity];

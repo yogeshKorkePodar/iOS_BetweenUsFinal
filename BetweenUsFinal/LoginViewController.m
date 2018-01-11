@@ -62,9 +62,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    // [self resetDefaults];
-    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+   
+    /* NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    */
     
    /* isStudentResourcePresent = @"1";
     [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"isStudentResourcePresent"];

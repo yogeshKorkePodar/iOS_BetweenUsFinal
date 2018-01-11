@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="17B48" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="435" height="106"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="435" height="105.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="435" height="105"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Anagha Gholap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzu-Rq-Fhi">
@@ -30,13 +30,14 @@
                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="02-May-2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO9-HR-1Jo">
-                        <rect key="frame" x="70" y="48" width="229" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="02-May-2016 11:37" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO9-HR-1Jo">
+                        <rect key="frame" x="70" y="48" width="283" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="M5E-cp-RCi"/>
+                            <constraint firstAttribute="width" constant="283" id="aDn-kw-sth"/>
                             <constraint firstAttribute="height" constant="21" id="ybl-Wv-RDu"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -55,7 +56,7 @@
                             <constraint firstAttribute="width" constant="335" id="I4E-jr-Htc"/>
                             <constraint firstAttribute="height" constant="21" id="XGr-AY-DWi"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <color key="textColor" red="0.96862745100000003" green="0.57254901960000004" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -87,11 +88,11 @@
                     <constraint firstAttribute="bottomMargin" secondItem="dOB-jl-qRY" secondAttribute="bottom" constant="19" id="CZM-VP-fhP"/>
                     <constraint firstItem="yzu-Rq-Fhi" firstAttribute="trailing" secondItem="O6c-Yn-jiD" secondAttribute="trailing" id="H8g-5F-0dW"/>
                     <constraint firstAttribute="bottomMargin" secondItem="h54-6W-1gP" secondAttribute="bottom" constant="18" id="HMZ-Ar-Sqk"/>
-                    <constraint firstItem="O6c-Yn-jiD" firstAttribute="trailing" secondItem="NO9-HR-1Jo" secondAttribute="trailing" constant="106" id="HXK-EE-wNE"/>
+                    <constraint firstItem="O6c-Yn-jiD" firstAttribute="trailing" secondItem="NO9-HR-1Jo" secondAttribute="trailing" constant="52" id="HXK-EE-wNE"/>
                     <constraint firstItem="Fo5-ZI-eg5" firstAttribute="top" secondItem="NO9-HR-1Jo" secondAttribute="bottom" id="Jk9-ku-MVm"/>
                     <constraint firstItem="O6c-Yn-jiD" firstAttribute="top" secondItem="h54-6W-1gP" secondAttribute="top" id="M8f-9u-b2m"/>
                     <constraint firstItem="O6c-Yn-jiD" firstAttribute="leading" secondItem="h54-6W-1gP" secondAttribute="trailing" constant="8" id="N1H-ga-Lxr"/>
-                    <constraint firstItem="NO9-HR-1Jo" firstAttribute="trailing" secondItem="Fo5-ZI-eg5" secondAttribute="trailing" id="QHp-jL-mbN"/>
+                    <constraint firstItem="NO9-HR-1Jo" firstAttribute="trailing" secondItem="Fo5-ZI-eg5" secondAttribute="trailing" constant="54" id="QHp-jL-mbN"/>
                     <constraint firstItem="O6c-Yn-jiD" firstAttribute="leading" secondItem="NO9-HR-1Jo" secondAttribute="leading" id="RN9-JK-Pn4"/>
                     <constraint firstItem="NO9-HR-1Jo" firstAttribute="leading" secondItem="h54-6W-1gP" secondAttribute="trailing" constant="8" id="SJK-bQ-Ruk"/>
                     <constraint firstItem="NO9-HR-1Jo" firstAttribute="leading" secondItem="Fo5-ZI-eg5" secondAttribute="leading" id="Y91-54-ZTR"/>
