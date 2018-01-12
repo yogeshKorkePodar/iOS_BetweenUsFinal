@@ -47,6 +47,9 @@
     expandedCells = [[NSMutableArray alloc]init];
     firstTime = YES;
     
+
+    _cycleTestClick.layer.borderWidth = 2.0f;
+    _cycleTestClick.layer.borderColor = [UIColor blackColor].CGColor;
   
     selectedIndex = -1;
     device =[[NSUserDefaults standardUserDefaults]
@@ -493,7 +496,8 @@
         tapGestTopicName.delegate = self;
         
           cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.plusButtonClick.userInteractionEnabled = YES;
+        //edit
+        cell.plusButtonClick.userInteractionEnabled = NO;
    
         cell.plusButtonClick.tag = indexPath.row;
         [cell.plusButtonClick setTag:indexPath.row];
@@ -567,7 +571,7 @@
         if(tableView==_topicTblView){
             if ([expandedCells containsObject:indexPath])
             {
-                return 100; //It's not necessary a constant, though
+                return 50; //It's not necessary a constant, though
             }
             else
             {

@@ -5001,66 +5001,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7b-tB-hdg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg4-2t-seg">
-                                        <rect key="frame" x="2" y="4" width="315" height="32"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cycleTestBtn:" destination="oQt-So-P1b" eventType="touchUpInside" id="Cxw-mb-AQh"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="wmC-qd-DIL">
-                                        <rect key="frame" x="379" y="4" width="32" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="0QV-Wo-Igd"/>
-                                            <constraint firstAttribute="height" constant="32" id="eUr-Cb-N23"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAH-Qj-rnf">
+                                <rect key="frame" x="20" y="8" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.58039215686274503" green="0.066666666666666666" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="gg4-2t-seg" firstAttribute="top" secondItem="S7b-tB-hdg" secondAttribute="top" constant="4" id="C5s-hp-Kkh"/>
-                                    <constraint firstAttribute="trailing" secondItem="wmC-qd-DIL" secondAttribute="trailing" constant="3" id="NNS-lY-SRe"/>
-                                    <constraint firstAttribute="bottom" secondItem="wmC-qd-DIL" secondAttribute="bottom" constant="4" id="P03-Zq-1gG"/>
-                                    <constraint firstAttribute="height" constant="40" id="YvS-WP-xXd"/>
-                                    <constraint firstAttribute="trailing" secondItem="gg4-2t-seg" secondAttribute="trailing" constant="3" id="e3U-1S-57G"/>
-                                    <constraint firstItem="gg4-2t-seg" firstAttribute="leading" secondItem="S7b-tB-hdg" secondAttribute="leading" constant="3" id="kBx-LY-DiD"/>
-                                    <constraint firstItem="wmC-qd-DIL" firstAttribute="top" secondItem="S7b-tB-hdg" secondAttribute="top" constant="4" id="qBv-Ae-wwG"/>
-                                    <constraint firstAttribute="bottom" secondItem="gg4-2t-seg" secondAttribute="bottom" constant="4" id="vDI-s0-1Qt"/>
+                                    <constraint firstAttribute="height" constant="30" id="suK-j1-CDx"/>
                                 </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uzh-oa-SSM">
-                                <rect key="frame" x="0.0" y="39" width="320" height="529"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Term 1">
+                                    <color key="titleColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="cycleTestBtn:" destination="oQt-So-P1b" eventType="touchUpInside" id="93B-Do-yGX"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uzh-oa-SSM">
+                                <rect key="frame" x="0.0" y="46" width="414" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop_arrow_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="aPQ-on-JvS">
+                                <rect key="frame" x="351" y="8" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Gh-Nc-waM"/>
+                                    <constraint firstAttribute="width" constant="30" id="3Cw-JD-1Iu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uzh-oa-SSM" firstAttribute="leading" secondItem="V43-wP-uuY" secondAttribute="leading" id="8Nc-cX-5Kl"/>
-                            <constraint firstAttribute="trailing" secondItem="S7b-tB-hdg" secondAttribute="trailing" id="Fry-zK-RCW"/>
-                            <constraint firstItem="S7b-tB-hdg" firstAttribute="leading" secondItem="V43-wP-uuY" secondAttribute="leading" id="TCq-yf-8II"/>
-                            <constraint firstItem="uzh-oa-SSM" firstAttribute="top" secondItem="S7b-tB-hdg" secondAttribute="top" id="Vcs-0d-Obx"/>
-                            <constraint firstAttribute="trailing" secondItem="uzh-oa-SSM" secondAttribute="trailing" id="ZBu-lU-fOI"/>
-                            <constraint firstItem="iIX-Zd-pFk" firstAttribute="top" secondItem="uzh-oa-SSM" secondAttribute="bottom" id="kFc-FH-qLY"/>
-                            <constraint firstItem="S7b-tB-hdg" firstAttribute="top" secondItem="Wsp-kA-vdg" secondAttribute="bottom" id="txC-9M-bkB"/>
+                            <constraint firstItem="aPQ-on-JvS" firstAttribute="top" secondItem="Wsp-kA-vdg" secondAttribute="bottom" constant="8" id="97v-0S-5o1"/>
+                            <constraint firstItem="EAH-Qj-rnf" firstAttribute="leading" secondItem="V43-wP-uuY" secondAttribute="leadingMargin" id="F5k-Fu-1Tj"/>
+                            <constraint firstItem="uzh-oa-SSM" firstAttribute="leading" secondItem="V43-wP-uuY" secondAttribute="leading" id="Pbh-xI-4EL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aPQ-on-JvS" secondAttribute="trailing" constant="13" id="SCs-nF-KaM"/>
+                            <constraint firstItem="uzh-oa-SSM" firstAttribute="top" secondItem="aPQ-on-JvS" secondAttribute="bottom" constant="8" id="cup-S2-RR7"/>
+                            <constraint firstItem="EAH-Qj-rnf" firstAttribute="top" secondItem="Wsp-kA-vdg" secondAttribute="bottom" constant="8" id="gJE-b8-iF0"/>
+                            <constraint firstItem="iIX-Zd-pFk" firstAttribute="top" secondItem="uzh-oa-SSM" secondAttribute="bottom" id="nPN-uF-GRz"/>
+                            <constraint firstItem="EAH-Qj-rnf" firstAttribute="trailing" secondItem="V43-wP-uuY" secondAttribute="trailingMargin" id="oPV-Lx-mHq"/>
+                            <constraint firstAttribute="trailing" secondItem="uzh-oa-SSM" secondAttribute="trailing" id="uZT-uX-U5m"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="cycleTestClick" destination="gg4-2t-seg" id="uqi-5k-ZIq"/>
-                        <outlet property="dropdownImage" destination="wmC-qd-DIL" id="vI9-Ky-dRP"/>
+                        <outlet property="cycleTestClick" destination="EAH-Qj-rnf" id="Lr7-RV-Z43"/>
+                        <outlet property="dropdownImage" destination="aPQ-on-JvS" id="grx-RL-nMJ"/>
                         <outlet property="topicTblView" destination="uzh-oa-SSM" id="3Z5-tc-3dh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIr-M4-UIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3616.875" y="4364.788732394366"/>
+            <point key="canvasLocation" x="3710.144927536232" y="4364.6739130434789"/>
         </scene>
         <!--Select students-->
         <scene sceneID="hAV-J3-NEm">
