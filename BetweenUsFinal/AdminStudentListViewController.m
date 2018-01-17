@@ -590,6 +590,7 @@
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AdminStudentListTableViewCell" owner:self options:nil];
             _cell = [nib objectAtIndex:0];
         }
+        
         UIImage *btnCheckedImage = [UIImage imageNamed:@"blue_messagechecked_32x32.png"];
         UIImage *btnUnCheckedImage = [UIImage imageNamed:@"unchecked_checkbox2.png"];
         [_cell.cellCheckBoxClick addTarget:self action:@selector(checkButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -607,7 +608,6 @@
         else if([self isSelectedCheckBox:_cell.cellCheckBoxClick.tag] && checkboxAllClicked==NO){
           [_cell.cellCheckBoxClick setImage:btnCheckedImage forState:UIControlStateNormal];
         }
-        
         
         if(![self isSelectedCheckBox:_cell.cellCheckBoxClick.tag] && checkboxAllClicked == YES)
         {

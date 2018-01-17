@@ -86,8 +86,6 @@
         //        AttendanceViewController.brd_Name = brd_Name;
         [self.navigationController pushViewController:AttendanceViewController animated:NO];
         //        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
-        
-        
     }
     else if(item.tag==4)
         
@@ -135,7 +133,7 @@
     [_enterMsg setDelegate:self];
     
     //optional
-    //  [enterMessage setDelegate:self];
+    //[enterMessage setDelegate:self];
     
     firstWebcall = YES;
     msd_id = msd_id;
@@ -153,7 +151,7 @@
     self.recipientTableData.dataSource = self;
     self.recipientTableData.delegate = self;
     [self.recipientTableData setHidden: YES];
-   // [self.errorMessage setHidden:YES];
+   //[self.errorMessage setHidden:YES];
     [self getData];
 
 }
@@ -466,8 +464,8 @@
         
         
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Successful" message:statusMessage preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+        //yocomment
+      /*  UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
             SentMessagesViewController *SentMessageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SentMessage"];
             SentMessageViewController.msd_id = msd_id;
             SentMessageViewController.usl_id = usl_id;
@@ -477,8 +475,11 @@
             self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:self.navigationItem.backBarButtonItem.style target:nil action:nil];
             
         }];
-        
+       */
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
+
+       // [alertController addAction:ok];
         
         [self presentViewController:alertController animated:YES completion:nil];
     }

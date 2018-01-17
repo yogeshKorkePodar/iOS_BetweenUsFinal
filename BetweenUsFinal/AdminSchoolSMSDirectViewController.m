@@ -266,7 +266,6 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     
     
-    
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*) response;
     
     int errorCode = httpResponse.statusCode;
