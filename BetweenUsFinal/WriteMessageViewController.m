@@ -553,7 +553,6 @@
     brd_Name = [[NSUserDefaults standardUserDefaults]
                 stringForKey:@"brd_name"];
     
-    
 }
 
 

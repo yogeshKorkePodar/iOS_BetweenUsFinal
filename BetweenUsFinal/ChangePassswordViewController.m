@@ -113,11 +113,11 @@
     NSLog(@"Device Token:%@",DeviceToken);
     
 
-    msd_id = msd_id;
+    /*msd_id = msd_id;
     usl_id = usl_id;
     clt_id = clt_id;
     brd_Name = brd_Name;
-    
+    */
     [self checkInternetConnectivity];
 
     [_old_password_texfield setDelegate:self];
@@ -293,7 +293,7 @@
     NSArray *parsedJsonArray = [NSJSONSerialization JSONObjectWithData:responseData options:(NSJSONReadingMutableContainers) error:&error];
     ChangePasswordStatus = [parsedJsonArray valueForKey:@"Status"];
     ChangePasswordStatusMessage = [parsedJsonArray valueForKey:@"StatusMsg"];
-    NSLog(@"Status:%@",ChangePasswordStatus);
+    NSLog(@"<<<<<<<<< Status:%@",ChangePasswordStatus);
     
     if([ChangePasswordStatus isEqualToString:@"1"]){
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Info" message:ChangePasswordStatusMessage preferredStyle:UIAlertControllerStyleAlert];
@@ -349,7 +349,7 @@
     }
     else if([ChangePasswordStatus isEqualToString:@"0"])
     {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error:" message:ChangePasswordStatusMessage preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error:" message: @"Old password does not match OR Logout from App and Login with new entered password" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
         [alertController addAction:ok];
@@ -450,7 +450,6 @@ didDismissWithButtonIndex:(NSInteger) buttonIndex
     }
     
 }
-
 
 -(void) buttonAction{
     NSLog(@"Navigation bar button clicked!");

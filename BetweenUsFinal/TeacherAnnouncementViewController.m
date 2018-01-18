@@ -39,6 +39,7 @@
     BOOL announcmentClick,firstTimeAnnouncement,loginClick;
 }
 @property (nonatomic, strong) AnnouncementResult2 *AnnouncementResultItems;
+@property (nonatomic, strong) TeacherAnnouncementTableViewCell *cell;
 @end
 
 @implementation TeacherAnnouncementViewController
@@ -408,20 +409,29 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
+   /* _cell = (MessageTableViewCell *)[tableView dequeueReusableCellWithIdentifier:nil];
+    if (_cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MessageTableViewCell" owner:self options:nil];
+        _cell = [nib objectAtIndex:0];
+    }
+    _cell.attachmentClick.tag = indexPath.row;
+    [_cell.attachmentClick addTarget:self action:@selector(attachment:) forControlEvents:UIControlEventTouchUpInside];
+    [_cell.attachmentClick setTag:indexPath.row];
+
+    */
     static NSString *simpleTableIdentifier = @"TeacherAnnouncementTableViewCell";
     
-    TeacherAnnouncementTableViewCell *cell = (TeacherAnnouncementTableViewCell *)[tableView dequeueReusableCellWithIdentifier:nil];
+     _cell = (TeacherAnnouncementTableViewCell *)[tableView dequeueReusableCellWithIdentifier:nil];
     
-    
-    if (cell == nil)
+    if (_cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TeacherAnnouncementTableViewCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        _cell = [nib objectAtIndex:0];
         
-        [tableView registerNib:[UINib nibWithNibName:@"TeacherAnnouncementTableViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+      /*  [tableView registerNib:[UINib nibWithNibName:@"TeacherAnnouncementTableViewCell" bundle:nil] forCellReuseIdentifier:simpleTableIdentifier];
+        _cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+       */
     }
     
     fulldate = [[teacherAnnoucementArray objectAtIndex:indexPath.row] objectForKey:@"msg_date"];
@@ -439,37 +449,36 @@
     NSLog(@"formated date%@",[dateFormat stringFromDate:yourDate]);
     formatedDate = [dateFormat stringFromDate:yourDate];
     
-    cell.datelabel.text = formatedDate;
+    _cell.datelabel.text = formatedDate;
     announcementMsg = [[teacherAnnoucementArray objectAtIndex:indexPath.row] objectForKey:@"msg_Message"];
     NSLog(@"Announcement msg %@",announcementMsg);
     
-    [cell.announcementText setText:announcementMsg];
+    [_cell.announcementText setText:announcementMsg];
     NSLog(@"Date:%@",[[teacherAnnoucementArray objectAtIndex:indexPath.row] objectForKey:@"msg_date"]);
-    CGSize sizeThatFitsTextView = [cell.announcementText sizeThatFits:CGSizeMake(cell.announcementText.frame.size.width, MAXFLOAT)];
-    cell.announcementHeight.constant = sizeThatFitsTextView.height;
+    CGSize sizeThatFitsTextView = [_cell.announcementText sizeThatFits:CGSizeMake(_cell.announcementText.frame.size.width, MAXFLOAT)];
+    _cell.announcementHeight.constant = sizeThatFitsTextView.height;
     
      if([ReadStatus isEqualToString:@"1"]){
         if([device isEqualToString:@"ipad"]){
-            [cell.announcementText setFont:[UIFont fontWithName:@"Arial-BoldMT" size:13]];
+            [_cell.announcementText setFont:[UIFont fontWithName:@"Arial-BoldMT" size:13]];
             self.badgeCount = [[MKNumberBadgeView alloc] initWithFrame:CGRectMake(650, -10,  30,35)];
-            [cell.datelabel addSubview:self.badgeCount];
+            [_cell.datelabel addSubview:self.badgeCount];
             //   [_cell.attachmentClick addSubview:self.badgeCount];
             self.badgeCount.value =  1;
         }
         else if([device isEqualToString:@"iphone"]){
-            [cell.announcementText setFont:[UIFont fontWithName:@"Arial-BoldMT" size:13]];
-            self.badgeCount = [[MKNumberBadgeView alloc] initWithFrame:CGRectMake(cell.datelabel.frame.size.width-60, -10,  30,35)];
-            [cell.datelabel addSubview:self.badgeCount];
+            [_cell.announcementText setFont:[UIFont fontWithName:@"Arial-BoldMT" size:13]];
+            self.badgeCount = [[MKNumberBadgeView alloc] initWithFrame:CGRectMake(_cell.datelabel.frame.size.width-60, -10,  30,35)];
+            [_cell.datelabel addSubview:self.badgeCount];
             //   [_cell.attachmentClick addSubview:self.badgeCount];
             self.badgeCount.value =  1;
         }
     }
     else if([ReadStatus isEqualToString:@"0"]){
-        [cell.announcementText setFont:[UIFont fontWithName:@"Arial" size:13]];
+        [_cell.announcementText setFont:[UIFont fontWithName:@"Arial" size:13]];
     }
     
-    
-    return cell;
+    return _cell;
     
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

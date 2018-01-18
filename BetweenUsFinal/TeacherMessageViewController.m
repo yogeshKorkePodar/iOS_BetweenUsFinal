@@ -307,20 +307,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:filename forKey:@"filename"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
-        //        dateitems = [date componentsSeparatedByString:@" "];
-        //        fulldate = dateitems[0];
-        //
-        //
-        //        NSLog(@"firstdate==%@", fulldate);
-        //        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        //        dateFormat.dateFormat = @"dd/MM/yyyy";
-        //
-        //        NSDate *yourDate = [dateFormat dateFromString:fulldate];
-        //
-        //        NSLog(@"your date%@",yourDate);
-        //        dateFormat.dateFormat = @"dd-MMM-yyyy";
-        //        NSLog(@"formated date%@",[dateFormat stringFromDate:yourDate]);
-        //        formatedDate = [dateFormat stringFromDate:yourDate];
+      
         
         _cell.label_senderName.text = senderName;
         _cell.label_date.text = date;
@@ -334,9 +321,9 @@
             [_cell.attachmentClick setHidden:NO];
         }
         
-        
         NSLog(@"Read Status: %@", msgReadStatus);
         NSLog(@"filepath: %@", filePath);
+        
         if([msgReadStatus isEqualToString:@"1"]){
             if(_cell.attachmentClick.hidden ==NO){
                 if([device isEqualToString:@"ipad"]){
@@ -415,7 +402,7 @@
                             [_cell.label_date addSubview:self.badgeCount];
                             self.badgeCount.value =  1;
                             
-                            
+                        
                         }
                         if(result.height == 667){
                             self.badgeCount = [[MKNumberBadgeView alloc] initWithFrame:CGRectMake( 230, -50,74,40)];
@@ -431,8 +418,6 @@
                         }
                         
                     }
-                    
-                    
                     
                 }
             }
@@ -476,9 +461,7 @@
         
         urlToDownload = [urlToDownload stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
-        //   NSString *decodeString = [NSString alloc]initWithCString:ch encoding:NSUTF8StringEncoding];
-        
-        
+        //  NSString *decodeString = [NSString alloc]initWithCString:ch encoding:NSUTF8StringEncoding];
         
         //  NSURL *url = [[NSURL alloc] initWithString:[urlToDownload stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
         NSLog(@"UrlTodownload:%@",urlToDownload);

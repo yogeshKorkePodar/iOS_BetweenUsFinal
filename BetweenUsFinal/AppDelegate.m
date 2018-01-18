@@ -681,10 +681,10 @@ NSString *alert,*classTeacher;
                                                               cancelButtonTitle:cancelTitle
                                                               otherButtonTitles: nil];
                     [alertView show];
-                                  }
-                else if([message isEqualToString:@"Annoucement"]){
-                    
-                                      AudioServicesPlaySystemSound(1004);
+                }
+                else if([message isEqualToString:@"Annoucement"])
+                {
+                    AudioServicesPlaySystemSound(1004);
                     
                     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Announcement"
                                                                         message:alert
@@ -713,7 +713,6 @@ NSString *alert,*classTeacher;
                      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
                     
                     self.window.rootViewController = navController;
-                    
                     
                 }
                 else if([message isEqualToString:@"Annoucement"]){
