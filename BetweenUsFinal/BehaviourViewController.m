@@ -435,12 +435,49 @@
         static NSString *simpleTableIdentifier = @"BehaviourTableViewCell";
         
         BehaviourTableViewCell *cell = (BehaviourTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-        if (cell == nil)
-        {
+       // if (cell == nil)
+       // {
             NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BehaviourTableViewCell" owner:self options:nil];
             cell = [nib objectAtIndex:0];
-        }
-        cell.date.text = [[behaviourdetails objectAtIndex:indexPath.row] objectForKey:@"msg_date"];
+      //  }
+        //cell.date.text = [[behaviourdetails objectAtIndex:indexPath.row] objectForKey:@"msg_date"];
+        NSString *date = [[behaviourdetails objectAtIndex:indexPath.row] objectForKey:@"msg_date"];
+        NSLog(@"<<<<<<<<<< Date: >>>>>>>>> %@",date);
+        
+        // Search from back to get the last space character
+        NSRange range= [date rangeOfString: @" " options: NSBackwardsSearch];
+        
+        // Take the first substring: from 0 to the space character
+        NSString* finalStr = [date substringToIndex: range.location];
+        
+          NSLog(@"<<<<<<<<<< Date: >>>>>>>>> %@",finalStr);
+        
+        // Search from back to get the last space character
+        NSRange range2= [finalStr rangeOfString: @" " options: NSBackwardsSearch];
+        
+        // Take the first substring: from 0 to the space character
+        NSString* finalStr2 = @"";
+        finalStr2 = [date substringToIndex: range2.location];
+        
+        NSLog(@"<<<<<<<<<< Date: >>>>>>>>> %@",finalStr2);
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"MM/dd/yyyy"];
+        
+        /* the date format is the same as that used by MySQL timestamps */
+      
+   
+        NSDate *date_modified = [formatter dateFromString:finalStr2];
+        NSLog(@"<<<<<<<<<< date_modified: >>>>>>>>> %@",date_modified);
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        // converting into our required date format
+        [dateFormatter setDateFormat:@"dd-MMMM-yyyy"];
+        
+        NSString *reqDateString = [dateFormatter stringFromDate:date_modified];
+        NSLog(@"<<<<<<<<< Final Date >>>>>>> %@", reqDateString);
+
+        cell.date.text = reqDateString;
         cell.behaviourmsg.text =[[behaviourdetails objectAtIndex:indexPath.row] objectForKey:@"msg_Message"];
         cell.studentNameLabel.text = [[behaviourdetails objectAtIndex:indexPath.row] objectForKey:@"sbj_name"];
         return cell;

@@ -161,7 +161,6 @@
     
     NSLog(@"Std:%@",std);
     
-    
     cell.label_studentName.text = [[stundentDetails objectAtIndex:indexPath.row] objectForKey:@"StudentName"];
     cell.label_std_div.text = [NSString stringWithFormat: @"%@ : %@, %@ : %@ ", @"Std", std,@"Div",div];
     return cell;

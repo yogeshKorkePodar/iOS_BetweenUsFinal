@@ -242,7 +242,7 @@
                     NSString *resSrt = [[NSString alloc]initWithData:responseData encoding:NSASCIIStringEncoding];
                     
                     //This is for Response
-                    NSLog(@"Response received %@", resSrt);
+                    NSLog(@"<<< Login Response received %@", resSrt);
                     
                     NSError *error = nil;
                     NSDictionary *receivedData =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];

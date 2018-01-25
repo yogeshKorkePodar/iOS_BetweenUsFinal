@@ -81,6 +81,7 @@
 @property(nonatomic,strong) NSString *ReceiprDate;
 @property(nonatomic,strong) NSString *amount;
 @property(nonatomic,strong) NSString *receiptNumebr;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *top_space;
 
 @property (weak, nonatomic) IBOutlet UIView *payFessOnlineView;
 @property (weak, nonatomic) IBOutlet UIImageView *payfessImg;

@@ -172,11 +172,11 @@
             static NSString *simpleTableIdentifier = @"AbsentHistoryCell";
             
             AbsentHistoryTableViewCell2 *cell = (AbsentHistoryTableViewCell2 *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-            if (cell == nil)
-            {
+          //  if (cell == nil)
+          //  {
                 NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AbsentHistoryTableViewCell2" owner:self options:nil];
                 cell = [nib objectAtIndex:0];
-            }
+          //  }
         [cell.absentReason_textview setEditable:NO];
            absentReason = [[attendanceHistortArray objectAtIndex:indexPath.row] objectForKey:@"atn_Reason"];
             absentDate = [[attendanceHistortArray objectAtIndex:indexPath.row] objectForKey:@"atn_date"];

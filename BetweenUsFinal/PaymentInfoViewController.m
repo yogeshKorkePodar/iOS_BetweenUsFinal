@@ -308,13 +308,19 @@
                 NSError *error = nil;
                 NSDictionary *receivedData =[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&error];
                 NSArray *parsedJsonArray = [NSJSONSerialization JSONObjectWithData:responseData options:(NSJSONReadingMutableContainers) error:&error];
-                PayFessBtnStatus = [parsedJsonArray valueForKey:@"Status"];
-                if([PayFessBtnStatus isEqualToString:@"1"]){
-                    [_payFessOnlineView setHidden:NO];
+                PayFessBtnStatus = [parsedJsonArray valueForKey:@"StatusMsg"];
+                NSLog(@"got PayFessBtnStatus==%@", PayFessBtnStatus);
+
+               // PayFessBtnStatus = [PayFessBtnStatus stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+                 NSLog(@"got PayFessBtnStatus==%@", PayFessBtnStatus);
+                if([PayFessBtnStatus isEqualToString:@"Show"]){
+                    [_clickPayFees setHidden:NO];
+                    
                     //   [_payfessImg setHidden:NO];
                 }
-                else if([PayFessBtnStatus isEqualToString:@"0"]){
-                    [_payFessOnlineView setHidden:YES];
+                else if([PayFessBtnStatus isEqualToString:@"Dont Show"]){
+                    [_clickPayFees setHidden:YES];
+                    _top_space.constant = 0;
                     //  [_payfessImg setHidden:YES];
                     
                 }

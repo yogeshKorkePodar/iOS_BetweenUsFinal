@@ -232,13 +232,13 @@ PieChartViewDataSource
 
     
     radius = 40.0f;
-    centerX = 50.0f;;
+    centerX = 50.0f;
     centerY = 50.0f;
     context = UIGraphicsGetCurrentContext();
     
     NSLog(@"Brd name saved Attendance:%@",brd_Name);
     
-    
+    //self.attendanceTable.expandOnlyOneCell = true;
     self.attendanceTable.HVTableViewDataSource = self;
     self.attendanceTable.HVTableViewDelegate = self;
     self.attendanceTable.tableFooterView = [UIView new];
@@ -545,15 +545,16 @@ PieChartViewDataSource
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath isExpanded:(BOOL)isExpanded{
     static NSString *simpleTableIdentifier = @"Cell";
-    
+   
+    self.attendanceTable.expandOnlyOneCell = true;
+
     AttendanceTableViewCell *cell = (AttendanceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    
-    if (cell == nil)
-    {
+    //if (cell == nil)
+    //{
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AttendanceTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-    }
+    //}
     
     if (!isExpanded) //prepare the cell as if it was collapsed! (without any animation!)
     {

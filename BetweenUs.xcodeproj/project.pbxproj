@@ -1330,7 +1330,7 @@
 					D3F7B43E1F1A1805005FBFE8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = EHE3TQAG25;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1817,14 +1817,14 @@
 				CODE_SIGN_ENTITLEMENTS = BetweenUsFinal/BetweenUsFinal.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Beanstalk Learning (EHE3TQAG25)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Beanstalk Learning (EHE3TQAG25)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EHE3TQAG25;
 				INFOPLIST_FILE = BetweenUsFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.podarbetweenus.BetweenUs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b560782e-30c2-4843-8341-be5bf991c21c";
-				PROVISIONING_PROFILE_SPECIFIER = CreatedOn4Nov17UsingiOSDisExpiringOn4Nov18;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1834,14 +1834,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BetweenUsFinal/BetweenUsFinal.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Beanstalk Learning (EHE3TQAG25)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EHE3TQAG25;
 				INFOPLIST_FILE = BetweenUsFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.podarbetweenus.BetweenUs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b560782e-30c2-4843-8341-be5bf991c21c";
-				PROVISIONING_PROFILE_SPECIFIER = CreatedOn4Nov17UsingiOSDisExpiringOn4Nov18;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

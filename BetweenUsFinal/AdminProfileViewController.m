@@ -326,10 +326,10 @@
     else if((([org_id isEqualToString: @"2"]) && (([school_name containsString:@"Podar Jumbo"])))){
         _img_logo.image = [UIImage imageNamed:@"PJK.png"];
     }
-    else if((([org_id isEqualToString: @"4"]) && ([brd_name isEqualToString: @"ICSE"]))){
+    else if((([org_id isEqualToString: @"4"]) && ([brd_name isEqualToString: @"ICSE."]))){
         _img_logo.image = [UIImage imageNamed:@"lilavati_250x125.png"];
     }
-    else if((([org_id isEqualToString: @"4"]) && ([brd_name isEqualToString: @"CBSE"]))){
+    else if((([org_id isEqualToString: @"4"]) && ([brd_name isEqualToString: @"CBSE."]))){
         _img_logo.image = [UIImage imageNamed:@"rnpodar_225x100.png"];
     }
     else if((([org_id isEqualToString: @"4"]) && ([brd_name isEqualToString: @"IB"]))){

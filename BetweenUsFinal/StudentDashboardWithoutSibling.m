@@ -439,7 +439,7 @@
                 NSURL *url = [NSURL URLWithString:str];
                 
                 //Pass The String to server
-                NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",msd_id,@"msd_id",month,@"month",check,@"check",pageNo,@"PageNo",pageSize,@"PageSize",nil];
+                NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",msd_id,@"msd_id",@"0",@"month",check,@"check",pageNo,@"PageNo",pageSize,@"PageSize",nil];
                 NSLog(@"the data Details is =%@", newDatasetInfo);
                 
                 //convert object to data
@@ -518,7 +518,7 @@
                         NSURL *url = [NSURL URLWithString:str];
                         
                         //Pass The String to server
-                        NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",msd_id,@"msd_id",@"",@"month",check,@"check",pageNo,@"PageNo",pageSize,@"PageSize",nil];
+                        NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",usl_id,@"usl_id",msd_id,@"msd_id",@"0",@"month",check,@"check",pageNo,@"PageNo",pageSize,@"PageSize",nil];
                         NSLog(@"the data Details is =%@", newDatasetInfo);
                         
                         //convert object to data
@@ -793,7 +793,7 @@
     else if((([org_id isEqualToString: @"4"]) && ([Brd_Id isEqualToString: @"10"]))){
         school_icon.image = [UIImage imageNamed:@"lilavati_250x125.png"];
     }
-    else if((([org_id isEqualToString: @"4"]) && ([Brd_Id isEqualToString: @"1"]))){
+    else if((([org_id isEqualToString: @"4"]) && ([Brd_Id isEqualToString: @"11"]))){
         school_icon.image = [UIImage imageNamed:@"rnpodar_225x100.png"];
     }
     else if((([org_id isEqualToString: @"4"]) && ([Brd_Id isEqualToString: @"4"]))){
