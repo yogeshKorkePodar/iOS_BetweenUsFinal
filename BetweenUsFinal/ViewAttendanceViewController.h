@@ -14,7 +14,7 @@
 @protocol PieChartViewDelegate;
 @protocol PieChartViewDataSource;
 
-@interface ViewAttendanceViewController : UIViewController<CCKFNavDrawerDelegate,UITabBarDelegate,HVTableViewDelegate, HVTableViewDataSource>
+@interface ViewAttendanceViewController : UIViewController<CCKFNavDrawerDelegate,UITabBarDelegate,HVTableViewDelegate, HVTableViewDataSource, UIScrollViewDelegate>
 {
     
     NSString *msd_id;
@@ -76,6 +76,7 @@
 @property BOOL hostActive;
 
 @property (strong, nonatomic) NSMutableArray *expandedCells;
+//@property (weak, nonatomic) IBOutlet HVTableView2 *attendanceTable;
 @property (weak, nonatomic) IBOutlet HVTableView *attendanceTable;
 
 @property (nonatomic, assign) id <PieChartViewDataSource> datasource;

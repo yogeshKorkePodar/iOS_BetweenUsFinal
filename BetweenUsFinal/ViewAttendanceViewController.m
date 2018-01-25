@@ -72,7 +72,7 @@ PieChartViewDataSource
     NSDictionary *newDatasetInfo;
     BOOL isSection0Cell0Expanded,message,announcement,attendance,behaviour,loginClick,firstTime,firstWebcall,collapse,firstTimeFirstRow;
     UITapGestureRecognizer *tapGestRecog ;
-
+    
     
     CGFloat radius;
     CGFloat centerX;
@@ -164,13 +164,27 @@ PieChartViewDataSource
     
     
 }
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [_attendanceTable collapseExpandedCells];
+}
+
+-(void)scrollViewDidScrollToTop:(UIScrollView *)scrollView{
+    [_attendanceTable collapseExpandedCells];
+
+}
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [_attendanceTable collapseExpandedCells];
+
+}
 - (void)viewDidLoad {
     
     firstWebcall =YES;
     firstTimeFirstRow = YES;
     hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self checkInternetConnectivity];
-
+    
     
     _my_tabBar.delegate = self;
     _my_tabBar.selectedItem = [_my_tabBar.items objectAtIndex:2];
@@ -229,20 +243,20 @@ PieChartViewDataSource
              stringForKey:@"device"];
     
     isStudentResourcePresent = [[NSUserDefaults standardUserDefaults]stringForKey:@"isStudenResourcePresent"];
-
+    
     
     radius = 40.0f;
-    centerX = 50.0f;
+    centerX = 50.0f;;
     centerY = 50.0f;
     context = UIGraphicsGetCurrentContext();
     
     NSLog(@"Brd name saved Attendance:%@",brd_Name);
     
-    //self.attendanceTable.expandOnlyOneCell = true;
+    self.attendanceTable.expandOnlyOneCell = TRUE;
     self.attendanceTable.HVTableViewDataSource = self;
     self.attendanceTable.HVTableViewDelegate = self;
     self.attendanceTable.tableFooterView = [UIView new];
-
+    
 }
 
 -(void) httpPostRequest{
@@ -251,29 +265,7 @@ PieChartViewDataSource
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         firstWebcall = NO;
         firstTime = NO;
-        //                NSError *err;
-        //                NSString *str = app_url @"PodarApp.svc/GetDateDropdownValue";
-        //                str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        //                NSURL *url = [NSURL URLWithString:str];
-        //
-        //                //Pass The String to server
-        //                NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",msd_id,@"msd_id",brd_Name,@"brd_name",nil];
-        //                NSLog(@"the data Details is =%@", newDatasetInfo);
-        //
-        //                //convert object to data
-        //                NSData* jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:kNilOptions error:&err];
-        //                NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        //                [request setHTTPMethod:POST];
-        //                [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        //                [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        //
-        //                //Apply the data to the body
-        //                [request setHTTPBody:jsonData];
-        //
-        //                self.restApi.delegate = self;
-        //                [self.restApi httpRequest:request];
-        //                NSURLResponse *response;
-        NSString *urlString =app_url @"PodarApp.svc/GetDateDropdownValue";
+              NSString *urlString =app_url @"PodarApp.svc/GetDateDropdownValue";
         newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:clt_id,@"clt_id",msd_id,@"msd_id",brd_Name,@"brd_name",nil];
         NSLog(@"the data Details is =%@", newDatasetInfo);
         NSError *error = nil;
@@ -486,16 +478,16 @@ PieChartViewDataSource
 
 -(void)tableView:(UITableView *)tableView expandCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath
 {
-    selectedIndexPath = indexPath;
-    tempSelectedIndexPath = selectedIndexPath;
-    row = @"";
+   // selectedIndexPath = indexPath;
+   // tempSelectedIndexPath = selectedIndexPath;
+   // row = @"";
 }
 
 //perform your collapse stuff (may include animation) for cell here. It will be called when the user touches an expanded cell so it gets collapsed or the table is in the expandOnlyOneCell satate and the user touches another item, So the last expanded item has to collapse
 -(void)tableView:(UITableView *)tableView collapseCell:(UITableViewCell *)cell withIndexPath:(NSIndexPath *)indexPath
 {
     
-    if(collapse ==YES){
+    //if(collapse ==YES){
         
         static NSString *simpleTableIdentifier = @"Cell";
         selectedIndexPath = indexPath;
@@ -508,7 +500,7 @@ PieChartViewDataSource
         [cell1.notMarked_textfield setHidden:YES];
         [cell1.click_absentHistory setHidden:YES];
         
-    }
+   // }
 }
 
 
@@ -545,32 +537,35 @@ PieChartViewDataSource
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath isExpanded:(BOOL)isExpanded{
     static NSString *simpleTableIdentifier = @"Cell";
-   
-    self.attendanceTable.expandOnlyOneCell = true;
+    
+    NSLog(@"$$$ Selected indexPath %ld", (long)indexPath.row);
 
+    
     AttendanceTableViewCell *cell = (AttendanceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    //if (cell == nil)
-    //{
+    
+    if (cell == nil)
+    {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AttendanceTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-    //}
+    }
     
     if (!isExpanded) //prepare the cell as if it was collapsed! (without any animation!)
     {
         
-        if(indexPath.row == 0){
+        if((indexPath.row)==0){
+            
             NSString *Title= [[attendancedetails objectAtIndex:0] objectForKey:@"MonthYear"];
             cell.monthName.text = Title;
             selectedIndexPath = 0;
             row= @"0";
-            NSLog(@"row %@", row);
+            NSLog(@"&&&&&& row %@", row);
             cell.click_absentHistory.tag = 0;
             [cell.click_absentHistory addTarget:self action:@selector(absentHistorySelector:) forControlEvents:UIControlEventTouchUpInside];
             [cell.click_absentHistory setTag:indexPath.row];
             year = [[attendancedetails objectAtIndex:cell.click_absentHistory.tag]objectForKey:@"years"];
             month = [[attendancedetails objectAtIndex:cell.click_absentHistory.tag]objectForKey:@"monthid"];
-            NSLog(@"selected month %@", month);
+            NSLog(@"<<<< selected month %@", month);
             
             pieChartView = [[PieChartView alloc] initWithFrame:kPieChartViewFrame];
             pieChartView.delegate = self;
@@ -723,7 +718,9 @@ PieChartViewDataSource
             
         }
         
+        
         else{
+           [_attendanceTable collapseCellAtIndexPath:0];
             row=@"0";
             NSString *Title= [[attendancedetails objectAtIndex:indexPath.row] objectForKey:@"MonthYear"];
             cell.monthName.text = Title;
@@ -734,7 +731,7 @@ PieChartViewDataSource
             [cell.click_absentHistory setTag:indexPath.row];
             year = [[attendancedetails objectAtIndex:cell.click_absentHistory.tag]objectForKey:@"years"];
             month = [[attendancedetails objectAtIndex:cell.click_absentHistory.tag]objectForKey:@"monthid"];
-            NSLog(@"selected month %@", month);
+            NSLog(@"++++++ selected month %@", month);
             
             pieChartView = [[PieChartView alloc] initWithFrame:kPieChartViewFrame];
             pieChartView.delegate = self;
@@ -877,6 +874,7 @@ PieChartViewDataSource
                 [cell.present_textfield setHidden:NO];
                 [cell.presentLabel setHidden:NO];
                 
+
                 
             }
             
@@ -884,14 +882,16 @@ PieChartViewDataSource
             if([absent isEqualToString:@"0"]){
                 [cell.click_absentHistory setHidden:YES];
             }
+            
+
         }
     }
     
     else ///prepare the cell as if it was expanded! (without any animation!)
     {
+
         row=@"";
     }
-    
     
     return cell;
     
@@ -937,7 +937,7 @@ PieChartViewDataSource
     [cell.click_absentHistory addTarget:self action:@selector(absentHistorySelector) forControlEvents:UIControlEventTouchUpInside];
     
     
-    NSLog(@"selected month %@", month);
+    NSLog(@"------selected month %@", month);
     
     NSLog(@"Row Selected %@", @"Row Selected");
     
@@ -982,7 +982,7 @@ PieChartViewDataSource
         if(index == 0){
             
             UIColor * color = [UIColor redColor] ;
-        
+            
             return color;
             //  return  GetRandomUIColor();
         }
@@ -1477,7 +1477,7 @@ PieChartViewDataSource
                 
             }
             else if(selectionIndex == 7){
-                            loginClick = YES;
+                loginClick = YES;
                 _Status = @"0";
                 [self httpPostRequest];
                 LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
@@ -1623,7 +1623,7 @@ PieChartViewDataSource
                 
             }
             else if(selectionIndex == 6){
-                           loginClick = YES;
+                loginClick = YES;
                 _Status = @"0";
                 [self httpPostRequest];
                 LoginViewController *LoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
@@ -1717,13 +1717,13 @@ PieChartViewDataSource
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

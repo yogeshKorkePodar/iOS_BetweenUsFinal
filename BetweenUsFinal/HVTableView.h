@@ -4,14 +4,14 @@
 //
 //  Created by Hamidreza Vakilian on 25/11/2013
 //  Copyright (c) 2013 Hamidreza Vakilian. All rights reserved.
-//  Website: http://www.infracyber.com/
-//  Email:   xerxes235@yahoo.com
+//  Website: http://www.innovian.com/
+//  Email:   gitsupport@innovian.com
 //
 
 
 //
-//***************	HVTableView - UITableView with expand/collapse feature   *****************************
-//					by hamidreza vakilian
+//***************	HVTableView - UITableView with expand/collapse feature
+//					by H.Vakilian (Innovian)
 //
 //
 //	This is a subclass of UITableView with expand/collapse feature that may come so handy in many apps.
@@ -69,8 +69,6 @@
 //
 //	Please don't hesitate to mail me your feedbacks and suggestions or a bug report. I would be very thankful of your responses.
 //
-//	ON THE BOTTOM LINE: I allow you to use my code in your applications with freedom in making any modifications, but if you are going to do so, or you just like it and want further updates and bug fixes please consider donating me via this url:
-//	https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=xerxes235%40yahoo%2ecom&lc=AE&item_name=Hamidreza%20Vakilian&item_number=HVTableView%20donation&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 //
 //
 //	Thanks,....
@@ -135,19 +133,57 @@
 - (void)tableView:(UITableView *)tableView performAction:(SEL)action forRowAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender NS_AVAILABLE_IOS(5_0);
 @end
 
-@interface HVTableView : UITableView <UITableViewDataSource, UITableViewDelegate>
+@interface HVTableView : UITableView <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 {
-	
-	NSIndexPath *selectedIndexPath;
-    NSIndexPath *lastIndex;
-	int actionToTake;
-	NSMutableArray* expandedIndexPaths;
+    NSIndexPath *selectedIndexPath;
+    int actionToTake;
+    NSMutableArray* expandedIndexPaths;
 }
 
-@property (weak,nonatomic) id <HVTableViewDelegate> HVTableViewDelegate;
-@property (weak,nonatomic) id <HVTableViewDataSource> HVTableViewDataSource;
-@property (nonatomic) BOOL expandOnlyOneCell;
-@property (nonatomic) BOOL enableAutoScroll;
+@property (weak,nonatomic) IBOutlet id <HVTableViewDelegate> HVTableViewDelegate;
+@property (weak,nonatomic) IBOutlet id <HVTableViewDataSource> HVTableViewDataSource;
+
+
+/**
+ Causes the HVTableView to only allow one cell being expanded at the same time.
+ */
+@property (nonatomic) IBInspectable BOOL expandOnlyOneCell;
+
+/**
+ Causes the HVTableView to automatically scroll to the cell which is being expanded.
+ */
+@property (nonatomic) IBInspectable BOOL enableAutoScroll;
+
+
+/**
+ Toggles expand or collapse state for the cell at specified indexPath.
+ 
+ @param indexPath indexPath to toggle.
+ */
+-(void)toggleCellAtIndexPath:(NSIndexPath*)indexPath;
+
+
+/**
+ Expands the cell at specified indexPath if it's already collapsed.
+ 
+ @param indexPath indexPath to epxand.
+ */
+-(void)expandCellAtIndexPath:(NSIndexPath*)indexPath;
+
+/**
+ Collapses the cell at specified indexPath if it's already collapsed.
+ 
+ @param indexPath indexPath to collapse.
+ */
+-(void)collapseCellAtIndexPath:(NSIndexPath*)indexPath;
+
+
+/**
+ Collapse all expanded cells (if any)
+ 
+ NOTE- This needs to be called before changing data source (see here https://github.com/xerxes235/HVTableView/issues/4#issuecomment-54508764)
+ */
+-(void)collapseExpandedCells;
 
 @end
 

@@ -2668,7 +2668,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="attendanceTable" destination="sRq-jP-Whx" id="0a8-yg-CqK"/>
+                        <outlet property="attendanceTable" destination="sRq-jP-Whx" id="3XR-48-4bz"/>
                         <outlet property="my_tabBar" destination="raD-KH-vgR" id="ynB-D4-lT6"/>
                     </connections>
                 </viewController>
