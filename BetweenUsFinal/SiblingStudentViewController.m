@@ -36,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES;
     msd_id = msd_id;
     usl_id = usl_id;
     std = @"Std : ";
