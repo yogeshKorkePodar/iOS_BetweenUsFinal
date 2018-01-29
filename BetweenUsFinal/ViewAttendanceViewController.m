@@ -55,8 +55,6 @@ int p;
 int a;
 int n;
 
-
-
 @interface ViewAttendanceViewController ()
 <
 PieChartViewDelegate,
@@ -72,7 +70,6 @@ PieChartViewDataSource
     NSDictionary *newDatasetInfo;
     BOOL isSection0Cell0Expanded,message,announcement,attendance,behaviour,loginClick,firstTime,firstWebcall,collapse,firstTimeFirstRow;
     UITapGestureRecognizer *tapGestRecog ;
-    
     
     CGFloat radius;
     CGFloat centerX;
@@ -540,9 +537,7 @@ PieChartViewDataSource
     
     NSLog(@"$$$ Selected indexPath %ld", (long)indexPath.row);
 
-    
-    AttendanceTableViewCell *cell = (AttendanceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
+    AttendanceTableViewCell *cell = (AttendanceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:nil];
     
     if (cell == nil)
     {
@@ -550,8 +545,8 @@ PieChartViewDataSource
         cell = [nib objectAtIndex:0];
     }
     
-    if (!isExpanded) //prepare the cell as if it was collapsed! (without any animation!)
-    {
+   // if (!isExpanded) //prepare the cell as if it was collapsed! (without any animation!)
+    //{
         
         if((indexPath.row)==0){
             
@@ -885,13 +880,13 @@ PieChartViewDataSource
             
 
         }
-    }
+   // }
     
-    else ///prepare the cell as if it was expanded! (without any animation!)
-    {
+    //else ///prepare the cell as if it was expanded! (without any animation!)
+    //{
 
-        row=@"";
-    }
+       // row=@"";
+   // }
     
     return cell;
     
@@ -929,7 +924,7 @@ PieChartViewDataSource
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+   
     cell.click_absentHistory.tag = indexPath.row;
     year = [[attendancedetails objectAtIndex:cell.click_absentHistory.tag]objectForKey:@"years"];
     month = [[attendancedetails objectAtIndex:cell.click_absentHistory.tag]objectForKey:@"monthid"];

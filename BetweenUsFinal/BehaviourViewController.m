@@ -472,7 +472,7 @@
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         // converting into our required date format
-        [dateFormatter setDateFormat:@"dd-MMMM-yyyy"];
+        [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
         
         NSString *reqDateString = [dateFormatter stringFromDate:date_modified];
         NSLog(@"<<<<<<<<< Final Date >>>>>>> %@", reqDateString);

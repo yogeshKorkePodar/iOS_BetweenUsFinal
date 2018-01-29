@@ -354,7 +354,7 @@
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
    // [self collapseCellAtIndexPath:0];
-    [self collapseExpandedCells];
+   // [self collapseExpandedCells];
     
 }
 

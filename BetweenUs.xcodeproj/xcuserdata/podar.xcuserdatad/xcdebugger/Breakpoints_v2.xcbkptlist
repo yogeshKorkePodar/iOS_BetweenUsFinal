@@ -3178,11 +3178,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetweenUsFinal/ViewAttendanceViewController.m"
-            timestampString = "538572880.603865"
+            timestampString = "538911517.481214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "481"
-            endingLineNumber = "481"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
             landmarkName = "-tableView:expandCell:withIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3194,11 +3194,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BetweenUsFinal/ViewAttendanceViewController.m"
-            timestampString = "538572880.603865"
+            timestampString = "538911517.481214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "493"
-            endingLineNumber = "493"
+            startingLineNumber = "492"
+            endingLineNumber = "492"
             landmarkName = "-tableView:collapseCell:withIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
