@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="17B48" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="87" id="PZw-E5-6zs" customClass="TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PZw-E5-6zs" id="dBm-4O-iUP">
+                <rect key="frame" x="0.0" y="0.0" width="425" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXa-PM-NrT" customClass="TableViewCell">
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="84"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilepicture.png" translatesAutoresizingMaskIntoConstraints="NO" id="GmW-cR-Rdy">
+                                <rect key="frame" x="8" y="11" width="68" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="Iwe-LI-POd"/>
+                                    <constraint firstAttribute="height" constant="62" id="mlY-LD-xhP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anushka Gulumkar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8E-Qs-A24">
+                                <rect key="frame" x="84" y="11" width="333" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="X3I-KP-kaw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Std : VI, Div : B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eej-W8-enp">
+                                <rect key="frame" x="84" y="46" width="333" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wV7-Af-XiT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h8E-Qs-A24" secondAttribute="trailing" constant="8" id="0WN-Xu-Qoq"/>
+                            <constraint firstItem="h8E-Qs-A24" firstAttribute="leading" secondItem="GmW-cR-Rdy" secondAttribute="trailing" constant="8" id="Bpz-av-xSY"/>
+                            <constraint firstAttribute="bottom" secondItem="h8E-Qs-A24" secondAttribute="bottom" constant="52" id="CAX-ns-tbF"/>
+                            <constraint firstItem="eej-W8-enp" firstAttribute="leading" secondItem="GmW-cR-Rdy" secondAttribute="trailing" constant="8" id="LcD-Jd-HTQ"/>
+                            <constraint firstAttribute="bottom" secondItem="eej-W8-enp" secondAttribute="bottom" constant="17" id="W5L-TB-qL5"/>
+                            <constraint firstAttribute="bottom" secondItem="GmW-cR-Rdy" secondAttribute="bottom" constant="11" id="Woy-Ks-3CO"/>
+                            <constraint firstItem="GmW-cR-Rdy" firstAttribute="leading" secondItem="pXa-PM-NrT" secondAttribute="leading" constant="8" id="cbv-aD-Xui"/>
+                            <constraint firstItem="GmW-cR-Rdy" firstAttribute="top" secondItem="pXa-PM-NrT" secondAttribute="top" constant="11" id="eLP-EX-jf8"/>
+                            <constraint firstAttribute="trailing" secondItem="eej-W8-enp" secondAttribute="trailing" constant="8" id="iyG-ri-hfF"/>
+                            <constraint firstItem="eej-W8-enp" firstAttribute="top" secondItem="h8E-Qs-A24" secondAttribute="bottom" constant="14" id="kOA-lE-TVQ"/>
+                            <constraint firstItem="h8E-Qs-A24" firstAttribute="top" secondItem="pXa-PM-NrT" secondAttribute="top" constant="11" id="tUU-Ow-6wI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pXa-PM-NrT" firstAttribute="top" secondItem="dBm-4O-iUP" secondAttribute="top" id="ZHe-Zu-9xP"/>
+                    <constraint firstItem="pXa-PM-NrT" firstAttribute="leading" secondItem="dBm-4O-iUP" secondAttribute="leading" id="gbw-NR-qPN"/>
+                    <constraint firstAttribute="bottom" secondItem="pXa-PM-NrT" secondAttribute="bottom" id="gk6-fL-xeK"/>
+                    <constraint firstAttribute="trailing" secondItem="pXa-PM-NrT" secondAttribute="trailing" id="vDT-FC-AZW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label_std_div" destination="eej-W8-enp" id="124-cE-rYQ"/>
+                <outlet property="lable_name" destination="h8E-Qs-A24" id="Wfz-Po-YzI"/>
+            </connections>
+            <point key="canvasLocation" x="418.5" y="197.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="profilepicture.png" width="90" height="90"/>
+    </resources>
+</document>

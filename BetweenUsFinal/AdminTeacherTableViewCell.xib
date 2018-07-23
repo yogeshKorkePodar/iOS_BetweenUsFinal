@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="17B48" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdminTeacherTableViewCell" rowHeight="35" id="KGk-i7-Jjw" customClass="AdminTeacherTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="34"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zX7-Lo-QNX">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="34"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjh-Kh-s5p">
+                                <rect key="frame" x="347" y="0.0" width="53" height="34"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.60784313729999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="K2O-Bz-Gvz"/>
+                                    <constraint firstAttribute="height" constant="34" id="u3I-5l-guf"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="14" minY="7" maxX="15" maxY="7"/>
+                                <state key="normal" image="unchecked_checkbox2.png"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgI-69-fVa">
+                                <rect key="frame" x="0.0" y="0.0" width="346" height="34"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.60784313729999995" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="8Pd-wK-EUd"/>
+                                    <constraint firstAttribute="width" constant="346" id="Fz7-gg-nM9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Fjh-Kh-s5p" secondAttribute="bottom" id="14Z-wX-56E"/>
+                            <constraint firstItem="Fjh-Kh-s5p" firstAttribute="top" secondItem="zX7-Lo-QNX" secondAttribute="top" id="2om-su-ZpH"/>
+                            <constraint firstItem="NgI-69-fVa" firstAttribute="top" secondItem="zX7-Lo-QNX" secondAttribute="top" id="Olr-eI-eqe"/>
+                            <constraint firstItem="NgI-69-fVa" firstAttribute="leading" secondItem="zX7-Lo-QNX" secondAttribute="leading" id="ea9-eJ-RyM"/>
+                            <constraint firstAttribute="bottom" secondItem="NgI-69-fVa" secondAttribute="bottom" id="hHw-y4-kCU"/>
+                            <constraint firstAttribute="trailing" secondItem="Fjh-Kh-s5p" secondAttribute="trailing" id="vhw-vE-zR1"/>
+                            <constraint firstItem="Fjh-Kh-s5p" firstAttribute="leading" secondItem="NgI-69-fVa" secondAttribute="trailing" constant="1" id="wKD-eD-15S"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="zX7-Lo-QNX" secondAttribute="trailing" id="50O-y9-rsP"/>
+                    <constraint firstAttribute="bottom" secondItem="zX7-Lo-QNX" secondAttribute="bottom" id="I8g-nv-yHB"/>
+                    <constraint firstItem="zX7-Lo-QNX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IgJ-7S-3tK"/>
+                    <constraint firstItem="zX7-Lo-QNX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jPC-vX-7Vx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkbox_click" destination="Fjh-Kh-s5p" id="5hj-R4-vm4"/>
+                <outlet property="teacherName_label" destination="NgI-69-fVa" id="oAb-Wo-pLu"/>
+            </connections>
+            <point key="canvasLocation" x="283" y="169.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="unchecked_checkbox2.png" width="52" height="52"/>
+    </resources>
+</document>
